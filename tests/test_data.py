@@ -223,3 +223,83 @@ def test_failed_contact_sheet_does_not_freeze_cli_outputs_and_can_retry(tmp_path
     assert (output / "manifest.csv").is_file()
     with pytest.raises(FileExistsError):
         d.main(arguments)
+
+
+def test_geotiff_alignment_accepts_serialization_roundoff_but_rejects_subpixel_shift(tmp_path):
+    """Upstream scale roundoff is harmless; 1/8-pixel shift must still fail."""
+    rio = pytest.importorskip('rasterio')
+    from affine import Affine
+    transform = Affine(8.983152841195215e-5,0,81.6388930207821,0,-8.983152841195215e-5,7.772942490429395)
+    image,mask=tmp_path/'image.tif',tmp_path/'mask.tif'
+    def save(path,bands,affine):
+        with rio.open(path,'w',driver='GTiff',height=512,width=512,count=bands,dtype='float32',crs='EPSG:4326',transform=affine) as dataset:
+            dataset.write(np.zeros((bands,512,512),dtype='float32'))
+    save(image,2,transform)
+    pair=dict(patch_id='p',image_path=str(image),mask_path=str(mask),units='db',band_order='VV,VH',label_source='manual')
+    roundoff=Affine(8.983152841195857e-5,0,transform.c,0,-8.983152841195857e-5,transform.f)
+    save(mask,1,roundoff)
+    row,patch=api().audit_pair(pair)
+    assert patch.power.shape==(2,512,512)
+    assert row['max_alignment_error_pixels'] <= 1e-6
+    save(mask,1,Affine(transform.a,transform.b,transform.c+.125*transform.a,transform.d,transform.e,transform.f+.125*transform.d))
+    with pytest.raises(ValueError,match='georeferencing'):
+        api().audit_pair(pair)
+    # A small scale error must be evaluated at the far corner, not origin only.
+    save(mask,1,Affine(transform.a*(1+1e-7),transform.b,transform.c,transform.d*(1+1e-7),transform.e,transform.f))
+    with pytest.raises(ValueError,match='georeferencing'):
+        api().audit_pair(pair)
+
+
+def test_frozen_manifest_paths_survive_copy_and_move_of_complete_dataset(tmp_path):
+    """An absolute source path would silently read the old tree after copying."""
+    import shutil
+    rio=pytest.importorskip('rasterio')
+    d=api()
+    original=tmp_path/'original'
+    raw=original/'raw';raw.mkdir(parents=True)
+    rows=[]
+    membership={'p0':'train','p1':'validation','p2':'test'}
+    for i,identifier in enumerate(membership):
+        paths={kind:raw/f'{identifier}-{kind}.tif' for kind in ('image','mask')}
+        for kind,path in paths.items():
+            bands=2 if kind=='image' else 1
+            with rio.open(path,'w',driver='GTiff',height=2,width=2,count=bands,dtype='float32',
+                          crs='EPSG:4326',transform=rio.transform.from_origin(i*4,2,1,1)) as dataset:
+                dataset.write(np.full((bands,2,2),-i if kind=='image' else 0,dtype='float32'))
+        row,_=d.audit_pair(dict(patch_id=identifier,image_path=str(paths['image']),mask_path=str(paths['mask']),
+                               units='db',band_order='VV,VH',label_source='manual'))
+        rows.append(row)
+    d.write_frozen_artifacts(rows,membership,original/'audit','supplied membership')
+    with (original/'audit'/'manifest.csv').open(newline='') as stream:
+        serialized=list(csv.DictReader(stream))
+    assert serialized[0]['image_path']=='../raw/p0-image.tif'
+    assert serialized[0]['mask_path']=='../raw/p0-mask.tif'
+    copied=tmp_path/'copied'
+    shutil.copytree(original,copied)
+    # Both explicit paths are confined to this test's own temporary directory.
+    moved=tmp_path/'moved'
+    assert original.resolve().is_relative_to(tmp_path.resolve())
+    assert moved.resolve().is_relative_to(tmp_path.resolve())
+    original.rename(moved)
+    for root in (copied,moved):
+        restored=d.read_manifest(root/'audit'/'manifest.csv')
+        assert Path(restored[0]['image_path'])==root/'raw'/'p0-image.tif'
+        for frozen in restored:
+            audited,patch=d.audit_pair(frozen)
+            assert audited['image_sha256']==frozen['image_sha256']
+            assert audited['mask_sha256']==frozen['mask_sha256']
+            assert audited['image_content_sha256']==frozen['image_content_sha256']
+            assert frozen['split']==membership[frozen['patch_id']]
+
+
+def test_alignment_error_is_invariant_to_shared_large_world_translation():
+    from affine import Affine
+    d=api()
+    image=Affine(1e-4,0,0,0,-1e-4,0)
+    mask=Affine(1e-4+1e-14,0,0,0,-1e-4-1e-14,0)
+    baseline=d._alignment_error_pixels(image,mask,512,512)
+    translated_image=Affine(image.a,image.b,1e9,image.d,image.e,-1e9)
+    translated_mask=Affine(mask.a,mask.b,1e9,mask.d,mask.e,-1e9)
+    translated=d._alignment_error_pixels(translated_image,translated_mask,512,512)
+    assert baseline > 1e-9
+    assert translated==pytest.approx(baseline,rel=1e-12,abs=0)

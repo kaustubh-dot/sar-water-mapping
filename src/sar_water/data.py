@@ -11,6 +11,7 @@ from dataclasses import dataclass
 import hashlib
 from io import BytesIO
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -138,8 +139,55 @@ def sha256_file(path):
     return digest.hexdigest()
 
 
+def read_manifest(path):
+    """Load frozen rows, resolving portable paths against the manifest folder.
+
+    Older absolute paths remain readable on their original platform. New audit
+    manifests use relative POSIX paths, so copying the dataset tree preserves
+    their meaning on Windows and Linux.
+    """
+    path = Path(path)
+    with path.open(newline="", encoding="utf-8-sig") as stream:
+        rows = list(csv.DictReader(stream))
+    for row in rows:
+        for name in ("image_path", "mask_path"):
+            if not row.get(name):
+                raise ValueError(f"manifest requires {name}")
+            source = Path(row[name])
+            row[name] = str((source if source.is_absolute() else path.parent/source).resolve())
+    return rows
+
+
+def _alignment_error_pixels(image_transform, mask_transform, width, height):
+    """Largest corner displacement in image pixels; no reprojection/resampling.
+
+    A 1e-6-pixel admission bound permits GeoTIFF serialization roundoff while
+    rejecting actual subpixel misalignment. Checking all corners catches scale,
+    rotation and shear errors as well as origin shifts.
+    """
+    linear = np.array([[image_transform.a, image_transform.b],
+                       [image_transform.d, image_transform.e]], dtype=np.float64)
+    differences = []
+    for x, y in ((0, 0), (width, 0), (0, height), (width, height)):
+        # Subtract affine coefficients before evaluation to avoid cancellation
+        # from large world-coordinate origins and deprecated Affine operators.
+        differences.append([(mask_transform.a-image_transform.a)*x +
+                            (mask_transform.b-image_transform.b)*y +
+                            (mask_transform.c-image_transform.c),
+                            (mask_transform.d-image_transform.d)*x +
+                            (mask_transform.e-image_transform.e)*y +
+                            (mask_transform.f-image_transform.f)])
+    try:
+        offsets = np.linalg.solve(linear, np.asarray(differences).T).T
+    except np.linalg.LinAlgError as error:
+        raise ValueError("image/mask georeferencing has singular transform") from error
+    if not np.isfinite(offsets).all():
+        raise ValueError("image/mask georeferencing has nonfinite transform")
+    return float(np.max(np.linalg.norm(offsets, axis=1)))
+
+
 def audit_pair(pair):
-    """Validate actual GeoTIFF arrays, masks, shape and exact georeferencing."""
+    """Validate arrays, masks and georeferencing within 1e-6 image pixels."""
     try:
         import rasterio
     except ImportError as error:
@@ -147,7 +195,8 @@ def audit_pair(pair):
     with rasterio.open(pair["image_path"]) as image, rasterio.open(pair["mask_path"]) as mask:
         if (image.width, image.height) != (mask.width, mask.height) or image.count != 2 or mask.count != 1:
             raise ValueError("image/mask shape or band-count mismatch")
-        if image.crs != mask.crs or image.transform != mask.transform:
+        alignment_error = _alignment_error_pixels(image.transform, mask.transform, image.width, image.height)
+        if image.crs != mask.crs or alignment_error > 1e-6:
             raise ValueError("image/mask georeferencing mismatch")
         patch = adapt_arrays(image.read(), mask.read(1), units=pair["units"],
                              band_order=pair["band_order"], input_mask=image.read_masks() > 0,
@@ -158,7 +207,8 @@ def audit_pair(pair):
         row = dict(pair, image_sha256=sha256_file(pair["image_path"]),
                    mask_sha256=sha256_file(pair["mask_path"]), image_content_sha256=content_hash,
                    height=image.height, width=image.width, crs=str(image.crs or ""),
-                   transform=list(image.transform), bounds=list(image.bounds) if image.crs else "",
+                   transform=list(image.transform), mask_transform=list(mask.transform),
+                   max_alignment_error_pixels=alignment_error, bounds=list(image.bounds) if image.crs else "",
                    image_nodata=image.nodata, mask_nodata=mask.nodata,
                    input_valid_pixels=int(patch.input_valid.sum()),
                    label_valid_pixels=int(patch.label_valid.sum()), score_valid_pixels=int(patch.score_valid.sum()),
@@ -227,7 +277,7 @@ def create_splits(rows, supplied=None, seed=42):
 
 
 def write_frozen_artifacts(rows, membership, destination, policy):
-    """Exclusive creation; never replace a frozen manifest or membership."""
+    """Exclusive creation with image/mask paths relative to the output folder."""
     validate_splits(rows, membership)
     destination = Path(destination)
     destination.mkdir(parents=True, exist_ok=True)
@@ -236,6 +286,12 @@ def write_frozen_artifacts(rows, membership, destination, policy):
         raise FileExistsError("frozen manifest/splits already exist; use a new audit directory")
     split_seed = "not_applicable" if policy == "supplied membership" else 42
     output = [dict(r, split=membership[r["patch_id"]], split_policy=policy, split_seed=split_seed) for r in rows]
+    for row in output:
+        for name in ("image_path", "mask_path"):
+            if row.get(name):
+                # Audit rows carry absolute native paths; serialize portable
+                # separators without changing the immutable source objects.
+                row[name] = Path(os.path.relpath(Path(row[name]).resolve(), destination.resolve())).as_posix()
     fields = sorted({k for r in output for k in r})
     with manifest.open("x", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fields); writer.writeheader()

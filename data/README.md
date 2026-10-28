@@ -1,6 +1,9 @@
 # Local data and the Phase 1 audit
 
-The organizer archive is absent. No real-data manifest or frozen split exists yet.
+The organizer archive is absent. A 100-pair upstream hand-labeled development
+substitute now has frozen official split membership; see the
+[development audit](../reports/development_data_audit.md). It does not replace
+the organizer-data gate.
 Keep raw files, archives and contact-sheet images outside Git. The project's MIT
 license does not change dataset terms. Downloading the entire dataset is unnecessary.
 
@@ -40,6 +43,15 @@ labels). No labels from validation/test are plotted by this option. Manually
 inspect representative development patches; automatic plotting does not complete
 that gate. Use a new output directory for an explicitly documented new data version.
 
+New manifests store `image_path` and `mask_path` as POSIX-style relative paths
+from the manifest directory. Preserve the relative dataset-tree layout when
+copying to Linux, a remote GPU or Colab. `sar_water.data.read_manifest(path)`
+resolves these paths against that directory before passing rows to `audit_pair`.
+The original absolute-path audit remains untouched; the portable development
+version is `data/development-v1/audit-v3-relative/`. Its source/decoded hashes and
+official membership match the original audit. Older absolute manifests remain
+readable on their original platform, but are not portable across machines.
+
 Use `--splits organizer_splits.csv` for a two-column `patch_id,split` CSV
 (`train`, `validation`, `test`). It must cover every patch exactly once and retain
 all three partitions. Alternatively fill the inventory's `split` field. Organizer
@@ -68,9 +80,13 @@ of any partial output and an explicitly chosen new audit directory.
 Cross-partition identical file/decoded-image hashes, source IDs, explicit spatial
 groups and intersecting same-CRS bounding boxes are rejected. Bounding-box overlap
 is conservative for rotated rasters; different CRS pairs require an explicit
-external overlap audit before a no-overlap claim. Matching input/mask CRS and
-affine transforms are required; missing georeferencing is recorded. No reprojection
-or resampling is silently performed. Unknown label codes (including custom nodata)
+external overlap audit before a no-overlap claim. Input/mask CRS must match;
+affine transforms may differ only when the largest displacement at all four
+raster corners is at most `1e-6` image pixels. This admits serialization roundoff
+while rejecting meaningful subpixel shifts, scale, shear or rotation errors.
+Both transforms and the maximum pixel displacement are saved. Missing
+georeferencing is recorded. No reprojection or resampling is performed.
+Unknown label codes (including custom nodata)
 are rejected until a separately documented adapter is approved.
 
 SAR metadata/finite validity and label validity are independent. Both input bands
