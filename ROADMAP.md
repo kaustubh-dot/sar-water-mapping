@@ -2,7 +2,9 @@
 
 **Created:** 28 October 2026. **Goal:** finish a defensible hackathon submission, with a complete Colab run under 30 minutes.
 
-**Progress:** Phase 0 complete; final method audit finished on 28 October 2026. The [implementation lock](docs/IMPLEMENTATION_LOCK.md) controls v1 method choices and exact model details. Phase 1 is next. No data-processing or training phase has been executed.
+**Progress:** Phase 0 complete; final method audit finished on 28 October 2026. The [implementation lock](docs/IMPLEMENTATION_LOCK.md) controls v1 method choices and exact model details. Phase 1 audit tooling and Phase 3 denoisers are implemented and reviewed, while their actual-data gates remain open. Phase 2 metrics and synthetic baseline are complete and reviewed. Phase 4 segmentation/selection tooling is fixture-tested and reviewed. All four implementation reviews used GPT-6.1 Sol at xhigh; findings are resolved. No real-data benchmark, training, or fresh Colab run has occurred.
+
+**Fresh progress audit (28 October 2026):** 50 tests passed; the synthetic integration rerun produced 98 candidates, four primary rows and four cleanup-ablation rows. See [verified status and the remaining execution order](reports/progress_audit.md). Phase 1-4 code is ready for actual-data execution; their remaining data-dependent gates are listed there. Source changes are currently uncommitted locally.
 
 **Architecture:** a small Python package does data loading, denoising, segmentation, and scoring; one notebook orchestrates it and presents results. Synthetic denoising evaluation is separate from real SAR water mapping. The [README](README.md) defines scope; the [evaluation protocol](docs/EVALUATION_PROTOCOL.md) fixes scientific rules; the [research review](docs/RESEARCH_REVIEW.md) records evidence behind method selection.
 
@@ -54,39 +56,66 @@ Phases 1-7 total approximately **7 hours engineering plus up to 1 hour remote tr
 - [ ] Inspect VV, VH, histograms, and masks for five representative development patches.
 - [ ] Keep independent manual masks distinct from Otsu/other weak labels. If only weak masks exist, label all resulting IoU/F1 as weak-label agreement and record the missing independent evaluation.
 - [ ] Use organizer splits if supplied; otherwise use the split hierarchy in the evaluation protocol. Audit duplicates and overlaps in either case.
-- [ ] Verify dB/power conversion, invalid-pixel handling, and no cross-split duplicates with small fixtures.
+- [x] Verify dB/power conversion, invalid-pixel handling, and no cross-split duplicates with small fixtures.
 
 **Gate:** one patch round-trips through the loader without swapping VV/VH or treating valid `0 dB` as nodata. The split manifest is saved and frozen. Missing independent masks blocks real-data ground-truth claims, but not filter development or synthetic evaluation.
+
+**Tooling evidence (28 October 2026):** the Phase 1 adapter, inventory-driven
+GeoTIFF audit CLI, provenance/hash manifest writer and guarded split creation are
+implemented. Fifteen scientific fixture tests pass, including GeoTIFF metadata,
+valid zero dB, independent input/label masks, deterministic filling and split
+conflict checks. See [implementation evidence](reports/phase1_implementation.md)
+and [missing-input audit](reports/data_audit.md). The [Sol xhigh review](reports/phase1_review.md)
+is resolved, including split-provenance and plotting-retry fixes. These fixtures are not the
+organizer subset: all actual-data checkboxes and the frozen real-data gate remain
+open. Explicit separated spatial groups are required when event/scene grouping
+cannot establish usable partitions; no automatic spatial-block claim is made.
 
 ## Phase 2: Establish trustworthy metrics
 
 **Create:** `src/sar_water/metrics.py`, `src/sar_water/synthetic.py`, `tests/test_metrics.py`, `tests/test_synthetic.py`, `configs/experiment.json`.
 
-- [ ] Verify IoU/F1 against a hand-computed confusion matrix, including invalid and empty-water cases.
-- [ ] Verify ENL on known constant and varying positive-intensity arrays; keep undefined results explicit.
-- [ ] Generate deterministic 256 x 256 intensity phantoms with known boundaries, homogeneous areas, and texture; split phantom identities before corruption.
-- [ ] Corrupt the reference with mean-one Gamma speckle at `L = 1` and `L = 4`, using three fixed realizations per image and identical corruption across methods.
-- [ ] Verify PSNR against known MSE, explicit data range, and identity output. Make the raw/noisy PSNR a required baseline.
+- [x] Verify IoU/F1 against a hand-computed confusion matrix, including invalid and empty-water cases.
+- [x] Verify ENL on known constant and varying positive-intensity arrays; keep undefined results explicit.
+- [x] Generate deterministic 256 x 256 intensity phantoms with known boundaries, homogeneous areas, and texture; split phantom identities before corruption.
+- [x] Corrupt the reference with mean-one Gamma speckle at `L = 1` and `L = 4`, using three fixed realizations per image and identical corruption across methods.
+- [x] Verify PSNR against known MSE, explicit data range, and identity output. Make the raw/noisy PSNR a required baseline.
 
 **Gate:** metric tests pass. Synthetic references are explicitly labeled simulated backscatter, and no real noisy image is called clean ground truth.
+
+**Synthetic development evidence (28 October 2026):** all 27 tests pass,
+including 12 Phase 2 metric/synthetic cases. The raw/noisy baseline exports 72
+records and a frozen 6/3/3 phantom identity split. See
+[Phase 2 implementation evidence](reports/phase2_implementation.md).
+The [Sol xhigh review](reports/phase2_review.md) passed with no scientific defects.
+This explicitly authorized synthetic development does not close the missing
+organizer-data Phase 1 gate or freeze real-data calibration. Only the shared
+corruption generator and raw baseline ran in Phase 2; separate validation-only
+denoiser diagnostics are recorded under Phase 3. Final synthetic test comparison remains pending.
 
 ## Phase 3: Implement the bounded denoiser set
 
 **Create:** `src/sar_water/filters.py`, `tests/test_filters.py`.
 
-- [ ] Add identity/raw, Median, and the exact multiplicative local-LMMSE Lee variant in the implementation lock, operating on linear power.
-- [ ] Add log-domain bilateral filtering as the dependency-light processing comparator. Document that log/exponentiation can bias intensity; measure mean change rather than claim an unbiased estimator.
+- [x] Add identity/raw, Median, and the exact multiplicative local-LMMSE Lee variant in the implementation lock, operating on linear power.
+- [x] Add log-domain bilateral filtering as the dependency-light processing comparator. Document that log/exponentiation can bias intensity; measure mean change rather than claim an unbiased estimator.
 - [ ] Give scalar MIDAL + BM3D at most 15 minutes of dependency/setup investigation within this phase. Use the scalar author API, frozen/known looks and six ADMM iterations; profile five development patches on both bands. Admit only if estimated cost of all enabled invocations, with 50% timing margin, fits three minutes and the whole notebook budget. If compatibility, terms, correctness or runtime fails, retain bilateral and close the branch. If admitted, replace bilateral before full validation rather than expanding the four-family comparison.
-- [ ] Use only this validation grid: Median windows `{3, 5}`; Lee windows `{5, 7}`; log-bilateral window `5`, spatial sigma `2`, dB color sigma `{1.5, 3.0}`.
+- [x] Use only this validation grid: Median windows `{3, 5}`; Lee windows `{5, 7}`; log-bilateral window `5`, spatial sigma `2`, dB color sigma `{1.5, 3.0}`.
 - [ ] Estimate Lee's effective looks from training-only homogeneous regions and freeze it; do not assume GRD is single-look. Use known `L` for synthetic data.
-- [ ] Filter bands independently, preserve shape, use reflection at image borders, and restore input invalid pixels after documented nearest-valid filling.
+- [x] Filter bands independently, preserve shape, use reflection at image borders, and restore input invalid pixels after documented nearest-valid filling.
 - [ ] Check constant-image behavior, invalid holes, tiny arrays, and finite positive outputs. Profile five development patches.
+
+**Synthetic development evidence (28 October 2026):** all 41 tests pass, including 14 focused filter cases. Exact filtering and a training-only recorded-ROI looks estimator are implemented. Five synthetic two-band 512 x 512 development arrays were profiled, and all bounded settings were checked on synthetic validation identities only (126 records). See [Phase 3 implementation evidence](reports/phase3_implementation.md). No real looks/settings are frozen, no final test comparison ran, and the MIDAL admission pilot is unrun/not admitted; bilateral is retained. The actual-data pilot and whole-Colab runtime gate remain open.
+
+The [Sol xhigh review](reports/phase3_review.md) passed with no findings.
 
 **Gate:** all four methods generate comparable outputs and timing. Extrapolated mandatory computation fits the Colab budget. If bilateral is too slow, reduce its one fixed window and record that choice before final evaluation.
 
 ## Phase 4: Freeze water segmentation
 
 **Create:** `src/sar_water/segment.py`, `src/sar_water/benchmark.py`, `tests/test_segment.py`, `tests/test_benchmark.py`.
+
+- [x] Implement and fixture-test valid-dB Otsu/fixed thresholding, bounded validation-only selection, disk-to-mask scoring, and the separate cleanup ablation.
 
 - [ ] Run per-patch Otsu on valid dB values, separately for VV and VH, for every denoiser configuration. This is the common filter comparison.
 - [ ] Also compare a validation-tuned fixed dB threshold using the bounded grid in the protocol. Keep this labeled as supervised calibration.
@@ -95,6 +124,20 @@ Phases 1-7 total approximately **7 hours engineering plus up to 1 hour remote tr
 - [ ] Freeze denoiser settings, channel, threshold strategy, and cleanup in `configs/experiment.json`. Record why Otsu fails on unimodal/all-land patches.
 
 **Gate:** a real patch runs from disk to water mask and metrics with one function/command. No test labels have been used to pick parameters.
+
+**Synthetic development evidence (28 October 2026):** all 50 tests pass,
+including nine focused Phase 4 cases. The exact bounded search ran on three
+synthetic validation identities, producing 98 candidate rows, four primary rows
+with cleanup disabled, and four separate cleanup-ablation rows. Explicit fixture
+fallback thresholds and known synthetic looks are recorded; no real choices or
+`configs/experiment.json` calibration fields were frozen. See
+[Phase 4 implementation evidence](reports/phase4_implementation.md). The actual
+data calibration checkboxes and real-patch exit gate above remain open.
+
+The [Sol xhigh review](reports/phase4_review.md) passed with no findings. The
+combined fixture suite passes 50 tests. Continue with actual-data Phase 1 audit,
+training-only ROI estimation and Phase 4 calibration when the subset arrives;
+Phase 5 training depends on those frozen inputs. Phases 5–7 remain unrun.
 
 ## Phase 5: Use the GPU for one controlled training comparison
 
@@ -140,4 +183,4 @@ Phases 1-7 total approximately **7 hours engineering plus up to 1 hour remote tr
 
 A new method may enter only if it answers a documented failure, has accessible compatible inputs/code/weights, fits remaining time, and replaces an existing optional item. Record the reason and affected phase here. Once final test results are visible, changes require a new versioned experiment and cannot be described as an untouched holdout evaluation.
 
-**Next action:** Phase 1, inspect the actual kickoff subset. Until it arrives, use the upstream sample only for loader and plotting smoke checks, and synthetic fixtures for metric/filter development.
+**Next action:** preserve the reviewed source checkpoint, then complete the real-data audit and classical validation freeze. Use the kickoff subset if available; otherwise prepare a clearly identified upstream hand-labeled development subset with recorded provenance and membership. The organizer-specific gate remains open until its data are audited. GPU setup and U-Net fixture implementation may proceed while data access is pending; real training depends on the frozen real inputs. Follow the [remaining-work roadmap](reports/progress_audit.md).

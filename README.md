@@ -4,7 +4,13 @@
 
 Reproducible speckle denoising and surface-water segmentation on a 100-patch Sentinel-1 VV/VH subset of Sen1Floods11. The target is an end-to-end Google Colab run in **under 30 minutes**.
 
-**Status:** design locked for v1 implementation after the final research audit. No filters, models, notebook, benchmark results, or runtime claims have been implemented or validated yet. The organizers' 100-patch subset has not been supplied in this workspace.
+**Status:** data-audit tools, scientific metrics, synthetic references, the four locked denoisers, and segmentation/validation tools are implemented. Phase 1–4 implementation reviews by GPT-6.1 Sol at xhigh are complete and findings are resolved. The actual-data gates remain open because the organizers' 100-patch subset is unavailable. No real-data benchmark, trained model, or fresh Colab runtime has been measured. See the [data audit](reports/data_audit.md) and the phase evidence in [the roadmap](ROADMAP.md).
+
+## Local development
+
+Use Python 3.11 or newer in a project environment, then install `pip install -e ".[geo,audit,test]"`. Run `python -m pytest -q --basetemp=outputs/pytest`. The [data instructions](data/README.md) describe the explicit inventory and `sar-water-audit` command. Fixtures exercise loader and split behavior; they do not replace the organizer-data audit or establish geographic generalization.
+
+Reproduce the simulated raw/noisy baseline with `python -m sar_water.synthetic --output outputs/phase2_synthetic`. Run `python scripts/phase3_synthetic_check.py` for filter diagnostics on training/validation phantoms, and `python scripts/phase4_fixture.py` for the segmentation-selection fixture. These are local synthetic development runs, not the final held-out benchmark or a timed Colab run. Real-data choices in `configs/experiment.json` remain unset until validation on the audited subset.
 
 ## Start here
 
