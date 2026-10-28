@@ -1,6 +1,6 @@
 # Evaluation Protocol
 
-Version 1, 28 October 2026. This is a planned protocol; no experiment has been run.
+Version 1.1, final audit 28 October 2026. This is a planned protocol; no experiment has been run. The [implementation lock](IMPLEMENTATION_LOCK.md) fixes architecture and training details.
 
 ## 1. Data contract and target
 
@@ -30,21 +30,23 @@ Use float32 arrays. Preserve a SAR validity mask derived from raster metadata an
 
 For filtering, fill invalid SAR locations from the nearest valid input pixel using a deterministic distance transform, filter, then restore their invalid mask. Reject all-invalid patches. Record boundary handling and do not interpret restored invalid pixels as land. This simple imputation rule is a baseline limitation near large missing regions.
 
+Before neural training/inference, apply the same SAR-only nearest-valid fill to raw and restored filtered inputs within each source patch, before standardization and crop extraction. Require finite network inputs and keep the original SAR mask for loss/scoring. Never use label validity for input filling. Masking the loss alone cannot prevent convolutional propagation of NaNs.
+
 ## 4. Controlled comparisons
 
-Primary real-data denoisers: raw, Median, multiplicative Lee, and log-domain bilateral. Scalar MIDAL + BM3D can replace bilateral if its bounded feasibility pilot passes, keeping four primary families. The optional UDL4FL neural benchmark is a segmentation model in a separate downstream table, not a denoiser.
+Primary real-data denoisers: raw, Median, multiplicative Lee, and log-domain bilateral. Scalar MIDAL + BM3D can replace bilateral if its bounded feasibility pilot passes, keeping four primary families. The primary learned experiment is compact VV/VH U-Net segmentation on raw versus selected filtered input, in a separate downstream table. UDL4FL is reserve only and excluded from the locked deliverable.
 
-Apply the same channel, threshold algorithm, validity mask, and cleanup policy to each denoiser in the primary filter-isolation table. Select each filter's small grid on validation. Select the common segmentation strategy by its mean validation water IoU across the core denoiser families; break ties by runtime. Do not tune this selection on test.
+Apply the same channel, threshold rule and validity mask to each denoiser in the primary filter-isolation table, with cleanup disabled. For each common channel/rule candidate, select each filter's small-grid setting by pooled validation water IoU. Select the common strategy by the mean of the four pooled validation IoUs, breaking exact ties by lower measured validation compute time. When a fixed threshold is selected, the same numeric threshold applies across denoisers. Do not tune on test.
 
 Segmentation candidates are per-patch Otsu on dB and a fixed dB threshold calibrated on validation. The fixed grid is VV `{-20,-18,-16,-14,-12,-10}` and VH `{-28,-26,-24,-22,-20,-18}`. Water means intensity below threshold. The grids are initial engineering choices, not universal physical water thresholds. A change prompted by the data audit must be recorded before final configuration freeze.
 
 Otsu computes a threshold from each input image at inference without labels; this is not test-label tuning. It can split a unimodal all-land image into artificial classes. For a constant patch, use the train/validation-calibrated fixed threshold and record the fallback. For all-invalid patches, return invalid without computing a threshold.
 
-Core cleanup ablation: none versus deleting 8-connected water components with fewer than 16 pixels, treating invalid pixels as barriers. No hole filling. Preserve both outputs so removal of narrow or tiny real water bodies remains visible.
+Separate cleanup ablation: none versus deleting 8-connected water components with fewer than 16 pixels, treating invalid pixels as barriers, for raw and the validation-selected filtered pipeline only. No hole filling. Preserve both outputs so removal of narrow or tiny real water bodies remains visible. The primary four-row denoiser table always has cleanup disabled.
 
 Also save the raw baseline with identical cleanup to distinguish denoiser gains from morphology gains. More elaborate local thresholding, ensembles, or ancillary terrain masks require a documented scope change.
 
-For UDL4FL, use frozen weights and released normalization, resolve/document the input-order inconsistency described in the research review, and verify output class mapping. Use the released decision rule unless a declared validation-only probability grid `{0.3,0.5,0.7}` is needed. Hold that choice fixed across raw and filtered inputs. Never let a model's invalid-class prediction remove a valid ground-truth pixel from scoring; retain it as non-water for binary scoring and report its count.
+For the compact U-Net, use the same raw-training-set normalization, architecture, initialization and crop/augmentation sequences across separately trained raw/filtered conditions. Fix sigmoid water threshold at `>0.5`; no neural threshold search. Select each best checkpoint by pooled validation water IoU, retaining the earlier checkpoint on a tie. Input and label validity control scoring; predictions never change the scored-pixel set.
 
 ## 5. ENL on real SAR
 
@@ -72,9 +74,9 @@ Report the raw/noisy baseline and mean PSNR per `L`, with per-phantom/per-seed r
 
 Accumulate `TP`, `FP`, `FN`, and `TN` over valid pixels. Water IoU is `TP/(TP+FP+FN)`; water F1 is `2TP/(2TP+FP+FN)`; precision is `TP/(TP+FP)`; recall is `TP/(TP+FN)`.
 
-Primary headline: pooled water IoU and F1 over the held-out subset. Also report per-patch values, macro means over defined cases, event/group summaries where available, and empty-water false positives. Do not substitute land-plus-water mean IoU for water IoU without relabeling it.
+Primary headline: pooled water IoU and F1 over the held-out subset. Also report per-patch values, macro water means over a fixed ground-truth-water-positive patch set, event/group summaries where available, and dry-patch false positives. The macro patch set must be identical across methods. Do not substitute land-plus-water mean IoU for water IoU without relabeling it.
 
-If ground truth and prediction both contain no water, per-patch water IoU/F1 are undefined: store null, exclude from the defined-case macro mean, and report the count. If ground truth has no water but predictions contain water, IoU/F1 are zero. Precision/recall denominators of zero are null; always retain confusion counts so aggregates can be recomputed.
+If ground truth and prediction both contain no water, per-patch water IoU/F1 are undefined: store null and report the count. If ground truth has no water but predictions contain water, the per-patch IoU/F1 are zero. Exclude all ground-truth-water-empty patches from the secondary macro water mean for every method, regardless of prediction, and report their false-positive pixels, false-positive rate over valid dry pixels, and fraction of dry patches with any false positives separately. Their confusion counts still contribute to primary pooled scores. Precision/recall denominators of zero are null; retain all confusion counts.
 
 No valid scored pixels means no score, not perfect performance. Pixel accuracy is optional and never the primary result because land can dominate. With this small subset, report improvements as measured differences rather than declaring statistical superiority from one seed.
 
@@ -85,6 +87,8 @@ Measure with a monotonic clock. Record runtime type, CPU/GPU, memory, dependency
 The final fresh Colab Run All must finish in **under 30 minutes**, including setup and documented data access. Include validation, synthetic evaluation, neural training if enabled, final scoring, and exports. No hidden precomputed predictions. Separately report any offline training represented by pretrained weights.
 
 Remote GPU training is allowed for development. Record its independent compute time, data/split identity, seeds and checkpoint provenance. A notebook that loads these checkpoints is explicitly `checkpoint-evaluation`; it must not be described as full training reproduction. A `full` Colab profile includes training inside its measured limit. If the judging rule requires full training, validate that profile or rely on the classical core; a fast inference-only run cannot substitute for it.
+
+If Colab uses a shorter training schedule than the remote run, report it as a separate budgeted experiment with its own results. It does not reproduce the longer run's weights or accuracy merely because the architecture matches.
 
 Save real and synthetic tables separately, plus per-patch metrics, finite ENL ROI values/statuses, mean-intensity changes, raw/filtered ratio examples, and before/after visual comparisons using shared display limits. Label each neural result as denoising or segmentation; segmentation-only models receive `not applicable` for ENL/PSNR.
 

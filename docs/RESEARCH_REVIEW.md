@@ -2,6 +2,8 @@
 
 **Search cutoff:** 28 October 2026. **Task:** denoise 100 Sentinel-1 VV/VH patches, segment surface water, and produce defensible ENL, PSNR, and IoU/F1 comparisons.
 
+**Final audit:** use [Implementation Lock v1](IMPLEMENTATION_LOCK.md) for execution. The compact trained U-Net is the primary learned model; UDL4FL and foundation-model adaptation are excluded from promised deliverables. The wider methods below remain research context.
+
 This is a targeted review of **30 research items**, with primary paper, author code, package, and model-card checks. It covers foundational filters, nonlocal methods, deep despeckling, current diffusion/self-supervision, and flood segmentation/foundation models. It is not an exhaustive review of every SAR paper. Full text and source were inspected where accessible; some items were assessed from publisher abstracts and author releases. Availability findings describe what was verifiable at the cutoff, not a guarantee that missing artifacts do not exist elsewhere. No models have been benchmarked by this project yet.
 
 ## Recommended direction
@@ -12,10 +14,10 @@ The strongest project is a controlled comparison whose input assumptions are cor
 | --- | --- | --- |
 | Required controls | Raw SAR, Median, multiplicative Lee | Fast, interpretable controls demanded by the problem; retain them even if a learned model wins. |
 | Guaranteed processing comparator | Log-domain bilateral | Small dependency burden and bounded compute. A practical fallback, not a claim of research novelty or statistical optimality. |
-| Stronger non-neural candidate | Scalar MIDAL + BM3D from MuLoG | Released likelihood-aware plug-and-play approach; pilot installation and iterative runtime. Replace bilateral if admitted. |
-| First pretrained segmentation reference | UDL4FL `sm_unet_s1`, RSE 2025 | Released SAR GRD weights and distinct declared supervised training datasets. Resolve input-order inconsistency and measure runtime. |
-| GPU training baseline | Compact two-channel U-Net | Learn the actual water task with controlled raw-versus-filtered training. A baseline for testing the value of preprocessing, not an assertion that this is the newest architecture. |
-| First foundation-model candidate for a later bounded upgrade | TerraMind Tiny, radar-only adaptation | Actual S1GRD support and released weights; still needs a segmentation head and training. Do not inherit multimodal scores as SAR-only evidence. |
+| Stronger published non-neural comparator candidate | Scalar MIDAL + BM3D from MuLoG | Verified scalar API, six default ADMM iterations. Replace bilateral only after the bounded compatibility/runtime pilot; quality improvement remains unproven. |
+| Reserve pretrained reference; outside promised v1 | UDL4FL `sm_unet_s1`, RSE 2025 | Released SAR weights and distinct declared supervised training sources, but unresolved input-order metadata and adapter differences make it unnecessary risk for the main experiment. |
+| Primary GPU training model | Compact two-channel U-Net | Controlled raw-versus-filtered training on the actual task. Exact architecture and sampling are fixed in the implementation lock; no architecture search. |
+| Future foundation-model work; outside v1 | TerraMind Tiny, radar-only adaptation | Actual S1GRD support and released weights; still needs a head and training. Do not inherit multimodal scores as SAR-only evidence. |
 
 The remote development GPU was verified as an RTX 4000 Ada with approximately 20 GB VRAM. This makes bounded training feasible to investigate; it does not establish convergence, generalization, or a Colab training runtime. Credentials and connection details do not belong in this repository.
 
@@ -65,7 +67,7 @@ These checks distinguish theoretical relevance from operational readiness. A GPU
 
 | ID | Primary reference/release | Actual modality and evidence | Decision |
 | --- | --- | --- | --- |
-| R20 | Portalés-Julià et al., **Understanding flood detection models across Sentinel-1 and Sentinel-2 modalities and benchmark datasets**, RSE 2025. [Paper](https://doi.org/10.1016/j.rse.2025.114882), [code](https://github.com/kipoju/udl4fl), [weights](https://huggingface.co/isp-uv-es/udl4fl_models) | Releases a SAR-only GRD checkpoint. Declared supervised training uses S1S2Water/Kuro Siwo; Sen1Floods11 is a separate evaluation dataset. | Preferred frozen neural reference. Dataset-name separation does not prove geographic non-overlap. Its paper protocol differs from our pooled 100-patch evaluation, so measure our own scores. |
+| R20 | Portalés-Julià et al., **Understanding flood detection models across Sentinel-1 and Sentinel-2 modalities and benchmark datasets**, RSE 2025. [Paper](https://doi.org/10.1016/j.rse.2025.114882), [code](https://github.com/kipoju/udl4fl), [weights](https://huggingface.co/isp-uv-es/udl4fl_models) | Releases a SAR-only GRD checkpoint. Declared supervised training uses S1S2Water/Kuro Siwo; Sen1Floods11 is a separate evaluation dataset. | Reserve only after the final adapter audit. Dataset-name separation does not prove geographic non-overlap. Its protocol also differs from our pooled subset evaluation. |
 | R21 | Tanaka and Tsutsumida, **Sensor-Adaptive Flood Mapping with Pre-trained Multi-Modal Transformers**, September 2025 preprint. [Paper](https://arxiv.org/abs/2509.23035), [Presto release](https://github.com/nasaharvest/presto) | Presto supports SAR and missing modalities, with a small pixel/time-series backbone. The flood study uses a curated subset and a distinct geographic test. | Small parameter count does not establish cheap full-image training: the paper reports approximately 23.5 hours on RTX 4090 for its recipe. Not the first adaptation to reproduce. |
 | R22 | Fuller et al., **CROMA**, NeurIPS 2023. [Paper](https://papers.neurips.cc/paper_files/paper/2023/hash/11822e84689e631615199db3b75cd0e4-Abstract-Conference.html), [code](https://github.com/antofuller/CROMA) | Genuine two-channel SAR encoder with public pretrained weights, including radar-only use. | Valid SAR foundation-model family. Encoder embeddings are not a water mask; a trained head, normalization and pretraining-overlap audit remain necessary. |
 | R23 | Jakubik et al., **TerraMind**, ICCV 2025. [Paper](https://arxiv.org/abs/2504.11171), [code](https://github.com/IBM/terramind), [Tiny weights](https://huggingface.co/ibm-esa-geospatial/TerraMind-1.0-tiny) | Actual two-channel S1GRD support and released Tiny/Small variants. The [author flood configuration](https://raw.githubusercontent.com/IBM/terramind/main/configs/terramind_v1_tiny_sen1floods11.yaml) uses S1+S2 and long training. | Strongest foundation-model candidate to explore after the compact baseline. Use only S1GRD here; do not report its multimodal example as a SAR-only result. |
@@ -79,7 +81,7 @@ These checks distinguish theoretical relevance from operational readiness. A GPU
 
 The [released checkpoint configuration](https://huggingface.co/isp-uv-es/udl4fl_models/blob/main/sm_unet_s1.json) specifies **MobileNetV2**, and the [model source](https://raw.githubusercontent.com/kipoju/udl4fl/main/udl4fl/models.py) uses **U-Net++**, despite a wrapper called `smp_Unet`. Do not describe this checkpoint as EfficientNet or plain U-Net.
 
-The checkpoint has two output classes, land/water, while the generic wrapper contains stale three-class documentation. Its [prediction source](https://raw.githubusercontent.com/kipoju/udl4fl/main/udl4fl/worldfloods_model.py) applies stored normalization and returns class predictions plus softmax probabilities. Use the checkpoint's actual class order and avoid double normalization; its training hooks are stubs, so the minimal release is an inference package rather than a complete training recipe.
+The checkpoint has two output classes, land/water, while the generic wrapper contains stale three-class documentation; this checkpoint has no invalid output class. Its [prediction source](https://raw.githubusercontent.com/kipoju/udl4fl/main/udl4fl/worldfloods_model.py) applies stored normalization in `predict()` when `normalized_data=False` and mutates the input dictionary. Reusing it can therefore normalize twice. Training hooks are stubs, so the minimal release is an inference package rather than a complete training recipe.
 
 There is an input-order inconsistency: the stored configuration says `vh/vv`, while the [author notebook](https://raw.githubusercontent.com/kipoju/udl4fl/main/notebooks/run_in_gee_image.ipynb) exports `[VV,VH]`. Trace the adapter carefully; if unresolved, compare exactly those two interpretations on validation only, freeze the mapping, and disclose the choice. The notebook uses GRD dB. Convert classical-filter power back to dB before this branch.
 
@@ -101,12 +103,11 @@ Do not compare numbers across papers as a leaderboard unless input modality, lab
 ## Bounded GPU experiment
 
 1. Finish the data/provenance audit and classical result first.
-2. Run the frozen UDL4FL reference if its adapter gate passes.
-3. Train one compact VV/VH U-Net on raw input and on the chosen classical-filter output using the same architecture, splits, augmentation and optimization. Start with one seed; add two fixed seeds only if the first controlled pair completes within the remote compute budget.
-4. Use at most 20 epochs, validation early stopping, and a one-hour wall-time cap for the compact training comparison. Log learning curves, best-validation checkpoint, seed, environment and actual training time. No synthetic clean-target claims are needed for supervised segmentation.
-5. Consider TerraMind Tiny only after those results exist, and only as a replacement for further optional model exploration. Start with a frozen S1GRD encoder and a small segmentation decoder; do not reproduce large-scale pretraining. Its separate admission gate must establish code compatibility, validation benefit, input normalization, and checkpoint provenance.
+2. Train the locked compact VV/VH U-Net separately on raw and selected filtered inputs. Match initialization, crop/augmentation sequences, split and maximum update budget; use the same raw-training-set normalization for both conditions.
+3. Define each epoch as four 256-square crops per source using the implementation lock's sampling rule. Use at most 20 remote epochs per condition, validation patience five and a one-hour cap for the paired comparison. Log actual updates, learning curves, checkpoints, seeds, environment and time.
+4. Start with paired seed 42; seeds 43 and 44 may be added only inside the same cap. No synthetic clean-target claims are needed for this supervised segmentation experiment.
 
-The initial experiment has four denoiser families and at most two neural architectures: one pretrained reference and one compact trained model. A foundation-model replacement requires an explicit recorded decision, not an expanding model zoo.
+The locked experiment has four denoiser families and one neural architecture, applied to two separately trained input conditions. UDL4FL and foundation-model adaptation are future work, excluded from promised v1 implementation. No new model search is needed before Phase 1.
 
 For Colab, report two different profiles if remote training is used: **checkpoint-based reproduction** (download frozen checkpoints and run evaluation) and **full training reproduction** (includes training). Passing the former does not establish the latter fits 30 minutes. If the judges require full training inside the limit, the compact training schedule must also be timed from a fresh Colab session or the classical core remains the compliant submission.
 
@@ -115,7 +116,7 @@ For Colab, report two different profiles if remote training is used: **checkpoin
 - The organizers' archive, exact patch size, independent masks and split metadata have not yet been inspected.
 - The remote hardware and Python access are verified; the system Python has no PyTorch installed. Create a dedicated environment and verify CUDA execution before training. The observed free resources were approximately 18 GB GPU memory and 440 GB disk; availability can change.
 - MuLoG and UDL4FL have not been installed or run in our environment; their complete runtime is unknown.
-- UDL4FL's input-order ambiguity and dataset/event overlap require recorded handling.
+- UDL4FL's input-order ambiguity and dataset/event overlap remain unresolved, but are no longer execution blockers because that model is outside the locked deliverable.
 - No single reviewed source establishes the newest universally best method for this exact subset. The proposed controlled validation will determine our method selection.
 
 Implementation order and acceptance gates are in the [roadmap](../ROADMAP.md).

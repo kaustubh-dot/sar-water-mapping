@@ -4,11 +4,12 @@
 
 Reproducible speckle denoising and surface-water segmentation on a 100-patch Sentinel-1 VV/VH subset of Sen1Floods11. The target is an end-to-end Google Colab run in **under 30 minutes**.
 
-**Status:** research and planning. No filters, models, notebook, benchmark results, or runtime claims have been implemented or validated yet. The organizers' 100-patch subset has not been supplied in this workspace.
+**Status:** design locked for v1 implementation after the final research audit. No filters, models, notebook, benchmark results, or runtime claims have been implemented or validated yet. The organizers' 100-patch subset has not been supplied in this workspace.
 
 ## Start here
 
 - [Phasewise roadmap](ROADMAP.md): sequence, timeboxes, deliverables, and completion gates.
+- [Implementation lock](docs/IMPLEMENTATION_LOCK.md): final method choices, exact U-Net, bounded grids, and exclusions for v1.
 - [Research review](docs/RESEARCH_REVIEW.md): primary papers, recent methods, reproducibility checks, and method selection.
 - [Evaluation protocol](docs/EVALUATION_PROTOCOL.md): splits, units, synthetic PSNR, real-data ENL, and water IoU/F1.
 
@@ -16,9 +17,9 @@ Reproducible speckle denoising and surface-water segmentation on a 100-patch Sen
 
 The central question is: **Does reducing speckle improve water segmentation enough to justify its runtime and loss of detail?**
 
-The guaranteed core compares unfiltered input, Median, Lee, and a lightweight log-domain bilateral pipeline. Every denoiser uses the same thresholding and scoring protocol. Scalar MIDAL + BM3D from the MuLoG package can replace bilateral if a short compatibility/runtime pilot passes. The preferred pretrained neural reference is the released 2025 UDL4FL Sentinel-1 segmentation checkpoint, subject to input-order, dependency, and runtime checks.
+The locked core compares unfiltered input, Median, multiplicative Lee, and a lightweight log-domain bilateral pipeline. Every denoiser uses the same validation-selected channel and threshold policy, with cleanup disabled in the primary comparison. Scalar MIDAL + BM3D is the sole bounded substitution for bilateral, subject to a compatibility and whole-workflow runtime gate.
 
-A remote RTX 4000 Ada GPU with approximately 20 GB VRAM is available for development. The bounded training experiment is a compact VV/VH U-Net on raw versus filtered inputs. Keep at most two neural architectures: this trained model and the pretrained reference. TerraMind Tiny is a later replacement candidate, not an automatic third model. The [research review](docs/RESEARCH_REVIEW.md) records the evidence and tradeoffs.
+A remote RTX 4000 Ada GPU with approximately 20 GB VRAM is available for development. The primary learned experiment is one compact VV/VH U-Net architecture, trained separately on raw and selected filtered inputs. UDL4FL is reserve literature, excluded from promised deliverables because of unresolved input-order metadata. Foundation-model adaptation is outside v1. The [implementation lock](docs/IMPLEMENTATION_LOCK.md) fixes the details; the [research review](docs/RESEARCH_REVIEW.md) records the wider evidence.
 
 The research review explains why a newer publication or a larger model is insufficient evidence of better performance on this particular dataset.
 
