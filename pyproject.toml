@@ -13,6 +13,7 @@ dependencies = ["numpy>=1.26", "scipy>=1.11"]
 geo = ["rasterio>=1.3"]
 audit = ["matplotlib>=3.8"]
 test = ["pytest>=8"]
+neural = ["torch>=2.2"]
 
 [project.scripts]
 sar-water-audit = "sar_water.data:main"
