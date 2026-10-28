@@ -1,0 +1,48 @@
+# Python and notebook state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+credentials*.json
+service-account*.json
+
+# Dataset files; keep lightweight provenance/manifests
+data/*
+!data/README.md
+!data/manifest.csv
+!data/splits.csv
+*.tif
+*.tiff
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.zip
+*.tar
+*.gz
+
+# Checkpoints and generated caches
+checkpoints/
+weights/
+outputs/
+cache/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
