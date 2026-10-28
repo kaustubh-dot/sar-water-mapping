@@ -2,6 +2,8 @@
 
 **Created:** 28 October 2026. **Goal:** finish a defensible hackathon submission, with a complete Colab run under 30 minutes.
 
+**Progress:** Phase 0 complete. Public repository and initial main branch verified; Phase 1 is next. No data-processing or training phase has been executed.
+
 **Architecture:** a small Python package does data loading, denoising, segmentation, and scoring; one notebook orchestrates it and presents results. Synthetic denoising evaluation is separate from real SAR water mapping. The [README](README.md) defines scope; the [evaluation protocol](docs/EVALUATION_PROTOCOL.md) fixes scientific rules; the [research review](docs/RESEARCH_REVIEW.md) records evidence behind method selection.
 
 **Execution:** work sequentially through the checkboxes. Open one phase at a time. Each phase ends with an inspectable artifact and a verification gate. Development timeboxes below are planning estimates, separate from the measured Colab runtime requirement.
@@ -38,11 +40,11 @@ Phases 1-7 total approximately **7 hours engineering plus up to 1 hour remote tr
 
 **Files:** `README.md`, `ROADMAP.md`, `docs/RESEARCH_REVIEW.md`, `docs/EVALUATION_PROTOCOL.md`, `AGENTS.md`, `.gitignore`, `LICENSE`.
 
-- [ ] Publish the public repository and verify its visibility and initial commit.
-- [ ] Finish the cited review, with publication status and code/weight availability distinguished.
-- [ ] Record the candidate choices and fallback before implementing experiments.
+- [x] Publish the public repository and verify its visibility and initial commit.
+- [x] Finish the cited review, with publication status and code/weight availability distinguished.
+- [x] Record the candidate choices and fallback before implementing experiments.
 
-**Done when:** these documents agree, contain no fabricated performance numbers, and expose the next task clearly. These checkboxes are closed only after remote publication is verified.
+**Verified:** the repository is public, the initial documents are on `main`, local document links resolve, and the review contains 30 cited research items. The next task is the data audit, not another open-ended literature search.
 
 ## Phase 1: Audit the actual data
 
