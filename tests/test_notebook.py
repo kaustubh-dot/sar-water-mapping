@@ -16,6 +16,58 @@ import pytest
 from sar_water.data import sha256_file
 
 
+@pytest.mark.parametrize('source_present', [True, False])
+def test_notebook_setup_imports_new_checkout_in_current_kernel_without_editable_startup(tmp_path, source_present):
+    """A successful pip child cannot process a new .pth in its parent kernel."""
+    repo=tmp_path/'fresh-checkout';repo.mkdir();(repo/'.git').mkdir()
+    (repo/'requirements-colab.txt').write_text('fixture lock\n')
+    if source_present:
+        package=repo/'src/sar_water';package.mkdir(parents=True)
+        (package/'__init__.py').write_text('')
+        (package/'data.py').write_text('CHECKOUT_MARKER = "new-reviewed-checkout"\n')
+    root=Path(__file__).parents[1]
+    notebook=json.loads((root/'notebooks/01_sar_water_mapping.ipynb').read_text(encoding='utf-8'))
+    source=next(cell['source'] for cell in notebook['cells'] if cell['cell_type']=='code'
+                and 'def checkout_source(' in cell['source'])
+    harness='''
+import importlib.util, os, sys
+from pathlib import Path
+from time import perf_counter
+from types import SimpleNamespace
+repo=Path(sys.argv[1]);source=sys.argv[2];source_present=sys.argv[3]=='True'
+assert importlib.util.find_spec('sar_water') is None
+assert str(repo/'src') not in sys.path
+calls=[]
+sha='a'*40
+def run(command, **kwargs):
+    calls.append(command)
+def check_output(command, **kwargs):
+    if command[-3:]==['remote','get-url','origin']:return 'https://example.test/reviewed.git\\n'
+    if command[-2:]==['status','--porcelain']:return ''
+    if 'rev-parse' in command:return sha+'\\n'
+    raise AssertionError(command)
+namespace=dict(Path=Path,os=os,sys=sys,perf_counter=perf_counter,
+    subprocess=SimpleNamespace(run=run,check_output=check_output),
+    REPO=repo,REPOSITORY='https://example.test/reviewed.git',REPO_REF=sha,STAGES={})
+if source_present:
+    exec(compile(source,'<fresh-notebook-setup>','exec'),namespace)
+    from sar_water import data
+    assert Path(data.__file__).resolve()==(repo/'src/sar_water/data.py').resolve()
+    assert data.CHECKOUT_MARKER=='new-reviewed-checkout'
+    assert namespace['STAGES']['installation_seconds']>=0
+else:
+    try:exec(compile(source,'<fresh-notebook-setup>','exec'),namespace)
+    except FileNotFoundError as error:assert 'source' in str(error).lower()
+    else:raise AssertionError('Missing reviewed source package must stop setup')
+assert len([command for command in calls if command[1:4]==['-m','pip','install']])==2
+'''
+    # -I ignores PYTHONPATH/current-directory imports; -S prevents an existing
+    # editable installation's startup hook from hiding the fresh-kernel bug.
+    result=subprocess.run([sys.executable,'-I','-S','-c',harness,str(repo),source,str(source_present)],
+                          capture_output=True,text=True)
+    assert result.returncode==0,result.stdout+result.stderr
+
+
 def test_unconnected_supplied_profile_stops_before_calibration():
     repo = Path(__file__).parents[1]
     notebook = json.loads((repo/'notebooks/01_sar_water_mapping.ipynb').read_text(encoding='utf-8'))
