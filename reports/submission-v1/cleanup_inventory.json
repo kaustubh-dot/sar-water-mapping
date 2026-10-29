@@ -1,0 +1,96 @@
+{
+  "historical_tag": "v1.0-hackathon",
+  "scientific_choices_changed": false,
+  "removed_files": [
+    {
+      "path": "reports/results_real.csv",
+      "reason": "Exact duplicate of reports/classical_results-v1/results_real.csv",
+      "sha256": "9898e195c14797d7e6af142100ee665a7423878c0a9d9538c6dfd7fa456384f9"
+    },
+    {
+      "path": "reports/results_neural.csv",
+      "reason": "Exact duplicate of reports/neural_results-v1/results_neural.csv",
+      "sha256": "815602e524e6e2f2abc744b4e9d73a5a37490508fdc2d923d95629ba88bf29da"
+    },
+    {
+      "path": "reports/results_synthetic.csv",
+      "reason": "Exact duplicate of reports/classical_results-v1/results_synthetic.csv",
+      "sha256": "1402065b617483332c322d4b68180992792587151df0aa9d054eeab9617c092e"
+    },
+    {
+      "path": "reports/runtime.json",
+      "reason": "Exact duplicate of reports/classical_results-v1/runtime.json",
+      "sha256": "a85d7f60c2527b58e9fa2e5830ddb34cca21526e989b4b50b462978587c00668"
+    },
+    {
+      "path": "reports/data_audit.md",
+      "reason": "Superseded pending-data audit; accepted supplied_data_review.md is current",
+      "sha256": "ab1540d9421424b0254538146463e73a47409c66dff4030fa620819fdd441950"
+    },
+    {
+      "path": "reports/phase1_implementation.md",
+      "reason": "Interim implementation diary; phase review and accepted data evidence retained",
+      "sha256": "78a748be6f0116f2c1fb674d4a8e82871023e0a3b161d19e8817dc18c2a7ecef"
+    },
+    {
+      "path": "reports/phase2_implementation.md",
+      "reason": "Interim implementation diary; correctness tests and phase review retained",
+      "sha256": "d442809c6cd63f4dcf68ac73cb7e0678629fda0c030e5541c78b4119d71bdb52"
+    },
+    {
+      "path": "reports/phase3_implementation.md",
+      "reason": "Interim implementation diary; filters, tests and scientific review retained",
+      "sha256": "9d58aade36231f22564e1214128ddeff05cf2c824eda87840e9ef6e30fc318db"
+    },
+    {
+      "path": "reports/phase4_implementation.md",
+      "reason": "Interim implementation diary; calibration, tests and scientific review retained",
+      "sha256": "54334f827bf9ae7d0f78fd41ff8e34b64e0f5504e32d398c0e0833485bc5d90c"
+    },
+    {
+      "path": "reports/notebook_completion.md",
+      "reason": "Superseded development wiring diary; accepted cached/fresh execution reviews retained",
+      "sha256": "c8baa1668c10d5fad85323c0216c4d891c1d357216b1bd79ad990f22647e7d1b"
+    },
+    {
+      "path": "reports/classical_calibration-v1/README.md",
+      "reason": "Invalid superseded calibration, preserved at original submission tag",
+      "sha256": "9a875771d64d629c0dfda7b4ff8cd68e3985f3128e904241b481bd646fd83aed"
+    },
+    {
+      "path": "reports/classical_calibration-v1/candidates.csv",
+      "reason": "Invalid superseded calibration, replaced by accepted v2 and supplied-v1",
+      "sha256": "df0f91939e63337e3b79546641a507af657c423fef184cbf6e60a6ae9d7268a7"
+    },
+    {
+      "path": "reports/classical_calibration-v1/training_looks.json",
+      "reason": "Invalid ROI byte bindings; superseded provenance retained in Git history",
+      "sha256": "d8a8c9fdf07d5a40ca6edf4fcd9ca57f3ccb84b845a192cd6d0fd26329825188"
+    },
+    {
+      "path": "reports/classical_calibration-v1/validation.json",
+      "reason": "Invalid superseded calibration; not consumed by current workflows",
+      "sha256": "bb79bdd02a6c33f6f98fa39dddba67b98e3b2609a10b55715b1b7668874227f9"
+    },
+    {
+      "path": "configs/development-calibrated-v1.json",
+      "reason": "Invalid superseded calibration; v3 is the accepted portable development config",
+      "sha256": "8d50a92d0464e4e77978f6127f5c06b1263465522e7594d6361c9a57926a95d2"
+    },
+    {
+      "path": "configs/development.json",
+      "reason": "Uncalibrated development staging config; no current code/test consumer",
+      "sha256": "5a81d2632ac2181af0c71a3211159bd01f19bb9662fc74b2c1738c7e9fe7171b"
+    },
+    {
+      "path": "scripts/phase3_synthetic_check.py",
+      "reason": "One-off development diagnostic; synthetic module and correctness tests retained",
+      "sha256": "4c0e7196228da34bee2d4cd0bf3062462c47be5377e71695a8002429a5db37e8"
+    },
+    {
+      "path": "scripts/phase4_fixture.py",
+      "reason": "One-off development fixture; calibration CLI and correctness tests retained",
+      "sha256": "3a3b9b21ccbd33c6fd97ab8599934f3e1e1634d3de51aaebee4718818e4010aa"
+    }
+  ]
+}

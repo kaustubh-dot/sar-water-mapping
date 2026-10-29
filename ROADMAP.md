@@ -21,7 +21,7 @@ Keep a small Python experiment and one Colab notebook. Required methods are raw,
 
 Use seed 42, frozen source splits, train-only normalization/noise estimates and validation-only selection. Classical primary rows share one numeric threshold and disable cleanup. Report cleanup separately. Keep the same ground-truth-water-positive macro set and disclose dry false positives. Use power for Lee/ENL and known synthetic references for PSNR. Keep data/checkpoints/credentials out of Git. Remote training and Colab checkpoint evaluation are different timings.
 
-## Phase 0 — Research and project contract
+## Phase 0 â€” Research and project contract
 
 - [x] Public GitHub repository and cited primary-source review.
 - [x] Exact bounded methods, model, training and evaluation contract.
@@ -29,7 +29,7 @@ Use seed 42, frozen source splits, train-only normalization/noise estimates and 
 
 Evidence: [research review](docs/RESEARCH_REVIEW.md), [implementation lock](docs/IMPLEMENTATION_LOCK.md).
 
-## Phase 1 — Data audit and frozen split
+## Phase 1 â€” Data audit and frozen split
 
 - [x] Select exactly 100 upstream hand-labeled pairs by label-blind hash ranking within official partitions, before reading imagery.
 - [x] Verify all 200 object sizes/MD5s/file SHA-256s, pairing, shape, units, band order, label validity and georeferencing.
@@ -43,7 +43,7 @@ Evidence: [data review](reports/development_data_review.md), [portable-identity 
 
 Supplied evidence: [accepted data/ROI review](reports/supplied_data_review.md), [internal split provenance](reports/supplied_split_provenance-v1.json), [accepted profile review](reports/supplied_profile_review.md) and [source configuration](reports/supplied_source-v1.json). The supplied event split is train 29 (Mekong/Nigeria/Pakistan), validation 40 (India), test 31 (Ghana); no cross-partition overlaps or touching chips were found. Prior project training exposure is 22 IDs, distributed 5/9/8, so pristine blind-test claims remain excluded. One test patch has no scored pixels and remains in membership. The five held-out ENL rectangles support land diagnostics only.
 
-## Phase 2 — Trustworthy metrics and synthetic references
+## Phase 2 â€” Trustworthy metrics and synthetic references
 
 - [x] Test conversions, validity, confusion metrics, empty/dry cases, ENL and explicit-range PSNR.
 - [x] Freeze procedural phantom identities before Gamma corruption; share seeds and corruption across methods.
@@ -51,7 +51,7 @@ Supplied evidence: [accepted data/ROI review](reports/supplied_data_review.md), 
 
 Evidence: [metric review](reports/phase2_review.md), [synthetic results](reports/classical_results-v1/results_synthetic.csv), [classical scientific execution review](reports/classical_results_review.md). Real noisy SAR is never a clean reference.
 
-## Phases 3–4 — Frozen classical calibration
+## Phases 3â€“4 â€” Frozen classical calibration
 
 - [x] Implement raw, power Median, multiplicative local-LMMSE Lee and dB bilateral with mask restoration and focused tests.
 - [x] Inspect six homogeneous raw training ROIs; freeze VV/VH effective looks 4.859278/4.020814 before validation.
@@ -64,7 +64,7 @@ Evidence: [calibration review](reports/classical_calibration_review.md), [v2 cal
 
 The completed items above describe development measurements. The supplied source-aware implementation is accepted. Its actual calibration completed 98 candidates on 40 India validation patches and froze shared VH below -20 dB, Median 5, Lee 5 and bilateral color sigma 3 dB; Median 5 is selected for neural input. The [independent calibration review](reports/supplied_calibration_review.md) accepted these frozen choices with zero held-out access. It uses four separately inspected training ROIs and the unchanged locked grids. Earlier development settings were not copied to the supplied run. See the [new configuration](configs/supplied-calibrated-v1.json).
 
-## Phase 5 — One controlled GPU pair
+## Phase 5 â€” One controlled GPU pair
 
 - [x] Inspect GPU/disk use and use a dedicated environment/project directory; preserve unrelated jobs and system packages.
 - [x] Verify exact 487,857-parameter architecture, SAR-only filling, masked BCE/Dice, shared raw-training normalization and deterministic crop policy.
@@ -86,7 +86,7 @@ initialization. [Public training metadata](reports/supplied_training-v1/summary.
 retains the original source/configuration and environment identities. Its
 reviewed checkpoint bundle is local only; no supplied public release is claimed.
 
-## Phase 6 — Held-out benchmark and one notebook
+## Phase 6 â€” Held-out benchmark and one notebook
 
 - [x] Evaluate frozen four-family classical configuration on all 20 held-out patches; save pooled/per-patch/dry/macro results, ENL and radiometry.
 - [x] Export separate synthetic PSNR and cleanup tables; inspect ratio/boundary/error figures and report failures.
@@ -99,7 +99,7 @@ reviewed checkpoint bundle is local only; no supplied public release is claimed.
 
 The cached Linux notebook took 91.78 seconds through ZIP/checksum, with an existing clean checkout and preinstalled kernel. It reproduced all four classical held-out confusion counts exactly. This is **not fresh Colab certification**. Four unselected validation candidates differed by one or two pixels across platforms; scientific choices did not change.
 
-Evidence: [classical review](reports/classical_results_review.md), [notebook implementation review](reports/notebook_review.md), [actual notebook execution review](reports/notebook_execution_review.md), [notebook timing summary](reports/notebook_smoke_summary.json), [real table](reports/results_real.csv), [neural result review](reports/neural_results_review.md), [neural table](reports/results_neural.csv), [synthetic table](reports/results_synthetic.csv).
+Evidence: [classical review](reports/classical_results_review.md), [notebook implementation review](reports/notebook_review.md), [actual notebook execution review](reports/notebook_execution_review.md), [notebook timing summary](reports/notebook_smoke_summary.json), [real table](reports/classical_results-v1/results_real.csv), [neural result review](reports/neural_results_review.md), [neural table](reports/neural_results-v1/results_neural.csv), [synthetic table](reports/classical_results-v1/results_synthetic.csv).
 
 Supplied measurements are now recorded in separate [classical](reports/supplied_classical-v1/results_real.csv)
 and [neural](reports/supplied_neural-v1/results_neural.csv) tables, accepted by
@@ -122,10 +122,11 @@ used 200 cached TIFFs, an existing clean isolated Linux clone and preinstalled
 kernel prerequisites. Initial clone/cache preparation were outside the clock;
 10 code cells and 96 checks completed. This historical run closes S1; the subsequent fresh Colab evidence closes S2.
 
-## Phase 7 — Submission preparation and stop
+## Phase 7 â€” Submission preparation and stop
 
 - [x] Draft the report with data, methods, measured results, failures, limitations and references.
 - [x] Prepare a three-minute explanation and exact reproduction/checkpoint instructions.
+- [x] Prepare the requested two-page IEEE-style technical note and five-slide PPTX/PDF pitch, with the supplied-set results, team identities, source-derived theme and saved reproducible figures. See [artifact evidence](reports/submission-v1/README.md); the refreshed assets record accepted S1/S2/S3 for the classical core.
 - [x] Finish whole-branch review, verify public artifact links/checksums and audit Git contents for data/credentials.
 - [x] Publish the accepted implementation to `main`, verify the public head and tag `v1.0-hackathon` (S3).
 
@@ -134,9 +135,17 @@ Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [
 ## Next actions, in order
 
 1. Completed: independent neural-result and final branch reviews accepted the development deliverable, with no unresolved P1/P2 findings. Preserve test-visible choices.
-2. Preserve the reviewed implementation branch and public development checkpoint artifact. Do not merge or issue a final acceptance tag on unverified evidence.
+2. Preserve the original submission tag and scientific artifacts. Main is the sole active branch; historical development checkpoints remain separately labeled.
 3. Supplied acquisition/audit/ROIs, source-aware profile and actual validation calibration are accepted. The completed scratch raw/Median-5 GPU pair is accepted; frozen classical and neural held-out measurements are independently accepted. Preserve the original development outputs and disclose prior 22-patch training exposure, including eight current test IDs. See the [supplied execution ledger](reports/supplied_execution_ledger.md).
-4. Completed: the connected cached notebook execution and independent review are accepted, closing S1. Preserve the pinned source, ZIP/sidecar and separately versioned supplied artifacts; the checkpoint bundle remains local only.
+4. Completed: the connected cached notebook execution and independent review are accepted, closing S1. Preserve the pinned source, ZIP/sidecar and separately versioned supplied artifacts; the supplied checkpoint bundle is delivered as a release asset outside Git.
 5. Completed: fresh uncached Colab at source `3eecc1434991835e576e7d3d09d967fbd9388359` took 566.40 seconds, including one dependency restart and 200 downloads. The original ZIP and authoritative timing sidecar are retained locally and independently reviewed. Completed: PR #1 merged to `main` at `51c6cd1088e843f86b2ecd2e552fb057d08305a3`; the `v1.0-hackathon` tag pins the submission publication (S3).
 
 A new method requires a recorded failure, scope authorization or replacement of an optional item, compatible accessible code/weights and remaining runtime. Once final test results are visible, any scientific change is a new versioned experiment rather than an untouched holdout evaluation.
+
+## Submission cleanup
+
+- [x] Keep main as the sole local and remote branch; no additional registered worktrees remain.
+- [x] Remove duplicate outputs and superseded staging files, preserve historical tag references, and pin the notebook to the verified Colab source.
+- [x] Refresh the two-page note and five-slide pitch with accepted fresh-Colab and publication evidence.
+
+See [cleanup inventory](reports/submission-v1/cleanup_inventory.json) and [submission files](reports/submission-v1/README.md).

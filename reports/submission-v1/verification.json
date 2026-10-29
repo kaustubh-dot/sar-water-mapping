@@ -1,0 +1,46 @@
+{
+  "status": "submission_ready_classical_core",
+  "scientific_choices_changed": false,
+  "note_pages": 2,
+  "pptx_slides": 5,
+  "pitch_pdf_pages": 5,
+  "tests": {
+    "passed": 135,
+    "seconds": 69.16,
+    "scope": "Full local suite with normal Windows Git helper access"
+  },
+  "fresh_colab": {
+    "accepted": true,
+    "seconds": 566.397461905,
+    "source_commit": "3eecc1434991835e576e7d3d09d967fbd9388359",
+    "scope": "Classical full profile; no neural training"
+  },
+  "branch": "main",
+  "additional_registered_worktrees": 0,
+  "removed_obsolete_or_duplicate_files": 18,
+  "native_chart_count": 1,
+  "reference_fonts": [
+    "Georgia",
+    "Arimo"
+  ],
+  "artifacts": {
+    "sar_water_mapping_pitch.html": {
+      "bytes": 1247569,
+      "sha256": "74c5080e93b384615bb6d5870dfc5ca4e8eac56b34309a6484450cdf2afe5550"
+    },
+    "sar_water_mapping_pitch.pdf": {
+      "bytes": 334262,
+      "sha256": "f4f64b73c6e6fb8bf2f730adc772382d3941907fed2297f5c3231b2968a8cbc2"
+    },
+    "sar_water_mapping_pitch.pptx": {
+      "bytes": 311071,
+      "sha256": "12f8225a234a3e129292ca1bda0a64f975755f1c16c9d0edcebb3fef836a5c1c"
+    },
+    "sar_water_mapping_technical_note.pdf": {
+      "bytes": 147983,
+      "sha256": "7cca0bc9c21ffa4fe35684f09489c244f4cdadc7bd3ece8ae1d0aea6252c9514"
+    }
+  },
+  "release_tag": "v1.0.1-submission",
+  "original_evidence_tag_preserved": "v1.0-hackathon"
+}

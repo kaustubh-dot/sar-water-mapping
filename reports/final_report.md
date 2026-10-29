@@ -105,9 +105,9 @@ inference and fresh Colab. The worse filtered validation result is retained.
 Public [training metadata](supplied_training-v1/summary.json) and the
 [original environment](supplied_training-v1/training-environment.txt) retain
 the exact configuration, source/data identities, crop records and checkpoint
-hashes. The reviewed local checkpoint ZIP is 3,666,469 bytes, SHA-256
+hashes. The reviewed supplied checkpoint ZIP is 3,666,469 bytes, SHA-256
 `9605d1906802434d73d5ef73239e127395779a03df11596004c94e4acb5aa6d6`.
-It has no public release yet. The frozen held-out measurements below are
+The [submission release](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/v1.0.1-submission) provides this exact bundle. The frozen held-out measurements below are
 recorded separately and accepted by the [result review](supplied_results_review.md).
 
 ## Supplied held-out results
@@ -399,3 +399,7 @@ Method sources and exclusions are recorded in the
 [research review](../docs/RESEARCH_REVIEW.md) and
 [implementation lock](../docs/IMPLEMENTATION_LOCK.md). Original project code is
 MIT; dataset and other third-party materials retain their own terms.
+
+## Submission downloads
+
+The [submission release](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/v1.0.1-submission) provides the refreshed two-page technical note, five-slide PPTX/PDF pitch, code with saved plots and the [supplied U-Net checkpoints](https://github.com/kaustubh-dot/sar-water-mapping/releases/download/v1.0.1-submission/supplied-seed42-checkpoints.zip). The original source tag and all scientific measurements remain unchanged. Full neural training inside the Colab budget remains unmeasured.

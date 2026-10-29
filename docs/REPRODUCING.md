@@ -73,7 +73,7 @@ checksum. Work performed before the first executable cell must be disclosed.
 
 ## Verified fresh Colab execution
 
-Open the [executed source notebook](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/3eecc1434991835e576e7d3d09d967fbd9388359/notebooks/01_sar_water_mapping.ipynb). For exact reproduction, set `REPO_REF` in its configuration cell to `3eecc1434991835e576e7d3d09d967fbd9388359` before Run All; the notebook's branch default can advance. Keep `DATA_SOURCE='supplied-first100'`, `PROFILE='full'` and neural training disabled.
+Open the [executed source notebook](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/3eecc1434991835e576e7d3d09d967fbd9388359/notebooks/01_sar_water_mapping.ipynb). For exact reproduction, set `REPO_REF` in its configuration cell to `3eecc1434991835e576e7d3d09d967fbd9388359` before Run All. The current notebook already uses this exact source pin. Keep `DATA_SOURCE='supplied-first100'`, `PROFILE='full'` and neural training disabled.
 
 The observed fresh CPU runtime started with zero source TIFFs and downloaded all 200 objects. Pinned installation replaced Colab's preloaded NumPy/matplotlib. When setup requests a restart, choose **Runtime > Restart session and run all**, preserving the runtime filesystem. The first cell restores the original clock, so installation, the restart and its wait remain included. Do not reset the runtime filesystem midway through this recovery.
 
@@ -214,8 +214,7 @@ including 11.1010 seconds of input preparation. Raw ran 10 epochs/150 updates
 training/validation records, not held-out scores. The reviewed local bundle
 `outputs/supplied-seed42-checkpoints.zip` has SHA-256
 `9605d1906802434d73d5ef73239e127395779a03df11596004c94e4acb5aa6d6`
-and 3,666,469 bytes. It has no public release yet; the earlier development
-release cannot substitute for these supplied checkpoints.
+and 3,666,469 bytes. Download the [supplied checkpoint bundle](https://github.com/kaustubh-dot/sar-water-mapping/releases/download/v1.0.1-submission/supplied-seed42-checkpoints.zip), verify this digest, and extract its files into an ignored training directory. The earlier development release cannot substitute for these supplied checkpoints.
 
 After all source/configuration/checkpoint identities are verified and the
 calibration is accepted, the frozen classical and neural execution commands are:
