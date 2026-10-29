@@ -4,7 +4,7 @@
 
 Reproducible speckle denoising and surface-water segmentation on a 100-patch Sentinel-1 VV/VH subset of Sen1Floods11. The target is an end-to-end Google Colab run in **under 30 minutes**.
 
-**Submission status: NOT READY; supplied-set gate S1 closed.** Supplied acquisition/audit, source-aware profile, calibration, paired scratch training, held-out results and cached notebook integration are independently accepted. Fresh uncached Colab (S2) is explicitly deferred and unverified. Publication to `main` and the submission tag (S3) remain pending. The [submission audit](reports/submission_audit.md) records this boundary. The supplied and earlier development results stay separately labeled.
+**Submission status: scientific execution and fresh Colab verified; publication pending.** Supplied execution (S1) and the fresh uncached classical Colab run (S2) are accepted. The full classical Colab run took **566.40 seconds (9 minutes 26 seconds)**, including setup, one dependency restart, all 200 downloads, checks, calibration, evaluation and export. See the [retained-evidence review](reports/colab_execution_review.md). Publication to `main` and the submission tag (S3) are the remaining gate. The [submission audit](reports/submission_audit.md) records this boundary. The supplied and earlier development results stay separately labeled.
 
 **Supplied-first100 profile:** the [recipe](reports/supplied_subset_recipe.md) selects the first 100 ordered upstream hand-labeled training rows. All 100 pairs are audited. The existing seed-42 event rule freezes 29 training patches (Mekong/Nigeria/Pakistan), 40 validation (India) and 31 test (Ghana), before tuning. No cross-partition overlap or touching chips was found. Exactly 22 IDs were previously used in development training, including eight current test IDs; this is a disclosed internal event holdout, not a pristine blind test. `Ghana_26376` remains in test with no scored pixels. The five held-out ENL regions are visually selected land regions only. See the [data review](reports/supplied_data_review.md), [source configuration](reports/supplied_source-v1.json) and [reproduction commands](docs/REPRODUCING.md).
 
@@ -47,7 +47,7 @@ existing clean isolated clone and preinstalled kernel prerequisites. Initial
 clone/cache preparation were outside the notebook clock. See the
 [summary](reports/supplied_notebook_smoke_summary.json) and
 [independent review](reports/supplied_notebook_review.md). This closes S1;
-fresh uncached Colab remains deferred and unverified.
+the subsequent fresh Colab run is recorded separately below.
 
 **Earlier development results (29 October 2026):** the distinct upstream development experiment has measured classical/neural results and a cached Linux notebook run. Phase reviews use GPT-6.1 Sol at xhigh. Its official partitions contain touching chips and shared events, so the following are correlated development results, not unseen-geography evidence. They do not describe the supplied-first100 profile.
 
@@ -64,7 +64,7 @@ All classical rows use validation-selected VV below -18 dB, with cleanup disable
 
 The GPU training pair took **122.06 seconds**, including preparation. The complete classical notebook took **91.78 seconds on Linux with cached TIFFs, an existing clone and preinstalled kernel**; this is not a fresh Colab measurement. See [notebook evidence](reports/notebook_smoke_summary.json), [current roadmap](ROADMAP.md) and [execution ledger](reports/execution_ledger.md).
 
-[Download the reviewed development checkpoints](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1). Weights are release assets outside Git; no raw dataset is included. The [reproduction guide](docs/REPRODUCING.md) explains the exact source commit, input restoration, environments and commands. [Open the classical notebook in Colab](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/implementation/remaining-phases/notebooks/01_sar_water_mapping.ipynb); this access link does not certify its fresh-runtime timing.
+[Download the reviewed development checkpoints](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1). Weights are release assets outside Git; no raw dataset is included. The [reproduction guide](docs/REPRODUCING.md) explains the exact source commit, input restoration, environments and commands. [Open the classical notebook in Colab](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/implementation/remaining-phases/notebooks/01_sar_water_mapping.ipynb); the [verified source-pinned Colab run](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/3eecc1434991835e576e7d3d09d967fbd9388359/notebooks/01_sar_water_mapping.ipynb) completed in 566.40 seconds. Its original ZIP and timing sidecar are retained locally outside Git; see the [verification summary](reports/colab_observed_summary.json). This certifies the classical core only; remote U-Net training remains a separate measurement.
 
 ## Local development
 
@@ -108,7 +108,7 @@ The upstream documentation describes two-band, 512 x 512 Sentinel-1 images in dB
 
 ## Planned stack
 
-Python, NumPy, SciPy, scikit-image, rasterio, pandas, matplotlib, and pytest. PyTorch and the neural package are introduced only if the neural feasibility gate passes. The classical pins are in `requirements-colab.txt`; actual training versions accompany the checkpoint bundle. Fresh Colab compatibility remains an execution gate.
+Python, NumPy, SciPy, scikit-image, rasterio, pandas, matplotlib, and pytest. PyTorch and the neural package are introduced only if the neural feasibility gate passes. The classical pins are in `requirements-colab.txt`; actual training versions accompany the checkpoint bundle. Fresh Colab compatibility is verified at the exact source pin linked above.
 
 Remote training and Colab reproduction are separate measurements. A checkpoint-based Colab evaluation under 30 minutes does not prove training also fits that limit. If full training is required within the judging budget, time that profile explicitly or submit the classical pipeline as the compliant core.
 

@@ -1,10 +1,11 @@
 # Final pre-submission audit
 
-29 October 2026. **Verdict: the supplied experiment is executed and reviewed;
-final submission is NOT READY.** The supplied notebook is independently
-accepted, closing S1. Fresh uncached Colab is explicitly
-deferred and remains unverified. Do not create the final acceptance tag while
-that acceptance gate is open.
+29 October 2026. **Verdict: S1 and S2 accepted; S3 publication pending.**
+Supplied scientific execution and fresh uncached classical Colab are independently
+accepted. Colab completed in **566.40 seconds**, including installation, one
+dependency restart, 200 downloads, checks, calibration, evaluation and export.
+The original ZIP/sidecar are retained locally outside Git. See the
+[independent execution review](colab_execution_review.md).
 
 ## Connection map
 
@@ -19,7 +20,7 @@ that acceptance gate is open.
 | Supplied first-100 recipe → executable acquisition/notebook | Exact ordered IDs, pinned objects, metadata-only source binding and default supplied notebook profile | Accepted implementation |
 | Supplied data → internal split → new calibration/results | 100 audited pairs; event split 29/40/31; 98 validation candidates; new scratch pair and separately scored outputs | Accepted data/calibration/training/results |
 | Supplied notebook → setup/access/audit/calibration/export | Ten cells, 96 checks, cached Linux run 123.04 seconds through export/hash; original ZIP/sidecar retained and verified | Accepted cached integration; **S1 closed** |
-| Fresh Colab → uncached download → full timed export | No actual fresh Colab result ZIP/sidecar exists | **Unverified** |
+| Fresh Colab → uncached download → full timed export | Original ZIP/sidecar retained; source/data/config hashes, CRC and scientific tables verified; 566.40 seconds | **Accepted; S2 closed** |
 | Reviewed implementation → default public branch | Public repo exists; implementation is in draft PR #1, not `main` | Final publication pending |
 
 ## Material findings and fixes
@@ -50,15 +51,26 @@ See the [supplied execution ledger](supplied_execution_ledger.md) and
 notebook export has SHA-256
 `968b9065b9ded3fb0c3c472e10e4fccf60c12a1f10c5f82481698de841577cef`.
 
-**S2 / P1 — Fresh uncached Colab is unverified and deferred.** The supplied
-notebook's 123.04 seconds used 200 cached TIFFs, an existing clean clone and a
-preinstalled execution environment on Linux. Its 76.77-second remote training
-pair is a separate measurement. The earlier development timings (91.78-second
-cached notebook and 122.06-second training) remain historical evidence. Retain an
-actual fresh-Colab full-profile ZIP plus its authoritative timing sidecar,
-source/configuration/data identities, hardware and setup/download/evaluation/
-export times, strictly below 1,800 seconds. Earlier browser attempts reported
-local browser use disabled; no successful Colab run is inferred from them.
+**S2 / P1 — CLOSED: fresh uncached classical Colab accepted.** Source
+`3eecc1434991835e576e7d3d09d967fbd9388359` completed in 566.397461905 seconds.
+The browser-observed fresh runtime had zero existing TIFFs and downloaded all
+200 objects. The original clock survives the one dependency restart and its
+wait. All ten original code cells completed. The retained 164,922,319-byte ZIP
+matches the browser and sidecar SHA-256
+`1e365165f95de72e623a7dd99b1078a97912d0cd99bc24a5bffa570ffc1c29e9`.
+The independent review verifies archive integrity, source/config/data bindings,
+98 validation summaries, all four held-out confusion rows and 124 per-patch
+rows, cleanup, 40 ENL records/eight aggregates and separate synthetic tables.
+Tiny unselected Otsu-threshold and looks/radiometry roundoff changes no choice
+or score. No retuning was performed.
+
+Original generic unverified-attestation fields remain untouched. Acceptance
+uses retained evidence together with external browser observation; the archive
+alone is not a freshness attestation. Executed notebook/stdout was not retained,
+so an exact Colab test count is not claimed. The classical core meets the
+30-minute gate. Remote U-Net training and checkpoint evaluation remain separate;
+full neural training within the Colab clock was not measured. Historical cached
+Linux timings do not serve as fresh-runtime evidence.
 
 **F1 / P2 — Misleading generic calibration provenance: fixed.** The calibration
 CLI previously labeled any accepted manual manifest as upstream development.
@@ -79,17 +91,13 @@ supported supplied recipe.
 **S3 — Default public branch is not the implementation.** The GitHub connector
 confirmed `main` is the default branch and still contains planning-only content;
 draft [PR #1](https://github.com/kaustubh-dot/sar-water-mapping/pull/1) holds the
-implementation. Keep the PR draft while S2 remains open. Once acceptance
-passes, publish the reviewed implementation and pin the submitted notebook/link
-to its exact accepted commit. Existing development checkpoint references remain
+implementation. S2 is accepted and the user authorized publication. Publish the reviewed
+implementation and pin the submitted notebook/link to its exact accepted commit. Existing development checkpoint references remain
 at their original training commit; a documentation commit is not retraining.
 
-Updating the existing PR description to reflect S1 completion was attempted,
-but the GitHub integration returned 403 (resource not accessible) and the local
-GitHub CLI reported invalid authentication. Git branch pushes remain available.
-The prepared replacement description is retained locally; PR metadata still
-requires an authenticated update. This does not invalidate the accepted S1
-experiment or change the draft/main acceptance boundary.
+An earlier PR metadata update was blocked by integration authentication.
+The current authenticated update succeeded: PR #1 now describes the accepted
+supplied profile, fresh Colab execution, 135 passing tests and scientific limits.
 
 ## Evidence reviewed
 
@@ -120,12 +128,11 @@ Current verification and gate values are recorded in
 1. S1 is closed: data/profile, calibration, scratch pair, frozen results and
    actual notebook execution have each passed independent Sol xhigh review.
    Final documentation/publication consistency is checked separately.
-2. Later, at the user's request, close S2 with actual fresh uncached Colab
-   evidence for the connected profile. It is explicitly deferred in this task.
-3. Publish the accepted implementation to the default branch and pin submitted
-   links only after the remaining acceptance gate passes; then create the final
-   submission tag. The implementation remains in draft PR #1 meanwhile.
+2. S2 is closed: retained original Colab ZIP/sidecar and independent review
+   establish the fresh classical run below 30 minutes.
+3. Publish the accepted implementation to `main`, verify its remote head and
+   create `v1.0-hackathon`. Preserve source-pinned execution links and historical
+   development/checkpoint identities.
 
-This audit fixes the bounded provenance/documentation defects and identifies
-the remaining work explicitly. It does not certify a perfect or completed
-submission while S2 remains open.
+No unresolved scientific P1/P2 finding remains in the accepted bounded experiment.
+Publication is the remaining gate; full neural training in Colab is not claimed.

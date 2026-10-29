@@ -4,9 +4,7 @@ The supplied-first100 acquisition, raster audit, frozen internal event split,
 fixed ROIs and source-aware notebook implementation are accepted. The new
 calibration and paired scratch training are independently accepted. Frozen
 held-out measurements are independently accepted. The cached supplied
-notebook smoke is independently accepted, closing S1. Fresh
-uncached Colab is explicitly deferred and unverified. Final READY status,
-publication to `main` and the submission tag remain pending.
+notebook smoke is independently accepted, closing S1. Fresh uncached classical Colab is accepted at 566.40 seconds, including installation, one dependency restart and all 200 downloads. See the [retained-evidence review](../reports/colab_execution_review.md). Publication to `main` and the submission tag remain pending.
 
 The distinct earlier development experiment remains reproducible below. Its
 measured GPU pair uses source commit
@@ -72,6 +70,14 @@ The old notebook's 91.78-second cached Linux run applies to development only.
 Neither that run nor the new wiring verifies fresh Colab. A notebook export has
 an authoritative sibling timing JSON written after archive creation and its
 checksum. Work performed before the first executable cell must be disclosed.
+
+## Verified fresh Colab execution
+
+Open the [executed source notebook](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/3eecc1434991835e576e7d3d09d967fbd9388359/notebooks/01_sar_water_mapping.ipynb). For exact reproduction, set `REPO_REF` in its configuration cell to `3eecc1434991835e576e7d3d09d967fbd9388359` before Run All; the notebook's branch default can advance. Keep `DATA_SOURCE='supplied-first100'`, `PROFILE='full'` and neural training disabled.
+
+The observed fresh CPU runtime started with zero source TIFFs and downloaded all 200 objects. Pinned installation replaced Colab's preloaded NumPy/matplotlib. When setup requests a restart, choose **Runtime > Restart session and run all**, preserving the runtime filesystem. The first cell restores the original clock, so installation, the restart and its wait remain included. Do not reset the runtime filesystem midway through this recovery.
+
+The accepted run took **566.397461905 seconds**, including calibration, held-out evaluation, figures, archive creation and checksum. Its original ZIP and sibling timing JSON are retained under `outputs/colab-20261029T105716698462Z.*` outside Git. The [independent review](../reports/colab_execution_review.md) records hashes, result comparisons and the external freshness observation. The files retain their default unverified attestation fields unchanged; metadata alone is insufficient evidence of a fresh runtime. The executed notebook/stdout was not retained, so no exact Colab pytest count is claimed. This is the compliant classical core, separate from remote U-Net training and checkpoint evaluation.
 
 ## Supplied inputs: restore accepted metadata and objects
 
@@ -234,8 +240,7 @@ serialization; they do not establish a full notebook runtime. Keep real tables s
 no-score status and dry-patch false positives, and use the same water-positive
 macro set across methods. Neural outputs receive no ENL or denoising PSNR.
 Remote training, checkpoint evaluation and full notebook runtime are separate
-measurements. Fresh uncached Colab is deferred; these commands cannot certify
-its under-30-minute gate.
+measurements. The separately executed fresh classical Colab run took 566.40 seconds; see the [timing summary](../reports/colab_observed_summary.json). It does not certify full neural training within the Colab budget.
 
 ## Earlier development: restore exact frozen inputs
 

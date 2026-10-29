@@ -1,6 +1,6 @@
 # Fresh Colab verification attempts
 
-29 October 2026. Fresh Colab acceptance remains open. These browser-observed
+29 October 2026. Fresh Colab acceptance is closed by the retained third run and its independent review. These browser-observed
 failures are retained independently of the accepted cached Linux evidence.
 
 1. Source `3d3ff7a33869a1650fde4128b20376eacd9f2ddb`: new Colab runtime,
@@ -24,8 +24,7 @@ failures are retained independently of the accepted cached Linux evidence.
    reported zero existing TIFFs and downloaded all 200 source objects. All ten
    original code cells completed. The original final cell reported archive
    SHA-256 `1e365165f95de72e623a7dd99b1078a97912d0cd99bc24a5bffa570ffc1c29e9`.
-   See `colab_observed_summary.json`. This is an observed completion; independent
-   archive/sidecar retention and review remain pending. Automated downloads
+   See `colab_observed_summary.json`. Original archive/sidecar files were subsequently saved locally by the user; their hashes, CRC, metadata bindings and scientific results passed independent review in `colab_execution_review.md`. Automated downloads
    through both `google.colab.files.download` and the Files-panel Download
    action produced no browser download event. The original ZIP and timing JSON
    remain visible in the Colab runtime; the user was asked to save them locally.
@@ -37,7 +36,7 @@ after the user's reconnect instruction, the runtime reported connected again.
 None of these intermediate states establishes a completed benchmark or timing.
 
 Neither failed attempt produced an accepted final result ZIP and timing
-sidecar. The third run produced them but still requires retained-file review.
+sidecar. The third run produced them and passed retained-file review.
 No new held-out scores, thresholds, architecture or training choices
 are selected from these setup failures. Main publication and the final
-acceptance tag remain pending actual successful fresh-Colab evidence.
+acceptance tag are the final publication step after the accepted fresh-Colab evidence.

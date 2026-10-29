@@ -2,7 +2,7 @@
 
 Updated 29 October 2026. This is the remaining-work contract. Research selection is finished; the [implementation lock](docs/IMPLEMENTATION_LOCK.md) controls methods and training, and the [evaluation protocol](docs/EVALUATION_PROTOCOL.md) controls scientific claims. Do not add models or tune against the observed test results.
 
-The [pre-submission audit](reports/submission_audit.md) retains a **NOT READY** verdict for the supplied-set submission. The completed statuses below apply to the earlier development experiment unless explicitly stated otherwise.
+The [pre-submission audit](reports/submission_audit.md) records accepted supplied execution (S1) and fresh Colab (S2); publication (S3) remains pending. The completed statuses below apply to the earlier development experiment unless explicitly stated otherwise.
 
 | Phase | Development status | Evidence / remaining gate |
 | --- | --- | --- |
@@ -12,7 +12,7 @@ The [pre-submission audit](reports/submission_audit.md) retains a **NOT READY** 
 | 3. Denoising baselines | Development and supplied calibration accepted | Four locked families; accepted source-aware calibration implementation |
 | 4. Water segmentation | Development and supplied choices accepted | VH -20 dB/Median 5 frozen from validation; zero held-out access |
 | 5. Controlled GPU training | Development and supplied pairs accepted | Scratch raw/Median-5 seed42 pair completed in 76.77 seconds; supplied checkpoint bundle local only |
-| 6. Benchmark and notebook | Development run complete; supplied wiring accepted | Supplied results and cached notebook accepted; S1 closed; uncached Colab deferred |
+| 6. Benchmark and notebook | Development run complete; supplied wiring accepted | Supplied results and fresh Colab accepted; S1/S2 closed; 566.40 seconds |
 | 7. Submission | Draft prepared | Report/demo/reproduction ready for review; final acceptance/tag open |
 
 ## Scope to preserve
@@ -94,8 +94,8 @@ reviewed checkpoint bundle is local only; no supplied public release is claimed.
 - [x] Complete independent Sol xhigh review of actual neural outputs before accepting this execution gate.
 - [x] Make the full classical notebook run setup, access, checks, audit, validation, evaluation and final export in cell order.
 - [x] Run all ten code cells in a separate Linux kernel and inspect results/bundle; record 76 passing notebook checks.
-- [ ] Deferred: restart a fresh Colab runtime, fetch uncached inputs, Run All and retain full setup/access/evaluation/export timing strictly below 30 minutes.
-- [ ] If judging requires training within that budget, independently measure the shorter full-training profile or use the complete classical core. A checkpoint-only run is insufficient.
+- [x] Fresh Colab: zero existing TIFFs, 200 downloads, original clock retained through dependency restart; full setup/access/checks/calibration/evaluation/export completed in 566.40 seconds. Original ZIP/sidecar retained and independently reviewed.
+- [x] Use the complete classical core for the certified Colab budget. Remote U-Net results are separate; full neural training within Colab is unmeasured.
 
 The cached Linux notebook took 91.78 seconds through ZIP/checksum, with an existing clean checkout and preinstalled kernel. It reproduced all four classical held-out confusion counts exactly. This is **not fresh Colab certification**. Four unselected validation candidates differed by one or two pixels across platforms; scientific choices did not change.
 
@@ -113,22 +113,21 @@ seconds including 124 figures/synthetic work; GPU checkpoint evaluation took
 9.06 seconds, separately from the 76.77-second training pair. Runner subtotals
 exclude setup/access/calibration and final metadata writes. The separate
 accepted cached supplied notebook took 123.04 seconds through final ZIP/hash,
-with 10 cells and 96 passing checks. S1 is closed; fresh uncached Colab remains
-deferred and unverified.
+with 10 cells and 96 passing checks. S1 is closed. The subsequent fresh Colab run completed in 566.40 seconds; see the [independent evidence review](reports/colab_execution_review.md).
 
 The [supplied notebook summary](reports/supplied_notebook_smoke_summary.json)
 and [independent review](reports/supplied_notebook_review.md) bind source pin
 `9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f`. The accepted 123.04-second smoke
 used 200 cached TIFFs, an existing clean isolated Linux clone and preinstalled
 kernel prerequisites. Initial clone/cache preparation were outside the clock;
-10 code cells and 96 checks completed. This closes S1 without closing S2.
+10 code cells and 96 checks completed. This historical run closes S1; the subsequent fresh Colab evidence closes S2.
 
 ## Phase 7 — Submission preparation and stop
 
 - [x] Draft the report with data, methods, measured results, failures, limitations and references.
 - [x] Prepare a three-minute explanation and exact reproduction/checkpoint instructions.
 - [x] Finish whole-branch review, verify public artifact links/checksums and audit Git contents for data/credentials.
-- [ ] Complete the remaining fresh Colab and publication acceptance gates and only then tag `v1.0-hackathon`.
+- [ ] Publish the accepted implementation to `main`, verify the public head and only then tag `v1.0-hackathon` (S3).
 
 Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [reproduction guide](docs/REPRODUCING.md), [execution ledger](reports/execution_ledger.md), [final review](reports/final_branch_review.md). The report now includes accepted supplied and development measurements; final submission acceptance remains open.
 
@@ -138,6 +137,6 @@ Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [
 2. Preserve the reviewed implementation branch and public development checkpoint artifact. Do not merge or issue a final acceptance tag on unverified evidence.
 3. Supplied acquisition/audit/ROIs, source-aware profile and actual validation calibration are accepted. The completed scratch raw/Median-5 GPU pair is accepted; frozen classical and neural held-out measurements are independently accepted. Preserve the original development outputs and disclose prior 22-patch training exposure, including eight current test IDs. See the [supplied execution ledger](reports/supplied_execution_ledger.md).
 4. Completed: the connected cached notebook execution and independent review are accepted, closing S1. Preserve the pinned source, ZIP/sidecar and separately versioned supplied artifacts; the checkpoint bundle remains local only.
-5. Fresh uncached Colab is explicitly deferred. Later run the connected profile with pinned source SHA, keep its ZIP and authoritative timing sidecar, and verify the full under-30-minute gate. Final READY status, publication to `main` and the submission tag remain pending that acceptance.
+5. Completed: fresh uncached Colab at source `3eecc1434991835e576e7d3d09d967fbd9388359` took 566.40 seconds, including one dependency restart and 200 downloads. The original ZIP and authoritative timing sidecar are retained locally and independently reviewed. Publish the accepted implementation to `main`, verify the public head and issue `v1.0-hackathon` (S3).
 
 A new method requires a recorded failure, scope authorization or replacement of an optional item, compatible accessible code/weights and remaining runtime. Once final test results are visible, any scientific change is a new versioned experiment rather than an untouched holdout evaluation.

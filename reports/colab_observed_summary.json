@@ -1,5 +1,5 @@
 {
-  "status": "completed_fresh_colab_awaiting_original_artifact_retention_and_review",
+  "status": "accepted_fresh_colab_retained_and_independently_reviewed",
   "source_commit_sha": "3eecc1434991835e576e7d3d09d967fbd9388359",
   "started_utc": "2026-10-29T10:57:16.690507+00:00",
   "runtime_type": "colab_cpu",
@@ -33,11 +33,11 @@
   "archive_sha256": "1e365165f95de72e623a7dd99b1078a97912d0cd99bc24a5bffa570ffc1c29e9",
   "archive_filename": "colab-20261029T105716698462Z.zip",
   "sidecar_filename": "colab-20261029T105716698462Z.runtime.json",
-  "evidence_origin": "Browser-visible original final cell output; original files still in Colab session and requested for local retention",
-  "original_archive_retained_locally": false,
-  "independent_execution_review_accepted": false,
-  "fresh_colab_gate_closed": false,
-  "remaining": "Retain original archive and sidecar, independently review identities/counts/CRC/checksums, then publish accepted status and merge main.",
+  "evidence_origin": "Browser-observed execution plus retained original ZIP and timing sidecar, independently reviewed",
+  "original_archive_retained_locally": true,
+  "independent_execution_review_accepted": true,
+  "fresh_colab_gate_closed": true,
+  "remaining": "Publish reviewed implementation to main and create final tag.",
   "stage_seconds": {
     "pre_restart_source_checkout_seconds": 1.5843383740000263,
     "pre_restart_installation_seconds": 37.12775911899999,
@@ -52,5 +52,10 @@
     "frozen_real_synthetic_evaluation_export_seconds": 219.69371343599994,
     "result_table_and_figure_display_seconds": 0.30112398300002496,
     "bundle_export_seconds": 12.627699310999901
-  }
+  },
+  "archive_bytes": 164922319,
+  "sidecar_sha256": "27291c222450c726baa1d933669fb317b20b692ecfe00c4d54044124c4a03b0f",
+  "review": "reports/colab_execution_review.md",
+  "exact_colab_pytest_count_retained": false,
+  "attestation_note": "Original unverified generic fields preserved; acceptance combines external browser observation with retained acquisition and result evidence. Executed notebook/stdout not retained."
 }

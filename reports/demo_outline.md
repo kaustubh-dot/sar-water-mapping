@@ -5,8 +5,7 @@
 **[Independent results accepted](supplied_results_review.md).** Data/profile,
 calibration and scratch training are also accepted. The cached supplied
 notebook execution and review are also accepted, closing S1.
-Uncached Colab is deferred; final READY status, `main` publication and the tag
-remain open. The reviewed supplied checkpoint ZIP is local only.
+Fresh uncached classical Colab is accepted at **566.40 seconds**, including setup, restart, 200 downloads and export. `main` publication and the tag remain open. The reviewed supplied checkpoint ZIP is local only.
 
 **0:00–0:30 — Problem and data.** Explain observed surface-water mapping from
 VV/VH SAR, its speckle and dark-target ambiguities. Show the exact supplied
@@ -58,7 +57,7 @@ The [summary](supplied_notebook_smoke_summary.json) and
 [notebook review](supplied_notebook_review.md) accept this cached integration
 and close S1.
 Uncached Colab and the under-30-minute gate
-remain unverified. Existing development tables stay separately labeled below.
+are accepted separately in the retained fresh-run review. Existing development tables stay separately labeled below.
 
 ## Earlier development demonstration reference
 
@@ -80,8 +79,7 @@ The [accepted scratch GPU pair](supplied_training_review.md) took 76.77 seconds
 including preparation: raw 10 epochs/150 updates, Median 5 nine epochs/135
 updates. Supplied held-out measurements are now independently accepted in the
 [result review](supplied_results_review.md). Cached supplied notebook smoke is
-accepted at 123.04 seconds; S1 is closed. Uncached
-Colab is deferred; final READY status, `main` publication and the tag remain open.
+accepted at 123.04 seconds; S1 is closed. The subsequent fresh classical Colab run is accepted at 566.40 seconds, closing S2. Publication and the tag remain open.
 
 **0:00–0:30 — Problem.** Monsoon clouds obstruct optical mapping. Sentinel-1 SAR
 provides observations through clouds, but multiplicative speckle makes a simple
@@ -113,7 +111,7 @@ bundle. Distinguish remote U-Net training from checkpoint inference and fresh
 Colab timing. The raw/Median U-Net pair completed in 122.06 seconds; test IoU
 was 0.5855/0.5346, below the classical Median row. The classical notebook
 completed in 91.78 seconds on Linux using cached data, an existing clone and
-a preinstalled kernel; fresh Colab Run All remains unverified and deferred.
+a preinstalled kernel. The separate supplied fresh Colab run completed in 566.40 seconds; the earlier cached timing is historical.
 The single notebook now defaults to the accepted supplied-first100 source
 profile. Its accepted held-out results appear in the separate outline above;
 these development measurements remain historical reference.

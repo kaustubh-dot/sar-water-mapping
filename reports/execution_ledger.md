@@ -72,3 +72,11 @@ Final pre-submission audit:
 - Fresh post-fix full suite passed 111 tests in 40.09 seconds. Focused calibration/notebook suite passed 11 tests in 4.87 seconds after observed failing regressions. All 119 local publication links resolved; no forbidden binary, large file or credential/connection pattern was found in the public file set.
 - Independent scientific audit rechecked 21 artifact-index files, all six segmentation rows, 40 native prediction masks against actual labels/validity, 72 synthetic records, 16 ENL summaries, validation selection and public release hashes. No new unresolved scientific defect in the development evidence was found.
 - GitHub confirms the default main branch still contains planning content; the implementation is draft PR #1. No main merge or final tag was performed. The consolidated reports/submission_audit.md and submission_verification.json retain NOT READY for final supplied-set submission until its profile/results and actual fresh uncached Colab evidence exist.
+
+
+Fresh Colab acceptance, 29 October 2026:
+
+- The third browser-driven Colab attempt at source `3eecc1434991835e576e7d3d09d967fbd9388359` completed in **566.397461905 seconds**, including setup, one dependency restart and its wait, 200 uncached downloads, checks, audit, calibration, evaluation, figures and ZIP/hash export. All ten original cells completed; no exact Colab test count is retained.
+- User-saved original ZIP and authoritative sidecar are retained outside Git. Archive SHA-256 `1e365165f95de72e623a7dd99b1078a97912d0cd99bc24a5bffa570ffc1c29e9` matches browser output and sidecar; ZIP integrity passes. Independent Sol xhigh review accepts source/data/config bindings and reproduced scientific tables. See [execution review](colab_execution_review.md) and [summary](colab_observed_summary.json).
+- The external browser observation establishes fresh execution alongside acquisition evidence; original generic unverified-attestation fields remain unchanged. Neural training was disabled. This closes S2 for the classical core and does not measure full neural training within Colab.
+- Fresh local final full suite: **135 passed in 70.09 seconds**, exit zero. Public-file scan found no raw data, weights, archives, oversized files or credential/connection matches. Main publication and tag are the remaining authorized S3 action.
