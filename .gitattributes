@@ -1,0 +1,13 @@
+# Frozen scientific artifacts are bound by byte-level SHA-256.
+# Preserve exact bytes across Windows/Linux checkouts.
+reports/classical_training_rois.csv -text
+reports/heldout_enl_rois.csv -text
+reports/classical_calibration-v*/** -text
+configs/development-calibrated-v*.json -text
+# Preserve the exact source bytes recorded by calibration v2.
+scripts/calibrate_classical.py -text
+src/sar_water/benchmark.py -text
+src/sar_water/data.py -text
+src/sar_water/filters.py -text
+src/sar_water/metrics.py -text
+src/sar_water/segment.py -text

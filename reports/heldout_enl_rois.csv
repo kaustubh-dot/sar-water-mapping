@@ -1,0 +1,6 @@
+roi_id,patch_id,y0,y1,x0,x1,roi_class,suitability
+test_land_1,Ghana_313799,384,416,64,96,land,raw-only visual inspection before filtering; uniform terrain away from visible boundaries
+test_land_2,Ghana_406026,320,352,64,96,land,raw-only visual inspection before filtering; uniform terrain away from visible boundaries
+test_land_3,Ghana_97059,320,352,128,160,land,raw-only visual inspection before filtering; uniform terrain away from visible boundaries
+test_water_1,India_591317,64,96,64,96,water,raw-only visual inspection before filtering; broad dark river interior
+test_water_2,India_591317,96,128,160,192,water,raw-only visual inspection before filtering; broad dark river interior

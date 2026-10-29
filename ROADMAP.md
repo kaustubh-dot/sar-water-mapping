@@ -2,7 +2,7 @@
 
 **Created:** 28 October 2026. **Goal:** finish a defensible hackathon submission, with a complete Colab run under 30 minutes.
 
-**Progress:** Phase 0 complete; final method audit finished on 28 October 2026. The [implementation lock](docs/IMPLEMENTATION_LOCK.md) controls v1 method choices and exact model details. Phase 1 audit tooling and Phase 3 denoisers are implemented and reviewed, while their actual-data gates remain open. Phase 2 metrics and synthetic baseline are complete and reviewed. Phase 4 segmentation/selection tooling is fixture-tested and reviewed. All four implementation reviews used GPT-6.1 Sol at xhigh; findings are resolved. No real-data benchmark, training, or fresh Colab run has occurred.
+**Progress (29 October 2026):** Phase 0 and the scientific implementation reviews are complete. The audited upstream development subset has 100 manual-label pairs with frozen official 60/20/20 membership; seven touching cross-partition pairs limit claims to correlated development evaluation. Version 2 train/validation calibration is independently accepted; paired GPU training is the next execution gate. The organizer subset and actual fresh Colab run remain open gates. The [execution ledger](reports/execution_ledger.md) records current evidence; dated paragraphs below preserve earlier checkpoints.
 
 **Fresh progress audit (28 October 2026):** 50 tests passed; the synthetic integration rerun produced 98 candidates, four primary rows and four cleanup-ablation rows. See [verified status and the remaining execution order](reports/progress_audit.md). Phase 1-4 code is ready for actual-data execution; their remaining data-dependent gates are listed there. Source changes are currently uncommitted locally.
 
@@ -52,10 +52,10 @@ Phases 1-7 total approximately **7 hours engineering plus up to 1 hour remote tr
 **Create:** `src/sar_water/data.py`, `data/README.md`, `data/manifest.csv`, `data/splits.csv`, `reports/data_audit.md`, `tests/test_data.py`, and the minimal `pyproject.toml` needed to run them.
 
 - [ ] Obtain the kickoff archive; record its source, archive hash, patch count, dimensions, band order, units, nodata, and label provenance.
-- [ ] Pair SAR and masks by identifiers, not directory order. Reject missing pairs, duplicate identifiers, unsupported labels, and mismatched shape/georeferencing.
-- [ ] Inspect VV, VH, histograms, and masks for five representative development patches.
-- [ ] Keep independent manual masks distinct from Otsu/other weak labels. If only weak masks exist, label all resulting IoU/F1 as weak-label agreement and record the missing independent evaluation.
-- [ ] Use organizer splits if supplied; otherwise use the split hierarchy in the evaluation protocol. Audit duplicates and overlaps in either case.
+- [x] Pair SAR and masks by identifiers, not directory order. Reject missing pairs, duplicate identifiers, unsupported labels, and mismatched shape/georeferencing.
+- [x] Inspect VV, VH, histograms, and masks for five representative development patches.
+- [x] Keep independent manual masks distinct from Otsu/other weak labels. If only weak masks exist, label all resulting IoU/F1 as weak-label agreement and record the missing independent evaluation.
+- [x] Use organizer splits if supplied; otherwise use the split hierarchy in the evaluation protocol. Audit duplicates and overlaps in either case.
 - [x] Verify dB/power conversion, invalid-pixel handling, and no cross-split duplicates with small fixtures.
 
 **Gate:** one patch round-trips through the loader without swapping VV/VH or treating valid `0 dB` as nodata. The split manifest is saved and frozen. Missing independent masks blocks real-data ground-truth claims, but not filter development or synthetic evaluation.
@@ -72,6 +72,8 @@ open. Explicit separated spatial groups are required when event/scene grouping
 cannot establish usable partitions; no automatic spatial-block claim is made.
 
 ## Phase 2: Establish trustworthy metrics
+
+**Development Phase 1 execution:** [independent review](reports/development_data_review.md) accepts 200 verified objects, portable manifest/split hashes, visual inspection and a bounded affine-roundoff check without resampling. Official split adjacency is explicitly disclosed. These completed items apply to the upstream development subset; the kickoff archive checkbox remains open.
 
 **Create:** `src/sar_water/metrics.py`, `src/sar_water/synthetic.py`, `tests/test_metrics.py`, `tests/test_synthetic.py`, `configs/experiment.json`.
 
@@ -99,11 +101,11 @@ denoiser diagnostics are recorded under Phase 3. Final synthetic test comparison
 
 - [x] Add identity/raw, Median, and the exact multiplicative local-LMMSE Lee variant in the implementation lock, operating on linear power.
 - [x] Add log-domain bilateral filtering as the dependency-light processing comparator. Document that log/exponentiation can bias intensity; measure mean change rather than claim an unbiased estimator.
-- [ ] Give scalar MIDAL + BM3D at most 15 minutes of dependency/setup investigation within this phase. Use the scalar author API, frozen/known looks and six ADMM iterations; profile five development patches on both bands. Admit only if estimated cost of all enabled invocations, with 50% timing margin, fits three minutes and the whole notebook budget. If compatibility, terms, correctness or runtime fails, retain bilateral and close the branch. If admitted, replace bilateral before full validation rather than expanding the four-family comparison.
+- [x] Resolve the optional MIDAL admission branch: not admitted/not piloted; retain bilateral. The original bounded option was at most 15 minutes of dependency/setup investigation within this phase. Use the scalar author API, frozen/known looks and six ADMM iterations; profile five development patches on both bands. Admit only if estimated cost of all enabled invocations, with 50% timing margin, fits three minutes and the whole notebook budget. If compatibility, terms, correctness or runtime fails, retain bilateral and close the branch. If admitted, replace bilateral before full validation rather than expanding the four-family comparison.
 - [x] Use only this validation grid: Median windows `{3, 5}`; Lee windows `{5, 7}`; log-bilateral window `5`, spatial sigma `2`, dB color sigma `{1.5, 3.0}`.
-- [ ] Estimate Lee's effective looks from training-only homogeneous regions and freeze it; do not assume GRD is single-look. Use known `L` for synthetic data.
+- [x] Estimate Lee's effective looks from training-only homogeneous regions and freeze it; do not assume GRD is single-look. Use known `L` for synthetic data.
 - [x] Filter bands independently, preserve shape, use reflection at image borders, and restore input invalid pixels after documented nearest-valid filling.
-- [ ] Check constant-image behavior, invalid holes, tiny arrays, and finite positive outputs. Profile five development patches.
+- [x] Check constant-image behavior, invalid holes, tiny arrays, and finite positive outputs. Profile five development patches.
 
 **Synthetic development evidence (28 October 2026):** all 41 tests pass, including 14 focused filter cases. Exact filtering and a training-only recorded-ROI looks estimator are implemented. Five synthetic two-band 512 x 512 development arrays were profiled, and all bounded settings were checked on synthetic validation identities only (126 records). See [Phase 3 implementation evidence](reports/phase3_implementation.md). No real looks/settings are frozen, no final test comparison ran, and the MIDAL admission pilot is unrun/not admitted; bilateral is retained. The actual-data pilot and whole-Colab runtime gate remain open.
 
@@ -117,11 +119,11 @@ The [Sol xhigh review](reports/phase3_review.md) passed with no findings.
 
 - [x] Implement and fixture-test valid-dB Otsu/fixed thresholding, bounded validation-only selection, disk-to-mask scoring, and the separate cleanup ablation.
 
-- [ ] Run per-patch Otsu on valid dB values, separately for VV and VH, for every denoiser configuration. This is the common filter comparison.
-- [ ] Also compare a validation-tuned fixed dB threshold using the bounded grid in the protocol. Keep this labeled as supervised calibration.
-- [ ] Choose a single common channel/threshold strategy by the pooled-validation procedure in the implementation lock. A fixed threshold must have the same numeric value across denoisers. Retain the full per-band validation table.
-- [ ] Keep cleanup disabled in the primary four-row filter comparison. Separately evaluate the cleanup toggle on raw and the selected filtered pipeline: none versus remove water components smaller than 16 pixels. Use no hole filling.
-- [ ] Freeze denoiser settings, channel, threshold strategy, and cleanup in `configs/experiment.json`. Record why Otsu fails on unimodal/all-land patches.
+- [x] Run per-patch Otsu on valid dB values, separately for VV and VH, for every denoiser configuration. This is the common filter comparison.
+- [x] Also compare a validation-tuned fixed dB threshold using the bounded grid in the protocol. Keep this labeled as supervised calibration.
+- [x] Choose a single common channel/threshold strategy by the pooled-validation procedure in the implementation lock. A fixed threshold must have the same numeric value across denoisers. Retain the full per-band validation table.
+- [x] Keep cleanup disabled in the primary four-row filter comparison. Separately evaluate the cleanup toggle on raw and the selected filtered pipeline: none versus remove water components smaller than 16 pixels. Use no hole filling.
+- [x] Freeze denoiser settings, channel, threshold strategy, and cleanup in versioned `configs/development-calibrated-v2.json` (the generic template remains unfitted). Record why Otsu fails on unimodal/all-land patches.
 
 **Gate:** a real patch runs from disk to water mask and metrics with one function/command. No test labels have been used to pick parameters.
 
@@ -143,9 +145,9 @@ Phase 5 training depends on those frozen inputs. Phases 5–7 remain unrun.
 
 **Files:** `src/sar_water/model.py`, `src/sar_water/train.py`, `tests/test_neural.py`, and a separate neural dependency group. Remote experiments use a dedicated project directory and environment; inspect shared resource use before launching training. Architecture, loss, normalization and sampling are fixed by the implementation lock.
 
-- [ ] Verify remote PyTorch/CUDA compatibility, free VRAM/disk, and a small forward/backward pass. Do not alter system packages or interfere with other GPU jobs.
-- [ ] Implement the compact U-Net: `[VV,VH]` inputs; widths `16,32,64,128`; three downsampling stages; two Conv/GroupNorm/ReLU operations per block; bilinear decoder; one output logit. Verify fewer than one million parameters and the expected approximately 0.49-million scale.
-- [ ] Verify SAR-only nearest-valid filling produces finite neural inputs while retaining original masks, masked `0.5*BCEWithLogits + 0.5*Dice` loss, shared raw-training-set mean/std normalization, and deterministic sampling. Each epoch draws four 256-square crops per training source, using the locked uniform/water-centered policy. Invalid labels affect neither input filling, loss nor scoring.
+- [x] Verify remote PyTorch/CUDA compatibility, free VRAM/disk, and a small forward/backward pass. Do not alter system packages or interfere with other GPU jobs.
+- [x] Implement the compact U-Net: `[VV,VH]` inputs; widths `16,32,64,128`; three downsampling stages; two Conv/GroupNorm/ReLU operations per block; bilinear decoder; one output logit. Verify fewer than one million parameters and the expected approximately 0.49-million scale.
+- [x] Verify SAR-only nearest-valid filling produces finite neural inputs while retaining original masks, masked `0.5*BCEWithLogits + 0.5*Dice` loss, shared raw-training-set mean/std normalization, and deterministic sampling. Each epoch draws four 256-square crops per training source, using the locked uniform/water-centered policy. Invalid labels affect neither input filling, loss nor scoring.
 - [ ] Train separate raw/filtered models with matched initialization and crop/augmentation sequences, batch `8`, Adam learning rate `0.001`, seed `42`, at most `20` epochs per condition, and validation patience `5`. Use the best pooled-validation-IoU checkpoint and fixed sigmoid threshold `>0.5`, with native-resolution final inference.
 - [ ] Bound the complete training comparison to one hour remote wall time. Log actual updates, including any early-stopping differences. Add paired seeds `43` and `44` only within the same cap; compare only seeds completed for both inputs.
 - [ ] Save learning curves, best-validation checkpoints, configuration/hash, environment, actual time, and seeds. Keep checkpoint binaries outside Git and publish retrievable artifact references when delivering results.
@@ -184,3 +186,5 @@ Phase 5 training depends on those frozen inputs. Phases 5–7 remain unrun.
 A new method may enter only if it answers a documented failure, has accessible compatible inputs/code/weights, fits remaining time, and replaces an existing optional item. Record the reason and affected phase here. Once final test results are visible, changes require a new versioned experiment and cannot be described as an untouched holdout evaluation.
 
 **Next action:** preserve the reviewed source checkpoint, then complete the real-data audit and classical validation freeze. Use the kickoff subset if available; otherwise prepare a clearly identified upstream hand-labeled development subset with recorded provenance and membership. The organizer-specific gate remains open until its data are audited. GPU setup and U-Net fixture implementation may proceed while data access is pending; real training depends on the frozen real inputs. Follow the [remaining-work roadmap](reports/progress_audit.md).
+
+**Accepted development calibration (29 October):** [Sol xhigh review](reports/classical_calibration_review.md) independently reproduces the 98 validation candidates and four cleanup rows without test access. Six training ROIs give effective VV/VH looks 4.8593/4.0208. The frozen common rule is VV below -18 dB; selected settings are Median 5, Lee 5, bilateral color sigma 3 dB. Median 5 supplies the filtered neural input. Version 1 is invalid and retained only as superseded evidence. This closes development Phases 3/4 execution, while organizer and fresh Colab acceptance remain open.

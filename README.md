@@ -4,7 +4,7 @@
 
 Reproducible speckle denoising and surface-water segmentation on a 100-patch Sentinel-1 VV/VH subset of Sen1Floods11. The target is an end-to-end Google Colab run in **under 30 minutes**.
 
-**Status:** data-audit tools, scientific metrics, synthetic references, the four locked denoisers, and segmentation/validation tools are implemented. Phase 1–4 implementation reviews by GPT-6.1 Sol at xhigh are complete and findings are resolved. The actual-data gates remain open because the organizers' 100-patch subset is unavailable. No real-data benchmark, trained model, or fresh Colab runtime has been measured. See the [data audit](reports/data_audit.md) and the phase evidence in [the roadmap](ROADMAP.md).
+**Status (29 October 2026):** the reviewed pipeline now has an audited upstream development subset of 100 hand-labeled pairs (60 train, 20 validation, 20 test). Classical calibration has run on train/validation only; its version 2 artifacts passed independent Sol xhigh review before GPU training. The organizers' subset and fresh Colab runtime remain open gates. See the [development audit](reports/development_data_audit.md), [execution ledger](reports/execution_ledger.md), and [roadmap](ROADMAP.md). The official subset contains touching cross-partition chips; results describe correlated development data, not unseen-geography generalization.
 
 ## Local development
 

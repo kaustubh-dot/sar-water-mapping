@@ -193,3 +193,96 @@ new scores. The protocol requires runtime source identity, and these two code
 snapshots can differ. Record the evaluation commit and dirty status separately,
 as the classical runner already does. No actual held-out neural experiment was
 run in this review.
+
+## Neural provenance and native-artifact re-review
+
+29 October 2026, subsequent scoped update. The remaining evaluation-source
+provenance P2 is **resolved**. `scripts/evaluate_neural.py:32`–48 records the
+evaluation commit, working-tree dirty flag, explicit Git availability status,
+and hashes of seven relevant source files, independently from the earlier
+training commit. These values are included in the runtime and strict JSON
+exports at lines 267–304. The original four classical packaging approvals
+remain unchanged.
+
+The new native exports use the same single `predict_patch` result for scoring
+and serialization. `evaluate_neural.py:238`–250 writes one compressed NPZ per
+condition/source patch with native `int8` predictions (`0` land, `1` water,
+`-1` SAR-invalid), independent Boolean input/label masks, and their scoring
+intersection. `native_predictions.csv` retains condition, patch ID, relative
+path, shape, encoding and artifact SHA-256. The numeric index in each filename
+prevents collisions from sanitized identifiers. Label-invalid SAR locations
+retain an inference prediction and are excluded only from scoring.
+
+Optional figures select at most five sorted identifiers before inference,
+without ranking held-out performance. The eight-panel comparison at
+`evaluate_neural.py:167`–199 uses raw-derived shared VV display limits for raw
+and filtered VV, preserves native alignment, masks invalid truth/error pixels,
+and displays raw/filtered predictions with signed FP/FN errors. I inspected
+the generated water-fixture panel: text and aligned diagnostic content are
+readable. These are fixture images, not real-data results or selected failures.
+
+Fresh reviewer evidence:
+
+- `.venv/Scripts/python.exe -m pytest -q tests/test_neural_evaluation.py
+  --basetemp=outputs/pytest-phase6-neural-final-review`: **7 passed in 17.99 s**.
+- Independently loaded all four fixture NPZ artifacts with
+  `allow_pickle=False` and recomputed each confusion matrix against its source
+  fixture mask. All four exactly matched the scored per-patch counts. Native
+  prediction dtype, Boolean validity dtypes, SAR-invalid `-1`, and the scoring
+  intersection were also verified.
+
+One bounded timing follow-up was requested: native NPZ compression and checksum
+work currently fall inside each condition's `seconds` at lines 229–262. Separate
+that export time from preprocessing/inference/scoring, and label the timing
+scope. The aggregate evaluation clock already covers the new mask/CSV exports
+and optional figures. No actual held-out experiment was run during this review.
+
+## Neural export timing: scoped final acceptance
+
+29 October 2026. **The bounded neural export timing follow-up is resolved.**
+The checkpoint-evaluation implementation is accepted for subsequent execution;
+this does not accept an actual-data result or close Phase 6.
+
+The pending deterministic regression first failed against the reviewed source:
+raw/filtered condition times were `47/53` seconds, including `36` seconds of
+native compression/checksum work per condition. The fix at
+`scripts/evaluate_neural.py:230`–268 records each native NPZ write and checksum
+separately, subtracts it from the condition compute interval, and labels both
+timing scopes. The regression now requires `11/17` seconds of raw/filtered
+preprocessing, native inference and scoring, `36/36` seconds of native export,
+and `100` seconds for the aggregate evaluation clock. Runtime metadata also
+retains the `72`-second aggregate native-export component. These injected times
+test accounting boundaries; they are not measured model performance.
+
+`evaluation_seconds` includes preflight, loading, compute, CSV/native-mask
+exports, checksums and enabled figures. Its scope now explicitly excludes the
+final JSON/config serialization. The external notebook workflow clock remains
+responsible for complete enabled execution and packaging; this internal helper
+clock cannot establish the under-30-minute fresh Colab gate.
+
+Fresh verification:
+
+- Before the fix, `.venv/Scripts/python.exe -m pytest -q
+  tests/test_neural_evaluation.py::test_native_prediction_export_time_is_separate_from_condition_compute
+  --basetemp=outputs/pytest-phase6-neural-timing-red`: **1 failed in 31.59 s**,
+  with the expected `47/53` versus `11/17` accounting mismatch.
+- After the fix, `.venv/Scripts/python.exe -m pytest -q
+  tests/test_neural_evaluation.py
+  --basetemp=outputs/pytest-phase6-neural-acceptance`: **8 passed in 29.61 s**.
+  The artifact test now also asserts native `int8` predictions, Boolean validity
+  arrays, SAR-invalid `-1`, and independently recounts all four persisted
+  confusion matrices against their source fixture labels.
+- A separate read-only probe loaded all four NPZ files with
+  `allow_pickle=False` and compared their input, label and scoring masks with
+  the original raster values and metadata masks. Every mask and confusion
+  matrix matched. All seven evaluation-source SHA-256 values matched current
+  source files; evaluation commit/dirty status remained distinct from the
+  fixture training commit. Fixture labels did not produce an independent
+  manual-label claim.
+
+No remaining material defect was found in this scoped timing/native-artifact
+review. Organizer-data provenance, a real validation freeze, actual held-out
+benchmark outputs, representative real-data failures, remote training evidence,
+and a fresh complete Colab run remain execution gates. This review used only
+synthetic fixture checkpoints and source rasters and ran no actual held-out
+experiment.

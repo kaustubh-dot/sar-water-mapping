@@ -86,11 +86,12 @@ def select_validation(rows):
                 selected_filter=selected)
 
 
-def validation_search(patches, membership, *, looks, fallback_thresholds):
+def validation_search(patches, membership, *, looks, fallback_thresholds, cache_limit_bytes=100_000_000):
     """Evaluate exact bounded grid on explicitly validation-only Patch mapping.
 
-    Filter outputs (SAR only) are cached once per setting and patch, outside
-    threshold loops. Labels are used only for validation metrics. Reported row
+    Filter outputs (SAR only) are retained for one setting across all patches,
+    outside threshold loops. The cache is capped separately from source arrays
+    and filter workspaces. Labels are used only for validation metrics. Reported row
     time includes filtering once plus that row's segmentation/scoring, without
     disk I/O. Otsu threshold/status records retain constant-patch fallbacks.
     """
@@ -98,7 +99,10 @@ def validation_search(patches, membership, *, looks, fallback_thresholds):
         raise ValueError('selection accepts validation membership only')
     if set(fallback_thresholds) != set(FIXED_GRID) or any(not np.isfinite(v) for v in fallback_thresholds.values()):
         raise ValueError('finite calibrated fallback thresholds required for VV/VH')
-    rows, cache = [], {}
+    cache_bytes = sum(patch.power.nbytes for patch in patches.values())
+    if cache_bytes > cache_limit_bytes:
+        raise ValueError('one validation setting exceeds cache budget')
+    rows = []
     macro_ids = sorted(key for key, patch in patches.items()
                        if np.any((patch.labels == 1) & patch.input_valid & patch.label_valid))
     for method, settings in FILTER_GRID.items():
@@ -110,7 +114,6 @@ def validation_search(patches, membership, *, looks, fallback_thresholds):
                                              **parameters, **({'looks': looks} if method == 'lee' else {}))
                                  if patch.input_valid.any() else np.full_like(patch.power, np.nan))
                 filter_seconds += perf_counter() - start
-            cache[(method, setting_index)] = filtered
             for channel, thresholds in FIXED_GRID.items():
                 for rule, threshold in [('otsu', None)] + [('fixed', t) for t in thresholds]:
                     counts, records = {}, {}
@@ -124,19 +127,28 @@ def validation_search(patches, membership, *, looks, fallback_thresholds):
                                      channel=channel, rule=rule, threshold=threshold, cleanup=False,
                                      seconds=filter_seconds + perf_counter() - start,
                                      summary=summarize_water(counts, macro_patch_ids=macro_ids), patches=records))
+            del filtered
     selection = select_validation(rows)
     ablation = []
+    refilter_start = perf_counter()
     for row in (selection['primary'][0], selection['selected_filter']):
+        filtered = {key: (filter_power(patch.power, patch.input_valid, method=row['method'],
+                    **row['parameters'], **({'looks': looks} if row['method'] == 'lee' else {}))
+                    if patch.input_valid.any() else np.full_like(patch.power, np.nan))
+                    for key, patch in patches.items()}
         for cleanup in (False, True):
             counts = {}
             start = perf_counter()
             for key, patch in patches.items():
-                result = _segment_filtered(patch, cache[(row['method'], row['setting_index'])][key],
+                result = _segment_filtered(patch, filtered[key],
                                            channel=row['channel'], rule=row['rule'], threshold=row['threshold'],
                                            fallback_threshold=fallback_thresholds[row['channel']], cleanup=cleanup)
                 counts[key] = result['counts']
             ablation.append(dict(method=row['method'], parameters=row['parameters'], cleanup=cleanup,
                                  seconds=perf_counter() - start, timing_scope='segmentation_and_scoring_only_cached_filter',
                                  summary=summarize_water(counts, macro_patch_ids=macro_ids)))
+        del filtered
     return dict(status='pending_real_calibration', validation_table=rows, cleanup_ablation=ablation,
-                fallback_thresholds=dict(fallback_thresholds), **selection)
+                fallback_thresholds=dict(fallback_thresholds), cache_peak_bytes=cache_bytes,
+                cache_limit_bytes=cache_limit_bytes, cache_policy='one_setting_then_release',
+                cleanup_refilter_and_scoring_seconds=perf_counter()-refilter_start, **selection)

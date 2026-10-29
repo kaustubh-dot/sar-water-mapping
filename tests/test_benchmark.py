@@ -88,3 +88,12 @@ def test_disk_pair_roundtrip(tmp_path):
                 band_order='VV,VH', source='synthetic fixture', label_source='manual_fixture')
     result = b.benchmark_pair(pair, method='raw', channel='VV', rule='fixed', threshold=-20)
     assert result['counts'] == dict(tp=1, fp=0, fn=0, tn=2)
+
+
+def test_validation_cache_holds_only_one_setting_and_enforces_budget():
+    b=api();p=patch()
+    result=b.validation_search({'p':p},{'p':'validation'},looks=[1,1],fallback_thresholds={'VV':-20,'VH':-20},cache_limit_bytes=p.power.nbytes)
+    assert result['cache_peak_bytes']==p.power.nbytes
+    assert len(result['validation_table'])==98
+    with pytest.raises(ValueError,match='cache budget'):
+        b.validation_search({'p':p},{'p':'validation'},looks=[1,1],fallback_thresholds={'VV':-20,'VH':-20},cache_limit_bytes=p.power.nbytes-1)
