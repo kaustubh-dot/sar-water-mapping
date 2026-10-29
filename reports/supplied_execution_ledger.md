@@ -34,7 +34,7 @@ is disclosed; this is not a claim of pristine blind evaluation.
   scratch training under one-hour cap; completed-pair independent review.
 - [x] Frozen classical/synthetic and neural held-out evaluation, separate
   outputs, figures/counts/hash evidence; independent result review.
-- [ ] Notebook supplied-profile execution smoke, report/reproduction/roadmap
+- [x] Notebook supplied-profile execution smoke, report/reproduction/roadmap
   update, final integration review and branch publication.
 
 Uncached Colab, its under-30-minute acceptance and final submission tag are
@@ -100,7 +100,25 @@ and eight means are separate from real SAR. No test-driven changes were made.
 Classical evaluation took 59.376433 seconds including 124 diagnostic figures;
 neural checkpoint evaluation took 9.061679 seconds, separately from training.
 
-The supplied notebook smoke is now running in a separate Linux kernel, clean
+The supplied notebook smoke completed in a separate Linux kernel, clean
 checkout pinned to `9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f`, with 200 cached
-TIFFs. Clone/cache preparation and the existing execution environment are
-outside its notebook clock. This can verify integration, not fresh Colab.
+TIFFs. It passed independent review in supplied_notebook_review.md: all ten
+cells executed, 96 checks passed, 98 validation records and every classical
+held-out confusion count reproduced exactly. ENL and synthetic results also
+agree; negligible radiometry roundoff is documented. The authoritative notebook
+clock is 123.043926 seconds through the original ZIP and checksum. The retained
+164,908,503-byte archive has SHA-256
+`968b9065b9ded3fb0c3c472e10e4fccf60c12a1f10c5f82481698de841577cef`.
+Clone/cache preparation and the existing execution environment are outside its
+notebook clock. This verifies cached integration, not fresh Colab. S1 scientific
+execution is closed. Final documentation and publication-scope consistency
+passed independent Sol xhigh review in supplied_integration_review.md. All
+implementation, script, test and notebook files remain unchanged from the
+130-test accepted implementation. Supplied results lead the report and README;
+old development measurements remain separately labeled. Raw data, checkpoints,
+native mask archives and private execution artifacts remain outside Git.
+
+The existing draft PR description could not be updated: the integration
+returned 403 and the local GitHub CLI has invalid authentication. A replacement
+body is saved locally. Git branch publication remains available; main, the
+final acceptance tag and uncached Colab are unchanged and pending.

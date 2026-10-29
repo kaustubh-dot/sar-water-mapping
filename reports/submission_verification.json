@@ -1,52 +1,73 @@
 {
   "date": "2026-10-29",
-  "verdict": "not_ready_for_supplied_subset_submission",
-  "audit_base_commit": "a2a9e15fc4f21fbe2595bdc481b37142265ee1cf",
+  "verdict": "S1_supplied_execution_passed_final_submission_not_ready",
+  "audit_base_commit": "612040e20ecb69fa2c2a875aec4ca32c18249208",
   "suite": {
-    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-submission-final",
-    "passed": 111,
-    "seconds": 40.09,
-    "exit_code": 0
+    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-supplied-integrated",
+    "passed": 130,
+    "seconds": 125.65,
+    "exit_code": 0,
+    "tested_implementation_commit": "72ef16abaeaef1a0205de5654f302d52e4371487",
+    "implementation_scope_unchanged_since_test_verified": true
   },
-  "focused_provenance_and_guard_tests": {
-    "passed": 11,
-    "seconds": 4.87,
-    "red_green_observed": true
+  "notebook": {
+    "source_commit": "9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f",
+    "code_cells": 10,
+    "scientific_checks_passed": 96,
+    "scientific_checks_seconds": 8.3,
+    "total_wall_seconds": 123.04392587998882,
+    "runtime_type": "local_cpu_not_colab",
+    "cached_tiffs": 200,
+    "neural_training_enabled": false,
+    "original_archive_sha256": "968b9065b9ded3fb0c3c472e10e4fccf60c12a1f10c5f82481698de841577cef",
+    "original_archive_bytes": 164908503,
+    "independent_review_accepted": true
   },
-  "notebook_code_cells_parse": 10,
-  "changed_notebook_code_cell_indices": [
-    9
-  ],
-  "notebook_change_scope": "Organizer failure message only; all numerical/data-access statements unchanged. First-page and source-profile documentation also clarified.",
   "links": {
-    "count": 119,
+    "count": 249,
     "missing": [],
     "not_in_public_file_set": []
   },
   "publication": {
-    "files": 143,
-    "text_files_scanned": 139,
+    "files": 209,
     "forbidden_binaries": [],
     "files_over_5mb": [],
     "credential_or_connection_matches": []
   },
   "scientific_artifact_indices_verified": 21,
-  "neural_mask_recounts_verified": 40,
+  "validation_neural_confusion_matrices_verified": 80,
+  "neural_mask_recounts_verified": 62,
   "synthetic_records_verified": 72,
+  "enl_records_verified": 40,
   "development_science_accepted": true,
   "supplied_selection_known": true,
-  "supplied_profile_connected": false,
-  "supplied_internal_split_frozen": false,
-  "supplied_experiment_executed": false,
+  "supplied_profile_connected": true,
+  "supplied_internal_split_frozen": true,
+  "supplied_experiment_executed": true,
+  "supplied_notebook_executed_and_reviewed": true,
+  "supplied_S1_gate_closed": true,
   "fresh_colab_verified": false,
+  "fresh_colab_verification_deferred_by_user": true,
   "default_public_branch": "main",
   "implementation_in_draft_pr": "https://github.com/kaustubh-dot/sar-water-mapping/pull/1",
   "final_tag_created": false,
+  "new_checkpoint_delivery": "reviewed_local_bundle_not_publicly_released",
   "remaining_blockers": [
-    "Connect/audit/run exact supplied first100 subset under a separately frozen internal split and source provenance.",
-    "Complete actual fresh uncached Colab verification below30min on connected supplied profile.",
-    "Publish reviewed final implementation/accepted source links after experimental gates pass."
+    "Actual fresh uncached Colab verification below 30 minutes on the connected supplied profile; explicitly deferred.",
+    "Publish reviewed final implementation to main and pin accepted source links after Colab acceptance."
   ],
-  "historical_artifact_note": "Previous recorded data/config/result/checkpoint files are preserved; earlier source remains available at61b09f9bfa61114d83bd7be19eba3de67d5621db.",
-  "new_calibrator_sha256": "bca808707f2ac0908bbef20d26bf04ceb5fc91bf7ba57bfddbad0e26202ab164"
+  "historical_artifact_note": "Original development data/config/result/checkpoint artifacts are preserved. Earlier source remains at 61b09f9bfa61114d83bd7be19eba3de67d5621db. Definition-only and earlier integration reviews have explicit historical-scope notes.",
+  "source_sha256": {
+    "scripts/calibrate_classical.py": "6c5ed4ada813fde9d57ee3a06d6b1de726d727b2bb3705366d3f636dfcc6eedd",
+    "src/sar_water/supplied_profile.py": "384ae9ffc7a855754b2caec521bc2dddfc37983f1ff20c9d8f194bf4b78437ac",
+    "notebooks/01_sar_water_mapping.ipynb": "74e8ef3d534b98d940ff04189274f1d3035ce916728804d73f7fcee7bf740102"
+  },
+  "final_integration_review": "reports/supplied_integration_review.md",
+  "final_integration_review_accepted": true,
+  "pr_description_update": {
+    "status": "blocked_by_existing_authentication",
+    "github_integration": "403 resource not accessible by integration",
+    "cli": "invalid authentication",
+    "prepared_body_retained_locally": true
+  }
 }

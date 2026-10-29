@@ -4,9 +4,52 @@
 
 Reproducible speckle denoising and surface-water segmentation on a 100-patch Sentinel-1 VV/VH subset of Sen1Floods11. The target is an end-to-end Google Colab run in **under 30 minutes**.
 
-**Pre-submission audit: NOT READY for final submission.** Development scores/checkpoints are verified, but the supplied first-100 profile is not connected and executed, and fresh uncached Colab is unverified. The [submission audit](reports/submission_audit.md) lists the remaining gates and corrected provenance/documentation issues. Do not relabel the development tables as supplied-set measurements.
+**Submission status: NOT READY; supplied-set gate S1 closed.** Supplied acquisition/audit, source-aware profile, calibration, paired scratch training, held-out results and cached notebook integration are independently accepted. Fresh uncached Colab (S2) is explicitly deferred and unverified. Publication to `main` and the submission tag (S3) remain pending. The [submission audit](reports/submission_audit.md) records this boundary. The supplied and earlier development results stay separately labeled.
 
-**Status (29 October 2026):** the upstream development experiment is implemented and measured: audited 100 manual-label pairs, frozen calibration, four classical pipelines, paired GPU U-Net training, held-out evaluation and a complete cached Linux notebook run. Phase reviews use GPT-6.1 Sol at xhigh. The organizers’ subset and a **fresh Colab Run All below 30 minutes remain unverified**. Official partitions contain touching chips and shared events, so these are correlated development results, not unseen-geography evidence.
+**Supplied-first100 profile:** the [recipe](reports/supplied_subset_recipe.md) selects the first 100 ordered upstream hand-labeled training rows. All 100 pairs are audited. The existing seed-42 event rule freezes 29 training patches (Mekong/Nigeria/Pakistan), 40 validation (India) and 31 test (Ghana), before tuning. No cross-partition overlap or touching chips was found. Exactly 22 IDs were previously used in development training, including eight current test IDs; this is a disclosed internal event holdout, not a pristine blind test. `Ghana_26376` remains in test with no scored pixels. The five held-out ENL regions are visually selected land regions only. See the [data review](reports/supplied_data_review.md), [source configuration](reports/supplied_source-v1.json) and [reproduction commands](docs/REPRODUCING.md).
+
+The single notebook now defaults to `DATA_SOURCE='supplied-first100'`; `upstream-development` preserves the earlier profile. Its supplied source, acquisition, split and ROI bindings are checked before calibration and held-out access. The [accepted calibration](reports/supplied_calibration_review.md) selects shared VH below -20 dB with Median 5 for neural input. The [accepted scratch training pair](reports/supplied_training_review.md) took 76.77 seconds including preparation: raw ran 10 epochs/150 updates, Median 5 ran 9 epochs/135 updates. The [supplied result review](reports/supplied_results_review.md) accepts the held-out tables; the [cached supplied notebook review](reports/supplied_notebook_review.md) also accepts the integrated execution. The new checkpoint ZIP is verified locally and has no public release yet. These timings do not certify a fresh Colab run.
+
+**Accepted supplied held-out measurements.** All six rows
+use the same 4,940,307 scored pixels across 31 Ghana test members: a fixed
+15-patch water-positive macro set, 15 dry patches and one no-score patch.
+Classical rows use shared VH below -20 dB with primary cleanup off; U-Net rows
+use probability strictly above 0.5.
+
+| Supplied held-out method | Water IoU | Water F1 |
+| --- | ---: | ---: |
+| Raw + shared threshold | 0.2772 | 0.4341 |
+| Median 5 + shared threshold | 0.4135 | 0.5851 |
+| Lee 5 + shared threshold | 0.4051 | 0.5766 |
+| Log-bilateral + shared threshold | 0.3825 | 0.5534 |
+| Compact U-Net, raw VV/VH | 0.4208 | 0.5923 |
+| Compact U-Net, Median-5 VV/VH | 0.4043 | 0.5758 |
+
+Median preprocessing improves threshold segmentation, while the filtered U-Net
+has lower pooled IoU than the raw U-Net. No method or setting is changed from
+these test outcomes. See the [supplied classical table](reports/supplied_classical-v1/results_real.csv),
+[neural table](reports/supplied_neural-v1/results_neural.csv) and
+[full report](reports/final_report.md). ENL covers five fixed visually selected
+land regions only; one has valid SAR but no valid label pixels and remains in
+the shared SAR-only diagnostic. Synthetic known-reference PSNR is separate.
+
+The supplied classical CPU runner took **59.38 seconds**, including synthetic
+work and 124 figures, excluding setup/access/calibration and final metadata
+writes. Neural GPU checkpoint evaluation took **9.06 seconds**, separately
+from the **76.77-second** remote training pair. These are recorded runner
+subtotals, not a full notebook or fresh Colab measurement.
+
+The **accepted supplied classical notebook smoke took 123.04 seconds** through
+the final ZIP/checksum at source pin
+`9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f`: 10 cells completed, with 96 tests
+passing in 8.30 seconds. It used a fresh kernel, 200 cached source TIFFs, an
+existing clean isolated clone and preinstalled kernel prerequisites. Initial
+clone/cache preparation were outside the notebook clock. See the
+[summary](reports/supplied_notebook_smoke_summary.json) and
+[independent review](reports/supplied_notebook_review.md). This closes S1;
+fresh uncached Colab remains deferred and unverified.
+
+**Earlier development results (29 October 2026):** the distinct upstream development experiment has measured classical/neural results and a cached Linux notebook run. Phase reviews use GPT-6.1 Sol at xhigh. Its official partitions contain touching chips and shared events, so the following are correlated development results, not unseen-geography evidence. They do not describe the supplied-first100 profile.
 
 | Held-out method | Water IoU | Water F1 |
 | --- | ---: | ---: |
@@ -22,8 +65,6 @@ All classical rows use validation-selected VV below -18 dB, with cleanup disable
 The GPU training pair took **122.06 seconds**, including preparation. The complete classical notebook took **91.78 seconds on Linux with cached TIFFs, an existing clone and preinstalled kernel**; this is not a fresh Colab measurement. See [notebook evidence](reports/notebook_smoke_summary.json), [current roadmap](ROADMAP.md) and [execution ledger](reports/execution_ledger.md).
 
 [Download the reviewed development checkpoints](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1). Weights are release assets outside Git; no raw dataset is included. The [reproduction guide](docs/REPRODUCING.md) explains the exact source commit, input restoration, environments and commands. [Open the classical notebook in Colab](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/implementation/remaining-phases/notebooks/01_sar_water_mapping.ipynb); this access link does not certify its fresh-runtime timing.
-
-**Supplied selection update:** the user has now provided a recipe selecting the first 100 rows of the upstream hand-labeled training CSV. It differs from the development subset above; only 22 identifiers overlap, all previously used for training. Its exact identities are frozen in the [recipe audit](reports/supplied_subset_recipe.md). These 100 have no supplied internal evaluation splits and have not yet been audited/calibrated as a set. The notebook currently reproduces the earlier development experiment; its result tables cannot be relabeled as this supplied subset.
 
 ## Local development
 
@@ -42,7 +83,7 @@ Reproduce the simulated raw/noisy baseline with `python -m sar_water.synthetic -
 
 The central question is: **Does reducing speckle improve water segmentation enough to justify its runtime and loss of detail?**
 
-The locked core compares unfiltered input, Median, multiplicative Lee, and a lightweight log-domain bilateral pipeline. Every denoiser uses the same validation-selected channel and threshold policy, with cleanup disabled in the primary comparison. Scalar MIDAL + BM3D is the sole bounded substitution for bilateral, subject to a compatibility and whole-workflow runtime gate.
+The locked core compares unfiltered input, Median, multiplicative Lee, and a lightweight log-domain bilateral pipeline. Every denoiser uses the same validation-selected channel and threshold policy, with cleanup disabled in the primary comparison. The optional MIDAL + BM3D branch was declined to preserve the dependency and runtime budget; bilateral was retained. MIDAL was not piloted or admitted. No further model search enters v1.
 
 A remote RTX 4000 Ada GPU with approximately 20 GB VRAM is available for development. The primary learned experiment is one compact VV/VH U-Net architecture, trained separately on raw and selected filtered inputs. UDL4FL is reserve literature, excluded from promised deliverables because of unresolved input-order metadata. Foundation-model adaptation is outside v1. The [implementation lock](docs/IMPLEMENTATION_LOCK.md) fixes the details; the [research review](docs/RESEARCH_REVIEW.md) records the wider evidence.
 

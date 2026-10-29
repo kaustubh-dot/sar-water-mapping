@@ -1,13 +1,71 @@
 # Local data and the Phase 1 audit
 
-The supplied acquisition recipe is now known: first 100 ordered rows of the
-official hand-labeled training CSV. Its [exact selection](../reports/supplied_subset_recipe.md)
-is frozen, but its full pair audit and internal evaluation splits are still
-unrun. An earlier, distinct 100-pair development substitute has frozen official
+The supplied acquisition recipe selects the first 100 ordered rows of the
+official hand-labeled training CSV. Its [exact selection](../reports/supplied_subset_recipe.md),
+100-pair raster audit and internal event split are accepted in the
+[data review](../reports/supplied_data_review.md). The existing seed-42 rule
+assigns Mekong/Nigeria/Pakistan to train (29), India to validation (40) and Ghana
+to test (31), before tuning. No cross-partition overlap or touching chips was
+found. An earlier, distinct 100-pair development substitute has frozen official
 60/20/20 membership; see the [development audit](../reports/development_data_audit.md).
 Do not treat those development results or splits as the supplied-set experiment.
 Keep raw files, archives and contact-sheet images outside Git. The project's MIT
 license does not change dataset terms. Downloading the entire dataset is unnecessary.
+
+Exactly 22 supplied IDs were previously used for project training: five current
+train, nine validation and eight test IDs. Preserve that exposure disclosure;
+these internal event holdouts are not a pristine blind test. `Ghana_26376` has
+zero scored pixels, remains in test and must receive an explicit no-score
+status. Four training ROIs and five test-only ENL rectangles are frozen in
+separate CSVs; the test rectangles support visually homogeneous land diagnostics
+only and never enter looks estimation or normalization.
+`supplied_enl_05` in `Ghana_168875` has valid SAR throughout but no valid label
+pixels; its land tag is visual interpretation. The other four regions are
+fully manual-label land. All five remain in the shared SAR-only ENL diagnostic;
+none is dropped or backfilled after scoring.
+
+## Supplied-first100 acquisition and audit
+
+The [single notebook](../notebooks/01_sar_water_mapping.ipynb) now defaults to
+`DATA_SOURCE='supplied-first100'`. Equivalent source acquisition and audit
+commands, from the repository root, are:
+
+```text
+python scripts/prepare_supplied_data.py --data-root data/supplied-v1 --output outputs/supplied-acquisition-reproduction-v1
+python -m sar_water.data data/supplied-v1/inventory.csv --splits data/supplied-v1/splits.csv --output data/supplied-v1/audit-v1 --contact-sheet
+```
+
+The acquisition helper verifies the pinned source CSV and exact ordered
+selection, freezes event membership before object access, requests only the
+200 selected generation-pinned objects, verifies size/MD5/SHA-256 and writes
+an immutable inventory. It does not perform the raster audit. It takes no cache
+override by default; optional `--cache-root` is read only and verifies matching
+object generation, size and MD5 before copying. Its completion log describes
+the original acquisition, so the notebook also records the current run's
+existing TIFF count. Use a new audit directory when files already exist.
+
+After the raster audit, create or verify the metadata-only source configuration
+with `sar_water.supplied_profile`. It binds every supplied ID, source object,
+event, split and input hash before source-aware calibration. The
+[reproduction guide](../docs/REPRODUCING.md) gives exact writer, calibration,
+scratch-training and evaluation commands, plus restoration of the accepted
+metadata bytes. The [profile review](../reports/supplied_profile_review.md)
+accepts that wiring; the [actual calibration review](../reports/supplied_calibration_review.md)
+also accepts the frozen validation choices. The [scratch training pair](../reports/supplied_training_review.md)
+is independently accepted. Frozen held-out measurements are recorded in the
+[classical table](../reports/supplied_classical-v1/results_real.csv) and
+[neural table](../reports/supplied_neural-v1/results_neural.csv), accepted by
+the [independent result review](../reports/supplied_results_review.md). All methods use the same 4,940,307 scored pixels,
+15 water-positive macro members, 15 dry patches and one no-score member.
+The [cached supplied notebook smoke](../reports/supplied_notebook_smoke_summary.json)
+and its [independent review](../reports/supplied_notebook_review.md) are accepted,
+closing S1. Its 123.04-second run used 200 cached TIFFs, an existing clean clone
+and preinstalled kernel prerequisites; initial clone/cache preparation were
+outside the clock. The exact source pin is
+`9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f`. Fresh uncached Colab remains unverified.
+Fresh uncached Colab is deferred.
+
+## Generic inventory contract
 
 Install in an isolated environment: `python -m pip install -e ".[geo,audit,test]"`.
 The base package uses NumPy/SciPy; GeoTIFF loading requires the `geo` extra and

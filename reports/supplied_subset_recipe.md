@@ -1,5 +1,10 @@
 # Audit of the supplied 100-patch recipe
 
+Historical definition audit, written before acquisition. The frozen JSON below
+retains that metadata-only snapshot. Subsequent execution is recorded in the
+[supplied execution ledger](supplied_execution_ledger.md); its current data,
+calibration and result status supersedes the original next-action list here.
+
 29 October 2026. The user supplied a Colab snippet received when asking about
 the 100 patches. It defines a concrete acquisition recipe: read the upstream
 hand-labeled training CSV without a header and take its first 100 rows. There

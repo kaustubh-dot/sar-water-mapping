@@ -1,5 +1,11 @@
 # Submission connections review
 
+Historical audit of the earlier integration gap. The supplied implementation
+and measured execution have since progressed; current acceptance evidence is
+in the [submission audit](submission_audit.md) and
+[supplied execution ledger](supplied_execution_ledger.md). The original findings
+below are preserved as the pre-fix record.
+
 29 October 2026. Bounded independent audit of source commit
 `a2a9e15fc4f21fbe2595bdc481b37142265ee1cf`. This review traces the supplied
 first-100 recipe through acquisition, audit/splits, calibration, the single

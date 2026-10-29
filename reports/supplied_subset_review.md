@@ -1,5 +1,10 @@
 # Supplied-subset recipe review
 
+Historical review of the definition-only phase. Later data/profile, calibration,
+training and result acceptance is recorded in the
+[supplied execution ledger](supplied_execution_ledger.md). The original review
+scope and findings below are preserved.
+
 Reviewer: **GPT-6.1 Sol**, reasoning effort **xhigh**. Independent review dated 29 October 2026.
 
 **Decision: accept the selection/provenance documentation only.** No P1/P2 findings remain in this bounded change. This does not accept a new data audit, split, calibration, trained model, benchmark or fresh Colab run; those gates remain open.

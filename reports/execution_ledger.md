@@ -1,5 +1,10 @@
 # Remaining-phase execution ledger
 
+This ledger preserves the earlier development run and initial submission audit.
+The separately versioned supplied experiment is tracked in the
+[supplied execution ledger](supplied_execution_ledger.md), which supersedes
+the pre-execution supplied-set next steps at the end of this historical record.
+
 Started 28 October 2026. User authorized phasewise implementation and GPT-6.1 Sol xhigh review/fixes after each phase. Work uses branch `implementation/remaining-phases` in the existing project checkout.
 
 - Baseline: committed the previously verified Phase 1-4 implementation as `33a9f7b`. No raw data, credentials, environments or checkpoints were committed.

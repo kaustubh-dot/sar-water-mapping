@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "status": "accepted_cached_linux_cpu_notebook_smoke",
+  "source_commit_sha": "9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f",
+  "requested_source_ref": "9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f",
+  "execution_engine": "nbclient; separate dedicated Python kernel",
+  "source_cell_changes": [
+    {
+      "cell_index": 3,
+      "change": "REPO_REF branch replaced with recorded full commit SHA only; kernel metadata selected separately"
+    }
+  ],
+  "code_cells_executed": 10,
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "cell_errors": 0,
+  "scientific_tests": {
+    "passed": 96,
+    "seconds": 8.3
+  },
+  "runtime_type": "local_cpu_not_colab",
+  "profile": "full",
+  "neural_training_enabled": false,
+  "total_wall_seconds": 123.04392587998882,
+  "wrapper_seconds": 123.90463726990856,
+  "stages_seconds": {
+    "source_checkout_seconds": 0.04279129207134247,
+    "installation_seconds": 2.086576286936179,
+    "supplied_download_and_object_verification_seconds": 0.30953847896307707,
+    "documented_data_access_seconds": 0.31213989900425076,
+    "scientific_checks_seconds": 8.49520229594782,
+    "audit_seconds": 4.027912266086787,
+    "training_roi_and_validation_calibration_seconds": 45.076373430900276,
+    "frozen_real_synthetic_evaluation_export_seconds": 59.212078529875726,
+    "result_table_and_figure_display_seconds": 0.11672886507585645,
+    "bundle_export_seconds": 3.405818375060335
+  },
+  "measured_below_30_minutes": true,
+  "fresh_colab_verified": false,
+  "fresh_colab_under_30_minute_gate_closed": false,
+  "execution_conditions": {
+    "fresh_kernel": true,
+    "fresh_environment": false,
+    "existing_clean_isolated_clone": true,
+    "cached_source_tiffs": 200,
+    "initial_clone_and_cache_preparation_outside_notebook_clock": true,
+    "kernel_prerequisites_preinstalled": true,
+    "fresh_network_data_download_measured": false
+  },
+  "data_source": "supplied-first100",
+  "data_provenance": {
+    "source": "supplied-first100",
+    "organizer_subset": false,
+    "existing_tiff_count_before_helper": 200,
+    "acquisition_completion_log_origin_counts": {
+      "cache": 44,
+      "download": 156
+    },
+    "acquisition_completion_log_note": "Immutable log describes its original acquisition, not this notebook execution.",
+    "split_counts": {
+      "test": 31,
+      "train": 29,
+      "validation": 40
+    },
+    "previous_training_exposure_by_split": {
+      "test": 8,
+      "train": 5,
+      "validation": 9
+    },
+    "provenance_limitation": "New internal event split; 22 prior project training exposures include 8 current test IDs. Source bindings are checked after raster audit.",
+    "inventory_sha256": "88e985560716774bc6a27e7daf82c0f11a030a2dd71de136d438111dcbd18cbb",
+    "training_rois_sha256": "06250010ee4dcc6cd43a9ff97c5ff4644c55f85b990664ea76e0fb7459abfad0",
+    "heldout_enl_rois_sha256": "ce9feec5fae46109f805c0650f27c9cc9e5193cd96d95f0c268115626a78556e",
+    "source_config_sha256": "f358aaa01a33cd690d63dc217a7700fb6de4d2d9586eb9f94c0d2bad2c738af0"
+  },
+  "calibration_identity": {
+    "config_file_sha256": "ab03d16d768705cb01a467aa14ef1fde2dffd5b66a35ca03f7c04b838352be32",
+    "manifest_file_sha256": "8d89ec95ec75d3fbb34aa0186b8600b166cfaed410948ff158cdaaaf399bb3ae",
+    "splits_file_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+    "training_roi_sha256": "06250010ee4dcc6cd43a9ff97c5ff4644c55f85b990664ea76e0fb7459abfad0",
+    "looks_artifact_sha256": "9763e44dba73f4ab59ddcafc212145c6654dce115458a54adeab6af527ad60ab",
+    "source_config_sha256": "f358aaa01a33cd690d63dc217a7700fb6de4d2d9586eb9f94c0d2bad2c738af0"
+  },
+  "dependency_lock_sha256": "8ceecb5f7380652ed7c99a0f64e97121908cb4dd5d886d5512a3ae707c2f700b",
+  "training_rois_sha256": "06250010ee4dcc6cd43a9ff97c5ff4644c55f85b990664ea76e0fb7459abfad0",
+  "heldout_enl_rois_sha256": "ce9feec5fae46109f805c0650f27c9cc9e5193cd96d95f0c268115626a78556e",
+  "calibration_common": {
+    "channel": "VH",
+    "rule": "fixed",
+    "threshold": -20,
+    "mean_pooled_iou": 0.33921016078964483,
+    "seconds": 11.40168366394937
+  },
+  "selected_filter": "median",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "cpu_count": 24,
+    "versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.17.1",
+      "rasterio": "1.5.2"
+    }
+  },
+  "original_archive_sha256": "968b9065b9ded3fb0c3c472e10e4fccf60c12a1f10c5f82481698de841577cef",
+  "original_archive_bytes": 164908503,
+  "original_timing_sidecar_filename": "colab-20261029T074330712528Z.runtime.json",
+  "original_sidecar_sha256": "ff6c329593f4c085e5cf2fa535c062b3ce40916ce1ea0dbe3e3608d48b54e374",
+  "original_archive_retained_locally": true,
+  "archive_crc_check": "passed",
+  "timing_scope": "First executable cell through the only archive write and archive checksum; excludes only timing-sidecar serialization and subsequent display.",
+  "review": "reports/supplied_notebook_review.md",
+  "note": "This is cached Linux integration evidence. A new run-local manifest/source/config hash is expected from different relative paths; method choices and result counts are independently checked against the accepted frozen experiment. No full training or fresh Colab timing is established.",
+  "scientific_result_reproduction": {
+    "validation_candidates_verified": 98,
+    "heldout_primary_rows_verified": 4,
+    "heldout_per_patch_rows_verified": 124,
+    "heldout_confusion_counts_exact": true,
+    "enl_records_verified": 40,
+    "synthetic_test_records_verified": 72,
+    "radiometry_roundoff_maximum_absolute_difference": 2.56e-10
+  }
+}

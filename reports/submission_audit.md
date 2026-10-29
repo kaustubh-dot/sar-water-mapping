@@ -1,9 +1,10 @@
 # Final pre-submission audit
 
-29 October 2026. **Verdict: development evidence is reviewed; the hackathon
-submission is NOT READY.** Passing tests and a reproducible development run
-cannot substitute for executing the supplied dataset and verifying fresh Colab.
-Do not create the final acceptance tag or describe these open gates as passed.
+29 October 2026. **Verdict: the supplied experiment is executed and reviewed;
+final submission is NOT READY.** The supplied notebook is independently
+accepted, closing S1. Fresh uncached Colab is explicitly
+deferred and remains unverified. Do not create the final acceptance tag while
+that acceptance gate is open.
 
 ## Connection map
 
@@ -15,33 +16,45 @@ Do not create the final acceptance tag or describe these open gates as passed.
 | Config → paired training → checkpoints → neural results | Shared normalization/crops, original checkpoint hashes, 40 native masks and counts verified | Development passed; one seed |
 | Public release → downloaded ZIP → model preflight | Published digest and inner hashes match; both checkpoints load | Development passed |
 | Development notebook → setup/access/audit/calibration/export | Ten cells completed on cached Linux in 91.78 seconds | Development smoke only |
-| Supplied first-100 recipe → executable acquisition/notebook | Exact IDs/hash recorded, but no executable supplied-set profile consumes them | **Blocked: implementation/execution required** |
-| Supplied data → internal split → new calibration/results | All 100 source IDs are upstream train; internal membership unassigned | **Unrun** |
+| Supplied first-100 recipe → executable acquisition/notebook | Exact ordered IDs, pinned objects, metadata-only source binding and default supplied notebook profile | Accepted implementation |
+| Supplied data → internal split → new calibration/results | 100 audited pairs; event split 29/40/31; 98 validation candidates; new scratch pair and separately scored outputs | Accepted data/calibration/training/results |
+| Supplied notebook → setup/access/audit/calibration/export | Ten cells, 96 checks, cached Linux run 123.04 seconds through export/hash; original ZIP/sidecar retained and verified | Accepted cached integration; **S1 closed** |
 | Fresh Colab → uncached download → full timed export | No actual fresh Colab result ZIP/sidecar exists | **Unverified** |
 | Reviewed implementation → default public branch | Public repo exists; implementation is in draft PR #1, not `main` | Final publication pending |
 
 ## Material findings and fixes
 
-**S1 / P1 — Supplied dataset is not connected to the notebook.** The required
-definition is now the first 100 ordered rows of the official hand-labeled
-training CSV. The current executable notebook consumes the earlier 60/20/20
-selection instead. Its organizer override intentionally stops before calibration.
-Only 22 supplied IDs overlap, all already used by the published development
-model for training. Neither copying the old ROI/config/checkpoint files nor
-renaming the tables resolves this.
+**S1 / P1 — Supplied execution: CLOSED after independent phase reviews.**
+The exact first 100 ordered official manual-training rows now drive
+the bounded acquisition helper and the single notebook's default profile.
+All 200 objects and 100 rasters are verified. The existing seed-42 event rule
+was frozen before object access: Mekong/Nigeria/Pakistan train (29), India
+validation (40), Ghana test (31), with no cross-partition overlap or touching.
+Four inspected training ROIs determine looks, and all method choices come
+from validation. New models start from matched scratch initialization.
 
-Remaining resolution: implement one bounded supplied-selection acquisition
-profile, verify its exact objects and metadata, freeze internal event/scene/
-spatial groups before tuning, establish new training-only ROIs/normalization,
-carry the supplied source/split/exposure identities through calibration, then
-run the locked classical and any promised learned comparison separately. Group
-constraints take precedence over exact 60/20/20 patch counts. The unchanged
-development results stay labeled as development. This is a new execution gate,
-not a reason to search for another model or tune against observed test results.
+The source/calibration chain, paired training and six held-out score rows are
+independently accepted. All 80 validation confusion matrices and 62 test-mask
+recounts match exactly. Real ENL and synthetic PSNR remain separate. One test
+patch has no scored pixels and stays explicit; every method shares the same
+15 water-positive macro patches and 15 dry patches. Five SAR-only ENL regions
+retain visual land tags; the fifth has invalid labels and is not independent
+ground-truth land. No test-guided model, threshold or ROI changes were made.
 
-**S2 / P1 — Fresh uncached Colab is unverified.** The recorded 91.78 seconds used
-cached TIFFs, an existing clone and preinstalled notebook prerequisites on Linux.
-The remote 122.06-second training pair is a different measurement. Retain an
+Prior project training exposure is still disclosed: 22 supplied IDs, including
+eight current test IDs. This is not a pristine project-level blind test. Recipe
+sender authority is not independently authenticated. Earlier development
+results and checkpoint identities remain preserved and separately labeled.
+See the [supplied execution ledger](supplied_execution_ledger.md) and
+[accepted notebook review](supplied_notebook_review.md). The retained original
+notebook export has SHA-256
+`968b9065b9ded3fb0c3c472e10e4fccf60c12a1f10c5f82481698de841577cef`.
+
+**S2 / P1 — Fresh uncached Colab is unverified and deferred.** The supplied
+notebook's 123.04 seconds used 200 cached TIFFs, an existing clean clone and a
+preinstalled execution environment on Linux. Its 76.77-second remote training
+pair is a separate measurement. The earlier development timings (91.78-second
+cached notebook and 122.06-second training) remain historical evidence. Retain an
 actual fresh-Colab full-profile ZIP plus its authoritative timing sidecar,
 source/configuration/data identities, hardware and setup/download/evaluation/
 export times, strictly below 1,800 seconds. Earlier browser attempts reported
@@ -53,31 +66,46 @@ It now uses `audited_manual_subset_calibrated` and `audited_manual_subset` for
 generic status/source. A real generic fixture reproduced the failure before
 the fix, then passed. This changes only new-run provenance labels; all frozen
 configurations, method choices and result artifacts remain unchanged. Neutral
-labels do not provide the missing supplied-profile source-configuration binding;
-that remains part of S1. The organizer stop is retained and regression-tested.
+labels alone did not provide a supplied-profile source binding. That separate
+binding is now implemented and accepted under S1. The generic organizer stop
+is retained and regression-tested.
 
-**F2 — Stale submission descriptions: fixed.** The report, demo, reproduction
-guide and first notebook page now state that the supplied definition is known,
-is distinct from the measured development set and remains unrun. The guard
-message explains the missing profile rather than the old provenance-label bug.
+**F2 — Submission descriptions updated.** The report, demo, reproduction guide
+and roadmap now distinguish measured supplied results from preserved historical
+development results. The notebook defaults to the supplied profile. Generic
+organizer inputs still stop before calibration; this does not block the exact
+supported supplied recipe.
 
 **S3 — Default public branch is not the implementation.** The GitHub connector
 confirmed `main` is the default branch and still contains planning-only content;
 draft [PR #1](https://github.com/kaustubh-dot/sar-water-mapping/pull/1) holds the
-implementation. Keep the PR draft while S1/S2 remain open. Once acceptance
+implementation. Keep the PR draft while S2 remains open. Once acceptance
 passes, publish the reviewed implementation and pin the submitted notebook/link
 to its exact accepted commit. Existing development checkpoint references remain
 at their original training commit; a documentation commit is not retraining.
 
+Updating the existing PR description to reflect S1 completion was attempted,
+but the GitHub integration returned 403 (resource not accessible) and the local
+GitHub CLI reported invalid authentication. Git branch pushes remain available.
+The prepared replacement description is retained locally; PR metadata still
+requires an authenticated update. This does not invalidate the accepted S1
+experiment or change the draft/main acceptance boundary.
+
 ## Evidence reviewed
 
-The independent [connections review](submission_connections_review.md) traces
-the supplied acquisition/CLI/notebook gaps. The independent
+The historical [connections review](submission_connections_review.md) traces
+the original supplied acquisition/CLI/notebook gaps. The historical
 [scientific review](submission_scientific_review.md) verifies all 21 indexed
 artifacts, six real segmentation score rows, 40 saved neural masks against
 their source labels/validity, 72 synthetic measurements, 16 ENL aggregates,
 validation selection and public checkpoint delivery. No new unresolved
-scientific defect was found in the recorded development results.
+scientific defect was found in the recorded development results. Current
+supplied evidence is accepted in the [data review](supplied_data_review.md),
+[profile review](supplied_profile_review.md),
+[calibration review](supplied_calibration_review.md),
+[training review](supplied_training_review.md) and
+[result review](supplied_results_review.md) and
+[notebook review](supplied_notebook_review.md).
 
 Source/data provenance: [supplied recipe](supplied_subset_recipe.md),
 [ordered supplied IDs](supplied_subset_selection.csv),
@@ -89,14 +117,15 @@ Current verification and gate values are recorded in
 
 ## Finish in this order
 
-1. Close S1 with a reviewed supplied-set profile and frozen internal data split.
-2. Run its bounded validation, freeze choices, then evaluate its held-out data;
-   use separate result/configuration/checkpoint identities and disclose prior
-   exposure. Preserve all negative findings and current development results.
-3. Close S2 with actual fresh uncached Colab evidence for the connected profile.
-4. Update the report/demo from those measured results, publish the reviewed
-   implementation and verified links, then create the final submission tag.
+1. S1 is closed: data/profile, calibration, scratch pair, frozen results and
+   actual notebook execution have each passed independent Sol xhigh review.
+   Final documentation/publication consistency is checked separately.
+2. Later, at the user's request, close S2 with actual fresh uncached Colab
+   evidence for the connected profile. It is explicitly deferred in this task.
+3. Publish the accepted implementation to the default branch and pin submitted
+   links only after the remaining acceptance gate passes; then create the final
+   submission tag. The implementation remains in draft PR #1 meanwhile.
 
 This audit fixes the bounded provenance/documentation defects and identifies
 the remaining work explicitly. It does not certify a perfect or completed
-submission while S1/S2 remain open.
+submission while S2 remains open.
