@@ -1,6 +1,6 @@
 # Evaluation Protocol
 
-Version 1.1, final audit 28 October 2026. This is a planned protocol; no experiment has been run. The [implementation lock](IMPLEMENTATION_LOCK.md) fixes architecture and training details.
+Version 1.1, final method audit 28 October 2026. This protocol controls execution; measured runs are recorded in the [execution ledger](../reports/execution_ledger.md). The [implementation lock](IMPLEMENTATION_LOCK.md) fixes architecture and training details.
 
 ## 1. Data contract and target
 

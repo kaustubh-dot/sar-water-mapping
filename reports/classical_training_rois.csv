@@ -1,0 +1,7 @@
+roi_id,patch_id,y0,y1,x0,x1,roi_class,suitability
+train_roi_01,Ghana_103272,150,182,200,232,land,raw VV/VH inspected; uniform land away from water and bright point targets
+train_roi_02,Ghana_103272,300,332,100,132,land,raw VV/VH inspected; uniform land without visible shoreline or strong edge
+train_roi_03,Nigeria_143329,80,112,300,332,land,raw VV/VH inspected; homogeneous land texture away from annotated water
+train_roi_04,Nigeria_143329,200,232,200,232,land,raw VV/VH inspected; homogeneous land with no strong boundary
+train_roi_05,Mekong_1439641,100,132,220,252,water,raw VV/VH inspected; river interior away from shoreline
+train_roi_06,Mekong_1439641,140,172,320,352,water,raw VV/VH inspected; river interior away from shoreline

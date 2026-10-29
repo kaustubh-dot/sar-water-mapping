@@ -1,0 +1,20 @@
+{
+  "selection": "lexicographically first held-out ID, not selected by score",
+  "images": [
+    {
+      "path": "reports/figures/supplied-v1/Ghana_103272_median.png",
+      "sha256": "7b8cb83995feeb4e97cbdcd8023b098cbfe8c06a6713ce4122261048d81dee68"
+    },
+    {
+      "path": "reports/figures/supplied-v1/Ghana_103272_neural.png",
+      "sha256": "90bdf97c2fe1a97c5f319ef913407f84dfe1f0df912af38d248ea476c9514c51"
+    }
+  ],
+  "learning_curves": "reports/supplied_neural-v1/learning_curves.png",
+  "observations": [
+    "Both thresholding and U-Net predictions expand visible pond boundaries relative to the supplied masks and retain some isolated dark detections scored as false positives.",
+    "Median-5 visibly suppresses speckle and softens texture. Its power ratio remains a diagnostic; high ENL alone does not establish faithful signal recovery.",
+    "Validation IoU plateaus while training objective decreases; locked patience selects earlier checkpoints. No test-guided model or epoch changes were made."
+  ],
+  "fresh_colab_verified": false
+}

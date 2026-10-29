@@ -1,0 +1,185 @@
+{
+  "looks": [
+    4.859278122453718,
+    4.020813607183419
+  ],
+  "rois": [
+    {
+      "patch_id": "Ghana_103272",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        150,
+        182,
+        200,
+        232
+      ],
+      "value": 5.1702391926075535,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        150,
+        182,
+        200,
+        232
+      ],
+      "value": 6.031507441112804,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        300,
+        332,
+        100,
+        132
+      ],
+      "value": 5.101636845757851,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        300,
+        332,
+        100,
+        132
+      ],
+      "value": 5.016818153722952,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Nigeria_143329",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        80,
+        112,
+        300,
+        332
+      ],
+      "value": 5.4229400123643225,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Nigeria_143329",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        80,
+        112,
+        300,
+        332
+      ],
+      "value": 4.125052063412264,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Nigeria_143329",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        200,
+        232,
+        200,
+        232
+      ],
+      "value": 4.5871408523288,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Nigeria_143329",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        200,
+        232,
+        200,
+        232
+      ],
+      "value": 3.916575150954574,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Mekong_1439641",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        100,
+        132,
+        220,
+        252
+      ],
+      "value": 4.616919399149586,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Mekong_1439641",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        100,
+        132,
+        220,
+        252
+      ],
+      "value": 1.2475086253065493,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Mekong_1439641",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        140,
+        172,
+        320,
+        352
+      ],
+      "value": 3.8368792108656598,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Mekong_1439641",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        140,
+        172,
+        320,
+        352
+      ],
+      "value": 1.221959418767198,
+      "status": "ok",
+      "n": 1024
+    }
+  ],
+  "usable_roi_counts": [
+    6,
+    6
+  ],
+  "interpretation": "effective looks estimate; not independent physical looks",
+  "training_roi_sha256": "c5a5c818c2c984d6d561b86fc51872167ea5f3aa005f600bbb0224c28139b533",
+  "manifest_sha256": "d840b655f00df68220d5b2ccbaf9eb9c5aa4e785dd0184e05f8dec7646c46786",
+  "splits_sha256": "24963a9951f318aab0cc3d687023ce849fc5c9435ed9fc8cbadced4dc6c2d1b7",
+  "frozen_before_validation_access_utc": "2026-10-28T19:00:12.771984+00:00"
+}

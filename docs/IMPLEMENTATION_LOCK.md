@@ -1,6 +1,6 @@
 # Implementation Lock: Version 1
 
-**Final audit:** 28 October 2026. **Status:** method design ready for implementation; no project accuracy or runtime has been measured.
+**Final method audit:** 28 October 2026. Method selection is locked. For subsequent measured execution and current acceptance gates, see the [execution ledger](../reports/execution_ledger.md); this document specifies the design rather than the latest experiment status.
 
 This is the controlling method-selection document for v1. The [roadmap](../ROADMAP.md) provides execution order; the [evaluation protocol](EVALUATION_PROTOCOL.md) provides scoring rules. The [research review](RESEARCH_REVIEW.md) preserves the wider literature and reasons for exclusions.
 

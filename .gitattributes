@@ -1,0 +1,32 @@
+# Frozen scientific artifacts are bound by byte-level SHA-256.
+# Preserve exact bytes across Windows/Linux checkouts.
+reports/classical_training_rois.csv -text
+reports/heldout_enl_rois.csv -text
+reports/development_data_selection.json -text
+reports/classical_calibration-v*/** -text
+configs/development-calibrated-v*.json -text
+reports/classical_results-v*/** -text
+reports/source_identity-v*/** -text
+reports/neural_training-v*/** -text
+reports/neural_results-v*/** -text
+reports/notebook_smoke_summary.json -text
+reports/supplied_subset_selection.csv -text
+reports/supplied_subset_recipe.json -text
+reports/supplied_*.csv -text whitespace=cr-at-eol
+reports/supplied_*.json -text whitespace=cr-at-eol
+reports/supplied_*-v*/** -text whitespace=cr-at-eol
+configs/supplied-*.json -text whitespace=cr-at-eol
+reports/results_real.csv -text
+reports/results_neural.csv -text
+reports/results_synthetic.csv -text
+reports/runtime.json -text
+reports/environment.txt -text
+# Preserve the exact source bytes recorded by calibration v2.
+scripts/calibrate_classical.py -text whitespace=cr-at-eol
+scripts/prepare_supplied_data.py -text whitespace=cr-at-eol
+src/sar_water/supplied_profile.py -text whitespace=cr-at-eol
+src/sar_water/benchmark.py -text
+src/sar_water/data.py -text
+src/sar_water/filters.py -text
+src/sar_water/metrics.py -text
+src/sar_water/segment.py -text

@@ -1,0 +1,11 @@
+{
+  "source_commit_sha": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+  "environment": "original dedicated remote training environment",
+  "torch_version": "2.15.0+cu132",
+  "procedure": "torch.manual_seed(42); model = CompactUNet(); state_sha256(model)",
+  "state_sha256": "74ad8bdd6adc541aa9ccaed6f05be6691e6ee10a53dffeeacf0a071ff380e7ca",
+  "matches_raw_and_filtered_recorded_initialization": true,
+  "source_images_read": 0,
+  "checkpoints_read": 0,
+  "new_training_executed": false
+}

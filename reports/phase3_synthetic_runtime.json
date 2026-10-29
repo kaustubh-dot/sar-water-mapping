@@ -1,0 +1,107 @@
+{
+  "runtime_type": "local_cpu_synthetic_development_only",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "python": "3.14.3",
+  "numpy": "2.5.4",
+  "scipy": "1.17.1",
+  "commit_sha": "99bdd2ac8587d9d14239abfb8bcc9866ac4935b8",
+  "working_tree_changes": "Phase 3 uncommitted implementation; commit SHA is base only",
+  "config_sha256": "cd77606ecf75e45a30abd16ef0e70f18084f36d249b48616ed1b6817070a5067",
+  "seed": 42,
+  "development_patch_count": 5,
+  "shape": [
+    2,
+    512,
+    512
+  ],
+  "development_known_looks": 4,
+  "validation_record_count": 126,
+  "timings": [
+    {
+      "configuration": "raw",
+      "seconds_per_two_band_patch": [
+        0.059568800003034994,
+        0.0729101000179071,
+        0.07050060000619851,
+        0.08077339999726973,
+        0.06166589999338612
+      ],
+      "total_five_patch_seconds": 0.34541880001779646,
+      "extrapolated_100_two_band_512_patches_seconds_with_50pct_margin": 10.362564000533892
+    },
+    {
+      "configuration": "median:{\"window\": 3}",
+      "seconds_per_two_band_patch": [
+        0.14212450000923127,
+        0.14774770001531579,
+        0.22841409998363815,
+        0.14177690001088195,
+        0.14123499998822808
+      ],
+      "total_five_patch_seconds": 0.8012982000072952,
+      "extrapolated_100_two_band_512_patches_seconds_with_50pct_margin": 24.038946000218857
+    },
+    {
+      "configuration": "median:{\"window\": 5}",
+      "seconds_per_two_band_patch": [
+        0.29306130000622943,
+        0.35809080000035465,
+        0.31935529998736456,
+        0.30637960002059117,
+        0.30383819999406114
+      ],
+      "total_five_patch_seconds": 1.580725200008601,
+      "extrapolated_100_two_band_512_patches_seconds_with_50pct_margin": 47.42175600025802
+    },
+    {
+      "configuration": "lee:{\"window\": 5}",
+      "seconds_per_two_band_patch": [
+        0.11341269998229109,
+        0.10461000000941567,
+        0.09438379999483004,
+        0.1502760000003036,
+        0.17388149999896996
+      ],
+      "total_five_patch_seconds": 0.6365639999858104,
+      "extrapolated_100_two_band_512_patches_seconds_with_50pct_margin": 19.09691999957431
+    },
+    {
+      "configuration": "lee:{\"window\": 7}",
+      "seconds_per_two_band_patch": [
+        0.1198154000157956,
+        0.11592609999934211,
+        0.10349169999244623,
+        0.08847730001434684,
+        0.1011741999827791
+      ],
+      "total_five_patch_seconds": 0.5288847000047099,
+      "extrapolated_100_two_band_512_patches_seconds_with_50pct_margin": 15.866541000141297
+    },
+    {
+      "configuration": "log_bilateral:{\"color_sigma_db\": 1.5, \"spatial_sigma\": 2.0, \"window\": 5}",
+      "seconds_per_two_band_patch": [
+        0.401428399985889,
+        0.5958999000140466,
+        0.40330969999195077,
+        0.4330136000062339,
+        0.4914524999912828
+      ],
+      "total_five_patch_seconds": 2.325104099989403,
+      "extrapolated_100_two_band_512_patches_seconds_with_50pct_margin": 69.75312299968209
+    },
+    {
+      "configuration": "log_bilateral:{\"color_sigma_db\": 3.0, \"spatial_sigma\": 2.0, \"window\": 5}",
+      "seconds_per_two_band_patch": [
+        0.5172584999818355,
+        0.5515835999976844,
+        0.48506489998544566,
+        0.44286559999454767,
+        0.40261269998154603
+      ],
+      "total_five_patch_seconds": 2.399385299941059,
+      "extrapolated_100_two_band_512_patches_seconds_with_50pct_margin": 71.98155899823178
+    }
+  ],
+  "limitations": "Synthetic arrays only; extrapolation excludes setup, I/O, scoring, other invocations and Colab hardware. No whole-notebook runtime gate passed. No synthetic settings selected or final test scoring."
+}

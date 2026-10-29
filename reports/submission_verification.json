@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-29",
+  "verdict": "S1_S2_accepted_S3_publication_pending",
+  "audit_base_commit": "612040e20ecb69fa2c2a875aec4ca32c18249208",
+  "suite": {
+    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-final-colab-accepted",
+    "passed": 135,
+    "seconds": 70.09,
+    "exit_code": 0,
+    "tested_implementation_commit": "cef571d95f190e99c198693cdccc2f76c1c6466e",
+    "implementation_scope_unchanged_since_test_verified": true
+  },
+  "notebook": {
+    "source_commit": "9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f",
+    "code_cells": 10,
+    "scientific_checks_passed": 96,
+    "scientific_checks_seconds": 8.3,
+    "total_wall_seconds": 123.04392587998882,
+    "runtime_type": "local_cpu_not_colab",
+    "cached_tiffs": 200,
+    "neural_training_enabled": false,
+    "original_archive_sha256": "968b9065b9ded3fb0c3c472e10e4fccf60c12a1f10c5f82481698de841577cef",
+    "original_archive_bytes": 164908503,
+    "independent_review_accepted": true
+  },
+  "links": {
+    "count": 268,
+    "missing": [],
+    "not_in_public_file_set": []
+  },
+  "publication": {
+    "files": 217,
+    "forbidden_binaries": [],
+    "files_over_5mb": [],
+    "credential_or_connection_matches": []
+  },
+  "scientific_artifact_indices_verified": 21,
+  "validation_neural_confusion_matrices_verified": 80,
+  "neural_mask_recounts_verified": 62,
+  "synthetic_records_verified": 72,
+  "enl_records_verified": 40,
+  "development_science_accepted": true,
+  "supplied_selection_known": true,
+  "supplied_profile_connected": true,
+  "supplied_internal_split_frozen": true,
+  "supplied_experiment_executed": true,
+  "supplied_notebook_executed_and_reviewed": true,
+  "supplied_S1_gate_closed": true,
+  "fresh_colab_verified": true,
+  "fresh_colab_verification_deferred_by_user": false,
+  "default_public_branch": "main",
+  "implementation_in_draft_pr": "https://github.com/kaustubh-dot/sar-water-mapping/pull/1",
+  "final_tag_created": false,
+  "new_checkpoint_delivery": "reviewed_local_bundle_not_publicly_released",
+  "remaining_blockers": [
+    "Publish accepted implementation to main, verify public head and create v1.0-hackathon."
+  ],
+  "historical_artifact_note": "Original development data/config/result/checkpoint artifacts are preserved. Earlier source remains at 61b09f9bfa61114d83bd7be19eba3de67d5621db. Definition-only and earlier integration reviews have explicit historical-scope notes.",
+  "source_sha256": {
+    "scripts/calibrate_classical.py": "6c5ed4ada813fde9d57ee3a06d6b1de726d727b2bb3705366d3f636dfcc6eedd",
+    "src/sar_water/supplied_profile.py": "384ae9ffc7a855754b2caec521bc2dddfc37983f1ff20c9d8f194bf4b78437ac",
+    "notebooks/01_sar_water_mapping.ipynb": "76da06f6d76ce19f04c4881aea7c607430db3cda5145520b666e0647f412d5be"
+  },
+  "final_integration_review": "reports/supplied_integration_review.md",
+  "final_integration_review_accepted": true,
+  "pr_description_update": {
+    "status": "updated_successfully",
+    "note": "GitHub integration authentication available again; PR title/body updated to accepted supplied and fresh-Colab scope."
+  },
+  "previous_suite": {
+    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-supplied-integrated",
+    "passed": 130,
+    "seconds": 125.65,
+    "exit_code": 0,
+    "tested_implementation_commit": "72ef16abaeaef1a0205de5654f302d52e4371487",
+    "implementation_scope_unchanged_since_test_verified": true
+  },
+  "fresh_colab_review": "reports/colab_execution_review.md",
+  "fresh_colab_summary": "reports/colab_observed_summary.json"
+}

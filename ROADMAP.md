@@ -1,143 +1,142 @@
-# SAR Water Mapping: Phasewise Roadmap
+# SAR Water Mapping: execution roadmap
 
-**Created:** 28 October 2026. **Goal:** finish a defensible hackathon submission, with a complete Colab run under 30 minutes.
+Updated 29 October 2026. This is the remaining-work contract. Research selection is finished; the [implementation lock](docs/IMPLEMENTATION_LOCK.md) controls methods and training, and the [evaluation protocol](docs/EVALUATION_PROTOCOL.md) controls scientific claims. Do not add models or tune against the observed test results.
 
-**Progress:** Phase 0 complete; final method audit finished on 28 October 2026. The [implementation lock](docs/IMPLEMENTATION_LOCK.md) controls v1 method choices and exact model details. Phase 1 is next. No data-processing or training phase has been executed.
+The [pre-submission audit](reports/submission_audit.md) records accepted supplied execution (S1) and fresh Colab (S2); publication (S3) remains pending. The completed statuses below apply to the earlier development experiment unless explicitly stated otherwise.
 
-**Architecture:** a small Python package does data loading, denoising, segmentation, and scoring; one notebook orchestrates it and presents results. Synthetic denoising evaluation is separate from real SAR water mapping. The [README](README.md) defines scope; the [evaluation protocol](docs/EVALUATION_PROTOCOL.md) fixes scientific rules; the [research review](docs/RESEARCH_REVIEW.md) records evidence behind method selection.
+| Phase | Development status | Evidence / remaining gate |
+| --- | --- | --- |
+| 0. Research and scope | Complete | Public repo, cited review, exact implementation lock |
+| 1. Data audit and split | Development and supplied data gates accepted | Exact first100 audited; seed-42 event split 29/40/31 and fixed ROIs reviewed |
+| 2. Metrics and synthetic benchmark | Complete | Focused correctness tests and separate held-out synthetic PSNR |
+| 3. Denoising baselines | Development and supplied calibration accepted | Four locked families; accepted source-aware calibration implementation |
+| 4. Water segmentation | Development and supplied choices accepted | VH -20 dB/Median 5 frozen from validation; zero held-out access |
+| 5. Controlled GPU training | Development and supplied pairs accepted | Scratch raw/Median-5 seed42 pair completed in 76.77 seconds; supplied checkpoint bundle local only |
+| 6. Benchmark and notebook | Development run complete; supplied wiring accepted | Supplied results and fresh Colab accepted; S1/S2 closed; 566.40 seconds |
+| 7. Submission | Draft prepared | Report/demo/reproduction ready for review; final acceptance/tag open |
 
-**Execution:** work sequentially through the checkboxes. Open one phase at a time. Each phase ends with an inspectable artifact and a verification gate. Development timeboxes below are planning estimates, separate from the measured Colab runtime requirement.
+## Scope to preserve
 
-## Scope contract
+Keep a small Python experiment and one Colab notebook. Required methods are raw, Median, multiplicative local-LMMSE Lee and log-bilateral; optional MIDAL was not admitted, and bilateral remains. One compact VV/VH U-Net architecture is trained separately on raw and validation-selected filtered inputs. No new architecture, foundation model, dashboard, API, deployment or full-dataset collection enters v1.
 
-- Required: raw baseline, Median, Lee, one lightweight processing pipeline, water thresholding, ENL, PSNR, IoU/F1, figures, and reproducibility.
-- First processing upgrade: scalar MIDAL + BM3D from the author MuLoG package, independently per polarization; it replaces bilateral only if a bounded pilot passes.
-- Primary learned model: one compact two-channel U-Net, trained separately on raw and selected filtered input. It performs segmentation, so ENL/PSNR are not applicable to its mask outputs.
-- A remote RTX 4000 Ada with approximately 20 GB VRAM is available for development; credentials stay outside the repository.
-- One locked neural architecture for v1. UDL4FL is reserve only because its input-order metadata remain ambiguous; it is excluded from promised deliverables. No foundation-model adaptation, diffusion training, or new self-supervised despeckling research in v1.
-- No Frost unless required by judging clarification; Median and Lee already meet the classical-filter requirement.
-- No UI, web app, API, database, cloud deployment, full-dataset download, ancillary-data pipeline, or broad hyperparameter search.
-- Use seed `42`; freeze test membership before optimization; use validation data for decisions.
-- A complete, honest classical result is preferable to an unfinished neural experiment. A neural win is a research question, never an acceptance condition.
+Use seed 42, frozen source splits, train-only normalization/noise estimates and validation-only selection. Classical primary rows share one numeric threshold and disable cleanup. Report cleanup separately. Keep the same ground-truth-water-positive macro set and disclose dry false positives. Use power for Lee/ENL and known synthetic references for PSNR. Keep data/checkpoints/credentials out of Git. Remote training and Colab checkpoint evaluation are different timings.
 
-## Phase overview
+## Phase 0 — Research and project contract
 
-| Phase | Development cap | Deliverable | Exit gate |
-| --- | --- | --- | --- |
-| 0. Research and scope | Current planning deliverable | Repository, literature review, protocol, roadmap | Explicit methods and exclusions recorded |
-| 1. Data audit and split | 60 min | Manifest, audit contact sheet, split file | Correct pairs, units, labels, provenance; no cross-split duplicates |
-| 2. Metrics and synthetic benchmark | 45 min | Trusted scoring functions and synthetic fixtures | Hand-calculated metric cases and known-reference tests pass |
-| 3. Denoising baselines | 75 min | Raw, Median, Lee, log-bilateral outputs | Valid shapes/units, finite valid output, no invalid-pixel contamination |
-| 4. Water segmentation | 60 min | Bounded validation comparison and frozen configuration | A complete end-to-end classical pipeline works |
-| 5. Controlled GPU training | 60 min engineering + 60 min remote compute cap | Compact U-Net raw/filtered training pair or documented failure | Correct inputs, logs/checkpoints, bounded compute |
-| 6. Final benchmark and Colab | 75 min | Final tables, notebook, figures, timed execution | All mandatory outputs; fresh run below 30 min |
-| 7. Submission | 45 min | Short report, demo outline, tagged final commit | Another person can reproduce and understand the result |
+- [x] Public GitHub repository and cited primary-source review.
+- [x] Exact bounded methods, model, training and evaluation contract.
+- [x] Explicit exclusions and change rule.
 
-Phases 1-7 total approximately **7 hours engineering plus up to 1 hour remote training** if every cap is used. Adjust available development time by cutting Phase 5 first, then optional analysis; preserve the evaluation and submission gates.
+Evidence: [research review](docs/RESEARCH_REVIEW.md), [implementation lock](docs/IMPLEMENTATION_LOCK.md).
 
-## Phase 0: Research and project contract
+## Phase 1 — Data audit and frozen split
 
-**Files:** `README.md`, `ROADMAP.md`, `docs/IMPLEMENTATION_LOCK.md`, `docs/RESEARCH_REVIEW.md`, `docs/EVALUATION_PROTOCOL.md`, `AGENTS.md`, `.gitignore`, `LICENSE`.
+- [x] Select exactly 100 upstream hand-labeled pairs by label-blind hash ranking within official partitions, before reading imagery.
+- [x] Verify all 200 object sizes/MD5s/file SHA-256s, pairing, shape, units, band order, label validity and georeferencing.
+- [x] Inspect five representative development patches and preserve independent SAR/label masks.
+- [x] Freeze official 60/20/20 membership and audit duplicate/overlap/adjacency constraints.
+- [x] Add portable native-source identity with exact file checks, preserving original source bytes and all scientific choices.
+- [x] Record the user's supplied acquisition recipe and freeze its exact first-100 upstream training identifiers and source CSV hash.
+- [x] Complete and review supplied cached notebook execution after the accepted calibration, paired scratch training and held-out evaluation; S1 is closed.
 
-- [x] Publish the public repository and verify its visibility and initial commit.
-- [x] Finish the cited review, with publication status and code/weight availability distinguished.
-- [x] Record the candidate choices and fallback before implementing experiments.
+Evidence: [data review](reports/development_data_review.md), [portable-identity review](reports/source_identity_review.md), [exact manifest/splits](reports/source_identity-v3/manifest.csv). Seven touching cross-partition pairs and shared events limit claims to correlated official-subset development evaluation. No event/geography independence is claimed.
 
-**Verified:** the repository is public, the initial documents are on `main`, local document links resolve, and the review contains 30 cited research items. The next task is the data audit, not another open-ended literature search.
+Supplied evidence: [accepted data/ROI review](reports/supplied_data_review.md), [internal split provenance](reports/supplied_split_provenance-v1.json), [accepted profile review](reports/supplied_profile_review.md) and [source configuration](reports/supplied_source-v1.json). The supplied event split is train 29 (Mekong/Nigeria/Pakistan), validation 40 (India), test 31 (Ghana); no cross-partition overlaps or touching chips were found. Prior project training exposure is 22 IDs, distributed 5/9/8, so pristine blind-test claims remain excluded. One test patch has no scored pixels and remains in membership. The five held-out ENL rectangles support land diagnostics only.
 
-## Phase 1: Audit the actual data
+## Phase 2 — Trustworthy metrics and synthetic references
 
-**Create:** `src/sar_water/data.py`, `data/README.md`, `data/manifest.csv`, `data/splits.csv`, `reports/data_audit.md`, `tests/test_data.py`, and the minimal `pyproject.toml` needed to run them.
+- [x] Test conversions, validity, confusion metrics, empty/dry cases, ENL and explicit-range PSNR.
+- [x] Freeze procedural phantom identities before Gamma corruption; share seeds and corruption across methods.
+- [x] Select synthetic settings on synthetic validation and export 72 held-out measurements separately from real SAR.
 
-- [ ] Obtain the kickoff archive; record its source, archive hash, patch count, dimensions, band order, units, nodata, and label provenance.
-- [ ] Pair SAR and masks by identifiers, not directory order. Reject missing pairs, duplicate identifiers, unsupported labels, and mismatched shape/georeferencing.
-- [ ] Inspect VV, VH, histograms, and masks for five representative development patches.
-- [ ] Keep independent manual masks distinct from Otsu/other weak labels. If only weak masks exist, label all resulting IoU/F1 as weak-label agreement and record the missing independent evaluation.
-- [ ] Use organizer splits if supplied; otherwise use the split hierarchy in the evaluation protocol. Audit duplicates and overlaps in either case.
-- [ ] Verify dB/power conversion, invalid-pixel handling, and no cross-split duplicates with small fixtures.
+Evidence: [metric review](reports/phase2_review.md), [synthetic results](reports/classical_results-v1/results_synthetic.csv), [classical scientific execution review](reports/classical_results_review.md). Real noisy SAR is never a clean reference.
 
-**Gate:** one patch round-trips through the loader without swapping VV/VH or treating valid `0 dB` as nodata. The split manifest is saved and frozen. Missing independent masks blocks real-data ground-truth claims, but not filter development or synthetic evaluation.
+## Phases 3–4 — Frozen classical calibration
 
-## Phase 2: Establish trustworthy metrics
+- [x] Implement raw, power Median, multiplicative local-LMMSE Lee and dB bilateral with mask restoration and focused tests.
+- [x] Inspect six homogeneous raw training ROIs; freeze VV/VH effective looks 4.859278/4.020814 before validation.
+- [x] Profile five real training patches; retain the bounded seven filter settings.
+- [x] Run 98 validation candidates; select common VV fixed threshold -18 dB, Median 5, Lee 5, bilateral color sigma 3 dB.
+- [x] Keep cleanup off in four primary rows; run a separate small-component cleanup ablation.
+- [x] Independently reproduce validation scientific records and freeze before held-out scoring.
 
-**Create:** `src/sar_water/metrics.py`, `src/sar_water/synthetic.py`, `tests/test_metrics.py`, `tests/test_synthetic.py`, `configs/experiment.json`.
+Evidence: [calibration review](reports/classical_calibration_review.md), [v2 calibration](reports/classical_calibration-v2/validation.json), [execution configuration v3](configs/development-calibrated-v3.json). V1 is invalid due inconsistent ROI byte hashes and is retained as superseded evidence. V3 changes provenance bindings only; it does not recalibrate v2 choices.
 
-- [ ] Verify IoU/F1 against a hand-computed confusion matrix, including invalid and empty-water cases.
-- [ ] Verify ENL on known constant and varying positive-intensity arrays; keep undefined results explicit.
-- [ ] Generate deterministic 256 x 256 intensity phantoms with known boundaries, homogeneous areas, and texture; split phantom identities before corruption.
-- [ ] Corrupt the reference with mean-one Gamma speckle at `L = 1` and `L = 4`, using three fixed realizations per image and identical corruption across methods.
-- [ ] Verify PSNR against known MSE, explicit data range, and identity output. Make the raw/noisy PSNR a required baseline.
+The completed items above describe development measurements. The supplied source-aware implementation is accepted. Its actual calibration completed 98 candidates on 40 India validation patches and froze shared VH below -20 dB, Median 5, Lee 5 and bilateral color sigma 3 dB; Median 5 is selected for neural input. The [independent calibration review](reports/supplied_calibration_review.md) accepted these frozen choices with zero held-out access. It uses four separately inspected training ROIs and the unchanged locked grids. Earlier development settings were not copied to the supplied run. See the [new configuration](configs/supplied-calibrated-v1.json).
 
-**Gate:** metric tests pass. Synthetic references are explicitly labeled simulated backscatter, and no real noisy image is called clean ground truth.
+## Phase 5 — One controlled GPU pair
 
-## Phase 3: Implement the bounded denoiser set
+- [x] Inspect GPU/disk use and use a dedicated environment/project directory; preserve unrelated jobs and system packages.
+- [x] Verify exact 487,857-parameter architecture, SAR-only filling, masked BCE/Dice, shared raw-training normalization and deterministic crop policy.
+- [x] Train separate raw/Median-5 models with matched initialization/crops, seed 42, Adam 0.001, batch 8, maximum 20 epochs and patience five.
+- [x] Complete within the shared one-hour cap; record actual updates and best-validation checkpoints.
+- [x] Independently verify all 13 crop plans and 40 native validation confusion matrices.
+- [x] Save curves, hashes, original environment and retrievable checkpoint bundle outside Git.
+- [x] Retain the negative filtered-model result; no rescue architecture search. Optional seeds 43/44 were not run.
 
-**Create:** `src/sar_water/filters.py`, `tests/test_filters.py`.
+The pair completed in 122.06 seconds including 12.86 seconds of preparation. Raw stopped after 11 epochs/327 updates (best epoch 6); filtered after 13/387 (best epoch 8). Peak PyTorch CUDA allocation was 964,296,704 bytes; CPU peak RSS was not measured.
 
-- [ ] Add identity/raw, Median, and the exact multiplicative local-LMMSE Lee variant in the implementation lock, operating on linear power.
-- [ ] Add log-domain bilateral filtering as the dependency-light processing comparator. Document that log/exponentiation can bias intensity; measure mean change rather than claim an unbiased estimator.
-- [ ] Give scalar MIDAL + BM3D at most 15 minutes of dependency/setup investigation within this phase. Use the scalar author API, frozen/known looks and six ADMM iterations; profile five development patches on both bands. Admit only if estimated cost of all enabled invocations, with 50% timing margin, fits three minutes and the whole notebook budget. If compatibility, terms, correctness or runtime fails, retain bilateral and close the branch. If admitted, replace bilateral before full validation rather than expanding the four-family comparison.
-- [ ] Use only this validation grid: Median windows `{3, 5}`; Lee windows `{5, 7}`; log-bilateral window `5`, spatial sigma `2`, dB color sigma `{1.5, 3.0}`.
-- [ ] Estimate Lee's effective looks from training-only homogeneous regions and freeze it; do not assume GRD is single-look. Use known `L` for synthetic data.
-- [ ] Filter bands independently, preserve shape, use reflection at image borders, and restore input invalid pixels after documented nearest-valid filling.
-- [ ] Check constant-image behavior, invalid holes, tiny arrays, and finite positive outputs. Profile five development patches.
+Evidence: [execution review](reports/phase5_execution_review.md), [training summary](reports/neural_training-v1/summary.json), [approved development checkpoint release](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1).
 
-**Gate:** all four methods generate comparable outputs and timing. Extrapolated mandatory computation fits the Colab budget. If bilateral is too slow, reduce its one fixed window and record that choice before final evaluation.
+The new supplied raw/Median-5 seed-42 pair is accepted by its separate
+[training review](reports/supplied_training_review.md). It completed in 76.77
+seconds including preparation: raw 10 epochs/150 updates (best epoch 5),
+filtered nine epochs/135 updates (best epoch 4). Both began with matched fresh
+initialization. [Public training metadata](reports/supplied_training-v1/summary.json)
+retains the original source/configuration and environment identities. Its
+reviewed checkpoint bundle is local only; no supplied public release is claimed.
 
-## Phase 4: Freeze water segmentation
+## Phase 6 — Held-out benchmark and one notebook
 
-**Create:** `src/sar_water/segment.py`, `src/sar_water/benchmark.py`, `tests/test_segment.py`, `tests/test_benchmark.py`.
+- [x] Evaluate frozen four-family classical configuration on all 20 held-out patches; save pooled/per-patch/dry/macro results, ENL and radiometry.
+- [x] Export separate synthetic PSNR and cleanup tables; inspect ratio/boundary/error figures and report failures.
+- [x] Evaluate both frozen U-Net checkpoints at native resolution; export 40 masks, independent validity arrays, curves, figures and separate segmentation results.
+- [x] Complete independent Sol xhigh review of actual neural outputs before accepting this execution gate.
+- [x] Make the full classical notebook run setup, access, checks, audit, validation, evaluation and final export in cell order.
+- [x] Run all ten code cells in a separate Linux kernel and inspect results/bundle; record 76 passing notebook checks.
+- [x] Fresh Colab: zero existing TIFFs, 200 downloads, original clock retained through dependency restart; full setup/access/checks/calibration/evaluation/export completed in 566.40 seconds. Original ZIP/sidecar retained and independently reviewed.
+- [x] Use the complete classical core for the certified Colab budget. Remote U-Net results are separate; full neural training within Colab is unmeasured.
 
-- [ ] Run per-patch Otsu on valid dB values, separately for VV and VH, for every denoiser configuration. This is the common filter comparison.
-- [ ] Also compare a validation-tuned fixed dB threshold using the bounded grid in the protocol. Keep this labeled as supervised calibration.
-- [ ] Choose a single common channel/threshold strategy by the pooled-validation procedure in the implementation lock. A fixed threshold must have the same numeric value across denoisers. Retain the full per-band validation table.
-- [ ] Keep cleanup disabled in the primary four-row filter comparison. Separately evaluate the cleanup toggle on raw and the selected filtered pipeline: none versus remove water components smaller than 16 pixels. Use no hole filling.
-- [ ] Freeze denoiser settings, channel, threshold strategy, and cleanup in `configs/experiment.json`. Record why Otsu fails on unimodal/all-land patches.
+The cached Linux notebook took 91.78 seconds through ZIP/checksum, with an existing clean checkout and preinstalled kernel. It reproduced all four classical held-out confusion counts exactly. This is **not fresh Colab certification**. Four unselected validation candidates differed by one or two pixels across platforms; scientific choices did not change.
 
-**Gate:** a real patch runs from disk to water mask and metrics with one function/command. No test labels have been used to pick parameters.
+Evidence: [classical review](reports/classical_results_review.md), [notebook implementation review](reports/notebook_review.md), [actual notebook execution review](reports/notebook_execution_review.md), [notebook timing summary](reports/notebook_smoke_summary.json), [real table](reports/results_real.csv), [neural result review](reports/neural_results_review.md), [neural table](reports/results_neural.csv), [synthetic table](reports/results_synthetic.csv).
 
-## Phase 5: Use the GPU for one controlled training comparison
+Supplied measurements are now recorded in separate [classical](reports/supplied_classical-v1/results_real.csv)
+and [neural](reports/supplied_neural-v1/results_neural.csv) tables, accepted by
+the [independent result review](reports/supplied_results_review.md). All six rows share 4,940,307 scored pixels, 15 fixed
+water-positive macro patches, 15 dry patches and one no-score member. Median
+threshold IoU is 0.4135 versus raw 0.2772; raw U-Net is 0.4208 versus
+Median-input U-Net 0.4043. Five land-only ENL ROIs and separate synthetic PSNR
+retain their diagnostic limits; one ENL ROI has valid SAR but no valid label
+pixels and remains in the fixed shared diagnostic. The remote CPU classical runner took 59.38
+seconds including 124 figures/synthetic work; GPU checkpoint evaluation took
+9.06 seconds, separately from the 76.77-second training pair. Runner subtotals
+exclude setup/access/calibration and final metadata writes. The separate
+accepted cached supplied notebook took 123.04 seconds through final ZIP/hash,
+with 10 cells and 96 passing checks. S1 is closed. The subsequent fresh Colab run completed in 566.40 seconds; see the [independent evidence review](reports/colab_execution_review.md).
 
-**Files:** `src/sar_water/model.py`, `src/sar_water/train.py`, `tests/test_neural.py`, and a separate neural dependency group. Remote experiments use a dedicated project directory and environment; inspect shared resource use before launching training. Architecture, loss, normalization and sampling are fixed by the implementation lock.
+The [supplied notebook summary](reports/supplied_notebook_smoke_summary.json)
+and [independent review](reports/supplied_notebook_review.md) bind source pin
+`9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f`. The accepted 123.04-second smoke
+used 200 cached TIFFs, an existing clean isolated Linux clone and preinstalled
+kernel prerequisites. Initial clone/cache preparation were outside the clock;
+10 code cells and 96 checks completed. This historical run closes S1; the subsequent fresh Colab evidence closes S2.
 
-- [ ] Verify remote PyTorch/CUDA compatibility, free VRAM/disk, and a small forward/backward pass. Do not alter system packages or interfere with other GPU jobs.
-- [ ] Implement the compact U-Net: `[VV,VH]` inputs; widths `16,32,64,128`; three downsampling stages; two Conv/GroupNorm/ReLU operations per block; bilinear decoder; one output logit. Verify fewer than one million parameters and the expected approximately 0.49-million scale.
-- [ ] Verify SAR-only nearest-valid filling produces finite neural inputs while retaining original masks, masked `0.5*BCEWithLogits + 0.5*Dice` loss, shared raw-training-set mean/std normalization, and deterministic sampling. Each epoch draws four 256-square crops per training source, using the locked uniform/water-centered policy. Invalid labels affect neither input filling, loss nor scoring.
-- [ ] Train separate raw/filtered models with matched initialization and crop/augmentation sequences, batch `8`, Adam learning rate `0.001`, seed `42`, at most `20` epochs per condition, and validation patience `5`. Use the best pooled-validation-IoU checkpoint and fixed sigmoid threshold `>0.5`, with native-resolution final inference.
-- [ ] Bound the complete training comparison to one hour remote wall time. Log actual updates, including any early-stopping differences. Add paired seeds `43` and `44` only within the same cap; compare only seeds completed for both inputs.
-- [ ] Save learning curves, best-validation checkpoints, configuration/hash, environment, actual time, and seeds. Keep checkpoint binaries outside Git and publish retrievable artifact references when delivering results.
-- [ ] If compact training is unstable, diagnose once within budget; the classical result remains the guaranteed submission. Do not open a rescue architecture search.
+## Phase 7 — Submission preparation and stop
 
-**Gate:** the paired compact experiment records actual seeds, updates, checkpoints and budget, or a concrete failure. No UDL4FL or foundation-model implementation is required for v1. A failed learned experiment does not delay the classical submission.
+- [x] Draft the report with data, methods, measured results, failures, limitations and references.
+- [x] Prepare a three-minute explanation and exact reproduction/checkpoint instructions.
+- [x] Finish whole-branch review, verify public artifact links/checksums and audit Git contents for data/credentials.
+- [ ] Publish the accepted implementation to `main`, verify the public head and only then tag `v1.0-hackathon` (S3).
 
-## Phase 6: Final benchmark and notebook
+Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [reproduction guide](docs/REPRODUCING.md), [execution ledger](reports/execution_ledger.md), [final review](reports/final_branch_review.md). The report now includes accepted supplied and development measurements; final submission acceptance remains open.
 
-**Create:** `notebooks/01_sar_water_mapping.ipynb`, `reports/results_real.csv`, `reports/results_synthetic.csv`, `reports/runtime.json`, `reports/figures/`, `reports/environment.txt`, and checkpoint provenance/download instructions when remote training is used.
+## Next actions, in order
 
-- [ ] Run the frozen configuration on the held-out set. Save per-patch scores and pooled confusion counts, not only headline averages.
-- [ ] Compare every frozen denoiser under the common threshold strategy with cleanup disabled. Add the separate raw/selected-filter cleanup ablation and the paired neural segmentation results, if completed.
-- [ ] Produce aligned VV/VH, raw/filtered, ground truth/prediction, error overlay, ratio image, and narrow-boundary failure examples. Use common display limits.
-- [ ] Make the notebook install, access data, validate inputs, run validation/frozen evaluation, generate figures, and export a results bundle in cell order. Label its profile `full` or `checkpoint-evaluation` explicitly; the latter uses remote-trained weights and does not claim to reproduce their training within the limit.
-- [ ] Run the meaningful unit checks and one full smoke experiment. Restart a fresh Colab runtime, then Run All and measure every stage.
+1. Completed: independent neural-result and final branch reviews accepted the development deliverable, with no unresolved P1/P2 findings. Preserve test-visible choices.
+2. Preserve the reviewed implementation branch and public development checkpoint artifact. Do not merge or issue a final acceptance tag on unverified evidence.
+3. Supplied acquisition/audit/ROIs, source-aware profile and actual validation calibration are accepted. The completed scratch raw/Median-5 GPU pair is accepted; frozen classical and neural held-out measurements are independently accepted. Preserve the original development outputs and disclose prior 22-patch training exposure, including eight current test IDs. See the [supplied execution ledger](reports/supplied_execution_ledger.md).
+4. Completed: the connected cached notebook execution and independent review are accepted, closing S1. Preserve the pinned source, ZIP/sidecar and separately versioned supplied artifacts; the checkpoint bundle remains local only.
+5. Completed: fresh uncached Colab at source `3eecc1434991835e576e7d3d09d967fbd9388359` took 566.40 seconds, including one dependency restart and 200 downloads. The original ZIP and authoritative timing sidecar are retained locally and independently reviewed. Publish the accepted implementation to `main`, verify the public head and issue `v1.0-hackathon` (S3).
 
-**Runtime budget:** setup and subset/checkpoint access `5 min`; audit `2`; synthetic evaluation `3`; classical filtering and bounded validation `7`; admitted neural evaluation or budgeted Colab training `6`; final scoring, figures, exports `2`; reserve `5`. Total target **30 minutes**, with measured completion strictly below it. Report network/setup and compute separately as well as the total; an exceeded download budget is not silently excluded. A full-training profile starts with at most eight epochs and the six-minute training cap; it must be measured independently of the remote 20-epoch experiment.
-
-**Gate:** the notebook finishes from a fresh runtime in under 30 minutes, exports the required artifacts, and makes no unmeasured performance claims. Hardware, profile, and actual patch count are recorded. If timing fails, remove optional neural work first. If judging requires full training inside the limit, an inference-only pass is insufficient; verify the full profile or use the classical core.
-
-## Phase 7: Submission and stop
-
-**Create:** `reports/final_report.md`; update `README.md` with the verified Colab link and actual results; tag the verified commit `v1.0-hackathon`.
-
-- [ ] Write a 2-4 page report: problem, data, methods, protocol, results, failure cases, limitations, references.
-- [ ] Prepare a three-minute explanation: multiplicative noise, method choices, quantitative comparison, and one important failure.
-- [ ] Verify notebook links, data-access instructions, test commands, result provenance, and the exact final commit.
-- [ ] Check that the repository contains no raw dataset, large checkpoints, access tokens, or invented benchmark results.
-- [ ] Mark the phases complete only from evidence and tag the reproducible submission.
-
-**Definition of done:** all required metrics have defensible provenance; all required artifacts exist; the fresh Colab run is measured below 30 minutes; and another team member can reproduce it from the repository instructions.
-
-## Change rule
-
-A new method may enter only if it answers a documented failure, has accessible compatible inputs/code/weights, fits remaining time, and replaces an existing optional item. Record the reason and affected phase here. Once final test results are visible, changes require a new versioned experiment and cannot be described as an untouched holdout evaluation.
-
-**Next action:** Phase 1, inspect the actual kickoff subset. Until it arrives, use the upstream sample only for loader and plotting smoke checks, and synthetic fixtures for metric/filter development.
+A new method requires a recorded failure, scope authorization or replacement of an optional item, compatible accessible code/weights and remaining runtime. Once final test results are visible, any scientific change is a new versioned experiment rather than an untouched holdout evaluation.

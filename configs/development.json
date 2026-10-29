@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "real_data": {
+    "status": "upstream_development_subset_pending_calibration",
+    "split_frozen": true,
+    "calibration_frozen": false,
+    "selected_channel": null,
+    "selected_threshold_strategy": null,
+    "selected_fixed_threshold_db": null,
+    "selected_filter_parameters": null,
+    "effective_looks_by_band": null,
+    "manifest_path": "../data/development-v1/audit-v3-relative/manifest.csv",
+    "splits_path": "../data/development-v1/audit-v3-relative/splits.csv",
+    "manifest_sha256": "74d00fd2b08e6417e77a102c0cfd5b0bd5c3b1d759ff814b6fabdae4729792cc",
+    "splits_sha256": "24963a9951f318aab0cc3d687023ce849fc5c9435ed9fc8cbadced4dc6c2d1b7",
+    "selection_sha256": "e7cbd62911647be8ad0fa0d6c08be3f98dc1bc335bf0e780ff180005b2642acf",
+    "provenance_limitation": "Correlated official subset: seven cross-partition touching chip pairs; events span partitions. No held-out-event, unseen-geography or independent-sample statistical generalization claim.",
+    "cross_partition_touching_pairs": [
+      {
+        "patch_a": "Mekong_1439641",
+        "split_a": "train",
+        "patch_b": "Mekong_1443339",
+        "split_b": "test",
+        "bbox_gap_pixels": 0.0
+      },
+      {
+        "patch_a": "Mekong_293769",
+        "split_a": "validation",
+        "patch_b": "Mekong_596495",
+        "split_b": "train",
+        "bbox_gap_pixels": 0.0
+      },
+      {
+        "patch_a": "Spain_1167260",
+        "split_a": "train",
+        "patch_b": "Spain_6095801",
+        "split_b": "test",
+        "bbox_gap_pixels": 0.0
+      },
+      {
+        "patch_a": "Spain_6095801",
+        "split_a": "test",
+        "patch_b": "Spain_7856615",
+        "split_b": "train",
+        "bbox_gap_pixels": 0.0
+      },
+      {
+        "patch_a": "Spain_6537196",
+        "split_a": "validation",
+        "patch_b": "Spain_8104659",
+        "split_b": "train",
+        "bbox_gap_pixels": 0.0
+      },
+      {
+        "patch_a": "USA_366607",
+        "split_a": "validation",
+        "patch_b": "USA_67102",
+        "split_b": "test",
+        "bbox_gap_pixels": 0.0
+      },
+      {
+        "patch_a": "USA_527077",
+        "split_a": "test",
+        "patch_b": "USA_58086",
+        "split_b": "train",
+        "bbox_gap_pixels": 0.0
+      }
+    ],
+    "split_counts": {
+      "train": 60,
+      "validation": 20,
+      "test": 20
+    },
+    "organizer_subset": false
+  },
+  "primary_cleanup": false,
+  "methods": {
+    "raw": {},
+    "median": {
+      "window_candidates": [
+        3,
+        5
+      ],
+      "domain": "linear_power"
+    },
+    "lee": {
+      "window_candidates": [
+        5,
+        7
+      ],
+      "variant": "multiplicative_local_lmmse",
+      "looks_source": "training_homogeneous_rois",
+      "domain": "linear_power"
+    },
+    "log_bilateral": {
+      "window": 5,
+      "spatial_sigma": 2,
+      "color_sigma_db_candidates": [
+        1.5,
+        3.0
+      ]
+    },
+    "midal_substitution": {
+      "status": "unrun",
+      "replaces": "log_bilateral",
+      "iterations": 6,
+      "setup_cap_minutes": 15,
+      "all_invocations_cap_minutes_with_50_percent_margin": 3
+    }
+  },
+  "segmentation_candidates": {
+    "channels": [
+      "VV",
+      "VH"
+    ],
+    "strategies": [
+      "per_patch_otsu_db",
+      "shared_fixed_db"
+    ],
+    "fixed_threshold_db": {
+      "VV": [
+        -20,
+        -18,
+        -16,
+        -14,
+        -12,
+        -10
+      ],
+      "VH": [
+        -28,
+        -26,
+        -24,
+        -22,
+        -20,
+        -18
+      ]
+    },
+    "selection": "pooled_validation_water_iou_per_filter_then_mean_across_four_families",
+    "tie_break": "lower_measured_validation_compute_time",
+    "fixed_threshold_shared_numeric_across_denoisers": true
+  },
+  "cleanup_ablation": {
+    "status": "unrun",
+    "min_water_component_pixels": 16,
+    "connectivity": 8,
+    "fill_holes": false
+  },
+  "synthetic": {
+    "source": "simulated_backscatter",
+    "identity_split_frozen_before_corruption": true,
+    "size": [
+      256,
+      256
+    ],
+    "reference_bounds": [
+      0.01,
+      1.0
+    ],
+    "split_ids": {
+      "train": [
+        "phantom_00",
+        "phantom_01",
+        "phantom_02",
+        "phantom_03",
+        "phantom_04",
+        "phantom_05"
+      ],
+      "validation": [
+        "phantom_06",
+        "phantom_07",
+        "phantom_08"
+      ],
+      "test": [
+        "phantom_09",
+        "phantom_10",
+        "phantom_11"
+      ]
+    },
+    "looks": [
+      1,
+      4
+    ],
+    "noise_seeds": [
+      42,
+      43,
+      44
+    ],
+    "noise": "Gamma(shape=L,scale=1/L)",
+    "shared_corruptions_across_methods": true,
+    "clip_observations": false,
+    "psnr_data_range": 1.0,
+    "method_selection_status": "pending_validation_only"
+  }
+}

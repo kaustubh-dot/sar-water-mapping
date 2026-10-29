@@ -1,0 +1,213 @@
+{
+  "status": "verified",
+  "source_commit": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+  "files_sha256": {
+    "training.json": "2bf40f37c37b46a08566dac1607f2949322168a60a6033eb78cb0d0b846e259b",
+    "raw_best.pt": "ca627a944b74ceaa01c4fb24a0de4a181a8e74751b0c5349165418c45b13c799",
+    "filtered_best.pt": "325a085a55fef3df79c653a8c63128dc2d4f71e3f5e9757ca7b0560ff61e4180"
+  },
+  "configuration_sha256": "a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b",
+  "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+  "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+  "split_counts": {
+    "test": 31,
+    "validation": 40,
+    "train": 29
+  },
+  "prior_development_training_exposure_by_split": {
+    "train": 5,
+    "validation": 9,
+    "test": 8
+  },
+  "heldout_source_reads": 0,
+  "heldout_access_attempts": [],
+  "unique_train_validation_files_opened": 138,
+  "train_validation_patch_count": 69,
+  "initialization_replay": {
+    "local_torch": "2.14.0+cpu",
+    "remote_torch": "2.15.0+cu132",
+    "local_initial_sha256": "6b2bc44a991f87dcc7a04d66b0334954db17c55ce953696bf967f5dfd927e773",
+    "recorded_initial_sha256": "74ad8bdd6adc541aa9ccaed6f05be6691e6ee10a53dffeeacf0a071ff380e7ca",
+    "exact_local_replay": false,
+    "original_environment_replay_sha256": null
+  },
+  "normalization_pixel_count": 7601417,
+  "normalization_difference_local_minus_remote": {
+    "mean": [
+      1.298537632976604e-08,
+      1.5853416357458627e-09
+    ],
+    "std": [
+      9.687385116308178e-09,
+      8.476446211602706e-10
+    ]
+  },
+  "crop_plan_count": 10,
+  "crop_plans": [
+    {
+      "epoch": 1,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 2,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 3,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 4,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 5,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 6,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 7,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 8,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 9,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    },
+    {
+      "epoch": 10,
+      "drawn": 116,
+      "accepted": 116,
+      "skipped": 0
+    }
+  ],
+  "conditions": {
+    "raw": {
+      "epochs": 10,
+      "total_updates": 150,
+      "best_epoch": 5,
+      "best_checkpoint_updates": 75,
+      "best_validation_iou": 0.3830579431132295,
+      "status": "early_stopped",
+      "state_sha256": "5659de4f79a01f06abe0c65bea5c998e5bb38a00f621e8a776c936df9010c22c"
+    },
+    "filtered": {
+      "epochs": 9,
+      "total_updates": 135,
+      "best_epoch": 4,
+      "best_checkpoint_updates": 60,
+      "best_validation_iou": 0.37072027821300374,
+      "status": "early_stopped",
+      "state_sha256": "3e3948b47c803eb302303937a5a372053d89b46d9f37b7bc800d171be7c6bda8"
+    }
+  },
+  "selected_filter": "median",
+  "validation_cpu_replay": {
+    "raw": {
+      "native_shape": [
+        512,
+        512
+      ],
+      "patch_count": 40,
+      "pooled": {
+        "iou": 0.3830579431132295,
+        "f1": 0.5539289876040557,
+        "precision": 0.6004493717949335,
+        "recall": 0.5140987032988188
+      },
+      "historical_pooled": {
+        "iou": 0.3830579431132295,
+        "f1": 0.5539289876040557,
+        "precision": 0.6004493717949335,
+        "recall": 0.5140987032988188
+      },
+      "confusion_delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "exact_per_patch_counts": true
+    },
+    "filtered": {
+      "native_shape": [
+        512,
+        512
+      ],
+      "patch_count": 40,
+      "pooled": {
+        "iou": 0.37072027821300374,
+        "f1": 0.5409131010979258,
+        "precision": 0.6007200224335347,
+        "recall": 0.49193652627091844
+      },
+      "historical_pooled": {
+        "iou": 0.37072027821300374,
+        "f1": 0.5409131010979258,
+        "precision": 0.6007200224335347,
+        "recall": 0.49193652627091844
+      },
+      "confusion_delta": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "exact_per_patch_counts": true
+    }
+  },
+  "remote_complete_pair_seconds": 76.76752543798648,
+  "remote_input_preparation_seconds": 11.101003871066496,
+  "remote_training_validation_seconds": 65.66078372905031,
+  "remote_environment": {
+    "python": "3.12.3",
+    "torch": "2.15.0+cu132",
+    "numpy": "2.5.4",
+    "scipy": "1.17.1",
+    "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+    "device": "cuda",
+    "device_name": "NVIDIA RTX 4000 Ada Generation",
+    "cuda": "13.2",
+    "cudnn": 92600,
+    "cpu_threads": 24,
+    "deterministic_algorithms": true
+  },
+  "local_environment": {
+    "python": "3.14.3",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.5.4",
+    "scipy": "1.17.1",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "device": "cpu",
+    "device_name": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cuda": null,
+    "cudnn": null,
+    "cpu_threads": 1,
+    "deterministic_algorithms": true
+  },
+  "review_probe_seconds": 201.4195302000153
+}

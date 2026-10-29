@@ -1,0 +1,195 @@
+{
+  "profile": "full",
+  "runtime_type": "remote_linux_cpu_not_colab",
+  "seed": 42,
+  "training_included": false,
+  "neural_status": "not_run_by_classical_runner",
+  "remote_training_seconds": null,
+  "fresh_colab_verified": false,
+  "python": "3.12.3",
+  "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "accelerator": "not_used_by_classical_runner",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "scipy": "1.17.1",
+    "rasterio": "1.5.2",
+    "matplotlib": "3.10.9",
+    "torch": "2.15.0"
+  },
+  "commit_sha": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+  "working_tree_dirty": false,
+  "config_sha256": "a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b",
+  "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+  "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+  "enl_rois_sha256": "ce9feec5fae46109f805c0650f27c9cc9e5193cd96d95f0c268115626a78556e",
+  "manifest_patch_count": 100,
+  "heldout_patch_count": 31,
+  "heldout_shapes": {
+    "Ghana_103272": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_1089161": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_11745": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_128663": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_134751": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_135389": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_141910": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_144050": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_146222": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_147015": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_154838": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_156478": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_161233": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_168875": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_187318": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_194723": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_247288": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_24858": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_26376": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_264787": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_362274": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_45911": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_49890": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_597288": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_61925": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_7496": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_8090": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_83200": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_887131": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_953791": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_97516": [
+      2,
+      512,
+      512
+    ]
+  },
+  "label_claim": "independent manual labels",
+  "external_setup_seconds": 0.0,
+  "load_and_verify_seconds": 0.757624794030562,
+  "real_evaluation_seconds": 55.42944911192171,
+  "synthetic_seconds": 3.1764017431996763,
+  "enl_status": "recorded_rois",
+  "synthetic_status": "scored_separate_known_reference",
+  "runner_seconds": 59.37643294990994,
+  "limitations": "No fresh Colab Run All was verified by this function. External setup includes only supplied timing. Surface water mapping does not establish new flooding versus permanent water.",
+  "total_wall_seconds_including_supplied_setup": 59.37643294990994
+}

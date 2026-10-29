@@ -1,0 +1,44 @@
+{
+  "status": "paired_training_completed_independently_accepted",
+  "source_commit": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+  "pair_complete": true,
+  "cap_exhausted": false,
+  "complete_pair_seconds": 76.76752543798648,
+  "input_preparation_seconds": 11.101003871066496,
+  "cuda_peak_allocated_bytes": 964296704,
+  "seed": 42,
+  "conditions": {
+    "raw": {
+      "status": "early_stopped",
+      "updates": 150,
+      "best_epoch": 5,
+      "best_iou": 0.3830579431132295,
+      "epochs_executed": 10
+    },
+    "filtered": {
+      "status": "early_stopped",
+      "updates": 135,
+      "best_epoch": 4,
+      "best_iou": 0.37072027821300374,
+      "epochs_executed": 9
+    }
+  },
+  "original_training_report_sha256": "2bf40f37c37b46a08566dac1607f2949322168a60a6033eb78cb0d0b846e259b",
+  "public_training_report_sha256": "46755ea263783445b2ae9f9c78cd32e14dd360279196640fa578e830436cc8b0",
+  "checkpoint_bundle_sha256": "9605d1906802434d73d5ef73239e127395779a03df11596004c94e4acb5aa6d6",
+  "checkpoint_bundle_bytes": 3666469,
+  "checkpoint_delivery_status": "reviewed_local_bundle_not_published",
+  "source_profile": "supplied-first100",
+  "split_counts": {
+    "train": 29,
+    "validation": 40,
+    "test": 31
+  },
+  "previous_project_training_exposure_by_split": {
+    "train": 5,
+    "validation": 9,
+    "test": 8
+  },
+  "fresh_colab_verified": false,
+  "execution_review": "reports/supplied_training_review.md"
+}

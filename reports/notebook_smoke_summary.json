@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "status": "accepted_cached_linux_cpu_notebook_smoke",
+  "review_date": "2026-10-29",
+  "source_commit_sha": "61b09f9bfa61114d83bd7be19eba3de67d5621db",
+  "execution_engine": "nbclient; dedicated Python kernel",
+  "source_cell_changes": [
+    {
+      "cell_index": 3,
+      "change": "REPO_REF branch replaced by the recorded full source commit SHA only"
+    }
+  ],
+  "code_cells_executed": 10,
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "cell_errors": 0,
+  "scientific_tests": {
+    "passed": 76,
+    "seconds": 5.33
+  },
+  "runtime_type": "local_cpu_not_colab",
+  "profile": "full",
+  "neural_training_enabled": false,
+  "fresh_colab_verified": false,
+  "fresh_colab_under_30_minute_gate_closed": false,
+  "execution_conditions": {
+    "fresh_kernel_reported": true,
+    "fresh_environment": false,
+    "cached_source_tiffs": 200,
+    "cached_source_bytes": 164663453,
+    "preexisting_clean_isolated_clone": true,
+    "kernel_and_execution_prerequisites_installed_before_notebook_clock": true,
+    "initial_clone_and_cache_preparation_outside_notebook_clock": true,
+    "fresh_network_data_download_measured": false
+  },
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "cpu_count": 24,
+    "ram_bytes": null,
+    "ram_status": "not recorded by this smoke",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.17.1",
+      "rasterio": "1.5.2",
+      "matplotlib": "3.10.9",
+      "torch": "2.15.0"
+    },
+    "gpu_used_for_classical_compute": false
+  },
+  "timing": {
+    "notebook_total_wall_seconds": 91.7843061760068,
+    "outer_execution_script_wall_seconds": 92.72281846194528,
+    "timing_scope": "First executable cell through the only archive write and archive checksum; excludes only timing-sidecar serialization and subsequent display.",
+    "stages_seconds": {
+      "source_checkout_seconds": 0.02765278215520084,
+      "installation_seconds": 7.23281869199127,
+      "upstream_download_and_object_verification_seconds": 0.11196600692346692,
+      "documented_data_access_seconds": 6.842377729946747,
+      "scientific_checks_seconds": 5.539168858900666,
+      "audit_seconds": 3.9812690019607544,
+      "training_roi_and_validation_calibration_seconds": 25.70149234798737,
+      "frozen_real_synthetic_evaluation_export_seconds": 40.13953186897561,
+      "result_table_and_figure_display_seconds": 0.1124843789730221,
+      "bundle_export_seconds": 1.9844690489117056
+    },
+    "stages_note": "documented_data_access_seconds includes upstream_download_and_object_verification_seconds; stages are not additive",
+    "measured_below_30_minutes_in_this_cached_non_colab_run": true,
+    "fresh_runtime_attestation": "unverified; record actual fresh runtime and access conditions before submission"
+  },
+  "data_provenance": {
+    "source": "upstream-development",
+    "organizer_subset": false,
+    "pair_count": 100,
+    "split_counts": {
+      "train": 60,
+      "validation": 20,
+      "test": 20
+    },
+    "selection_sha256": "e7cbd62911647be8ad0fa0d6c08be3f98dc1bc335bf0e780ff180005b2642acf",
+    "inventory_sha256": "0bd1acc5a02bfedd0f7f45720970b3c861f31ee6185f966c46a08765f38d04e1",
+    "official_membership_verified": true,
+    "official_source_list_sha256": {
+      "train": "57be4dc440bf8a526effa77e06d4b8cb7a8484589c0bffa201d8e0f49e994beb",
+      "validation": "04999b82b93e393c32a54ac85b2bf8a18b671f7a6f43a9478b340e8a9b9647fb",
+      "test": "8b598c9438042f3ed8aed4484268387fae1aa5b660882e1c5b4c1218eba63d67"
+    },
+    "provenance_limitation": "Correlated official-subset development benchmark: events span partitions and seven chip pairs touch across partitions. No held-out-event, unseen-geography or independent-sample statistical generalization claim.",
+    "training_rois_sha256": "c5a5c818c2c984d6d561b86fc51872167ea5f3aa005f600bbb0224c28139b533",
+    "heldout_enl_rois_sha256": "6e2db0aad0f8efa756df6cb937771b4ca896a3e0ae4f70677a15c30197f551c7"
+  },
+  "calibration_identity": {
+    "config_file_sha256": "5f359b2da3db68f8131913980a952ea71aac5122732bb89e58746362a643f038",
+    "manifest_file_sha256": "e8a5eb558da8bc400653907c63604630aaeb3983968eabc6498a551fcfa47869",
+    "splits_file_sha256": "24963a9951f318aab0cc3d687023ce849fc5c9435ed9fc8cbadced4dc6c2d1b7",
+    "training_roi_sha256": "c5a5c818c2c984d6d561b86fc51872167ea5f3aa005f600bbb0224c28139b533",
+    "looks_artifact_sha256": "b115b01694af76dc82859490f617d31da81c3d289521414d6b634a2540e94130"
+  },
+  "dependency_lock_sha256": "8ceecb5f7380652ed7c99a0f64e97121908cb4dd5d886d5512a3ae707c2f700b",
+  "calibration": {
+    "candidate_count": 98,
+    "cleanup_record_count": 4,
+    "test_source_files_opened": 0,
+    "selected_settings": {
+      "selected_channel": "VV",
+      "selected_threshold_strategy": "shared_fixed_db",
+      "selected_fixed_threshold_db": -18,
+      "selected_filter_parameters": {
+        "raw": {},
+        "median": {
+          "window": 5
+        },
+        "lee": {
+          "window": 5
+        },
+        "log_bilateral": {
+          "window": 5,
+          "spatial_sigma": 2.0,
+          "color_sigma_db": 3.0
+        }
+      },
+      "selected_filter": "median",
+      "fallback_thresholds_db": {
+        "VV": -18,
+        "VH": -24
+      }
+    },
+    "same_selected_settings_as_calibration_v2": true,
+    "cross_platform_validation_candidates_with_count_differences": 4,
+    "maximum_absolute_confusion_count_difference": 2,
+    "tp_fn_count_differences": 0,
+    "maximum_training_looks_relative_difference_from_v2": 1.6188406171124825e-10
+  },
+  "outputs": {
+    "primary_real_rows": 4,
+    "per_patch_real_rows": 80,
+    "cleanup_ablation_rows": 4,
+    "enl_roi_band_method_rows": 40,
+    "enl_ok_rows": 40,
+    "synthetic_validation_rows": 126,
+    "synthetic_test_rows": 72,
+    "synthetic_selection_rows": 8,
+    "synthetic_summary_rows": 8,
+    "heldout_patches": 20,
+    "native_shape": [
+      2,
+      512,
+      512
+    ],
+    "heldout_primary_counts_identical_to_reviewed_classical_results_v1": true,
+    "heldout_water_iou_by_method": {
+      "raw": 0.608414549132711,
+      "median": 0.6304119335124857,
+      "lee": 0.606972459462281,
+      "log_bilateral": 0.6303737615077443
+    }
+  },
+  "archive": {
+    "sha256": "70455a43e8041bd2e11ee190fbb78d855062c6a7e5e3b6a68252582b4dcb3c90",
+    "bytes": 103740669,
+    "entries": 659,
+    "png_entries": 90,
+    "heldout_diagnostic_png_entries": 80,
+    "contains_authoritative_timing_sidecar": false,
+    "contains_real_source_tiffs": false,
+    "verification_scope": "Execution owner recomputed the remote original ZIP checksum and supplied its complete entry listing; this reviewer independently checked that evidence against the copied timing sidecar and expected outputs."
+  },
+  "original_evidence_sha256": {
+    "executed_notebook": "088483df844cb62e53ab87c507d6851f2571eaf1dce9131c3ca9d1148b130e62",
+    "authoritative_timing_sidecar": "e96898840f9c7554d0700fc23c2d8206e524ba9ae852aea01c450db1a298e5c3",
+    "execution_owner_summary": "6fe459ca76333c4981b4882f1b59796e6d9a818e1d214b0641fa1d4bfab84cc4",
+    "remote_archive_verification": "e8ed10b42de3da3410919d4f9f1fe25972907653793bf15459619740006fa87d"
+  },
+  "limitations": [
+    "Cached Linux CPU smoke; no fresh Colab or fresh full-data-download timing.",
+    "Kernel prerequisites, existing clone and data-cache preparation preceded the notebook clock.",
+    "Organizer subset and organizer calibration support remain open.",
+    "No neural training reproduction or under-budget full-training claim.",
+    "Four unselected validation candidate counts vary slightly across platforms; this is not bitwise numerical reproduction."
+  ]
+}

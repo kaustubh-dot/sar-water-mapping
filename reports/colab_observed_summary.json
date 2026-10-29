@@ -1,0 +1,61 @@
+{
+  "status": "accepted_fresh_colab_retained_and_independently_reviewed",
+  "source_commit_sha": "3eecc1434991835e576e7d3d09d967fbd9388359",
+  "started_utc": "2026-10-29T10:57:16.690507+00:00",
+  "runtime_type": "colab_cpu",
+  "profile": "full",
+  "neural_training_enabled": false,
+  "original_code_cells_completed": 10,
+  "existing_tiff_count_before_helper": 0,
+  "downloaded_objects": 200,
+  "split_counts": {
+    "train": 29,
+    "validation": 40,
+    "test": 31
+  },
+  "runtime_setup": {
+    "dependency_restart_count": 1,
+    "setup_pass_count": 2,
+    "timing_includes_dependency_restart": true,
+    "changed_loaded_dependencies": {
+      "numpy": {
+        "loaded": "2.1.3",
+        "installed": "2.5.4"
+      },
+      "matplotlib": {
+        "loaded": "3.10.0",
+        "installed": "3.10.9"
+      }
+    }
+  },
+  "total_wall_seconds": 566.397461905,
+  "measured_below_30_minutes": true,
+  "archive_sha256": "1e365165f95de72e623a7dd99b1078a97912d0cd99bc24a5bffa570ffc1c29e9",
+  "archive_filename": "colab-20261029T105716698462Z.zip",
+  "sidecar_filename": "colab-20261029T105716698462Z.runtime.json",
+  "evidence_origin": "Browser-observed execution plus retained original ZIP and timing sidecar, independently reviewed",
+  "original_archive_retained_locally": true,
+  "independent_execution_review_accepted": true,
+  "fresh_colab_gate_closed": true,
+  "remaining": "Publish reviewed implementation to main and create final tag.",
+  "stage_seconds": {
+    "pre_restart_source_checkout_seconds": 1.5843383740000263,
+    "pre_restart_installation_seconds": 37.12775911899999,
+    "dependency_restart_wait_seconds": 34.33252818700001,
+    "source_checkout_seconds": 0.3856408139999985,
+    "installation_seconds": 12.713363068999968,
+    "supplied_download_and_object_verification_seconds": 16.09285602099999,
+    "documented_data_access_seconds": 16.100396391999993,
+    "scientific_checks_seconds": 42.705531037000014,
+    "audit_seconds": 15.66083198199999,
+    "training_roi_and_validation_calibration_seconds": 172.59569287199997,
+    "frozen_real_synthetic_evaluation_export_seconds": 219.69371343599994,
+    "result_table_and_figure_display_seconds": 0.30112398300002496,
+    "bundle_export_seconds": 12.627699310999901
+  },
+  "archive_bytes": 164922319,
+  "sidecar_sha256": "27291c222450c726baa1d933669fb317b20b692ecfe00c4d54044124c4a03b0f",
+  "review": "reports/colab_execution_review.md",
+  "exact_colab_pytest_count_retained": false,
+  "attestation_note": "Original unverified generic fields preserved; acceptance combines external browser observation with retained acquisition and result evidence. Executed notebook/stdout not retained."
+}

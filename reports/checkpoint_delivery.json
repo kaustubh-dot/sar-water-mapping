@@ -1,0 +1,20 @@
+{
+  "status": "downloaded_public_checkpoint_and_verified_preflight",
+  "release_url": "https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1",
+  "asset_url": "https://github.com/kaustubh-dot/sar-water-mapping/releases/download/development-seed42-v1/development-seed42-checkpoints.zip",
+  "sha256": "b70dc5117a21ecac5b3b0e2ad9fc06f960a727370c81892089ac27b894100238",
+  "bytes": 3648324,
+  "github_asset_digest_matches": true,
+  "downloaded_from_public_release": true,
+  "original_checkpoint_bytes_match": true,
+  "both_checkpoints_cpu_preflight_accepted": true,
+  "heldout_sources_opened_by_preflight": 0,
+  "public_training_report_paths_redacted": true,
+  "raw_tiffs_in_bundle": false,
+  "source_commit": "61b09f9bfa61114d83bd7be19eba3de67d5621db",
+  "related_public_artifacts": {
+    "reports/neural_training-v1/training.json": "22d35d8fa4053f642edab81f9277c88962d0b2cbc9808083506205bbbe37a314",
+    "reports/neural_results-v1/results_neural.csv": "815602e524e6e2f2abc744b4e9d73a5a37490508fdc2d923d95629ba88bf29da",
+    "reports/notebook_smoke_summary.json": "af973620ab6db947c2c753ce08474a850b97b590625a7566951c8852d86e77b2"
+  }
+}

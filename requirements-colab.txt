@@ -1,0 +1,7 @@
+# Exact classical dependencies exercised by the local scientific test suite.
+# Fresh Colab compatibility/runtime must still be measured; no CUDA stack pins.
+numpy==2.5.4
+scipy==1.17.1
+rasterio==1.5.2
+matplotlib==3.10.9
+pytest==9.0.3

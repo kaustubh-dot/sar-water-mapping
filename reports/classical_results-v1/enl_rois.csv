@@ -1,0 +1,41 @@
+band,method,n,patch_id,roi_class,roi_id,status,suitability,value,x0,x1,y0,y1
+VV,raw,1024,Ghana_313799,land,test_land_1,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,5.711007697886534,64,96,384,416
+VH,raw,1024,Ghana_313799,land,test_land_1,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,4.222232040414323,64,96,384,416
+VV,raw,1024,Ghana_406026,land,test_land_2,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,4.033575184236812,64,96,320,352
+VH,raw,1024,Ghana_406026,land,test_land_2,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,3.1496115645570897,64,96,320,352
+VV,raw,1024,Ghana_97059,land,test_land_3,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,5.214718228609997,128,160,320,352
+VH,raw,1024,Ghana_97059,land,test_land_3,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,5.4845649270621735,128,160,320,352
+VV,raw,1024,India_591317,water,test_water_1,ok,raw-only visual inspection before filtering; broad dark river interior,3.517425721253243,64,96,64,96
+VH,raw,1024,India_591317,water,test_water_1,ok,raw-only visual inspection before filtering; broad dark river interior,1.4596870157179476,64,96,64,96
+VV,raw,1024,India_591317,water,test_water_2,ok,raw-only visual inspection before filtering; broad dark river interior,3.0900611486596934,160,192,96,128
+VH,raw,1024,India_591317,water,test_water_2,ok,raw-only visual inspection before filtering; broad dark river interior,1.6946774935982505,160,192,96,128
+VV,median,1024,Ghana_313799,land,test_land_1,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,19.991266212962795,64,96,384,416
+VH,median,1024,Ghana_313799,land,test_land_1,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,14.480728622572162,64,96,384,416
+VV,median,1024,Ghana_406026,land,test_land_2,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,10.142364616000092,64,96,320,352
+VH,median,1024,Ghana_406026,land,test_land_2,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,8.328540748203428,64,96,320,352
+VV,median,1024,Ghana_97059,land,test_land_3,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,15.175562579898408,128,160,320,352
+VH,median,1024,Ghana_97059,land,test_land_3,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,20.064113764265866,128,160,320,352
+VV,median,1024,India_591317,water,test_water_1,ok,raw-only visual inspection before filtering; broad dark river interior,12.122371661084763,64,96,64,96
+VH,median,1024,India_591317,water,test_water_1,ok,raw-only visual inspection before filtering; broad dark river interior,4.163697494623526,64,96,64,96
+VV,median,1024,India_591317,water,test_water_2,ok,raw-only visual inspection before filtering; broad dark river interior,11.130957263123415,160,192,96,128
+VH,median,1024,India_591317,water,test_water_2,ok,raw-only visual inspection before filtering; broad dark river interior,5.771768881856285,160,192,96,128
+VV,lee,1024,Ghana_313799,land,test_land_1,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,22.84606123043861,64,96,384,416
+VH,lee,1024,Ghana_313799,land,test_land_1,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,14.201008040110942,64,96,384,416
+VV,lee,1024,Ghana_406026,land,test_land_2,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,11.110025143896918,64,96,320,352
+VH,lee,1024,Ghana_406026,land,test_land_2,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,9.563089881484206,64,96,320,352
+VV,lee,1024,Ghana_97059,land,test_land_3,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,18.241846330350754,128,160,320,352
+VH,lee,1024,Ghana_97059,land,test_land_3,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,22.40651247253205,128,160,320,352
+VV,lee,1024,India_591317,water,test_water_1,ok,raw-only visual inspection before filtering; broad dark river interior,13.062673142545961,64,96,64,96
+VH,lee,1024,India_591317,water,test_water_1,ok,raw-only visual inspection before filtering; broad dark river interior,3.6044616224192993,64,96,64,96
+VV,lee,1024,India_591317,water,test_water_2,ok,raw-only visual inspection before filtering; broad dark river interior,9.996520588089655,160,192,96,128
+VH,lee,1024,India_591317,water,test_water_2,ok,raw-only visual inspection before filtering; broad dark river interior,4.993484203095279,160,192,96,128
+VV,log_bilateral,1024,Ghana_313799,land,test_land_1,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,14.567563900843115,64,96,384,416
+VH,log_bilateral,1024,Ghana_313799,land,test_land_1,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,9.414686586503288,64,96,384,416
+VV,log_bilateral,1024,Ghana_406026,land,test_land_2,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,7.742425960552519,64,96,320,352
+VH,log_bilateral,1024,Ghana_406026,land,test_land_2,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,5.889058486601479,64,96,320,352
+VV,log_bilateral,1024,Ghana_97059,land,test_land_3,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,11.831389155903219,128,160,320,352
+VH,log_bilateral,1024,Ghana_97059,land,test_land_3,ok,raw-only visual inspection before filtering; uniform terrain away from visible boundaries,13.684428471827564,128,160,320,352
+VV,log_bilateral,1024,India_591317,water,test_water_1,ok,raw-only visual inspection before filtering; broad dark river interior,7.608910858326745,64,96,64,96
+VH,log_bilateral,1024,India_591317,water,test_water_1,ok,raw-only visual inspection before filtering; broad dark river interior,2.215741208845795,64,96,64,96
+VV,log_bilateral,1024,India_591317,water,test_water_2,ok,raw-only visual inspection before filtering; broad dark river interior,6.240349933656401,160,192,96,128
+VH,log_bilateral,1024,India_591317,water,test_water_2,ok,raw-only visual inspection before filtering; broad dark river interior,2.761933589737266,160,192,96,128

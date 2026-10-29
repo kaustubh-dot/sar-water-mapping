@@ -1,0 +1,1411 @@
+{
+  "status": "download_verified",
+  "pairs": 100,
+  "files": 200,
+  "bytes": 164663453,
+  "download_elapsed_seconds": 184.3227390999964,
+  "selection_sha256": "e7cbd62911647be8ad0fa0d6c08be3f98dc1bc335bf0e780ff180005b2642acf",
+  "objects": [
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_103272_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_103272_S1Hand.tif",
+      "sha256": "1c46a973029c6d05ea931f7c82b1bce9f20282229cc44eb712b0fb84773fcab5",
+      "bytes": 1787221,
+      "generation": "1601572698721398"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_103272_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_103272_LabelHand.tif",
+      "sha256": "0b295adc1c5831a534b9d285a1e079cb48715220a4c47e11c7fd59550830bb59",
+      "bytes": 1413,
+      "generation": "1601572621252638"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_128663_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_128663_S1Hand.tif",
+      "sha256": "ac8eed522f95c06403cd82699fd5de3792b827191b321fb4cecd56eac599dd27",
+      "bytes": 1783654,
+      "generation": "1601572690447994"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_128663_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_128663_LabelHand.tif",
+      "sha256": "4620ba9c43318f88d7b6e1be6ae5fc3ccdcd4b7f443c9e409788c2f4f0a45aa4",
+      "bytes": 3394,
+      "generation": "1601572621294629"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_132163_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_132163_S1Hand.tif",
+      "sha256": "6d5a3d92ad681fff37fb4f9f4b25040e4788b0e8bf783cdaff91c34609d248cf",
+      "bytes": 1796639,
+      "generation": "1601572703310185"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_132163_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_132163_LabelHand.tif",
+      "sha256": "c36e39ceb5d45cf844a1d70ae9c733878bfbf716e4e68c8db2f5be74edc49dff",
+      "bytes": 3242,
+      "generation": "1601572621319398"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_142312_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_142312_S1Hand.tif",
+      "sha256": "018ac13b6045910a0984431f7aadc031b0386261082a3e52e5aacc5fcdb06989",
+      "bytes": 1773214,
+      "generation": "1601572674860978"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_142312_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_142312_LabelHand.tif",
+      "sha256": "5948bc133d2dbd480f557a663ffbbafdc5819f5853eaa4a258634c1e3e21a018",
+      "bytes": 1015,
+      "generation": "1601572621366288"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_168875_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_168875_S1Hand.tif",
+      "sha256": "13aa61ee7a49a556fc53b514c909b49514a5ced3309ce14e5ad09707c51622d8",
+      "bytes": 1791206,
+      "generation": "1601572689962629"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_168875_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_168875_LabelHand.tif",
+      "sha256": "d2a87b6253fe66402894c36d4cf148eedff7db853233d10c79074fbee38b563e",
+      "bytes": 2764,
+      "generation": "1601572621360682"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_187318_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_187318_S1Hand.tif",
+      "sha256": "6de6e08127d187deeff5ed092ddb3cecb3f3b3bb28e09ed81390612b6f1808ec",
+      "bytes": 1781895,
+      "generation": "1601572699027054"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_187318_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_187318_LabelHand.tif",
+      "sha256": "0097bc8b715f103c3f3d142028bc5d90e0b3a4b31dc4ece4493a706b836620ce",
+      "bytes": 1015,
+      "generation": "1601572621346433"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_24858_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_24858_S1Hand.tif",
+      "sha256": "9516e857143c4b2f47ce684dcdcae2471d1b5a2db149658deddce4b6544622e6",
+      "bytes": 1781630,
+      "generation": "1601572691594539"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_24858_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_24858_LabelHand.tif",
+      "sha256": "711e33ff541ccbc9e6fdb8bb7990ccca205bc25d06074b02d391a3fc7bbf47c5",
+      "bytes": 1368,
+      "generation": "1601572621393712"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_26376_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_26376_S1Hand.tif",
+      "sha256": "bf41fee1cd0f50d634c8cd797adade28e2e755e3b1ec6b990bcc601503e7c1d7",
+      "bytes": 1789725,
+      "generation": "1601572700134025"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_26376_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_26376_LabelHand.tif",
+      "sha256": "77bedab00e27761210ec03f9fbb24e475004e5a6915237bf0ab1fba6a30f6775",
+      "bytes": 1015,
+      "generation": "1601572621402557"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_264787_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_264787_S1Hand.tif",
+      "sha256": "738540adc77ac9b61fd922acf0bfedcc6dce049e3e03a15927a49f1851385a5c",
+      "bytes": 1788706,
+      "generation": "1601572711673065"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_264787_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_264787_LabelHand.tif",
+      "sha256": "9290b4f720b727030e8641c83572ead6d051da49393bab2e54ab335a245a8184",
+      "bytes": 8603,
+      "generation": "1601572621429830"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_313799_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_313799_S1Hand.tif",
+      "sha256": "4555c98d54ea0ca81e681abc75af20d61774fbbcdc3d48992c3378ebdd5887bc",
+      "bytes": 1789032,
+      "generation": "1601572729025452"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_313799_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_313799_LabelHand.tif",
+      "sha256": "3bde81b5172d5017ec561ce137cdf8d59fbf3a69fc7796d08188b97219a32862",
+      "bytes": 6073,
+      "generation": "1601572621464078"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_406026_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_406026_S1Hand.tif",
+      "sha256": "e48885b39a1bbfc96b1b8dfe08d6c002e8cfc0a93dd6b628cd1b12d483160e3b",
+      "bytes": 1770739,
+      "generation": "1601572706256480"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_406026_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_406026_LabelHand.tif",
+      "sha256": "17dd70f6385cb0e9ba9778ecec974eeb7fdece11ea58eae1084422da86eac819",
+      "bytes": 1574,
+      "generation": "1601572621448669"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_97059_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_97059_S1Hand.tif",
+      "sha256": "9a5a69c8e48e75cdacab88616517ac537962616f36bfba450ce00b057a74f2b2",
+      "bytes": 1791086,
+      "generation": "1601572747350866"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_97059_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_97059_LabelHand.tif",
+      "sha256": "0763674773d153069073b7674ff5cc438144c53d2b5bee6447a1c6004e03c8fd",
+      "bytes": 2003,
+      "generation": "1601572621538862"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_97516_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_97516_S1Hand.tif",
+      "sha256": "eb4cde7af17c3a524b590cc173b8acb3fd0cf14136f747a3bc2dd7bf326767fd",
+      "bytes": 1764609,
+      "generation": "1601572736589485"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_97516_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Ghana_97516_LabelHand.tif",
+      "sha256": "a6a16b0c24ce167c026e132178d3e89d7ec5862ffb471a3502a1fac56531fcf6",
+      "bytes": 3546,
+      "generation": "1601572621597054"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_1018317_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_1018317_S1Hand.tif",
+      "sha256": "1a84fbcb7a0db45a5187ebd4acc052c9bf93ddad4a443425f173c01e00871300",
+      "bytes": 1656795,
+      "generation": "1601572744575818"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_1018317_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_1018317_LabelHand.tif",
+      "sha256": "f6e9adf73f782c7778c7ea911d6c8bc86300d9d9cafc139c5215cc3dfeb84a23",
+      "bytes": 5925,
+      "generation": "1601572621623296"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_1018327_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_1018327_S1Hand.tif",
+      "sha256": "d69a706c250dd3dd37ff43eb4969117460abd64d3280bca71fdd9916f4f3d6b1",
+      "bytes": 1670156,
+      "generation": "1601572739828650"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_1018327_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_1018327_LabelHand.tif",
+      "sha256": "98290650b74df82e3acc22aaef90bcb4272821b2afb53f05af683f94b5fe1b56",
+      "bytes": 11303,
+      "generation": "1601572621641178"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_103447_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_103447_S1Hand.tif",
+      "sha256": "5827b63630493152fe45660f33fe3d111bd5e8e9e9573cb18ac73704a4cc14a9",
+      "bytes": 1660418,
+      "generation": "1601572742115466"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_103447_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_103447_LabelHand.tif",
+      "sha256": "74b9f50208d5162af149a527579b303dd94eeb5c6ca58895419469954bca254b",
+      "bytes": 11945,
+      "generation": "1601572621613597"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_164336_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_164336_S1Hand.tif",
+      "sha256": "33cb9aff852779a15437d21ea01ef1c9eb674e77396fd03e91a1fa2cabadbcbd",
+      "bytes": 1674045,
+      "generation": "1601572740164095"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_164336_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_164336_LabelHand.tif",
+      "sha256": "11688c3caa39195a2ec83857a80076b2bf48167d3332b8ab875b2901e6936e18",
+      "bytes": 2668,
+      "generation": "1601572621676122"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_179238_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_179238_S1Hand.tif",
+      "sha256": "66f9fb02d4a6233269bd82ec9dbdcaa97c46e4f0a201f4030829a6bdd4a774c3",
+      "bytes": 1652218,
+      "generation": "1601572741991909"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_179238_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_179238_LabelHand.tif",
+      "sha256": "38107d87b1327813ec83b10d75e49c564cf1de649ac2488eced8d3c5bf693c3f",
+      "bytes": 11401,
+      "generation": "1601572621713302"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_244057_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_244057_S1Hand.tif",
+      "sha256": "e630de450074796ee6cf167e4783bbe01a36ab9ecbc9f85d0313c8747afd7571",
+      "bytes": 1697212,
+      "generation": "1601572744630193"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_244057_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_244057_LabelHand.tif",
+      "sha256": "15db1220680cbf491eefece583fae40ebc319d7c0bb2c5f354ef738a2246eaf7",
+      "bytes": 9970,
+      "generation": "1601572621711164"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_265762_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_265762_S1Hand.tif",
+      "sha256": "602309e9df326715a216e6115c3cb24010d6cf34d65fa974b6eaedf6ecb3c400",
+      "bytes": 1661747,
+      "generation": "1601572770085711"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_265762_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_265762_LabelHand.tif",
+      "sha256": "8e23ff29cae336fafc90d8783b3e3119b2fc02178f0f3433cc3cabec97f46544",
+      "bytes": 10702,
+      "generation": "1601572621777294"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_56450_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_56450_S1Hand.tif",
+      "sha256": "22d6ebd641bf53dac257316be74c96afb548bbbe75adf764daf1827bdfed4832",
+      "bytes": 1687938,
+      "generation": "1601572782760784"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_56450_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_56450_LabelHand.tif",
+      "sha256": "e4b2731993bd93966c4f67f5b68652c22b96f357eaa6ab6cfc4fbda8e892bc60",
+      "bytes": 9042,
+      "generation": "1601572621817208"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_591317_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_591317_S1Hand.tif",
+      "sha256": "53374c3e29255f1400339f7b32dc6145032eac613e3c808f840203cd7ea4c139",
+      "bytes": 1661702,
+      "generation": "1601572800171072"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_591317_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_591317_LabelHand.tif",
+      "sha256": "6f5f4c7a34bae3b62348af93b642b2e6e420c9a2d77a857145b46fda8348873a",
+      "bytes": 8323,
+      "generation": "1601572621874198"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_592446_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_592446_S1Hand.tif",
+      "sha256": "a56299df37160745abd570528ad50d29de2bc5a3e3b4d2369db5ac6359c5f552",
+      "bytes": 1673280,
+      "generation": "1601572773396970"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_592446_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_592446_LabelHand.tif",
+      "sha256": "23cf1fcd9882fac00552bc25ec4202e95d58421eff597c9cf659c4f733c49cd0",
+      "bytes": 5708,
+      "generation": "1601572621864705"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_59460_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_59460_S1Hand.tif",
+      "sha256": "83456b355e9ec267de8543a677deb8c2f2b1a7241a7b910d77c473324aa16f53",
+      "bytes": 1681041,
+      "generation": "1601572781181947"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_59460_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_59460_LabelHand.tif",
+      "sha256": "e2e59c851ec18a8e73975f46779a0a4b186741830478b67474ad10fb5c2f9409",
+      "bytes": 3665,
+      "generation": "1601572621918053"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_664410_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_664410_S1Hand.tif",
+      "sha256": "e60bddb7ed7f9c38f681193a183e49261d9792e3cdf37cb76491e7be2243dda9",
+      "bytes": 1661461,
+      "generation": "1601572795331043"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_664410_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_664410_LabelHand.tif",
+      "sha256": "66e20dd4222c572024e8d0037750e8716c8ea1b132597f843a44345d6e075b29",
+      "bytes": 9300,
+      "generation": "1601572621912457"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_698338_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_698338_S1Hand.tif",
+      "sha256": "d6381f7c72e560e4f44de164f9689bd88457e0f39adb89c0c0e21606581575de",
+      "bytes": 1659927,
+      "generation": "1601572794547819"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_698338_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_698338_LabelHand.tif",
+      "sha256": "22b25cba554c4581bd46865cee6143150590d65b14681f8250387b55ffa73923",
+      "bytes": 7591,
+      "generation": "1601572621946260"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_774689_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_774689_S1Hand.tif",
+      "sha256": "f0d5171ed0eea8297595db3489015b562d1e120c70806cf226994d4395d585c2",
+      "bytes": 1658027,
+      "generation": "1601572808994773"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_774689_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_774689_LabelHand.tif",
+      "sha256": "e49de9eb03f76dcf673e0facf890ded010376fe8b5165dc7379b3578feb0b2a3",
+      "bytes": 11494,
+      "generation": "1601572622011432"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_804466_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_804466_S1Hand.tif",
+      "sha256": "6ab387987072e405fb5fb18884340e6d78e235a9b0b5439866a0d055190e8e2a",
+      "bytes": 1666432,
+      "generation": "1601572792344610"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_804466_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\India_804466_LabelHand.tif",
+      "sha256": "4c60ddbdfd3844fd4252c5c3ee02b65670cf6331d353fc4c48315bab323aeb57",
+      "bytes": 16046,
+      "generation": "1601572622044812"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1149855_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_1149855_S1Hand.tif",
+      "sha256": "e53925ce5265c89099b9d3aa1915661173ffd34375c751e2e24c1b1a4bd07587",
+      "bytes": 1780298,
+      "generation": "1601572837824793"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1149855_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_1149855_LabelHand.tif",
+      "sha256": "e90aaedbb51c617c6250c06cbeff13a14c992c46e5df1fe5b8988a5b239308b6",
+      "bytes": 8988,
+      "generation": "1601572622196150"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1439641_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_1439641_S1Hand.tif",
+      "sha256": "8bb3895655b0a4895b8e9f4ef65efb2f623136036dcfb670574f20642225722b",
+      "bytes": 1785601,
+      "generation": "1601572845941791"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1439641_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_1439641_LabelHand.tif",
+      "sha256": "5e6a8e0a4a240ec67402dba79be7535f0a90df3f52be777b6d2133e55ee3c3f5",
+      "bytes": 9807,
+      "generation": "1601572622208952"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1443339_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_1443339_S1Hand.tif",
+      "sha256": "cee6ea28c9f700f7d04b16f036fe504e0e836eab9f1b00420fe332366c985ab3",
+      "bytes": 1783090,
+      "generation": "1601572858443330"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1443339_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_1443339_LabelHand.tif",
+      "sha256": "e306812aaf1587c46f9b2a0c63e4af4fe46ac9fd46a9e6286dd41d70f824454e",
+      "bytes": 13991,
+      "generation": "1601572622248449"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_254910_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_254910_S1Hand.tif",
+      "sha256": "143aed56655704da0f27412dccf63cafc78f95719995f405b9021c14dea0bf26",
+      "bytes": 1778412,
+      "generation": "1601572850933974"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_254910_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_254910_LabelHand.tif",
+      "sha256": "6bc5cf165f540b5a0c437a30c75e5ec3b561980d9ddb94ee135a97cb491db8f2",
+      "bytes": 7568,
+      "generation": "1601572622228671"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_293769_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_293769_S1Hand.tif",
+      "sha256": "2b691deda91cdf630f7f4ab3a38d1c75d9a4d45d3d267eec5e65c794033b078b",
+      "bytes": 1773981,
+      "generation": "1601572840793920"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_293769_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_293769_LabelHand.tif",
+      "sha256": "629304ae517b2c7dd0dc6cb8dd72d5943b4a2943965bd782a7b309f28077ef73",
+      "bytes": 6528,
+      "generation": "1601572622250707"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_382276_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_382276_S1Hand.tif",
+      "sha256": "a0a63fe99584a50541d1baab2745803133aff5a8b33992bf25cd1d75711aa3cb",
+      "bytes": 1778401,
+      "generation": "1601572848727549"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_382276_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_382276_LabelHand.tif",
+      "sha256": "9ff60aa49161aec241227fd6e9fed2c89a6f22ec839ef9dbf76268d399996631",
+      "bytes": 2201,
+      "generation": "1601572622247289"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_596495_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_596495_S1Hand.tif",
+      "sha256": "9a65b8f124989a3944b9c3b436e02e01c7c67268b4330144e7c4c74b05082fde",
+      "bytes": 1783331,
+      "generation": "1601572865737494"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_596495_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Mekong_596495_LabelHand.tif",
+      "sha256": "9fbec9b1bd06e96cc8eb0c66fa4934a48dd80cbd1b670494c2affd259ee7a32c",
+      "bytes": 11426,
+      "generation": "1601572622284973"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_1095404_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_1095404_S1Hand.tif",
+      "sha256": "1cd84b8d19a5ae64ceb3a1b518f847e22fc46d81a2e7e65268e58186f686c812",
+      "bytes": 1785780,
+      "generation": "1601572878197084"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_1095404_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_1095404_LabelHand.tif",
+      "sha256": "be4f39b67216e4ada16d571ae1d4e6551b4070e5dd580269e1383145af8741b4",
+      "bytes": 9850,
+      "generation": "1601572622346653"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_143329_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_143329_S1Hand.tif",
+      "sha256": "5c5c2401e6c0cb4aa964c77863533c3348204a0c050b48ca544c5326c06a0221",
+      "bytes": 1778640,
+      "generation": "1601572881002520"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_143329_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_143329_LabelHand.tif",
+      "sha256": "c6732c47603d03521fe9223b690a3a4cc6c3f719621486de078c495fb05ac4fa",
+      "bytes": 3480,
+      "generation": "1601572622302530"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_417184_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_417184_S1Hand.tif",
+      "sha256": "99b58fdcad3b27e09a0bb672246cf59f58e1c7e211d290e45485c5321995d7dc",
+      "bytes": 1074073,
+      "generation": "1601572850013030"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_417184_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_417184_LabelHand.tif",
+      "sha256": "f0d0acbdd9483dfa0873dc6baf577e9f97b4e07f12c6d5de5088ec675976e6a4",
+      "bytes": 4593,
+      "generation": "1601572622381514"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_439488_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_439488_S1Hand.tif",
+      "sha256": "29a76cfbc4cb6e21e80c652d579aa5ce67612653f6485de1256657c2ea184f90",
+      "bytes": 1780253,
+      "generation": "1601572877304508"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_439488_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_439488_LabelHand.tif",
+      "sha256": "7c53908b2fdb14bf24bdadceaf1f7b4ccea127f74cb0c4517400114c0d6bf462",
+      "bytes": 6447,
+      "generation": "1601572622425865"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_707067_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_707067_S1Hand.tif",
+      "sha256": "4c6cbdebd9dbb47dbd38eba116c11d16ebc0f77c6aca8175acf91f62c1cbdeee",
+      "bytes": 1781252,
+      "generation": "1601572881432050"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_707067_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_707067_LabelHand.tif",
+      "sha256": "89a36972a4efa30b0a8488af035e07e350ef4a1453402ed603717d66884c482f",
+      "bytes": 3718,
+      "generation": "1601572622430271"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_812045_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_812045_S1Hand.tif",
+      "sha256": "60721c48b1bc862abdb9e6b0ee93d67590fb058f4581e43f615569b22beff4e0",
+      "bytes": 1792307,
+      "generation": "1601572896427807"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_812045_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Nigeria_812045_LabelHand.tif",
+      "sha256": "77386f8586a6a825430b11d74619fd39391f2c5d3fc2fc93d829bc15f4933308",
+      "bytes": 9767,
+      "generation": "1601572622485841"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Pakistan_1027214_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_1027214_S1Hand.tif",
+      "sha256": "d25c7fdbb58c7cd849c38e56ace6cfb7856de06084cb7fd7fe5f5d3882c5a0b0",
+      "bytes": 1635076,
+      "generation": "1601572908445109"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Pakistan_1027214_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_1027214_LabelHand.tif",
+      "sha256": "82f1a0c7677d4b14ebda580884a6e8e854c2bf00ba5f470c439456e3da2c1902",
+      "bytes": 10004,
+      "generation": "1601572622511747"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Pakistan_1036366_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_1036366_S1Hand.tif",
+      "sha256": "041bad2aa8ce0de3c4b1ea0be1231a1c5fbc3a13231ed5cb74897874f8a97ac6",
+      "bytes": 1626207,
+      "generation": "1601572903525987"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Pakistan_1036366_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_1036366_LabelHand.tif",
+      "sha256": "b58e0956f6d9464aa6ef99f5e7368e4f8af4a3afb29d0c30b19a9438527f18d1",
+      "bytes": 8194,
+      "generation": "1601572622476884"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Pakistan_43105_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_43105_S1Hand.tif",
+      "sha256": "1594a4ab57da8f3ef16816661bdbba94669236364605465832047a8560c2252c",
+      "bytes": 1572835,
+      "generation": "1601572902271938"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Pakistan_43105_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_43105_LabelHand.tif",
+      "sha256": "60fe4edb4e6ce61fad7cd3e8810e0f030712fccf2053e7996c786941ffcb0130",
+      "bytes": 1323,
+      "generation": "1601572622545485"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Pakistan_548910_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_548910_S1Hand.tif",
+      "sha256": "7664eb8a1694d10c430d7b4111b21e4c9f6cfd95062f70d24800e4060ee49c0a",
+      "bytes": 1615127,
+      "generation": "1601572902105431"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Pakistan_548910_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_548910_LabelHand.tif",
+      "sha256": "9a474cbe809d600e9b326edc7549cf03eadb2b2e06580828b0eac4b140a57e4d",
+      "bytes": 3493,
+      "generation": "1601572622548946"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Pakistan_694942_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_694942_S1Hand.tif",
+      "sha256": "f613d5439c98554b004bf351b7b6550a89f4275835e7bce7671b35b04efa32c2",
+      "bytes": 1575297,
+      "generation": "1601572934356096"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Pakistan_694942_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_694942_LabelHand.tif",
+      "sha256": "095b3e78ea2bed54ed45f453344afd9067fec33fc96b9e3ce8f9d144a4301323",
+      "bytes": 4661,
+      "generation": "1601572622602960"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Pakistan_712873_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_712873_S1Hand.tif",
+      "sha256": "5076271e52c8d21c7d2d4995da0a51f1a96e36210aa76f7fe81ce727009d3ad4",
+      "bytes": 1623372,
+      "generation": "1601572912580351"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Pakistan_712873_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Pakistan_712873_LabelHand.tif",
+      "sha256": "3455ab827f86c34b658261986b64c8b4e8c29a510a1b0ec838c45c2562c3181f",
+      "bytes": 5249,
+      "generation": "1601572622592949"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_1076204_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_1076204_S1Hand.tif",
+      "sha256": "d76479421fc80f8028e5962baade54b706533070fdb082d634321bd9b3bd2831",
+      "bytes": 1680988,
+      "generation": "1601572932810232"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_1076204_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_1076204_LabelHand.tif",
+      "sha256": "b7e2eb383a0172eb4959e9cf5d7408036ea9997014724f5740cccc3a1f0ead2f",
+      "bytes": 1753,
+      "generation": "1601572622658745"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_198534_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_198534_S1Hand.tif",
+      "sha256": "8746c884ddbd8246bf163caddb6796240906d3eb19d73314ca2e052bf84a7bcb",
+      "bytes": 1689455,
+      "generation": "1601572936882626"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_198534_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_198534_LabelHand.tif",
+      "sha256": "ce958f459c3388cc99635f765f846f77130e8dd3fc0898f427cb7f85b4cc165c",
+      "bytes": 8532,
+      "generation": "1601572622711601"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_212687_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_212687_S1Hand.tif",
+      "sha256": "906126ede554df1c1834f0c166b6eb0b5233b1df731be1ddb3466ed6a07e8a6c",
+      "bytes": 1667678,
+      "generation": "1601572960556682"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_212687_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_212687_LabelHand.tif",
+      "sha256": "4c5c3fe0eb23beba11247dec63e6b648976dfc380d8ee279ea1b191e411b741e",
+      "bytes": 1962,
+      "generation": "1601572622693014"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_225187_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_225187_S1Hand.tif",
+      "sha256": "bc812bd694d05db9ae0def3f6d06dc728ed1d3190e61c5abc3a240d5abc8cda8",
+      "bytes": 1671982,
+      "generation": "1601572965166479"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_225187_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_225187_LabelHand.tif",
+      "sha256": "b70bfeb0a6a57000505778e7021f4e82f000883bcc0c7241ae0c723edb6f5bb6",
+      "bytes": 1057,
+      "generation": "1601572622697824"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_247656_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_247656_S1Hand.tif",
+      "sha256": "4e1db6dd4e0ada240e3f2331942d4cd6e42d8ee8bd78bb1f62cbbd2aa0bea4a3",
+      "bytes": 1685666,
+      "generation": "1601572946939529"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_247656_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_247656_LabelHand.tif",
+      "sha256": "8c85c665716c0a4f32f38021c8e4fdd5724488e7425d6308ff8c1af9f22a508c",
+      "bytes": 2961,
+      "generation": "1601572622725994"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_252217_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_252217_S1Hand.tif",
+      "sha256": "b306c313e0977aaadcb809ed51e77d30446f4c7bac40d5f3a53d1504f5908b7f",
+      "bytes": 1673806,
+      "generation": "1601572939760517"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_252217_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_252217_LabelHand.tif",
+      "sha256": "e2550d5fd600121ce491ab1c40e908db58198c78436d56a4d4e4be327c910e82",
+      "bytes": 1889,
+      "generation": "1601572622740774"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_284928_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_284928_S1Hand.tif",
+      "sha256": "4530d293e0a8e4d4e2bd06ba6c626c69ec1d76ed9bb183e3766fd14b75d7c75c",
+      "bytes": 1673813,
+      "generation": "1601572957019718"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_284928_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_284928_LabelHand.tif",
+      "sha256": "528e3459f22ad446e1abe670bb3993b265145a08cdec883cc57e34fd711b5988",
+      "bytes": 1015,
+      "generation": "1601572622768755"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_48673_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_48673_S1Hand.tif",
+      "sha256": "6ec61af8c698118b9523f8302305455072d6b5a690bba3bdb26aa31827a1c5df",
+      "bytes": 1681527,
+      "generation": "1601572965086833"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_48673_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_48673_LabelHand.tif",
+      "sha256": "f5389e1844f9e1602ceadf22de700932659f40164797f05d988a31ca3e7662f6",
+      "bytes": 1088,
+      "generation": "1601572622826994"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_605682_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_605682_S1Hand.tif",
+      "sha256": "59c611d66f8c4dd2f53b9bdd00286e34156e6a772d9ace43bb4c6c2cc7f5f3d5",
+      "bytes": 1683399,
+      "generation": "1601572968756333"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_605682_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_605682_LabelHand.tif",
+      "sha256": "5cbb7369a4eac21360dd628dade0dd3d65ec6c8f29c1d00996f824517f8c4f51",
+      "bytes": 14316,
+      "generation": "1601572622911569"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_721886_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_721886_S1Hand.tif",
+      "sha256": "06c7d2a536f64bf5392d0fcf1fecfc2d9d13f3f9c618d60d2f14a69dd3857c34",
+      "bytes": 1669185,
+      "generation": "1601572983565498"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_721886_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_721886_LabelHand.tif",
+      "sha256": "96b902f1fcf8cd1c6e07c145c815d0dac4cc4e4fee884403c86010f646137d57",
+      "bytes": 5608,
+      "generation": "1601572622917403"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_792268_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_792268_S1Hand.tif",
+      "sha256": "0973990e56c1284bc274e4b799ea87f167ac0484ac4e6777ac716373e92d56c4",
+      "bytes": 1666541,
+      "generation": "1601573004167397"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_792268_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_792268_LabelHand.tif",
+      "sha256": "cfafdb06fe66f965ef2198a3d08ea4b9b215d18320713ea14c9641d8cf6b9403",
+      "bytes": 1575,
+      "generation": "1601572622929709"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Paraguay_913449_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_913449_S1Hand.tif",
+      "sha256": "d574270d0876e440adfac65762f76a32e67ddcb2508b381480e806e81df3833b",
+      "bytes": 1679957,
+      "generation": "1601572995114536"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Paraguay_913449_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Paraguay_913449_LabelHand.tif",
+      "sha256": "7292d7566b46869ea95132a2b0d623f9f47c5de3144f1158b7e46191f90efeb9",
+      "bytes": 3428,
+      "generation": "1601572622967523"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Somalia_322855_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_322855_S1Hand.tif",
+      "sha256": "a9c284e8e99bd544383d0a455882b221bb95f7f05be81b98f51442b19570f678",
+      "bytes": 1800396,
+      "generation": "1601573041680472"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Somalia_322855_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_322855_LabelHand.tif",
+      "sha256": "c38f887de34306b7a40e8a0edbbc756f5dad289ee52c41f559cae9b29dcf4e43",
+      "bytes": 11099,
+      "generation": "1601572623061739"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Somalia_32375_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_32375_S1Hand.tif",
+      "sha256": "5e44aba5c1779146c62c01733f2ba80a378e6c70098fa3e1db10b79ce83cbb13",
+      "bytes": 1760378,
+      "generation": "1601573022253230"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Somalia_32375_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_32375_LabelHand.tif",
+      "sha256": "a0a51b4c1d5d2db1b5cb13575ef942dc73d912c50a4bf98596e37cd6c170273c",
+      "bytes": 9542,
+      "generation": "1601572623080184"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Somalia_371421_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_371421_S1Hand.tif",
+      "sha256": "e0b2817226bd77bc521bd8cbf65db85c0dba5632793b5466e1481c1c92389bff",
+      "bytes": 1776843,
+      "generation": "1601573041783636"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Somalia_371421_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_371421_LabelHand.tif",
+      "sha256": "f4f16eb1d1c0b74adc2e105ed35d6a457a5695c87980c6b017084fece1a6b9d5",
+      "bytes": 12315,
+      "generation": "1601572623080195"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Somalia_626316_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_626316_S1Hand.tif",
+      "sha256": "16a211c774ebbf373b77eef7300ba9659cfb1ea948507fea5ab3014e5dca919a",
+      "bytes": 1773450,
+      "generation": "1601573018325609"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Somalia_626316_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_626316_LabelHand.tif",
+      "sha256": "be0abab03c2d351858f07c831eabd69f329ef3f7e403b06894c5e10eac1922a6",
+      "bytes": 10140,
+      "generation": "1601572623119688"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Somalia_649376_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_649376_S1Hand.tif",
+      "sha256": "4a24cfbcc08af9621c6be97e849b5a4cba9db4ea80b72447d0f692034c12cae7",
+      "bytes": 1780582,
+      "generation": "1601573043402419"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Somalia_649376_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_649376_LabelHand.tif",
+      "sha256": "89e847dedf5f2b6d5375016d6772f17cab42f72c56d6e8d70312798edd70df5c",
+      "bytes": 8780,
+      "generation": "1601572623130017"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Somalia_699062_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_699062_S1Hand.tif",
+      "sha256": "c905fcba8efe764f1c91d9b1fb061da12b797c645ad33b80befb575dc00a5d38",
+      "bytes": 1776009,
+      "generation": "1601573035966327"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Somalia_699062_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_699062_LabelHand.tif",
+      "sha256": "9864be374d11bd6855a909c946ce09cddb4aff3f7ef211092f5d9a75a79d893f",
+      "bytes": 7268,
+      "generation": "1601572623158979"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Somalia_886726_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_886726_S1Hand.tif",
+      "sha256": "e5c17fc4337c97598202b549c7f09994358f682c2eae84cbd73fbf67ccadae90",
+      "bytes": 1781985,
+      "generation": "1601573049134318"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Somalia_886726_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Somalia_886726_LabelHand.tif",
+      "sha256": "75113a60da9a5a57d1feb3bd9816dbcc714f4e22c0362c89d8bc46718a125167",
+      "bytes": 15708,
+      "generation": "1601572623225638"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_1167260_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_1167260_S1Hand.tif",
+      "sha256": "e838194f1f60dca63e111ce7df7f2705a6f76779fe4bc5b6181dc224e80d1f01",
+      "bytes": 1498434,
+      "generation": "1601573046070740"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_1167260_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_1167260_LabelHand.tif",
+      "sha256": "7fb2d9b5f65885b57b0f7a2e2ac02e3342ece255d3e2a6f6cb10645937f6f6e3",
+      "bytes": 11420,
+      "generation": "1601572623250527"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_1199913_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_1199913_S1Hand.tif",
+      "sha256": "343e99bb775af47d2fb690d04c1c71c56c751f179c13aa56c84992fd4e6b740f",
+      "bytes": 1491993,
+      "generation": "1601573053275020"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_1199913_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_1199913_LabelHand.tif",
+      "sha256": "27fedadf6819805196eb1061a21e11ccb7ba26648a2424917b9de3174d45f2e0",
+      "bytes": 2348,
+      "generation": "1601572623169469"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_6095801_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_6095801_S1Hand.tif",
+      "sha256": "c15ceaa0f70d1ea23cc378251244f61307e6857f7503ff9c673db126a82496c9",
+      "bytes": 1505207,
+      "generation": "1601573076816280"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_6095801_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_6095801_LabelHand.tif",
+      "sha256": "f0c9a7ad9c7049ca43363580eb8c6849812b51bb8095901fcc2796400817f512",
+      "bytes": 7549,
+      "generation": "1601572623257058"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_6537196_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_6537196_S1Hand.tif",
+      "sha256": "eed6a008ca7edba317c87b670c0cd4a481ec138560976fb73822a2b3633a3d6d",
+      "bytes": 1494679,
+      "generation": "1601573047623288"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_6537196_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_6537196_LabelHand.tif",
+      "sha256": "f33396772875e0a162e4f7000ee640fd622fa7540fd7f0cb96287861a37261b1",
+      "bytes": 2441,
+      "generation": "1601572623239881"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_6860600_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_6860600_S1Hand.tif",
+      "sha256": "5ffd422a0375aa9113e078d7481643355aa9109dbaa459e03b659c0bde503787",
+      "bytes": 1490744,
+      "generation": "1601573071830126"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_6860600_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_6860600_LabelHand.tif",
+      "sha256": "ebf990071fcaa4f20a86d141b4cb25df0ce9a310178740b697dde22b4af4ea7b",
+      "bytes": 1374,
+      "generation": "1601572623236908"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_7856615_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_7856615_S1Hand.tif",
+      "sha256": "5c1315b5e96224e74c32f8a6301ee4ad634bdd854dcf50241a2888ac8a88f71c",
+      "bytes": 1497262,
+      "generation": "1601573079718059"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_7856615_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_7856615_LabelHand.tif",
+      "sha256": "83ad1cbe61fe63cc94e59b86e74c2f48fb92ce1f404572952efd2163f960ddb4",
+      "bytes": 4980,
+      "generation": "1601572623308405"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_8104659_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_8104659_S1Hand.tif",
+      "sha256": "684478fd76187222acef33e6f2da0912123065a44c283a6a6af7c97e52c88e6f",
+      "bytes": 1508366,
+      "generation": "1601573080441789"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_8104659_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_8104659_LabelHand.tif",
+      "sha256": "a0ded85574230815d3cea3f0dcd6a568de4f3d7747bc990e636694861856324c",
+      "bytes": 2256,
+      "generation": "1601572623293347"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_8199661_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_8199661_S1Hand.tif",
+      "sha256": "e338c0462755272e8eb5b172c435f903bf0772e20de7a48cd78e13ea3a8d1b6d",
+      "bytes": 1490846,
+      "generation": "1601573078515654"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_8199661_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_8199661_LabelHand.tif",
+      "sha256": "73b55033d476fbe4744a1589e1cbb71632eef478732eb0819a1b0d8b09e2547b",
+      "bytes": 3618,
+      "generation": "1601572623278504"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Spain_8372658_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_8372658_S1Hand.tif",
+      "sha256": "e19f8210a9a2d5abd1d831f86ed20dfc397b137fc2d3caf6977d33b11b343abd",
+      "bytes": 1505931,
+      "generation": "1601573086393703"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Spain_8372658_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Spain_8372658_LabelHand.tif",
+      "sha256": "bc4b42832688fb9f0e82554ce05bb13b4d92e8ec638bc416dba62ae4ec0fe093",
+      "bytes": 10893,
+      "generation": "1601572623331662"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Sri-Lanka_1038087_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_1038087_S1Hand.tif",
+      "sha256": "67670fcc0f7d19f7f62846dbdebc5bf0ec070324e317c2d93a2635237864f16a",
+      "bytes": 1788519,
+      "generation": "1601573080972430"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Sri-Lanka_1038087_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_1038087_LabelHand.tif",
+      "sha256": "88c87d915169fb1af98869557509b995a449aad0c44b673beedca6227588483c",
+      "bytes": 7418,
+      "generation": "1601572623375949"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Sri-Lanka_120804_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_120804_S1Hand.tif",
+      "sha256": "d8709db16979c4204636298bd58caa3061b629e3acacc514dbeb59f0d345b1f2",
+      "bytes": 1789518,
+      "generation": "1601573096736613"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Sri-Lanka_120804_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_120804_LabelHand.tif",
+      "sha256": "6de1d3b06e5c3bc4c451c49577311b82a397c014147b48b66577492a11cfdfb4",
+      "bytes": 4318,
+      "generation": "1601572623387633"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Sri-Lanka_135713_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_135713_S1Hand.tif",
+      "sha256": "f296d3e4cca319c71e02b76c4f63c8f4b14f7e5b2514e50ebec2aed853cc5c4e",
+      "bytes": 1813813,
+      "generation": "1601573102549053"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Sri-Lanka_135713_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_135713_LabelHand.tif",
+      "sha256": "13c46800abfc49e319ad58d62f89fb65040b0f4ec88a1cdb6d88aab9a49ef701",
+      "bytes": 6159,
+      "generation": "1601572623399470"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Sri-Lanka_14484_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_14484_S1Hand.tif",
+      "sha256": "08eb5ba71b92a4257f983abdba9d9dee332a7ac1c500331419f45df1c11d4e3b",
+      "bytes": 1798657,
+      "generation": "1601573080012378"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Sri-Lanka_14484_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_14484_LabelHand.tif",
+      "sha256": "8f3dad7aa8c25de9de9060cc3f0d5465952729a754e6f6e72b8793aca1352f53",
+      "bytes": 9451,
+      "generation": "1601572623424891"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Sri-Lanka_152185_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_152185_S1Hand.tif",
+      "sha256": "23b1c75ca84938d5f56623da6dcb89186c2bc3fb0511915caf3237aed3d4b903",
+      "bytes": 1795442,
+      "generation": "1601573092548920"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Sri-Lanka_152185_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_152185_LabelHand.tif",
+      "sha256": "49c5f8ca91c9c184ae5ecad35f96ba06744f1f86fbb6e9f4675e54ff1cf5de80",
+      "bytes": 1335,
+      "generation": "1601572623392029"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Sri-Lanka_178753_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_178753_S1Hand.tif",
+      "sha256": "a31b6fdb473705829425bb3da871ab8400988934944c981ea0be0a3285bf17d3",
+      "bytes": 1806697,
+      "generation": "1601573080335414"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Sri-Lanka_178753_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_178753_LabelHand.tif",
+      "sha256": "542dd1c6e16feb8c0ffd1025afad568c7d17d8782367e36e76c2669edd5888a1",
+      "bytes": 2490,
+      "generation": "1601572623409459"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Sri-Lanka_713926_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_713926_S1Hand.tif",
+      "sha256": "8d51be4c5e9a9bb87ae95b69ae2ba10a59ac30d84056b6d65d5cbc44af2e515d",
+      "bytes": 1786176,
+      "generation": "1601573114074561"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Sri-Lanka_713926_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_713926_LabelHand.tif",
+      "sha256": "b07e813683173d668958cb456048d9904ac9f7ed9e5c8d4791d93cdec04412cc",
+      "bytes": 4008,
+      "generation": "1601572623543039"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Sri-Lanka_956740_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_956740_S1Hand.tif",
+      "sha256": "ac74cea00deba88474e04384e27d9a1bbe4082343e801bccb64f45557dbde097",
+      "bytes": 1797080,
+      "generation": "1601573132598702"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Sri-Lanka_956740_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\Sri-Lanka_956740_LabelHand.tif",
+      "sha256": "95c5659bc1ae19960b38fdefc00a0f22e2c92f0d72ff3553319a9e101fa326aa",
+      "bytes": 4139,
+      "generation": "1601572623603942"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_19225_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_19225_S1Hand.tif",
+      "sha256": "d3040e0208eddaf0b48e62ef381b0c0bd6ccae8b77c34a1b65b769cdc9ce495a",
+      "bytes": 1476446,
+      "generation": "1601573153452263"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_19225_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_19225_LabelHand.tif",
+      "sha256": "f0621c9070e0ad11fc3cd8bc19cf2c8215b011a0a2fbfd7805f60c720dc5c43e",
+      "bytes": 1752,
+      "generation": "1601572623664574"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_198411_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_198411_S1Hand.tif",
+      "sha256": "2f5e04cd476e8f0ed2751d1a760ace8129f3cedaacbbbb2befd695956c4db1d4",
+      "bytes": 503694,
+      "generation": "1601573114777622"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_198411_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_198411_LabelHand.tif",
+      "sha256": "ce0eea264fc318603fdd46a0b2bccc57ecc87079a001cdd6852adc24855639e5",
+      "bytes": 5241,
+      "generation": "1601572623712804"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_217598_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_217598_S1Hand.tif",
+      "sha256": "d22a985119caad30f1ac18622e81d653e1b0ae65149f06e6737e594942e0eba6",
+      "bytes": 1456769,
+      "generation": "1601573132044087"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_217598_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_217598_LabelHand.tif",
+      "sha256": "fc0ef2700470dc49c861b21b193fe28195688aeda1320332160be851938ed00f",
+      "bytes": 7212,
+      "generation": "1601572623706558"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_225017_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_225017_S1Hand.tif",
+      "sha256": "176c511768b44662a50cdbc04bcbe1d01e7c4c1a608e9edf2a45d53b8a086e4d",
+      "bytes": 1474692,
+      "generation": "1601573155761272"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_225017_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_225017_LabelHand.tif",
+      "sha256": "687f1336fc75f1dbea75f2500f913d2de333d843f297b3dbf1d8bef3540d7981",
+      "bytes": 3400,
+      "generation": "1601572623691161"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_231124_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_231124_S1Hand.tif",
+      "sha256": "16aa90d3723a6d0e8d8f1665da730c1d7721138850697b23a2c378e6acf71ea1",
+      "bytes": 761603,
+      "generation": "1601573127895727"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_231124_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_231124_LabelHand.tif",
+      "sha256": "913d7c8fcb0dc9eb87d95cff202eb0f67a64256f3347a9d12a2db550f05f43fc",
+      "bytes": 5546,
+      "generation": "1601572623731922"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_232060_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_232060_S1Hand.tif",
+      "sha256": "f6be0b36a32afd681eb1a76136356f74beaf9c850c099224b440d60b6bc73841",
+      "bytes": 1467836,
+      "generation": "1601573153463513"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_232060_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_232060_LabelHand.tif",
+      "sha256": "e009c7025245116d408332b9b0be054103ed2737c6e7b448055f8a78eab8e416",
+      "bytes": 1854,
+      "generation": "1601572623732286"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_348639_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_348639_S1Hand.tif",
+      "sha256": "4805178b0d5f241ecb1b8f60c2e37827b9ef7e663444518dcddf6bfd4d48d429",
+      "bytes": 1471729,
+      "generation": "1601573160268538"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_348639_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_348639_LabelHand.tif",
+      "sha256": "e01b9b158bf0b6b71cd62874a092a7ed9ac8702e381f344f89fc80d6ed0d3dfd",
+      "bytes": 5139,
+      "generation": "1601572623777871"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_366607_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_366607_S1Hand.tif",
+      "sha256": "4c80b2b60bade0ddab30cf2ada71cfec90c24239007fff0c826cc509ee5f8bb9",
+      "bytes": 1480874,
+      "generation": "1601573168628799"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_366607_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_366607_LabelHand.tif",
+      "sha256": "7490cae2e305ab13fcc5f7313ec5397dc8ae7d6afca9df7a647b1fa3aea1e3c8",
+      "bytes": 4502,
+      "generation": "1601572623767536"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_527077_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_527077_S1Hand.tif",
+      "sha256": "c07ad61e2736333cb552c363335e17a52477769e32fec1e0e3638b46bb2a8090",
+      "bytes": 1474054,
+      "generation": "1601573167593908"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_527077_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_527077_LabelHand.tif",
+      "sha256": "903f28338ff4ea357729047d91b9e3abf99db8c7db44973e79ee0cd548fa5026",
+      "bytes": 1857,
+      "generation": "1601572623821935"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_58086_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_58086_S1Hand.tif",
+      "sha256": "f9fbfc6b5dec7693e1fa5c91aeb46b4eaa9ba31221741a46488c9bfecae5b9d4",
+      "bytes": 1474624,
+      "generation": "1601573161429079"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_58086_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_58086_LabelHand.tif",
+      "sha256": "9fad9c377e0a0af6efd6bb1806f70e50c1561360e81a2c45b4bb3a7ea369f86b",
+      "bytes": 3455,
+      "generation": "1601572623798502"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_638521_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_638521_S1Hand.tif",
+      "sha256": "200451938eac9dd529ea32f113b3b8abd45d6a242a69f704c9ac9f3196b405fd",
+      "bytes": 1449863,
+      "generation": "1601573165449205"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_638521_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_638521_LabelHand.tif",
+      "sha256": "dfa06b3fe3a31d40338cd30e305b057c89ba21a7eeb4d5d7380a2ce25ea20cdd",
+      "bytes": 3363,
+      "generation": "1601572623827507"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_67102_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_67102_S1Hand.tif",
+      "sha256": "c9ff1e645dbfdee3c8b182cc65ab793372bade004f5900cf744d8167bfa7bacc",
+      "bytes": 1477527,
+      "generation": "1601573188121331"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_67102_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_67102_LabelHand.tif",
+      "sha256": "48c52abfe9c81476960a6a22924e5dbb42fe9016674ff13f3fa9e68693bcfe50",
+      "bytes": 2413,
+      "generation": "1601572623873518"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_693819_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_693819_S1Hand.tif",
+      "sha256": "adfef48baa75b9b8741d01901857361fca555366545ce6d825c039974715d66a",
+      "bytes": 1473887,
+      "generation": "1601573171413994"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_693819_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_693819_LabelHand.tif",
+      "sha256": "11366ef40131c2bc3f5497d504ff24bf33f8624b89f7709bae965932e2cbb81e",
+      "bytes": 2223,
+      "generation": "1601572623886582"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_761032_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_761032_S1Hand.tif",
+      "sha256": "db344bd6f672b59f0b2e41b5283279d931724cb10d197ba169a9af6ecba45bce",
+      "bytes": 1477304,
+      "generation": "1601573169652573"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_761032_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_761032_LabelHand.tif",
+      "sha256": "b01159af78189e6a83682305c8f4345f26dd704f8183d93b235d1eb9c6ed7add",
+      "bytes": 4174,
+      "generation": "1601572623933871"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_788696_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_788696_S1Hand.tif",
+      "sha256": "a4351b3598abdbcf73383e2df4064a80e14445c2205cebee6e7abd56d2a96530",
+      "bytes": 1483856,
+      "generation": "1601573195421126"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_788696_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_788696_LabelHand.tif",
+      "sha256": "98aa3115cb7db55962b88210fd2ce20e5284ff138fc230807d37644a9b9c6b86",
+      "bytes": 5776,
+      "generation": "1601572623927053"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_831672_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_831672_S1Hand.tif",
+      "sha256": "7796eff307e488ca7c820cfc850290e206793b541ba9471fb8923c92b73ae09d",
+      "bytes": 1462516,
+      "generation": "1601573197640355"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_831672_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_831672_LabelHand.tif",
+      "sha256": "6cf6428cea56d1faeea47b1f80a2ec36945daf4d8536eaef114c59f721953644",
+      "bytes": 6310,
+      "generation": "1601572623955795"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/USA_84195_S1Hand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_84195_S1Hand.tif",
+      "sha256": "8f9c81afd00c6f45e8a5845a0be025fe46a72ea4562a9ddbc15af0a2fcdea5c4",
+      "bytes": 1472034,
+      "generation": "1601573186592570"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/USA_84195_LabelHand.tif",
+      "path": "C:\\Kaustubh\\Hackathon\\data\\development-v1\\USA_84195_LabelHand.tif",
+      "sha256": "f90ba84fc4222f5794e39f32ac53c2380f2196afc4bfe5d23491c6f37cc83093",
+      "bytes": 2207,
+      "generation": "1601572624476008"
+    }
+  ],
+  "downloaded_utc": "2026-10-28T18:28:17.134412+00:00"
+}

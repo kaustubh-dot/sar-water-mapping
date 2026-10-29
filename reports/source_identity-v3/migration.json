@@ -1,0 +1,23 @@
+{
+  "status": "provenance_only_source_identity_migration",
+  "utc": "2026-10-29T03:04:54.573141+00:00",
+  "source_config_sha256": "a2e6da8bd81a8a345953d73e943eb2d923409e5797684bd4d3be5fef2f3e445d",
+  "config_sha256": "3b54e43f217ad80e2c029554289acd483538ecbd09837bcfb9c9b689a653f4af",
+  "source_manifest_sha256": "74d00fd2b08e6417e77a102c0cfd5b0bd5c3b1d759ff814b6fabdae4729792cc",
+  "manifest_sha256": "d840b655f00df68220d5b2ccbaf9eb9c5aa4e785dd0184e05f8dec7646c46786",
+  "splits_sha256": "24963a9951f318aab0cc3d687023ce849fc5c9435ed9fc8cbadced4dc6c2d1b7",
+  "changed_configuration_fields": [
+    "looks_artifact_path",
+    "looks_artifact_sha256",
+    "manifest_path",
+    "manifest_sha256",
+    "splits_path"
+  ],
+  "patch_count": 100,
+  "source_files_byte_identical": true,
+  "source_hash_domain": "source_float32_vv_vh_validity_v1",
+  "calibration_source_commit": "f9f6e56284caed9fed8d5bb7e0c806d40782f8cd",
+  "scientific_choices_unchanged": true,
+  "validation_search_rerun": false,
+  "reason": "Exact derived float32 power hashes vary by platform; retain legacy audit hashes and add exact native source identity. No split, ROI, effective looks, threshold, filter or model choice changes."
+}
