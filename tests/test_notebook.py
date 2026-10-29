@@ -207,3 +207,67 @@ def test_notebook_refuses_validation_evidence_for_a_different_config(tmp_path):
     config.write_text(config.read_text()+'\n')
     with pytest.raises(ValueError, match='config.*hash'):
         verify(config, files['manifest'], files['splits'], files['training_roi'], validation)
+
+
+def test_notebook_supplied_default_calls_bounded_acquisition_and_binds_source_before_evaluation():
+    notebook = json.loads((Path(__file__).parents[1]/'notebooks/01_sar_water_mapping.ipynb').read_text(encoding='utf-8'))
+    code = '\n'.join(cell['source'] for cell in notebook['cells'] if cell['cell_type']=='code')
+    assert "DATA_SOURCE = 'supplied-first100'" in code
+    assert "DATA_SOURCE == 'upstream-development'" in code
+    assert 'scripts/prepare_supplied_data.py' in code
+    assert "'data/supplied-v1'" in code
+    assert '--cache-root' not in code
+    assert 'existing_tiff_count_before_helper' in code
+    assert 'reports/supplied_training_rois-v1.csv' in code
+    assert 'reports/supplied_heldout_enl_rois-v1.csv' in code
+    assert 'write_supplied_source_config(' in code
+    assert "['--source-config', str(SOURCE_CONFIG)]" in code
+    assert 'source_config_path=SOURCE_CONFIG' in code
+    assert code.index('write_supplied_source_config(') < code.index('calibrator =')
+    assert code.index('CALIBRATION_IDENTITY =') < code.index('runtime = run_evaluation(')
+
+
+def test_notebook_supplied_calibration_verifier_rejects_source_config_sha_before_evaluation(tmp_path):
+    verify = helper('verify_calibration_identity')
+    files, config, validation = calibration_fixture(tmp_path)
+    source = tmp_path/'source.json';source.write_text('{}')
+    frozen = json.loads(config.read_text())
+    frozen['real_data'].update(source='supplied-first100',source_config_path=source.name,source_config_sha256='wrong')
+    config.write_text(json.dumps(frozen))
+    with pytest.raises(ValueError,match='source.*hash'):
+        verify(config, files['manifest'], files['splits'], files['training_roi'], validation, source_config_path=source)
+
+
+def test_notebook_supplied_access_snapshots_metadata_and_records_this_runs_existing_tiffs(tmp_path, monkeypatch):
+    import zlib
+    from test_supplied_data import module, service, SOURCE_ZLIB_BASE64
+    root=Path(__file__).parents[1];repo=tmp_path/'repo';repo.mkdir()
+    data=repo/'data/supplied-v1'
+    selection=(root/'reports/supplied_subset_selection.csv').read_bytes()
+    fetch,_,_=service(zlib.decompress(base64.b64decode(SOURCE_ZLIB_BASE64)),selection,data)
+    module().prepare_supplied_data(data,tmp_path/'original-acquisition',fetcher=fetch)
+    scripts=repo/'scripts';scripts.mkdir()
+    shutil.copy2(root/'scripts/prepare_supplied_data.py',scripts)
+    reports=repo/'reports';reports.mkdir()
+    for name in ('supplied_subset_recipe.json','supplied_subset_selection.csv'):
+        shutil.copy2(root/'reports'/name,reports/name)
+    for name in ('supplied_training_rois-v1.csv','supplied_heldout_enl_rois-v1.csv'):
+        (reports/name).write_text('patch_id,y0,y1,x0,x1,suitability,roi_class\n')
+    notebook=json.loads((root/'notebooks/01_sar_water_mapping.ipynb').read_text(encoding='utf-8'))
+    access=next(cell['source'] for cell in notebook['cells'] if cell['cell_type']=='code' and 'def freeze_upstream_selection(' in cell['source'])
+    namespace=dict(Path=Path,json=json,csv=csv,shutil=shutil,subprocess=subprocess,sys=sys,
+        perf_counter=perf_counter,REPO=repo,RUN_ID='supplied-fixture',STAGES={},
+        DATA_SOURCE='supplied-first100',INVENTORY=None,SUPPLIED_SPLITS=None,
+        TRAINING_ROIS=None,HELDOUT_ENL_ROIS=None,ORGANIZER_DATA_CONFIG=None)
+    monkeypatch.chdir(repo)
+    exec(compile(access,'<notebook supplied access>','exec'),namespace)
+    run=repo/'outputs/colab-supplied-fixture'
+    provenance=namespace['DATA_PROVENANCE']
+    assert provenance['existing_tiff_count_before_helper']==200
+    assert provenance['acquisition_completion_log_origin_counts']=={'download':200}
+    assert provenance['split_counts']=={'train':29,'validation':40,'test':31}
+    assert (run/'inputs/supplied_acquisition/download.json').read_bytes()==(data/'download.json').read_bytes()
+    assert (run/'inputs/supplied_subset_recipe.json').read_bytes()==(reports/'supplied_subset_recipe.json').read_bytes()
+    assert (run/'inputs/training_rois.csv').read_bytes()==(reports/'supplied_training_rois-v1.csv').read_bytes()
+    assert namespace['SUPPLIED_SPLITS']==data/'splits.csv'
+    assert (run/'reports/supplied_acquisition/split_freeze.json').is_file()

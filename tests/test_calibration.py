@@ -86,3 +86,11 @@ def test_input_modified_during_calibration_blocks_configuration_freeze(tmp_path,
     with pytest.raises(ValueError,match='changed during calibration'):
         mod.calibrate(manifest,splits,roi,config,tmp_path/'run')
     assert not config.exists()
+
+
+def test_pilot_uses_five_training_patches_when_only_three_events_exist():
+    rows=[dict(patch_id=f'{event}_{i}',event_id=event) for event in ('A','B','C') for i in range(3)]
+    membership={row['patch_id']:'train' for row in rows}|{'heldout':'test'}
+    keys=module()._pilot_keys(rows,membership)
+    assert keys==['A_0','B_0','C_0','A_1','A_2']
+    assert all(membership[key]=='train' for key in keys)

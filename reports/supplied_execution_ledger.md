@@ -26,7 +26,7 @@ is disclosed; this is not a claim of pristine blind evaluation.
 - [x] Acquisition implementation: exact identities, pinned object integrity,
   event membership freeze, cache reuse, safe immutable artifacts; focused tests.
 - [x] Independent Sol xhigh acquisition/data audit acceptance.
-- [ ] Source-aware calibration + supplied notebook profile implementation;
+- [x] Source-aware calibration + supplied notebook profile implementation;
   preserve development profile and exactly one notebook; independent review.
 - [ ] Inspect raw training and test-only ENL regions, freeze training looks and
   validation choices under unchanged method grids; independent review.
@@ -41,3 +41,5 @@ Uncached Colab, its under-30-minute acceptance and final submission tag are
 explicitly deferred. A local/remote cached smoke cannot close them.
 
 Phase1 accepted:100pairs/200objects169393092bytes,44verifiedcachedcopies156downloads,148.656s acquisition. All512squareVV/VHmanuallabels; frozen29/40/31 preserved. No cross-partition overlap/touch;20within-partitiontouchingpairs. Scoredpixels train6769828,val8788754,test4940307; Ghana26376testno-score andGhana24858test484pixels retained. FourtrainROIs andfivetestlandROIs independentlyaccepted, no waterENLregionpromised. Traininglooks nextfreezeexpectedVV4.60203,VH2.58204. Sourceprofileimplementationpausedbrieflybyusageerror; usercontinuedandusageavailable. Transferapprovalreviewfailurewasaccountusage,notasafetydetermination; retrynowauthorizedsameGPUhost.
+
+Sourceprofilegateaccepted: metadata-onlysourceconfigSHA7c121d..., strictsource/digest/membership/exposurechain checks, pathrebasing andendguard; newnotebookdefaults supplied-first100 witholddevelopment preserved. Independent30tests passed58.02s and TIFF-open sentry confirmedmetadata-only APIs; rootfullsuite130passed125.65s. No numericalgrids/filter/protocol changes. Next freezecommit andrun newvalidationcalibration only.

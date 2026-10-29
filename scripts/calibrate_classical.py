@@ -26,6 +26,7 @@ from sar_water.data import (audit_pair,read_manifest,sha256_file,validate_splits
 from sar_water.filters import FILTER_GRID,estimate_training_looks,filter_power
 from sar_water.metrics import enl,summarize_water
 from sar_water.segment import FIXED_GRID
+from sar_water.supplied_profile import verify_supplied_source_config
 
 
 def read_rois(path,membership):
@@ -95,11 +96,30 @@ def _pilot(patches,looks):
     return records
 
 
-def calibrate(manifest_path,splits_path,roi_path,config_path,output_path):
+def _pilot_keys(rows,membership):
+    """Prefer event variety, then use sorted IDs to fill five train patches."""
+    keys=[];events=set()
+    for row in rows:
+        event=row.get('event_id') or row['patch_id']
+        if membership[row['patch_id']]=='train' and event not in events:
+            keys.append(row['patch_id']);events.add(event)
+        if len(keys)==5:return keys
+    for key in sorted(membership):
+        if len(keys)==5:break
+        if membership[key]=='train' and key not in keys:keys.append(key)
+    return keys
+
+
+def calibrate(manifest_path,splits_path,roi_path,config_path,output_path,*,source_config_path=None):
     manifest_path,splits_path,roi_path,config_path,output_path=map(Path,(manifest_path,splits_path,roi_path,config_path,output_path))
     if config_path.exists() or output_path.exists():raise FileExistsError('calibration outputs already exist; use new paths')
     started=perf_counter()
     input_paths=dict(manifest=manifest_path,splits=splits_path,training_roi=roi_path)
+    source_real=None;source_hash=None
+    if source_config_path is not None:
+        source_config_path=Path(source_config_path)
+        source_hash=sha256_file(source_config_path)
+        source_real=verify_supplied_source_config(source_config_path,manifest_path,splits_path)
     input_hashes={name:sha256_file(path) for name,path in input_paths.items()}
     rows=read_manifest(manifest_path)
     with splits_path.open(newline='',encoding='utf-8-sig') as stream:split_rows=list(csv.DictReader(stream))
@@ -124,13 +144,8 @@ def calibrate(manifest_path,splits_path,roi_path,config_path,output_path):
     output_path.mkdir(parents=True);looks_path=output_path/'training_looks.json'
     looks.update(training_roi_sha256=input_hashes['training_roi'],manifest_sha256=input_hashes['manifest'],splits_sha256=input_hashes['splits'],frozen_before_validation_access_utc=datetime.now(timezone.utc).isoformat())
     _json(looks_path,looks)
-    # Timing pilot uses at most five distinct-event training images, label-blind.
-    pilot_keys=[];events=set()
-    for row in rows:
-        event=row.get('event_id') or row['patch_id']
-        if membership[row['patch_id']]=='train' and event not in events:
-            pilot_keys.append(row['patch_id']);events.add(event)
-        if len(pilot_keys)==5:break
+    # Prefer distinct events, then fill to five sorted training IDs, label-blind.
+    pilot_keys=_pilot_keys(rows,membership)
     pilot=_pilot({key:load(key) for key in pilot_keys},looks['looks'])
     validation={key:load(key) for key in sorted(membership) if membership[key]=='validation'}
     fallbacks,fallback_table=_fallbacks(validation)
@@ -139,13 +154,19 @@ def calibrate(manifest_path,splits_path,roi_path,config_path,output_path):
     validation_seconds=perf_counter()-validation_start
     repo=Path(__file__).resolve().parents[1]
     code_paths=['scripts/calibrate_classical.py']+[f'src/sar_water/{name}.py' for name in ('benchmark','data','filters','metrics','segment')]
+    if source_real is not None:code_paths.append('src/sar_water/supplied_profile.py')
     code_hashes={name:sha256_file(repo/name) for name in code_paths}
     config=json.loads((repo/'configs'/'experiment.json').read_text())
     pending=repo/'configs'/'development.json'
-    if pending.exists():
+    if source_real is None and pending.exists():
         pending_config=json.loads(pending.read_text())
         if pending_config['real_data'].get('manifest_sha256')==sha256_file(manifest_path):config=pending_config
     real=config['real_data']
+    if source_real is not None:
+        real.update(source_real)
+        real.update(source_config_path=_relative(source_config_path,config_path.parent),source_config_sha256=source_hash)
+        real['source_artifacts']={name:dict(binding,path=_relative(source_config_path.parent/binding['path'],config_path.parent))
+                                  for name,binding in source_real['source_artifacts'].items()}
     real.update(status='audited_manual_subset_calibrated',split_frozen=True,calibration_frozen=True,
         manifest_path=_relative(manifest_path,config_path.parent),splits_path=_relative(splits_path,config_path.parent),
         manifest_sha256=sha256_file(manifest_path),splits_sha256=sha256_file(splits_path),
@@ -157,6 +178,7 @@ def calibrate(manifest_path,splits_path,roi_path,config_path,output_path):
         selected_fixed_threshold_db=result['common']['threshold'],selected_filter_parameters={r['method']:r['parameters'] for r in result['primary']},
         selected_filter=result['selected_filter']['method'],calibration_frozen_utc=datetime.now(timezone.utc).isoformat())
     real.setdefault('provenance_limitation','Supplied development subset; spatial/event independence is not established.')
+    if source_real is not None:real['status']='supplied_first100_manual_subset_calibrated'
     config['methods']['midal_substitution'].update(status='not_admitted_not_piloted',reason='optional substitution declined to preserve locked dependency-light bilateral workflow and total runtime budget; no measured MIDAL compatibility or speed claim')
     config['cleanup_ablation']['status']='validation_complete_separate_from_primary'
     roi_diagnostics=[]
@@ -182,6 +204,12 @@ def calibrate(manifest_path,splits_path,roi_path,config_path,output_path):
     for name,path in input_paths.items():
         if sha256_file(path)!=input_hashes[name]:
             raise ValueError(f'{name} changed during calibration; configuration not frozen')
+    if source_config_path is not None:
+        if sha256_file(source_config_path)!=source_hash:
+            raise ValueError('source configuration changed during calibration; configuration not frozen')
+        verify_supplied_source_config(source_config_path,manifest_path,splits_path)
+        result.update(status='supplied_first100_calibration_frozen',source='supplied-first100',source_config_sha256=source_hash,
+                      source_provenance=source_real)
     config_path.parent.mkdir(parents=True,exist_ok=True)
     _json(config_path,config);result['config_sha256']=sha256_file(config_path)
     _json(output_path/'validation.json',result)
@@ -194,8 +222,9 @@ def calibrate(manifest_path,splits_path,roi_path,config_path,output_path):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ('manifest','splits','rois','config','output'):parser.add_argument('--'+name,type=Path,required=True)
+    parser.add_argument('--source-config',type=Path,help='verified metadata-only supplied first100 source configuration')
     args=parser.parse_args()
-    result=calibrate(args.manifest,args.splits,args.rois,args.config,args.output)
+    result=calibrate(args.manifest,args.splits,args.rois,args.config,args.output,source_config_path=args.source_config)
     print(json.dumps(dict(status=result['status'],rows=len(result['validation_table']),common=result['common'],selected_filter=result['selected_filter']['method'],looks=result['looks']['looks'],seconds=result['elapsed_seconds'],config_sha256=result['config_sha256'])))
 
 

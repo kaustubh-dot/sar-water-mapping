@@ -23,6 +23,8 @@ reports/runtime.json -text
 reports/environment.txt -text
 # Preserve the exact source bytes recorded by calibration v2.
 scripts/calibrate_classical.py -text whitespace=cr-at-eol
+scripts/prepare_supplied_data.py -text whitespace=cr-at-eol
+src/sar_water/supplied_profile.py -text whitespace=cr-at-eol
 src/sar_water/benchmark.py -text
 src/sar_water/data.py -text
 src/sar_water/filters.py -text
