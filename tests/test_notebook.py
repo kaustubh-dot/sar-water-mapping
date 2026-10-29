@@ -5,6 +5,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+from types import SimpleNamespace
 import shutil
 import subprocess
 import sys
@@ -13,6 +14,19 @@ from time import perf_counter
 import pytest
 
 from sar_water.data import sha256_file
+
+
+def test_unconnected_supplied_profile_stops_before_calibration():
+    repo = Path(__file__).parents[1]
+    notebook = json.loads((repo/'notebooks/01_sar_water_mapping.ipynb').read_text(encoding='utf-8'))
+    source = next(cell['source'] for cell in notebook['cells']
+                  if cell['cell_type'] == 'code' and 'def verify_calibration_identity(' in cell['source'])
+    calls = []
+    namespace = dict(Path=Path, REPO=repo, DATA_SOURCE='organizer', perf_counter=lambda: 0,
+                     subprocess=SimpleNamespace(run=lambda *a, **k: calls.append((a, k))))
+    with pytest.raises(RuntimeError, match='supplied-set.*profile'):
+        exec(compile(source, '<notebook-organizer-guard>', 'exec'), namespace)
+    assert calls == []
 
 
 def helper(name):

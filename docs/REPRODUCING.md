@@ -2,8 +2,10 @@
 
 Use the implementation branch and the recorded source commit. The measured GPU
 pair uses `61b09f9bfa61114d83bd7be19eba3de67d5621db`. A later documentation commit
-does not imply a retrained checkpoint. The organizer subset is a separate open
-input; the commands below reproduce the upstream development experiment.
+does not imply a retrained checkpoint. The supplied recipe now identifies the
+first 100 official training rows; that distinct set is still unrun. All commands
+below reproduce the earlier upstream development experiment, not that supplied
+set. See the [exact selection audit](../reports/supplied_subset_recipe.md).
 
 ## Environment and notebook
 
@@ -19,8 +21,18 @@ The [single notebook](../notebooks/01_sar_water_mapping.ipynb) defaults to the
 exact 100-pair upstream selection, official membership and recorded raw-image
 ROIs. Set `REPO_REF` to the full source SHA before execution. It runs a complete
 classical profile, including validation and exports, with neural training
-disabled. Its organizer override deliberately stops before upstream-specific
-calibration until organizer provenance is supported.
+disabled. Its organizer override deliberately stops before calibration until
+the supplied acquisition/split/provenance profile is connected and reviewed.
+Generic CLI calibration now uses neutral manual-subset labels; that metadata
+correction alone does not establish a supplied-set experiment.
+
+The notebook has no executable profile for the supplied first-100 selection
+yet. Setting `DATA_SOURCE='organizer'` is not a workaround: it intentionally
+stops before calibration. Do not remove that guard or point its development
+ROIs/config/checkpoints at the new data. The new set needs audited pairs,
+frozen internal groups, training-only ROIs/normalization, source-aware
+calibration and a separately recorded run before a submission profile can be
+claimed.
 
 The notebook completed an actual Linux kernel execution with cached TIFFs;
 this is not fresh Colab acceptance. Fresh installation, access and total Colab

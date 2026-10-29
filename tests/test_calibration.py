@@ -39,6 +39,10 @@ def test_calibration_freezes_hashed_portable_choices_without_opening_test_files(
     config=tmp_path/'config.json';out=tmp_path/'run'
     result=module().calibrate(manifest,splits,roi,config,out)
     frozen=json.loads(config.read_text());real=frozen['real_data']
+    # A generic audited manual subset is not proof of upstream/organizer identity.
+    assert real['status']=='audited_manual_subset_calibrated'
+    assert result['source']=='audited_manual_subset'
+    assert real.get('organizer_subset') is not True
     assert real['calibration_frozen'] and real['split_frozen']
     assert real['manifest_sha256']==sha256_file(manifest)
     assert real['training_roi_sha256']==sha256_file(roi)

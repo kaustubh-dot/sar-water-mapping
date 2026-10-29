@@ -4,6 +4,8 @@
 
 Reproducible speckle denoising and surface-water segmentation on a 100-patch Sentinel-1 VV/VH subset of Sen1Floods11. The target is an end-to-end Google Colab run in **under 30 minutes**.
 
+**Pre-submission audit: NOT READY for final submission.** Development scores/checkpoints are verified, but the supplied first-100 profile is not connected and executed, and fresh uncached Colab is unverified. The [submission audit](reports/submission_audit.md) lists the remaining gates and corrected provenance/documentation issues. Do not relabel the development tables as supplied-set measurements.
+
 **Status (29 October 2026):** the upstream development experiment is implemented and measured: audited 100 manual-label pairs, frozen calibration, four classical pipelines, paired GPU U-Net training, held-out evaluation and a complete cached Linux notebook run. Phase reviews use GPT-6.1 Sol at xhigh. The organizers’ subset and a **fresh Colab Run All below 30 minutes remain unverified**. Official partitions contain touching chips and shared events, so these are correlated development results, not unseen-geography evidence.
 
 | Held-out method | Water IoU | Water F1 |

@@ -2,6 +2,8 @@
 
 Updated 29 October 2026. This is the remaining-work contract. Research selection is finished; the [implementation lock](docs/IMPLEMENTATION_LOCK.md) controls methods and training, and the [evaluation protocol](docs/EVALUATION_PROTOCOL.md) controls scientific claims. Do not add models or tune against the observed test results.
 
+The [pre-submission audit](reports/submission_audit.md) retains a **NOT READY** verdict for the supplied-set submission. The completed statuses below apply to the earlier development experiment unless explicitly stated otherwise.
+
 | Phase | Development status | Evidence / remaining gate |
 | --- | --- | --- |
 | 0. Research and scope | Complete | Public repo, cited review, exact implementation lock |
@@ -100,8 +102,8 @@ Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [
 
 1. Completed: independent neural-result and final branch reviews accepted the development deliverable, with no unresolved P1/P2 findings. Preserve test-visible choices.
 2. Preserve the reviewed implementation branch and public development checkpoint artifact. Do not merge or issue a final acceptance tag on unverified evidence.
-3. Run the fresh classical notebook in Colab with the pinned source SHA and uncached download. Keep its result ZIP and authoritative timing sidecar. GPU development is already complete.
-4. Use the newly supplied first-100 training-row recipe for a separate supplied-subset experiment. Audit its pairs, freeze internal event/scene/spatial splits before tuning, calibrate only on its validation and evaluate its frozen held-out partition. Preserve the original development outputs and disclose prior 22-patch training exposure. See the [recipe audit](reports/supplied_subset_recipe.md).
+3. Connect the newly supplied first-100 training-row recipe to a separate supplied-subset experiment. Audit its pairs, freeze internal event/scene/spatial splits before tuning, calibrate only on its validation and evaluate its frozen held-out partition. Preserve the original development outputs and disclose prior 22-patch training exposure. See the [recipe audit](reports/supplied_subset_recipe.md).
+4. Run that connected classical profile in a fresh Colab session with the pinned source SHA and uncached download. Keep its result ZIP and authoritative timing sidecar. Repeating the old development profile does not verify the supplied-set submission.
 5. Update the report with those measured gates and create the final submission tag only when all required evidence exists.
 
 A new method requires a recorded failure, scope authorization or replacement of an optional item, compatible accessible code/weights and remaining runtime. Once final test results are visible, any scientific change is a new versioned experiment rather than an untouched holdout evaluation.

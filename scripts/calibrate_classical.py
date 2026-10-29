@@ -146,7 +146,7 @@ def calibrate(manifest_path,splits_path,roi_path,config_path,output_path):
         pending_config=json.loads(pending.read_text())
         if pending_config['real_data'].get('manifest_sha256')==sha256_file(manifest_path):config=pending_config
     real=config['real_data']
-    real.update(status='upstream_development_subset_calibrated',split_frozen=True,calibration_frozen=True,
+    real.update(status='audited_manual_subset_calibrated',split_frozen=True,calibration_frozen=True,
         manifest_path=_relative(manifest_path,config_path.parent),splits_path=_relative(splits_path,config_path.parent),
         manifest_sha256=sha256_file(manifest_path),splits_sha256=sha256_file(splits_path),
         training_roi_path=_relative(roi_path,config_path.parent),training_roi_sha256=sha256_file(roi_path),
@@ -169,7 +169,7 @@ def calibrate(manifest_path,splits_path,roi_path,config_path,output_path):
                 for b,band in enumerate(('VV','VH')):roi_diagnostics.append(dict(patch_id=key,method=row['method'],band=band,roi_class=roi.get('roi_class'),coordinates=[y0,y1,x0,x1],**enl(filtered[b,y0:y1,x0:x1],valid=p.input_valid[y0:y1,x0:x1])))
     try:commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=repo,text=True).strip()
     except subprocess.SubprocessError:commit='unavailable'
-    result.update(status='real_development_calibration_frozen',test_files_opened=0,source='audited_supplied_development',
+    result.update(status='real_development_calibration_frozen',test_files_opened=0,source='audited_manual_subset',
         elapsed_seconds=perf_counter()-started,validation_seconds=validation_seconds,validation_patch_ids=sorted(validation),
         training_roi_patch_ids=sorted(train),source_patch_ids_opened=sorted(loaded),fallback_calibration_table=fallback_table,
         looks=looks,pilot=pilot,training_roi_filter_diagnostics=roi_diagnostics,

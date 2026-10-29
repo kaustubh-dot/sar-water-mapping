@@ -1,9 +1,11 @@
 # Local data and the Phase 1 audit
 
-The organizer archive is absent. A 100-pair upstream hand-labeled development
-substitute now has frozen official split membership; see the
-[development audit](../reports/development_data_audit.md). It does not replace
-the organizer-data gate.
+The supplied acquisition recipe is now known: first 100 ordered rows of the
+official hand-labeled training CSV. Its [exact selection](../reports/supplied_subset_recipe.md)
+is frozen, but its full pair audit and internal evaluation splits are still
+unrun. An earlier, distinct 100-pair development substitute has frozen official
+60/20/20 membership; see the [development audit](../reports/development_data_audit.md).
+Do not treat those development results or splits as the supplied-set experiment.
 Keep raw files, archives and contact-sheet images outside Git. The project's MIT
 license does not change dataset terms. Downloading the entire dataset is unnecessary.
 

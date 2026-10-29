@@ -4,6 +4,12 @@ Development report, 29 October 2026. Organizer-subset acceptance and a fresh
 Google Colab Run All remain open. This report describes measured upstream
 development experiments, not a completed hackathon acceptance test.
 
+**Submission warning:** the subsequently supplied recipe defines the first
+100 rows of the official training CSV. That is a different set from every
+real-data result below. Its identities are recorded, but its audit, internal
+evaluation split and experiment have not run. Do not submit these tables as
+measurements on that supplied set. See the [recipe audit](supplied_subset_recipe.md).
+
 ## Question and data
 
 Does reducing multiplicative SAR speckle improve water segmentation enough to
@@ -11,7 +17,7 @@ justify added computation and loss of detail? We compare four fixed processing
 families on two-band Sentinel-1 VV/VH patches, and separately train one compact
 U-Net architecture on raw versus validation-selected filtered inputs.
 
-The organizer archive was unavailable. We selected exactly 100 upstream
+Before receiving the supplied recipe, we selected exactly 100 upstream
 Sen1Floods11 v1.1 hand-labeled pairs by label-blind hash ranking within official
 train/validation/test partitions: 60/20/20 patches, each 512 by 512 pixels. All
 200 object lengths, upstream MD5s and local SHA-256s were verified. Weak/Otsu
@@ -162,8 +168,10 @@ It reproduced all four held-out classical confusion counts exactly. This
 smoke run does not measure fresh installation, uncached access or Colab
 hardware. See the [execution evidence](notebook_smoke_summary.json).
 
-Remaining acceptance gates are the organizer subset and a measured fresh
-Colab run below 30 minutes. Remote training and checkpoint-only inference
+Remaining acceptance gates are execution on the exact supplied first-100 set
+with frozen internal splits, and a measured fresh Colab run below 30 minutes.
+The existing checkpoints already trained on 22 supplied IDs, so they cannot
+support an unseen-input claim on the whole supplied set. Remote training and checkpoint-only inference
 remain separate timings. The full classical notebook is the bounded fallback.
 No final submission tag is issued until its acceptance evidence exists.
 

@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-29",
+  "verdict": "not_ready_for_supplied_subset_submission",
+  "audit_base_commit": "a2a9e15fc4f21fbe2595bdc481b37142265ee1cf",
+  "suite": {
+    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-submission-final",
+    "passed": 111,
+    "seconds": 40.09,
+    "exit_code": 0
+  },
+  "focused_provenance_and_guard_tests": {
+    "passed": 11,
+    "seconds": 4.87,
+    "red_green_observed": true
+  },
+  "notebook_code_cells_parse": 10,
+  "changed_notebook_code_cell_indices": [
+    9
+  ],
+  "notebook_change_scope": "Organizer failure message only; all numerical/data-access statements unchanged. First-page and source-profile documentation also clarified.",
+  "links": {
+    "count": 119,
+    "missing": [],
+    "not_in_public_file_set": []
+  },
+  "publication": {
+    "files": 143,
+    "text_files_scanned": 139,
+    "forbidden_binaries": [],
+    "files_over_5mb": [],
+    "credential_or_connection_matches": []
+  },
+  "scientific_artifact_indices_verified": 21,
+  "neural_mask_recounts_verified": 40,
+  "synthetic_records_verified": 72,
+  "development_science_accepted": true,
+  "supplied_selection_known": true,
+  "supplied_profile_connected": false,
+  "supplied_internal_split_frozen": false,
+  "supplied_experiment_executed": false,
+  "fresh_colab_verified": false,
+  "default_public_branch": "main",
+  "implementation_in_draft_pr": "https://github.com/kaustubh-dot/sar-water-mapping/pull/1",
+  "final_tag_created": false,
+  "remaining_blockers": [
+    "Connect/audit/run exact supplied first100 subset under a separately frozen internal split and source provenance.",
+    "Complete actual fresh uncached Colab verification below30min on connected supplied profile.",
+    "Publish reviewed final implementation/accepted source links after experimental gates pass."
+  ],
+  "historical_artifact_note": "Previous recorded data/config/result/checkpoint files are preserved; earlier source remains available at61b09f9bfa61114d83bd7be19eba3de67d5621db.",
+  "new_calibrator_sha256": "bca808707f2ac0908bbef20d26bf04ceb5fc91bf7ba57bfddbad0e26202ab164"
+}

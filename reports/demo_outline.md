@@ -1,5 +1,9 @@
 # Three-minute demonstration
 
+Development demonstration only. All reported results below use the earlier
+60/20/20 selection, not the newly supplied first-100 training-row recipe.
+Replace them only after the supplied-set experiment is actually measured.
+
 **0:00–0:30 — Problem.** Monsoon clouds obstruct optical mapping. Sentinel-1 SAR
 provides observations through clouds, but multiplicative speckle makes a simple
 dark-pixel water threshold noisy. Our output is surface water; identifying new
@@ -30,7 +34,7 @@ bundle. Distinguish remote U-Net training from checkpoint inference and fresh
 Colab timing. The raw/Median U-Net pair completed in 122.06 seconds; test IoU
 was 0.5855/0.5346, below the classical Median row. The classical notebook
 completed in 91.78 seconds on Linux using cached data, an existing clone and
-a preinstalled kernel; fresh Colab Run All remains unverified. The organizer
-archive remains unavailable.
+a preinstalled kernel; fresh Colab Run All remains unverified. The supplied
+first-100 recipe is now known, but its distinct set has not been evaluated.
 Close with the practical finding: a small classical pipeline yields a measured
 water-IoU gain here, while smoothing alone cannot guarantee better mapping.
