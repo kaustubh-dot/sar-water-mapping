@@ -5,7 +5,7 @@ Updated 29 October 2026. This is the remaining-work contract. Research selection
 | Phase | Development status | Evidence / remaining gate |
 | --- | --- | --- |
 | 0. Research and scope | Complete | Public repo, cited review, exact implementation lock |
-| 1. Data audit and split | Development complete | 100 upstream manual pairs; organizer archive still unavailable |
+| 1. Data audit and split | Development complete; supplied recipe now known | Exact first-100 definition recorded; new set audit/splits remain open |
 | 2. Metrics and synthetic benchmark | Complete | Focused correctness tests and separate held-out synthetic PSNR |
 | 3. Denoising baselines | Complete | Four locked families; train-only looks; bounded validation |
 | 4. Water segmentation | Complete | Validation-frozen VV -18 dB strategy and cleanup ablation |
@@ -34,7 +34,8 @@ Evidence: [research review](docs/RESEARCH_REVIEW.md), [implementation lock](docs
 - [x] Inspect five representative development patches and preserve independent SAR/label masks.
 - [x] Freeze official 60/20/20 membership and audit duplicate/overlap/adjacency constraints.
 - [x] Add portable native-source identity with exact file checks, preserving original source bytes and all scientific choices.
-- [ ] Obtain and audit the organizers’ kickoff archive and supplied split/provenance notes before claiming organizer-subset acceptance.
+- [x] Record the user's supplied acquisition recipe and freeze its exact first-100 upstream training identifiers and source CSV hash.
+- [ ] Download/audit that distinct supplied set, establish internal splits/provenance and rerun a separately versioned experiment before claiming supplied-subset acceptance.
 
 Evidence: [data review](reports/development_data_review.md), [portable-identity review](reports/source_identity_review.md), [exact manifest/splits](reports/source_identity-v3/manifest.csv). Seven touching cross-partition pairs and shared events limit claims to correlated official-subset development evaluation. No event/geography independence is claimed.
 
@@ -100,7 +101,7 @@ Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [
 1. Completed: independent neural-result and final branch reviews accepted the development deliverable, with no unresolved P1/P2 findings. Preserve test-visible choices.
 2. Preserve the reviewed implementation branch and public development checkpoint artifact. Do not merge or issue a final acceptance tag on unverified evidence.
 3. Run the fresh classical notebook in Colab with the pinned source SHA and uncached download. Keep its result ZIP and authoritative timing sidecar. GPU development is already complete.
-4. When the kickoff archive arrives, audit its source/splits/labels, version a separate organizer experiment, calibrate on its validation only and run its untouched test partition.
+4. Use the newly supplied first-100 training-row recipe for a separate supplied-subset experiment. Audit its pairs, freeze internal event/scene/spatial splits before tuning, calibrate only on its validation and evaluate its frozen held-out partition. Preserve the original development outputs and disclose prior 22-patch training exposure. See the [recipe audit](reports/supplied_subset_recipe.md).
 5. Update the report with those measured gates and create the final submission tag only when all required evidence exists.
 
 A new method requires a recorded failure, scope authorization or replacement of an optional item, compatible accessible code/weights and remaining runtime. Once final test results are visible, any scientific change is a new versioned experiment rather than an untouched holdout evaluation.

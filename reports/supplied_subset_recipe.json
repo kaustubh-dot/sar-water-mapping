@@ -1,0 +1,68 @@
+{
+  "status": "supplied_selection_recipe_verified_not_downloaded_or_audited_as_a_set",
+  "recorded_utc": "2026-10-29T03:55:27.219760+00:00",
+  "selection_source": "User says this snippet was supplied when asking about the 100 patches; sender authority not independently authenticated.",
+  "source_csv_url": "https://storage.googleapis.com/sen1floods11/v1.1/splits/flood_handlabeled/flood_train_data.csv",
+  "source_csv_sha256": "57be4dc440bf8a526effa77e06d4b8cb7a8484589c0bffa201d8e0f49e994beb",
+  "source_csv_bytes": 13574,
+  "source_csv_rows": 252,
+  "source_matches_earlier_verified_upstream_csv": true,
+  "selection": "First 100 data rows, in supplied CSV order; header=None; no shuffle or replacement",
+  "selection_path": "reports/supplied_subset_selection.csv",
+  "selection_sha256": "9c4204b432254130a7dc7cc8e08705962b3a6eeab03824ea8fe76f9f8070b7b2",
+  "patch_count": 100,
+  "upstream_split_counts": {
+    "train": 100
+  },
+  "evaluation_split_status": "unassigned; no organizer train/validation/test membership provided within these 100",
+  "event_counts": {
+    "Ghana": 31,
+    "India": 40,
+    "Mekong": 18,
+    "Nigeria": 10,
+    "Pakistan": 1
+  },
+  "previous_development_overlap_counts": {
+    "train": 22
+  },
+  "previous_training_overlap_ids": [
+    "Ghana_103272",
+    "Ghana_24858",
+    "Ghana_97516",
+    "Ghana_168875",
+    "Ghana_128663",
+    "Ghana_264787",
+    "Ghana_187318",
+    "Ghana_26376",
+    "India_664410",
+    "India_179238",
+    "India_774689",
+    "India_698338",
+    "India_59460",
+    "India_804466",
+    "India_103447",
+    "India_56450",
+    "India_265762",
+    "Mekong_596495",
+    "Mekong_1439641",
+    "Nigeria_143329",
+    "Nigeria_439488",
+    "Nigeria_707067"
+  ],
+  "same_as_existing_development_subset": false,
+  "full_new_subset_downloaded": false,
+  "input_label_validity_audited": false,
+  "new_calibration_or_training_run": false,
+  "prior_models_valid_for_unseen_holdout_claim": false,
+  "prior_result_tables_apply_to_this_subset": false,
+  "existing_results_preserved": true,
+  "fresh_colab_verified": false,
+  "limitations": [
+    "The snippet defines selection but does not supply internal evaluation splits.",
+    "The first100 selection is order-dependent and has 31 Ghana,40 India,18 Mekong,10 Nigeria,1 Pakistan patches; it is not a balanced event sample.",
+    "22 IDs were already in the previous experiment training partition; an existing checkpoint cannot support an unseen-input claim on those IDs.",
+    "Discarding SAR/label metadata validity or making missing SAR -30dB can corrupt segmentation/ENL evaluation.",
+    "File existence alone does not establish complete/intact downloads.",
+    "Fresh Colab execution is separately blocked until browser access is enabled and a Colab runtime is available."
+  ]
+}

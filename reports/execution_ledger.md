@@ -50,3 +50,11 @@ Completed GPU and notebook execution:
 - Remaining acceptance work: final branch review/public instructions check, organizer archive, fresh uncached Colab run, and final submission tag. GPU development, classical/neural scientific execution and the cached notebook smoke are measured separately.
 
 Final delivery review: GPT-6.1 Sol xhigh accepted the whole development branch with no unresolved P1/P2 findings. Independent isolated restoration ran the exact reproduction-guide block, verified all 200 cached file hashes and frozen manifest/splits, rehashed the public checkpoint ZIP/internal files, and checked the two-path-only training-report redaction. The complete final suite passed 110 tests in 83.58 seconds. Public-file pattern inspection found no raw dataset, weights, archives, credentials or private connection locations. The branch is ready for a development draft PR; organizer/fresh-Colab acceptance and final tag remain open.
+
+Supplied acquisition update, 29 October:
+
+- User provided the actual snippet received when asking about the 100 patches: first 100 ordered rows of the official hand-labeled training CSV. The public CSV was fetched anew and exactly matches earlier verified upstream bytes, SHA-256 57be4dc440bf8a526effa77e06d4b8cb7a8484589c0bffa201d8e0f49e994beb.
+- Frozen the 100 supplied identifiers as reports/supplied_subset_selection.csv (not imagery), with source/hash/composition/overlap evidence. It contains Ghana31/India40/Mekong18/Nigeria10/Pakistan1; all are official upstream training IDs. Only22 overlap the completed development set, all previously training.
+- This resolves selection provenance, not independent internal evaluation splits or actual pair validity. The original tables/checkpoints remain tied to the original subset. No scientific choice, data membership of an existing run, calibration, model or notebook behavior changed in this update.
+- Documented loader corrections: preserve SAR/label metadata validity; missing SAR must not become scored -30dB water. Download existence checks must be replaced by verified object/file identity and pair audit.
+- Fresh browser capability check still reports local browser use disabled in Work settings. No actual Colab run has started, and neither local metadata audit nor a prospective local download closes that gate.

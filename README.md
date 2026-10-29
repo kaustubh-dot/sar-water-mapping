@@ -21,6 +21,8 @@ The GPU training pair took **122.06 seconds**, including preparation. The comple
 
 [Download the reviewed development checkpoints](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1). Weights are release assets outside Git; no raw dataset is included. The [reproduction guide](docs/REPRODUCING.md) explains the exact source commit, input restoration, environments and commands. [Open the classical notebook in Colab](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/implementation/remaining-phases/notebooks/01_sar_water_mapping.ipynb); this access link does not certify its fresh-runtime timing.
 
+**Supplied selection update:** the user has now provided a recipe selecting the first 100 rows of the upstream hand-labeled training CSV. It differs from the development subset above; only 22 identifiers overlap, all previously used for training. Its exact identities are frozen in the [recipe audit](reports/supplied_subset_recipe.md). These 100 have no supplied internal evaluation splits and have not yet been audited/calibrated as a set. The notebook currently reproduces the earlier development experiment; its result tables cannot be relabeled as this supplied subset.
+
 ## Local development
 
 Use Python 3.12 or later for the pinned notebook profile (`pip install -r requirements-colab.txt`, then `pip install -e . --no-deps`). The core package also supports Python 3.11 with compatible dependencies. Run `python -m pytest -q --basetemp=outputs/pytest`. The [data instructions](data/README.md) describe the explicit inventory and `sar-water-audit` command. Fixtures exercise loader and split behavior; they do not replace the organizer-data audit or establish geographic generalization.
