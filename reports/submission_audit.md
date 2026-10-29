@@ -1,6 +1,6 @@
 # Final pre-submission audit
 
-29 October 2026. **Verdict: S1 and S2 accepted; S3 publication pending.**
+29 October 2026. **Verdict: S1/S2/S3 accepted for the complete classical core.**
 Supplied scientific execution and fresh uncached classical Colab are independently
 accepted. Colab completed in **566.40 seconds**, including installation, one
 dependency restart, 200 downloads, checks, calibration, evaluation and export.
@@ -21,7 +21,7 @@ The original ZIP/sidecar are retained locally outside Git. See the
 | Supplied data → internal split → new calibration/results | 100 audited pairs; event split 29/40/31; 98 validation candidates; new scratch pair and separately scored outputs | Accepted data/calibration/training/results |
 | Supplied notebook → setup/access/audit/calibration/export | Ten cells, 96 checks, cached Linux run 123.04 seconds through export/hash; original ZIP/sidecar retained and verified | Accepted cached integration; **S1 closed** |
 | Fresh Colab → uncached download → full timed export | Original ZIP/sidecar retained; source/data/config hashes, CRC and scientific tables verified; 566.40 seconds | **Accepted; S2 closed** |
-| Reviewed implementation → default public branch | Public repo exists; implementation is in draft PR #1, not `main` | Final publication pending |
+| Reviewed implementation → default public branch | PR #1 merged to `main`; submission pinned by `v1.0-hackathon` | **S3 closed** |
 
 ## Material findings and fixes
 
@@ -88,16 +88,16 @@ development results. The notebook defaults to the supplied profile. Generic
 organizer inputs still stop before calibration; this does not block the exact
 supported supplied recipe.
 
-**S3 — Default public branch is not the implementation.** The GitHub connector
-confirmed `main` is the default branch and still contains planning-only content;
-draft [PR #1](https://github.com/kaustubh-dot/sar-water-mapping/pull/1) holds the
-implementation. S2 is accepted and the user authorized publication. Publish the reviewed
-implementation and pin the submitted notebook/link to its exact accepted commit. Existing development checkpoint references remain
-at their original training commit; a documentation commit is not retraining.
+**S3 — CLOSED: reviewed implementation published to main.** GitHub confirms
+[PR #1](https://github.com/kaustubh-dot/sar-water-mapping/pull/1) merged at
+`51c6cd1088e843f86b2ecd2e552fb057d08305a3`. Its tree exactly matches the reviewed implementation head
+`721025ab9b5af8f21ac6c3c4bc80a4191c6b28e9`. The full suite on that merged commit passed 135 tests in 67.15 seconds, exit zero. The final documentation records
+publication and is pinned by `v1.0-hackathon`. The executed Colab source remains
+`3eecc1434991835e576e7d3d09d967fbd9388359`; original development and supplied
+training/checkpoint identities are preserved. The supplied weights remain local.
 
-An earlier PR metadata update was blocked by integration authentication.
-The current authenticated update succeeded: PR #1 now describes the accepted
-supplied profile, fresh Colab execution, 135 passing tests and scientific limits.
+The authenticated PR title/body update now reflects accepted supplied and
+fresh-Colab scope. Earlier integration authentication failures are historical.
 
 ## Evidence reviewed
 
@@ -130,9 +130,9 @@ Current verification and gate values are recorded in
    Final documentation/publication consistency is checked separately.
 2. S2 is closed: retained original Colab ZIP/sidecar and independent review
    establish the fresh classical run below 30 minutes.
-3. Publish the accepted implementation to `main`, verify its remote head and
-   create `v1.0-hackathon`. Preserve source-pinned execution links and historical
+3. S3 is closed: PR #1 merged the accepted implementation to `main`;
+   `v1.0-hackathon` pins the published submission. Preserve source-pinned execution links and historical
    development/checkpoint identities.
 
 No unresolved scientific P1/P2 finding remains in the accepted bounded experiment.
-Publication is the remaining gate; full neural training in Colab is not claimed.
+The bounded classical deliverable is accepted and published. Full neural training in Colab is not claimed.

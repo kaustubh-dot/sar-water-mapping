@@ -37,7 +37,7 @@
   "original_archive_retained_locally": true,
   "independent_execution_review_accepted": true,
   "fresh_colab_gate_closed": true,
-  "remaining": "Publish reviewed implementation to main and create final tag.",
+  "remaining": "None for the classical execution/publication gates. Full neural training in Colab is outside the certified timing.",
   "stage_seconds": {
     "pre_restart_source_checkout_seconds": 1.5843383740000263,
     "pre_restart_installation_seconds": 37.12775911899999,

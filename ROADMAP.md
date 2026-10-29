@@ -2,7 +2,7 @@
 
 Updated 29 October 2026. This is the remaining-work contract. Research selection is finished; the [implementation lock](docs/IMPLEMENTATION_LOCK.md) controls methods and training, and the [evaluation protocol](docs/EVALUATION_PROTOCOL.md) controls scientific claims. Do not add models or tune against the observed test results.
 
-The [pre-submission audit](reports/submission_audit.md) records accepted supplied execution (S1) and fresh Colab (S2); publication (S3) remains pending. The completed statuses below apply to the earlier development experiment unless explicitly stated otherwise.
+The [pre-submission audit](reports/submission_audit.md) records accepted supplied execution (S1) and fresh Colab (S2); publication (S3) is complete on `main`, with submission tag `v1.0-hackathon`. The completed statuses below apply to the earlier development experiment unless explicitly stated otherwise.
 
 | Phase | Development status | Evidence / remaining gate |
 | --- | --- | --- |
@@ -13,7 +13,7 @@ The [pre-submission audit](reports/submission_audit.md) records accepted supplie
 | 4. Water segmentation | Development and supplied choices accepted | VH -20 dB/Median 5 frozen from validation; zero held-out access |
 | 5. Controlled GPU training | Development and supplied pairs accepted | Scratch raw/Median-5 seed42 pair completed in 76.77 seconds; supplied checkpoint bundle local only |
 | 6. Benchmark and notebook | Development run complete; supplied wiring accepted | Supplied results and fresh Colab accepted; S1/S2 closed; 566.40 seconds |
-| 7. Submission | Draft prepared | Report/demo/reproduction ready for review; final acceptance/tag open |
+| 7. Submission | Complete for classical core | PR #1 merged; source-pinned Colab evidence and v1.0-hackathon tag |
 
 ## Scope to preserve
 
@@ -127,9 +127,9 @@ kernel prerequisites. Initial clone/cache preparation were outside the clock;
 - [x] Draft the report with data, methods, measured results, failures, limitations and references.
 - [x] Prepare a three-minute explanation and exact reproduction/checkpoint instructions.
 - [x] Finish whole-branch review, verify public artifact links/checksums and audit Git contents for data/credentials.
-- [ ] Publish the accepted implementation to `main`, verify the public head and only then tag `v1.0-hackathon` (S3).
+- [x] Publish the accepted implementation to `main`, verify the public head and tag `v1.0-hackathon` (S3).
 
-Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [reproduction guide](docs/REPRODUCING.md), [execution ledger](reports/execution_ledger.md), [final review](reports/final_branch_review.md). The report now includes accepted supplied and development measurements; final submission acceptance remains open.
+Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [reproduction guide](docs/REPRODUCING.md), [execution ledger](reports/execution_ledger.md), [final review](reports/final_branch_review.md). The report now includes accepted supplied and development measurements; the classical submission gates are accepted. Full neural training inside Colab is unmeasured.
 
 ## Next actions, in order
 
@@ -137,6 +137,6 @@ Artifacts: [report](reports/final_report.md), [demo](reports/demo_outline.md), [
 2. Preserve the reviewed implementation branch and public development checkpoint artifact. Do not merge or issue a final acceptance tag on unverified evidence.
 3. Supplied acquisition/audit/ROIs, source-aware profile and actual validation calibration are accepted. The completed scratch raw/Median-5 GPU pair is accepted; frozen classical and neural held-out measurements are independently accepted. Preserve the original development outputs and disclose prior 22-patch training exposure, including eight current test IDs. See the [supplied execution ledger](reports/supplied_execution_ledger.md).
 4. Completed: the connected cached notebook execution and independent review are accepted, closing S1. Preserve the pinned source, ZIP/sidecar and separately versioned supplied artifacts; the checkpoint bundle remains local only.
-5. Completed: fresh uncached Colab at source `3eecc1434991835e576e7d3d09d967fbd9388359` took 566.40 seconds, including one dependency restart and 200 downloads. The original ZIP and authoritative timing sidecar are retained locally and independently reviewed. Publish the accepted implementation to `main`, verify the public head and issue `v1.0-hackathon` (S3).
+5. Completed: fresh uncached Colab at source `3eecc1434991835e576e7d3d09d967fbd9388359` took 566.40 seconds, including one dependency restart and 200 downloads. The original ZIP and authoritative timing sidecar are retained locally and independently reviewed. Completed: PR #1 merged to `main` at `51c6cd1088e843f86b2ecd2e552fb057d08305a3`; the `v1.0-hackathon` tag pins the submission publication (S3).
 
 A new method requires a recorded failure, scope authorization or replacement of an optional item, compatible accessible code/weights and remaining runtime. Once final test results are visible, any scientific change is a new versioned experiment rather than an untouched holdout evaluation.

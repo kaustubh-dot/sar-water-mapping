@@ -4,7 +4,7 @@ The supplied-first100 acquisition, raster audit, frozen internal event split,
 fixed ROIs and source-aware notebook implementation are accepted. The new
 calibration and paired scratch training are independently accepted. Frozen
 held-out measurements are independently accepted. The cached supplied
-notebook smoke is independently accepted, closing S1. Fresh uncached classical Colab is accepted at 566.40 seconds, including installation, one dependency restart and all 200 downloads. See the [retained-evidence review](../reports/colab_execution_review.md). Publication to `main` and the submission tag remain pending.
+notebook smoke is independently accepted, closing S1. Fresh uncached classical Colab is accepted at 566.40 seconds, including installation, one dependency restart and all 200 downloads. See the [retained-evidence review](../reports/colab_execution_review.md). PR #1 is merged to `main`; `v1.0-hackathon` pins the submission. The executed Colab source remains the exact pin below.
 
 The distinct earlier development experiment remains reproducible below. Its
 measured GPU pair uses source commit

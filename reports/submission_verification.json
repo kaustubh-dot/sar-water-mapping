@@ -1,13 +1,13 @@
 {
   "date": "2026-10-29",
-  "verdict": "S1_S2_accepted_S3_publication_pending",
+  "verdict": "S1_S2_S3_accepted_classical_core_published",
   "audit_base_commit": "612040e20ecb69fa2c2a875aec4ca32c18249208",
   "suite": {
-    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-final-colab-accepted",
+    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-merged-main",
     "passed": 135,
-    "seconds": 70.09,
+    "seconds": 67.15,
     "exit_code": 0,
-    "tested_implementation_commit": "cef571d95f190e99c198693cdccc2f76c1c6466e",
+    "tested_implementation_commit": "51c6cd1088e843f86b2ecd2e552fb057d08305a3",
     "implementation_scope_unchanged_since_test_verified": true
   },
   "notebook": {
@@ -49,12 +49,10 @@
   "fresh_colab_verified": true,
   "fresh_colab_verification_deferred_by_user": false,
   "default_public_branch": "main",
-  "implementation_in_draft_pr": "https://github.com/kaustubh-dot/sar-water-mapping/pull/1",
-  "final_tag_created": false,
+  "implementation_in_draft_pr": null,
+  "final_tag_created": true,
   "new_checkpoint_delivery": "reviewed_local_bundle_not_publicly_released",
-  "remaining_blockers": [
-    "Publish accepted implementation to main, verify public head and create v1.0-hackathon."
-  ],
+  "remaining_blockers": [],
   "historical_artifact_note": "Original development data/config/result/checkpoint artifacts are preserved. Earlier source remains at 61b09f9bfa61114d83bd7be19eba3de67d5621db. Definition-only and earlier integration reviews have explicit historical-scope notes.",
   "source_sha256": {
     "scripts/calibrate_classical.py": "6c5ed4ada813fde9d57ee3a06d6b1de726d727b2bb3705366d3f636dfcc6eedd",
@@ -76,5 +74,17 @@
     "implementation_scope_unchanged_since_test_verified": true
   },
   "fresh_colab_review": "reports/colab_execution_review.md",
-  "fresh_colab_summary": "reports/colab_observed_summary.json"
+  "fresh_colab_summary": "reports/colab_observed_summary.json",
+  "merged_pr": "https://github.com/kaustubh-dot/sar-water-mapping/pull/1",
+  "merge_commit": "51c6cd1088e843f86b2ecd2e552fb057d08305a3",
+  "submission_tag": "v1.0-hackathon",
+  "scope_note": "Complete classical Colab core verified below30minutes; remote U-Net results retained separately. Full neural training in Colab unmeasured.",
+  "premerge_suite": {
+    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-final-colab-accepted",
+    "passed": 135,
+    "seconds": 70.09,
+    "exit_code": 0,
+    "tested_implementation_commit": "cef571d95f190e99c198693cdccc2f76c1c6466e",
+    "implementation_scope_unchanged_since_test_verified": true
+  }
 }

@@ -80,3 +80,10 @@ Fresh Colab acceptance, 29 October 2026:
 - User-saved original ZIP and authoritative sidecar are retained outside Git. Archive SHA-256 `1e365165f95de72e623a7dd99b1078a97912d0cd99bc24a5bffa570ffc1c29e9` matches browser output and sidecar; ZIP integrity passes. Independent Sol xhigh review accepts source/data/config bindings and reproduced scientific tables. See [execution review](colab_execution_review.md) and [summary](colab_observed_summary.json).
 - The external browser observation establishes fresh execution alongside acquisition evidence; original generic unverified-attestation fields remain unchanged. Neural training was disabled. This closes S2 for the classical core and does not measure full neural training within Colab.
 - Fresh local final full suite: **135 passed in 70.09 seconds**, exit zero. Public-file scan found no raw data, weights, archives, oversized files or credential/connection matches. Main publication and tag are the remaining authorized S3 action.
+
+
+Final publication, 29 October 2026:
+
+- GitHub confirms PR #1 merged into `main` at `51c6cd1088e843f86b2ecd2e552fb057d08305a3`. Its tree exactly matches accepted implementation head `721025ab9b5af8f21ac6c3c4bc80a4191c6b28e9`.
+- The complete suite on the merged commit passed **135 tests in 67.15 seconds**, exit zero. Final changes only record publication; scientific source, notebook, locked dependencies, configurations and numerical artifacts are unchanged.
+- S1/S2/S3 are closed for the complete classical deliverable. The final documentation and `v1.0-hackathon` submission tag are published together. The original Colab execution remains pinned to `3eecc1434991835e576e7d3d09d967fbd9388359`; remote U-Net results remain separate. The newly trained supplied checkpoint bundle is local only.

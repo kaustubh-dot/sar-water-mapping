@@ -5,7 +5,7 @@
 **[Independent results accepted](supplied_results_review.md).** Data/profile,
 calibration and scratch training are also accepted. The cached supplied
 notebook execution and review are also accepted, closing S1.
-Fresh uncached classical Colab is accepted at **566.40 seconds**, including setup, restart, 200 downloads and export. `main` publication and the tag remain open. The reviewed supplied checkpoint ZIP is local only.
+Fresh uncached classical Colab is accepted at **566.40 seconds**, including setup, restart, 200 downloads and export. The implementation is merged to `main` and pinned as `v1.0-hackathon`. The reviewed supplied checkpoint ZIP is local only.
 
 **0:00–0:30 — Problem and data.** Explain observed surface-water mapping from
 VV/VH SAR, its speckle and dark-target ambiguities. Show the exact supplied
@@ -79,7 +79,7 @@ The [accepted scratch GPU pair](supplied_training_review.md) took 76.77 seconds
 including preparation: raw 10 epochs/150 updates, Median 5 nine epochs/135
 updates. Supplied held-out measurements are now independently accepted in the
 [result review](supplied_results_review.md). Cached supplied notebook smoke is
-accepted at 123.04 seconds; S1 is closed. The subsequent fresh classical Colab run is accepted at 566.40 seconds, closing S2. Publication and the tag remain open.
+accepted at 123.04 seconds; S1 is closed. The subsequent fresh classical Colab run is accepted at 566.40 seconds, closing S2. Publication to `main` is complete and pinned as `v1.0-hackathon`.
 
 **0:00–0:30 — Problem.** Monsoon clouds obstruct optical mapping. Sentinel-1 SAR
 provides observations through clouds, but multiplicative speckle makes a simple

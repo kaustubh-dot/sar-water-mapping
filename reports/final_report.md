@@ -3,7 +3,7 @@
 Development results and supplied execution status, 29 October 2026. Supplied
 data/profile and calibration gates are independently accepted. The supplied
 scratch GPU pair is also accepted. Held-out measurements and cached notebook integration are independently accepted, closing S1.
-Fresh uncached classical Colab is independently accepted at **566.40 seconds**, including setup, dependency restart and all 200 downloads. Publication to `main` and the tag remain open. See the [original-artifact review](colab_execution_review.md).
+Fresh uncached classical Colab is independently accepted at **566.40 seconds**, including setup, dependency restart and all 200 downloads. PR #1 is merged to `main`; the submission is pinned by `v1.0-hackathon`. See the [original-artifact review](colab_execution_review.md).
 
 **Submission warning:** the subsequently supplied recipe defines the first
 100 ordered rows of the official training CSV. That is a different set from
@@ -244,7 +244,7 @@ verified before scoring.
 The original local ZIP is 164,908,503 bytes, SHA-256
 `968b9065b9ded3fb0c3c472e10e4fccf60c12a1f10c5f82481698de841577cef`,
 with its authoritative timing sidecar outside the archive. Both remain outside
-Git. This accepts cached Linux integration. The subsequent fresh Colab run at source `3eecc1434991835e576e7d3d09d967fbd9388359` completed in **566.397461905 seconds**, including one dependency restart and its wait, zero cached TIFFs and 200 downloads. Its original 164,922,319-byte ZIP has SHA-256 `1e365165f95de72e623a7dd99b1078a97912d0cd99bc24a5bffa570ffc1c29e9`; the authoritative sidecar and ZIP remain outside Git. The [independent review](colab_execution_review.md) closes S2 using retained metadata/results plus browser-observed execution. The unedited sidecar keeps its default unverified attestation; freshness is established by the documented external observation and acquisition evidence. Publication remains the final gate.
+Git. This accepts cached Linux integration. The subsequent fresh Colab run at source `3eecc1434991835e576e7d3d09d967fbd9388359` completed in **566.397461905 seconds**, including one dependency restart and its wait, zero cached TIFFs and 200 downloads. Its original 164,922,319-byte ZIP has SHA-256 `1e365165f95de72e623a7dd99b1078a97912d0cd99bc24a5bffa570ffc1c29e9`; the authoritative sidecar and ZIP remain outside Git. The [independent review](colab_execution_review.md) closes S2 using retained metadata/results plus browser-observed execution. The unedited sidecar keeps its default unverified attestation; freshness is established by the documented external observation and acquisition evidence. PR #1 subsequently merged the accepted implementation to `main`; `v1.0-hackathon` pins the submission.
 
 ## Development methods and selection
 
@@ -391,8 +391,7 @@ are also accepted, closing S1. Existing development
 checkpoints already trained on 22 supplied IDs, including eight current test
 IDs, and cannot support an unseen-input claim there. Fresh classical Colab is accepted at 566.40 seconds with retained original evidence.
 Remote training and checkpoint-only inference remain separate timings. The
-full classical notebook is the bounded fallback. Final READY status, publication
-to `main` and the submission tag await publication of the accepted implementation.
+full classical notebook is the bounded fallback. The classical core is accepted and published to `main`, with `v1.0-hackathon` as the submission reference.
 
 Dataset attribution: Bonafilia et al. (2020),
 [Sen1Floods11](https://github.com/cloudtostreet/Sen1Floods11).
