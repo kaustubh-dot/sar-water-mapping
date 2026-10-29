@@ -29,3 +29,12 @@ Fresh combined implementation run: 79 tests passed in 28.56 seconds while the ne
 - Exact-byte Git attributes protect frozen ROI, configuration and calibration artifacts during Windows/Linux transfer.
 - Fresh resource inspection: remote GPU has approximately 18.8 GB free memory; dedicated environment still reports CUDA available. No scientific training has started at this checkpoint.
 - Neural native-mask export timing is receiving a focused fix/review. Notebook defaults and calibration integration are being completed independently. Fresh Colab execution remains unverified.
+
+Subsequent verified execution:
+
+- Calibration accepted: independent reviewer reproduced all 98 validation candidates and four cleanup records; 37 focused tests passed. Published freeze 9e9481a and exact-source-byte correction f9f6e56. Remote preflight verified all frozen source/configuration/ROI/looks hashes and clean checkout.
+- First GPU invocation stopped in input preparation before any training update: identical TIFF SHA and decoded dB/masks but 378/524,288 converted power samples differed by one float32 ULP across Windows/Linux. Maximum relative difference 1.19e-7; probe recorded separately.
+- Portable identity fix adds a versioned native decoded-source digest while preserving mandatory exact file hashes and legacy duplicate hashes. Derived ROI ENL roundoff alone receives a tight relative tolerance; identity/count/status remain exact. Implementation tests: 64 passed, one sandbox-only Git fixture deselected. Independent review remains required before training retry.
+- Identity-only migration creates manifest audit-v4-sourceidentity and configuration v3. All 100 source pairs, split membership, ROIs, looks, thresholds, denoisers, selected neural input and training settings remain unchanged. No validation search or test-based selection is rerun.
+- Actual frozen classical evaluation completed: 20 held-out patches, four primary rows, separate cleanup, 40 band/ROI ENLs, 72 synthetic test rows and 80 figures. Independent review accepted the scientific outputs. Runner 130.44 seconds on local CPU, excluding prior setup/download/calibration; no fresh-Colab or full-training timing claim.
+- Measured pooled water IoU: raw 0.608415, Median 0.630412, Lee 0.606972, bilateral 0.630374. Negative findings include lower Lee IoU and lower Median IoU after cleanup. Full byte-preserved evidence is in reports/classical_results-v1.

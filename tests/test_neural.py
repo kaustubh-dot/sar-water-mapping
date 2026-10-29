@@ -267,7 +267,7 @@ def test_file_training_gate_rejects_unfrozen_configuration_before_data_access(tm
                                       tmp_path / 'missing_splits.csv', config)
 
 
-def test_file_training_checks_roi_membership_hashes_and_does_not_open_test(tmp_path):
+def test_file_training_checks_roi_membership_hashes_and_does_not_open_test(tmp_path, monkeypatch):
     import csv
     from sar_water.data import audit_pair, sha256_file
     from sar_water.filters import estimate_training_looks
@@ -291,7 +291,8 @@ def test_file_training_checks_roi_membership_hashes_and_does_not_open_test(tmp_p
         rows.append(dict(row, split=membership[key]))
     rows.append(dict(rows[1], patch_id='test', source_patch_id='test', split='test',
                      image_path=str(tmp_path / 'unread_test.tif'), image_sha256='a' * 64,
-                     image_content_sha256='b' * 64, mask_sha256='c' * 64))
+                     image_content_sha256='b' * 64, image_source_content_sha256='d' * 64,
+                     mask_sha256='c' * 64))
 
     def write_csv(path, values):
         fields = sorted({key for row in values for key in row})
@@ -326,6 +327,35 @@ def test_file_training_checks_roi_membership_hashes_and_does_not_open_test(tmp_p
     assert loaded['membership'] == membership
     assert loaded['filtered_identity']['method'] == 'median'
     assert loaded['filtered_identity']['config_file_sha256'] == sha256_file(config_path)
+    # The exact source is unchanged, while another libm may round converted
+    # float32 power and derived ENL by one ULP. Preserve the frozen looks.
+    from sar_water import data
+    adapt = data.adapt_arrays
+    def other_platform(*args, **kwargs):
+        patch = adapt(*args, **kwargs)
+        patch.power[:, patch.input_valid] = np.nextafter(patch.power[:, patch.input_valid], np.float32(np.inf))
+        return patch
+    with monkeypatch.context() as scoped:
+        scoped.setattr(data, 'adapt_arrays', other_platform)
+        portable = t.load_frozen_training_inputs(manifest, splits, config_path)
+    assert portable['filtered_identity']['looks'] == loaded['filtered_identity']['looks']
+    from sar_water import filters
+    estimate = filters.estimate_training_looks
+    def materially_different(*args, **kwargs):
+        result = estimate(*args, **kwargs)
+        result['rois'][0]['value'] *= 1.01
+        return result
+    with monkeypatch.context() as scoped:
+        scoped.setattr(filters, 'estimate_training_looks', materially_different)
+        with pytest.raises(ValueError, match='reproduce frozen looks'):
+            t.load_frozen_training_inputs(manifest, splits, config_path)
+    # New source identity never excuses changed source bytes.
+    with (tmp_path / 'train.tif').open('ab') as stream:
+        stream.write(b'changed')
+    with pytest.raises(ValueError, match='source|hash'):
+        t.load_frozen_training_inputs(manifest, splits, config_path)
+    # Restore the source for the independent ROI provenance checks below.
+    (tmp_path / 'train.tif').write_bytes((tmp_path / 'train.tif').read_bytes()[:-7])
     write_csv(roi, [dict(rois[0], patch_id='val')])
     config['real_data']['training_roi_sha256'] = sha256_file(roi)
     config_path.write_text(json.dumps(config))

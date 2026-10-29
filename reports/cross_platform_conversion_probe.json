@@ -1,0 +1,11 @@
+{
+  "patch_id": "Ghana_103272",
+  "source_db_arrays_exactly_equal": true,
+  "validity_exactly_equal": true,
+  "different_power_samples": 378,
+  "sample_count": 524288,
+  "max_relative_power_difference": 1.1876285554990318e-07,
+  "max_float32_ulp_difference": 1,
+  "same_numpy_version": "2.5.4",
+  "finding": "Identical decoded dB and masks; derived float32 db-to-power differs across platforms. Exact derived-power hash is unsuitable as portable source identity."
+}

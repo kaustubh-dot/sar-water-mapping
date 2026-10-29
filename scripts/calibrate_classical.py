@@ -21,7 +21,8 @@ from time import perf_counter
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 import numpy as np
 from sar_water.benchmark import _segment_filtered,validation_search
-from sar_water.data import audit_pair,read_manifest,sha256_file,validate_splits
+from sar_water.data import (audit_pair,read_manifest,sha256_file,validate_splits,
+                           verify_decoded_image_identity)
 from sar_water.filters import FILTER_GRID,estimate_training_looks,filter_power
 from sar_water.metrics import enl,summarize_water
 from sar_water.segment import FIXED_GRID
@@ -59,8 +60,7 @@ def _checked_patch(row):
         if not row.get(kind+'_sha256') or sha256_file(row[kind+'_path'])!=row[kind+'_sha256']:
             raise ValueError('development source hash changed: '+row['patch_id'])
     audited,patch=audit_pair(row)
-    if not row.get('image_content_sha256') or audited['image_content_sha256']!=row['image_content_sha256']:
-        raise ValueError('development decoded SAR hash changed')
+    verify_decoded_image_identity(row,audited)
     if row.get('label_source')!='manual':raise ValueError('independent manual development labels required')
     return patch
 

@@ -1,0 +1,76 @@
+{
+  "source": "outputs/final-classical-development-v1",
+  "files": [
+    {
+      "path": "reports/classical_results-v1/cleanup_ablation.csv",
+      "sha256": "18ffe87ab7d24d82429d07f4365fd9b6a3dfcf3a5b2a38d2be625c7cb14f5ca2",
+      "bytes": 3136
+    },
+    {
+      "path": "reports/classical_results-v1/config.json",
+      "sha256": "a2e6da8bd81a8a345953d73e943eb2d923409e5797684bd4d3be5fef2f3e445d",
+      "bytes": 6169
+    },
+    {
+      "path": "reports/classical_results-v1/enl_rois.csv",
+      "sha256": "a3fa282e56ea50f31dc615461dc5272a9a120633227ef709ba27027f9d8f8fa8",
+      "bytes": 6676
+    },
+    {
+      "path": "reports/classical_results-v1/enl_summary.csv",
+      "sha256": "dcf714307385e89dc18e6650d32cde37b7a1b5b4bf57b2c59d6058161d5ccc3c",
+      "bytes": 1387
+    },
+    {
+      "path": "reports/classical_results-v1/environment.txt",
+      "sha256": "fd5e30dd9c322bc436f9daf4665d49d7caed38211d41921c0e6791335a41a0a8",
+      "bytes": 96
+    },
+    {
+      "path": "reports/classical_results-v1/per_patch_real.csv",
+      "sha256": "f2e4c2bedfb96e41ad3ae809152d9fd5787d2d332f4544c197e6d8f748a2e698",
+      "bytes": 10659
+    },
+    {
+      "path": "reports/classical_results-v1/radiometry.csv",
+      "sha256": "d26422eba39d8a625ef7f5d6cc5c9f280e37718610ff32d832b6febf63c98bec",
+      "bytes": 13049
+    },
+    {
+      "path": "reports/classical_results-v1/results_real.csv",
+      "sha256": "9898e195c14797d7e6af142100ee665a7423878c0a9d9538c6dfd7fa456384f9",
+      "bytes": 3592
+    },
+    {
+      "path": "reports/classical_results-v1/results_real.json",
+      "sha256": "9ecfac6dddc6267ca515efebea9ae2a977ba70f4a80e336ab713a2dbaa887a5c",
+      "bytes": 138620
+    },
+    {
+      "path": "reports/classical_results-v1/results_synthetic.csv",
+      "sha256": "1402065b617483332c322d4b68180992792587151df0aa9d054eeab9617c092e",
+      "bytes": 736
+    },
+    {
+      "path": "reports/classical_results-v1/runtime.json",
+      "sha256": "a85d7f60c2527b58e9fa2e5830ddb34cca21526e989b4b50b462978587c00668",
+      "bytes": 3058
+    },
+    {
+      "path": "reports/classical_results-v1/synthetic_selection.csv",
+      "sha256": "118a57450867069c7c2d2a0529e140f99b628a50890af4aa91345e61071e3798",
+      "bytes": 594
+    },
+    {
+      "path": "reports/classical_results-v1/synthetic_test.csv",
+      "sha256": "69fccfd7c7aeb07df5bcf09a31227924ea880afe7925777f558e672225df0a74",
+      "bytes": 10445
+    },
+    {
+      "path": "reports/classical_results-v1/synthetic_validation.csv",
+      "sha256": "9c2720ff641faa366da72ffc210bdc2ccdfa79cf4b00adb2455519bfbae69961",
+      "bytes": 19488
+    }
+  ],
+  "artifact_kind": "measured frozen upstream development evaluation; no fresh Colab or training claim"
+}

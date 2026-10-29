@@ -97,9 +97,15 @@ Nearest-valid filling uses SciPy's deterministic Euclidean distance-transform
 indices, rejects all-invalid input, and leaves restoration of the original mask
 to the downstream filter. Large missing regions remain an imputation limitation.
 
-Canonical decoded-power hashes supplement file SHA-256 to catch differently
-compressed copies. They do not prove absence of near duplicates, shifted crops,
-or overlap where spatial metadata is absent. Keep those limitations in the report.
+Exact file SHA-256 checks remain mandatory. New audits also record
+`image_source_content_sha256` in the versioned
+`source_float32_vv_vh_validity_v1` domain: decoded source samples in declared
+units, canonical VV/VH band order, little-endian float32, invalid values replaced
+by zero, and the original SAR-validity mask. This avoids platform-dependent
+transcendental rounding in dB-to-power conversion. The legacy decoded-power hash
+is retained for historical audits and duplicate checks; manifests without the
+new digest retain their original exact legacy check. Neither digest proves
+absence of near duplicates, shifted crops or unrecorded spatial overlap.
 
 Tests: `python -m pytest -q --basetemp=outputs/pytest-run` (create `outputs/`
 first). All test rasters are generated temporary scientific fixtures, not dataset

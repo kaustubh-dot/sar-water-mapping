@@ -1,0 +1,9 @@
+looks,mean_validation_psnr_db,method,parameters,selection_split
+1,4.147652584617837,raw,{},validation
+1,12.88495793893248,median,"{""window"": 5}",validation
+1,18.770474809806654,lee,"{""window"": 7}",validation
+1,7.769356143056282,log_bilateral,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",validation
+4,10.12444674029444,raw,{},validation
+4,20.032897824125058,median,"{""window"": 5}",validation
+4,23.061920947302138,lee,"{""window"": 7}",validation
+4,16.76688030464933,log_bilateral,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",validation

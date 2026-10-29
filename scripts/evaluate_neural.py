@@ -21,7 +21,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 import numpy as np
 import torch
 
-from sar_water.data import Patch, audit_pair, power_to_db, sha256_file, validate_splits
+from sar_water.data import (Patch, audit_pair, power_to_db, sha256_file, validate_splits,
+                            verify_decoded_image_identity)
 from sar_water.evaluate import _csv, _table, frozen_settings
 from sar_water.filters import filter_power
 from sar_water.metrics import confusion_counts, summarize_water
@@ -130,9 +131,7 @@ def _heldout_patches(rows, membership, manifest_path):
                 raise ValueError(f'held-out {name} hash changed after audit')
             pair[name + '_path'] = str(path)
         audit, patch = audit_pair(pair)
-        if (not pair.get('image_content_sha256')
-                or audit['image_content_sha256'] != pair['image_content_sha256']):
-            raise ValueError('held-out decoded SAR hash changed after audit')
+        verify_decoded_image_identity(pair, audit)
         patches[pair['patch_id']] = patch
     if not patches:
         raise ValueError('held-out membership has no patches')

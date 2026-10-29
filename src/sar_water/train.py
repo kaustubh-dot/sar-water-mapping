@@ -25,7 +25,8 @@ import numpy as np
 import scipy
 import torch
 
-from .data import Patch, audit_pair, nearest_valid_fill, power_to_db, sha256_file, validate_splits
+from .data import (Patch, audit_pair, nearest_valid_fill, power_to_db, sha256_file,
+                   validate_splits, verify_decoded_image_identity)
 from .metrics import confusion_counts, summarize_water
 from .model import CompactUNet, masked_bce_dice_loss
 
@@ -519,6 +520,23 @@ def paired_train(raw_patches, filtered_patches, rows, membership, *, config=None
     return PairedTrainingResult(models, normalization, report)
 
 
+def _roi_records_match(actual, expected):
+    """Exact ROI identity/count/status; tolerate only derived ENL roundoff."""
+    if len(actual) != len(expected):
+        return False
+    for observed, frozen in zip(actual, expected):
+        if ({key: value for key, value in observed.items() if key != 'value'} !=
+                {key: value for key, value in frozen.items() if key != 'value'}):
+            return False
+        a, b = observed.get('value'), frozen.get('value')
+        if a is None or b is None:
+            if a is not None or b is not None:
+                return False
+        elif not np.isclose(a, b, rtol=1e-6, atol=0):
+            return False
+    return True
+
+
 def load_frozen_training_inputs(manifest_path, splits_path, config_path):
     """Verify disk identities/ROI provenance, load development inputs only.
 
@@ -579,15 +597,15 @@ def load_frozen_training_inputs(manifest_path, splits_path, config_path):
                 raise ValueError(f'development {name} hash changed after audit')
             pair[name + '_path'] = str(path)
         audit, patch = audit_pair(pair)
-        if not pair.get('image_content_sha256') or audit['image_content_sha256'] != pair['image_content_sha256']:
-            raise ValueError('development decoded SAR hash changed after audit')
+        verify_decoded_image_identity(pair, audit)
         raw[key] = patch
     estimated = estimate_training_looks({key: dict(power=patch.power, input_valid=patch.input_valid)
                                         for key, patch in raw.items() if membership[key] == 'train'}, rois, membership)
     frozen_looks = json.loads(looks_path.read_text(encoding='utf-8'))
-    if (not np.allclose(estimated['looks'], settings['looks'], rtol=1e-7, atol=0)
-            or not np.allclose(estimated['looks'], frozen_looks['looks'], rtol=1e-7, atol=0)
-            or _json_hash(estimated['rois']) != _json_hash(frozen_looks['rois'])):
+    if (not np.allclose(estimated['looks'], settings['looks'], rtol=1e-6, atol=0)
+            or not np.allclose(estimated['looks'], frozen_looks['looks'], rtol=1e-6, atol=0)
+            or estimated['usable_roi_counts'] != frozen_looks['usable_roi_counts']
+            or not _roi_records_match(estimated['rois'], frozen_looks['rois'])):
         raise ValueError('training sources/ROIs do not reproduce frozen looks artifact')
     method = settings['selected_filter']
     parameters = settings['parameters'][method]

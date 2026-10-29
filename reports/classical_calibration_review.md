@@ -40,6 +40,8 @@ The validation cache retains one filter setting at a time, then releases it befo
 
 Recorded source hashes cover `scripts/calibrate_classical.py` and `src/sar_water/{benchmark,data,filters,metrics,segment}.py`. Each matches the reviewed working bytes. The recorded base commit is `df3e73e43edad655cfe1800f4144b6ca5172110c`; the source hashes identify the then-uncommitted calibration changes.
 
+The follow-up index-byte check initially found the previously tracked normalized `filters.py` blob still differed from the v2 working bytes, despite the new attribute. Restaging that exact file with `git add --renormalize -- src/sar_water/filters.py` applied `-text` without editing the source. A fresh `git show :<path>` SHA-256 check then confirmed all six staged source blobs exactly match the v2 recorded hashes. The staged ROI CSVs, configuration, all three v2 outputs, and `.gitattributes` also match their working bytes. Preserve this source-byte correction in the commit used for remote transfer.
+
 ## Accepted choices and limits
 
 The shared policy is **VV, fixed threshold -18 dB, water below threshold, cleanup disabled**. Selected settings are raw identity, Median window 5, multiplicative Lee window 5, and log-bilateral window 5 / spatial sigma 2 / color sigma 3 dB. Lee effective looks are **VV 4.859278122453718, VH 4.020813607183419**, each from six finite nonconstant training ROIs. They are effective estimates, not independently established physical looks. The Otsu constant-patch fallbacks are VV -18 dB and VH -24 dB, calibrated on raw validation only.

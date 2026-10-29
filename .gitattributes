@@ -2,8 +2,15 @@
 # Preserve exact bytes across Windows/Linux checkouts.
 reports/classical_training_rois.csv -text
 reports/heldout_enl_rois.csv -text
+reports/development_data_selection.json -text
 reports/classical_calibration-v*/** -text
 configs/development-calibrated-v*.json -text
+reports/classical_results-v*/** -text
+reports/source_identity-v*/** -text
+reports/results_real.csv -text
+reports/results_synthetic.csv -text
+reports/runtime.json -text
+reports/environment.txt -text
 # Preserve the exact source bytes recorded by calibration v2.
 scripts/calibrate_classical.py -text
 src/sar_water/benchmark.py -text

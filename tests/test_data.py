@@ -152,6 +152,72 @@ def test_geotiff_metadata_and_content_hashes(tmp_path):
         d.audit_pair(pair)
 
 
+def test_source_content_identity_is_independent_of_derived_power_roundoff(tmp_path, monkeypatch):
+    rio = pytest.importorskip('rasterio')
+    d = api()
+    image, mask = tmp_path/'source.tif', tmp_path/'mask.tif'
+    values = np.array([[[-25., -11.], [-7., 0.]], [[-31., -17.], [-13., -6.]]], dtype='float32')
+    profile = dict(driver='GTiff', height=2, width=2, transform=rio.transform.from_origin(0, 2, 1, 1))
+    with rio.open(image, 'w', count=2, dtype='float32', **profile) as stream:
+        stream.write(values)
+    with rio.open(mask, 'w', count=1, dtype='int8', **profile) as stream:
+        stream.write(np.zeros((1, 2, 2), dtype='int8'))
+    pair = dict(patch_id='source', image_path=str(image), mask_path=str(mask),
+                units='db', band_order='VV,VH', label_source='manual')
+    before, original = d.audit_pair(pair)
+    adapt = d.adapt_arrays
+    def other_platform(*args, **kwargs):
+        patch = adapt(*args, **kwargs)
+        patch.power[:, patch.input_valid] = np.nextafter(patch.power[:, patch.input_valid], np.float32(np.inf))
+        return patch
+    monkeypatch.setattr(d, 'adapt_arrays', other_platform)
+    after, changed = d.audit_pair(pair)
+    assert not np.array_equal(original.power, changed.power)
+    assert before['image_content_sha256'] != after['image_content_sha256']
+    assert before['image_source_content_sha256'] == after['image_source_content_sha256']
+    assert before['image_source_content_hash_domain'] == 'source_float32_vv_vh_validity_v1'
+    assert before['image_sha256'] == after['image_sha256']
+
+
+def test_decoded_identity_prefers_portable_source_and_requires_legacy_otherwise():
+    d = api()
+    frozen = dict(image_source_content_sha256='source', image_content_sha256='power-old')
+    audited = dict(image_source_content_sha256='source', image_content_sha256='power-other-platform')
+    d.verify_decoded_image_identity(frozen, audited)
+    with pytest.raises(ValueError, match='decoded'):
+        d.verify_decoded_image_identity(frozen, dict(audited, image_source_content_sha256='changed'))
+    d.verify_decoded_image_identity(dict(image_content_sha256='legacy'), dict(image_content_sha256='legacy'))
+    with pytest.raises(ValueError, match='decoded'):
+        d.verify_decoded_image_identity(dict(image_content_sha256='legacy'), dict(image_content_sha256='changed'))
+    with pytest.raises(ValueError, match='decoded'):
+        d.verify_decoded_image_identity({}, audited)
+
+
+def test_portable_source_hash_normalizes_band_order_and_keeps_power_duplicate_detection(tmp_path):
+    rio = pytest.importorskip('rasterio')
+    d = api()
+    mask = tmp_path/'mask.tif'
+    profile = dict(driver='GTiff', height=2, width=2, transform=rio.transform.from_origin(0, 2, 1, 1))
+    with rio.open(mask, 'w', count=1, dtype='int8', **profile) as stream:
+        stream.write(np.zeros((1, 2, 2), dtype='int8'))
+    def audit(name, values, units='db', order='VV,VH'):
+        path = tmp_path/f'{name}.tif'
+        with rio.open(path, 'w', count=2, dtype='float32', compress='deflate', **profile) as stream:
+            stream.write(values.astype('float32'))
+        return d.audit_pair(dict(patch_id=name, image_path=str(path), mask_path=str(mask),
+                                units=units, band_order=order, label_source='manual'))[0]
+    db = np.stack([np.zeros((2, 2)), np.full((2, 2), -10.)]).astype('float32')
+    normal, swapped = audit('normal', db), audit('swapped', db[::-1], order='VH,VV')
+    assert normal['image_source_content_sha256'] == swapped['image_source_content_sha256']
+    power = np.power(10., db/10).astype('float32')
+    linear = audit('linear', power, units='linear_power')
+    assert normal['image_source_content_sha256'] != linear['image_source_content_sha256']
+    assert normal['image_content_sha256'] == linear['image_content_sha256']
+    rows = [normal, linear, dict(patch_id='third', image_sha256='other')]
+    with pytest.raises(ValueError, match='duplicate'):
+        d.validate_splits(rows, dict(normal='train', linear='validation', third='test'))
+
+
 def test_inventory_source_patch_conflicts_are_not_lost(tmp_path):
     path = tmp_path / "inventory.csv"
     path.write_text('patch_id,kind,path,source,units,band_order,label_source,source_patch_id\n'

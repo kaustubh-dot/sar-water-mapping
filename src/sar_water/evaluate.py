@@ -18,7 +18,7 @@ from time import perf_counter
 import numpy as np
 
 from .benchmark import _segment_filtered
-from .data import audit_pair, sha256_file, validate_splits
+from .data import audit_pair, sha256_file, validate_splits, verify_decoded_image_identity
 from .filters import FILTER_GRID, filter_power
 from .metrics import enl, psnr, summarize_water
 from .segment import FIXED_GRID
@@ -310,11 +310,10 @@ def run_evaluation(manifest_path, splits_path, config_path, output, *, enl_rois=
             path = Path(pair[name])
             pair[name] = str(path if path.is_absolute() else manifest_path.parent/path)
         for name in ('image', 'mask'):
-            if sha256_file(pair[name+'_path']) != pair[name+'_sha256']:
+            if not pair.get(name+'_sha256') or sha256_file(pair[name+'_path']) != pair[name+'_sha256']:
                 raise ValueError(f'held-out {name} hash changed after audit')
         audit, patch = audit_pair(pair)
-        if pair.get('image_content_sha256') and audit['image_content_sha256'] != pair['image_content_sha256']:
-            raise ValueError('held-out decoded image hash changed after audit')
+        verify_decoded_image_identity(pair, audit)
         patches[pair['patch_id']] = patch
         heldout_rows.append(audit)
     rois = []

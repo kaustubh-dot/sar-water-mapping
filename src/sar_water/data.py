@@ -139,6 +139,18 @@ def sha256_file(path):
     return digest.hexdigest()
 
 
+def verify_decoded_image_identity(frozen, audited):
+    """Prefer exact source-domain identity; require legacy power hash otherwise.
+
+    This does not replace the caller's mandatory image/mask file SHA checks.
+    Legacy manifests retain their original, platform-sensitive power contract.
+    """
+    key = ('image_source_content_sha256' if frozen.get('image_source_content_sha256')
+           else 'image_content_sha256')
+    if not frozen.get(key) or audited.get(key) != frozen[key]:
+        raise ValueError('decoded SAR hash changed after audit')
+
+
 def read_manifest(path):
     """Load frozen rows, resolving portable paths against the manifest folder.
 
@@ -198,14 +210,29 @@ def audit_pair(pair):
         alignment_error = _alignment_error_pixels(image.transform, mask.transform, image.width, image.height)
         if image.crs != mask.crs or alignment_error > 1e-6:
             raise ValueError("image/mask georeferencing mismatch")
-        patch = adapt_arrays(image.read(), mask.read(1), units=pair["units"],
+        source_samples = image.read().astype(np.float32)
+        patch = adapt_arrays(source_samples, mask.read(1), units=pair["units"],
                              band_order=pair["band_order"], input_mask=image.read_masks() > 0,
                              label_mask=mask.read_masks(1) > 0)
+        # Hash decoded source samples before db->power transcendental arithmetic.
+        # The same file can differ by one power ULP across libm/platform builds.
+        # Normalize band order, byte order and invalid payloads, keeping units
+        # and validity explicit. File SHA independently binds every source byte.
+        source_domain = 'source_float32_vv_vh_validity_v1'
+        canonical_source = source_samples[::-1] if pair['band_order'] == 'VH,VV' else source_samples
+        canonical_source = np.where(patch.input_valid[None], canonical_source, 0).astype('<f4')
+        header = json.dumps(dict(domain=source_domain, units=pair['units'],
+                                 shape=list(canonical_source.shape)), sort_keys=True,
+                            separators=(',', ':')).encode('utf-8') + b'\0'
+        source_hash = hashlib.sha256(header + canonical_source.tobytes() +
+                                    patch.input_valid.astype('u1').tobytes()).hexdigest()
         # Canonical decoded-power hash catches duplicates stored with different TIFF compression.
         canonical = np.nan_to_num(patch.power, nan=0).astype("<f4").tobytes()
         content_hash = hashlib.sha256(str(patch.power.shape).encode() + canonical + patch.input_valid.tobytes()).hexdigest()
         row = dict(pair, image_sha256=sha256_file(pair["image_path"]),
                    mask_sha256=sha256_file(pair["mask_path"]), image_content_sha256=content_hash,
+                   image_source_content_sha256=source_hash,
+                   image_source_content_hash_domain=source_domain,
                    height=image.height, width=image.width, crs=str(image.crs or ""),
                    transform=list(image.transform), mask_transform=list(mask.transform),
                    max_alignment_error_pixels=alignment_error, bounds=list(image.bounds) if image.crs else "",
@@ -232,7 +259,7 @@ def validate_splits(rows, membership):
             cross = membership[a["patch_id"]] != membership[b["patch_id"]]
             if not cross:
                 continue
-            for key in ("image_sha256", "image_content_sha256"):
+            for key in ("image_sha256", "image_content_sha256", "image_source_content_sha256"):
                 if a.get(key) and a.get(key) == b.get(key):
                     raise ValueError("cross-split duplicate image")
             for key in ("spatial_group", "source_patch_id"):
