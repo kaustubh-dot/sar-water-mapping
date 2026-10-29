@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "real_data": {
+    "status": "supplied_first100_manual_subset_calibrated",
+    "split_frozen": true,
+    "calibration_frozen": true,
+    "selected_channel": "VH",
+    "selected_threshold_strategy": "shared_fixed_db",
+    "selected_fixed_threshold_db": -20,
+    "selected_filter_parameters": {
+      "raw": {},
+      "median": {
+        "window": 5
+      },
+      "lee": {
+        "window": 5
+      },
+      "log_bilateral": {
+        "window": 5,
+        "spatial_sigma": 2.0,
+        "color_sigma_db": 3.0
+      }
+    },
+    "effective_looks_by_band": {
+      "VV": 4.6020301257391925,
+      "VH": 2.582041888130562
+    },
+    "source": "supplied-first100",
+    "organizer_subset": false,
+    "pair_count": 100,
+    "selection_definition": "first 100 ordered rows of upstream manual training CSV; user supplied recipe",
+    "selection_authority": "User says this snippet was supplied when asking about the 100 patches; sender authority not independently authenticated.",
+    "upstream_split_counts": {
+      "train": 100
+    },
+    "split_seed": 42,
+    "split_policy": "event_id",
+    "split_counts": {
+      "test": 31,
+      "validation": 40,
+      "train": 29
+    },
+    "split_proportions": {
+      "test": 0.31,
+      "validation": 0.4,
+      "train": 0.29
+    },
+    "events_by_split": {
+      "train": [
+        "Mekong",
+        "Nigeria",
+        "Pakistan"
+      ],
+      "validation": [
+        "India"
+      ],
+      "test": [
+        "Ghana"
+      ]
+    },
+    "previous_training_exposure_count": 22,
+    "previous_training_exposure_ids": [
+      "Ghana_103272",
+      "Ghana_128663",
+      "Ghana_168875",
+      "Ghana_187318",
+      "Ghana_24858",
+      "Ghana_26376",
+      "Ghana_264787",
+      "Ghana_97516",
+      "India_103447",
+      "India_179238",
+      "India_265762",
+      "India_56450",
+      "India_59460",
+      "India_664410",
+      "India_698338",
+      "India_774689",
+      "India_804466",
+      "Mekong_1439641",
+      "Mekong_596495",
+      "Nigeria_143329",
+      "Nigeria_439488",
+      "Nigeria_707067"
+    ],
+    "previous_training_exposure_by_split": {
+      "test": 8,
+      "validation": 9,
+      "train": 5
+    },
+    "prior_models_valid_for_unseen_holdout_claim": false,
+    "provenance_limitation": "Internal event groups use 29/40/31 patches, not official upstream test membership. 22 supplied IDs were previously used in project training, including 8 current test IDs; existing development checkpoints cannot support an unseen-input claim. Recipe sender authority is unverified.",
+    "manifest_path": "../data/supplied-v1/audit-v1/manifest.csv",
+    "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+    "splits_path": "../data/supplied-v1/audit-v1/splits.csv",
+    "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+    "source_artifacts": {
+      "recipe": {
+        "path": "../reports/supplied_subset_recipe.json",
+        "sha256": "9787e73036c406aeaa1dba2bb9b69acfffa7e2a602529d39fc9c95cf34e36214"
+      },
+      "supplied_selection": {
+        "path": "../reports/supplied_subset_selection.csv",
+        "sha256": "9c4204b432254130a7dc7cc8e08705962b3a6eeab03824ea8fe76f9f8070b7b2"
+      },
+      "source_csv": {
+        "path": "../data/supplied-v1/flood_train_data.csv",
+        "sha256": "57be4dc440bf8a526effa77e06d4b8cb7a8484589c0bffa201d8e0f49e994beb"
+      },
+      "acquired_supplied_selection": {
+        "path": "../data/supplied-v1/supplied_subset_selection.csv",
+        "sha256": "9c4204b432254130a7dc7cc8e08705962b3a6eeab03824ea8fe76f9f8070b7b2"
+      },
+      "acquisition_splits": {
+        "path": "../data/supplied-v1/splits.csv",
+        "sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532"
+      },
+      "split_freeze": {
+        "path": "../data/supplied-v1/split_freeze.json",
+        "sha256": "07a49d6a76beb50e1725bf1ce18a975d3196a70bba7bcfeef9dda823c5ef9d11"
+      },
+      "acquisition_selection": {
+        "path": "../data/supplied-v1/selection.json",
+        "sha256": "8cade23f9cbce0bb116ef3827d8cdffc35ab8ddc536f638ffb9372c85b2b07f0"
+      },
+      "download": {
+        "path": "../data/supplied-v1/download.json",
+        "sha256": "551d3b4240e0624debb1f097f72dac8f03a283c592839c837ec7664cea2a2c8b"
+      },
+      "inventory": {
+        "path": "../data/supplied-v1/inventory.csv",
+        "sha256": "88e985560716774bc6a27e7daf82c0f11a030a2dd71de136d438111dcbd18cbb"
+      }
+    },
+    "source_config_path": "../reports/supplied_source-v1.json",
+    "source_config_sha256": "7c121d63328d90c1850b419647d6964131a6138d468e686c02d6ba1c5d93fbbe",
+    "training_roi_path": "../reports/supplied_training_rois-v1.csv",
+    "training_roi_sha256": "06250010ee4dcc6cd43a9ff97c5ff4644c55f85b990664ea76e0fb7459abfad0",
+    "looks_artifact_path": "../reports/supplied_calibration-v1/training_looks.json",
+    "looks_artifact_sha256": "97179626997d624aa1026320d950098af91f74a8e24abbfcd85e86b29ef1dac2",
+    "fallback_thresholds_db": {
+      "VV": -14,
+      "VH": -22
+    },
+    "fallback_calibration": "best pooled raw validation fixed-grid water IoU per band; ties retain first threshold in locked grid",
+    "selected_filter": "median",
+    "calibration_frozen_utc": "2026-10-29T07:15:11.026218+00:00"
+  },
+  "primary_cleanup": false,
+  "methods": {
+    "raw": {},
+    "median": {
+      "window_candidates": [
+        3,
+        5
+      ],
+      "domain": "linear_power"
+    },
+    "lee": {
+      "window_candidates": [
+        5,
+        7
+      ],
+      "variant": "multiplicative_local_lmmse",
+      "looks_source": "training_homogeneous_rois",
+      "domain": "linear_power"
+    },
+    "log_bilateral": {
+      "window": 5,
+      "spatial_sigma": 2,
+      "color_sigma_db_candidates": [
+        1.5,
+        3.0
+      ]
+    },
+    "midal_substitution": {
+      "status": "not_admitted_not_piloted",
+      "replaces": "log_bilateral",
+      "iterations": 6,
+      "setup_cap_minutes": 15,
+      "all_invocations_cap_minutes_with_50_percent_margin": 3,
+      "reason": "optional substitution declined to preserve locked dependency-light bilateral workflow and total runtime budget; no measured MIDAL compatibility or speed claim"
+    }
+  },
+  "segmentation_candidates": {
+    "channels": [
+      "VV",
+      "VH"
+    ],
+    "strategies": [
+      "per_patch_otsu_db",
+      "shared_fixed_db"
+    ],
+    "fixed_threshold_db": {
+      "VV": [
+        -20,
+        -18,
+        -16,
+        -14,
+        -12,
+        -10
+      ],
+      "VH": [
+        -28,
+        -26,
+        -24,
+        -22,
+        -20,
+        -18
+      ]
+    },
+    "selection": "pooled_validation_water_iou_per_filter_then_mean_across_four_families",
+    "tie_break": "lower_measured_validation_compute_time",
+    "fixed_threshold_shared_numeric_across_denoisers": true
+  },
+  "cleanup_ablation": {
+    "status": "validation_complete_separate_from_primary",
+    "min_water_component_pixels": 16,
+    "connectivity": 8,
+    "fill_holes": false
+  },
+  "synthetic": {
+    "source": "simulated_backscatter",
+    "identity_split_frozen_before_corruption": true,
+    "size": [
+      256,
+      256
+    ],
+    "reference_bounds": [
+      0.01,
+      1.0
+    ],
+    "split_ids": {
+      "train": [
+        "phantom_00",
+        "phantom_01",
+        "phantom_02",
+        "phantom_03",
+        "phantom_04",
+        "phantom_05"
+      ],
+      "validation": [
+        "phantom_06",
+        "phantom_07",
+        "phantom_08"
+      ],
+      "test": [
+        "phantom_09",
+        "phantom_10",
+        "phantom_11"
+      ]
+    },
+    "looks": [
+      1,
+      4
+    ],
+    "noise_seeds": [
+      42,
+      43,
+      44
+    ],
+    "noise": "Gamma(shape=L,scale=1/L)",
+    "shared_corruptions_across_methods": true,
+    "clip_observations": false,
+    "psnr_data_range": 1.0,
+    "method_selection_status": "pending_validation_only"
+  }
+}

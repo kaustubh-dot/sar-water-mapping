@@ -1,0 +1,129 @@
+{
+  "looks": [
+    4.6020301257391925,
+    2.582041888130562
+  ],
+  "rois": [
+    {
+      "patch_id": "Nigeria_143329",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        80,
+        112,
+        300,
+        332
+      ],
+      "value": 5.4229400123643225,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Nigeria_143329",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        80,
+        112,
+        300,
+        332
+      ],
+      "value": 4.125052063412264,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Nigeria_143329",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        200,
+        232,
+        200,
+        232
+      ],
+      "value": 4.5871408523288,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Nigeria_143329",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        200,
+        232,
+        200,
+        232
+      ],
+      "value": 3.916575150954574,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Mekong_1439641",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        100,
+        132,
+        220,
+        252
+      ],
+      "value": 4.616919399149586,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Mekong_1439641",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        100,
+        132,
+        220,
+        252
+      ],
+      "value": 1.2475086253065493,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Mekong_1439641",
+      "split": "train",
+      "band": "VV",
+      "coordinates": [
+        140,
+        172,
+        320,
+        352
+      ],
+      "value": 3.8368792108656598,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Mekong_1439641",
+      "split": "train",
+      "band": "VH",
+      "coordinates": [
+        140,
+        172,
+        320,
+        352
+      ],
+      "value": 1.221959418767198,
+      "status": "ok",
+      "n": 1024
+    }
+  ],
+  "usable_roi_counts": [
+    4,
+    4
+  ],
+  "interpretation": "effective looks estimate; not independent physical looks",
+  "training_roi_sha256": "06250010ee4dcc6cd43a9ff97c5ff4644c55f85b990664ea76e0fb7459abfad0",
+  "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+  "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+  "frozen_before_validation_access_utc": "2026-10-29T07:10:54.618285+00:00"
+}

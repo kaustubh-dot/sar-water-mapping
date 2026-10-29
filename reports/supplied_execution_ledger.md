@@ -28,7 +28,7 @@ is disclosed; this is not a claim of pristine blind evaluation.
 - [x] Independent Sol xhigh acquisition/data audit acceptance.
 - [x] Source-aware calibration + supplied notebook profile implementation;
   preserve development profile and exactly one notebook; independent review.
-- [ ] Inspect raw training and test-only ENL regions, freeze training looks and
+- [x] Inspect raw training and test-only ENL regions, freeze training looks and
   validation choices under unchanged method grids; independent review.
 - [ ] Remote GPU resource preflight, dedicated environment, seed42 paired
   scratch training under one-hour cap; completed-pair independent review.
@@ -40,6 +40,39 @@ is disclosed; this is not a claim of pristine blind evaluation.
 Uncached Colab, its under-30-minute acceptance and final submission tag are
 explicitly deferred. A local/remote cached smoke cannot close them.
 
-Phase1 accepted:100pairs/200objects169393092bytes,44verifiedcachedcopies156downloads,148.656s acquisition. All512squareVV/VHmanuallabels; frozen29/40/31 preserved. No cross-partition overlap/touch;20within-partitiontouchingpairs. Scoredpixels train6769828,val8788754,test4940307; Ghana26376testno-score andGhana24858test484pixels retained. FourtrainROIs andfivetestlandROIs independentlyaccepted, no waterENLregionpromised. Traininglooks nextfreezeexpectedVV4.60203,VH2.58204. Sourceprofileimplementationpausedbrieflybyusageerror; usercontinuedandusageavailable. Transferapprovalreviewfailurewasaccountusage,notasafetydetermination; retrynowauthorizedsameGPUhost.
+Phase 1 accepted: 100 pairs / 200 objects, 169,393,092 bytes, 44 verified
+cached copies and 156 downloads; acquisition took 148.656 seconds. All patches
+are 512 square VV/VH with manual labels. Frozen membership is 29/40/31. There
+is no cross-partition overlap or touching; 20 pairs touch within partitions.
+Scored pixels: training 6,769,828, validation 8,788,754, test 4,940,307.
+Ghana_26376 has no scored pixels; Ghana_24858 has 484. Both are retained.
+Four training ROIs and five test land ROIs were independently accepted; no
+water-region ENL is promised. A transient account-usage approval error paused
+the remote transfer; the same authorized transfer later completed successfully.
 
-Sourceprofilegateaccepted: metadata-onlysourceconfigSHA7c121d..., strictsource/digest/membership/exposurechain checks, pathrebasing andendguard; newnotebookdefaults supplied-first100 witholddevelopment preserved. Independent30tests passed58.02s and TIFF-open sentry confirmedmetadata-only APIs; rootfullsuite130passed125.65s. No numericalgrids/filter/protocol changes. Next freezecommit andrun newvalidationcalibration only.
+Source profile gate accepted at commit 72ef16a. The metadata-only source config
+SHA-256 is `7c121d63328d90c1850b419647d6964131a6138d468e686c02d6ba1c5d93fbbe`.
+It verifies the source, digest, membership and exposure chain with path rebasing
+and an end-of-calibration guard. The single notebook now defaults to
+`supplied-first100`, preserving the development mode. Independent review passed
+30 tests in 58.02 seconds; a TIFF-open sentry confirmed metadata-only APIs.
+The integrated suite passed 130 tests in 125.65 seconds. Numerical grids,
+filter implementations and the evaluation protocol are unchanged.
+
+Actual calibration started on the supplied data at source 72ef16a. Training
+looks were frozen at 07:10:54 UTC before validation access: VV 4.6020301257391925,
+VH 2.582041888130562, four usable ROIs per band. The independent reviewer
+reproduced all eight ROI records. Final validation choices and acceptance
+were frozen in 260.463 seconds: 98 candidates, shared VH below -20 dB,
+Median 5, Lee 5 and log-bilateral color sigma 3 dB. Median 5 is the selected
+neural input. Config SHA-256:
+`a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b`.
+Independent Sol xhigh review accepted all 98 saved rows, directly reproduced
+the four selected validation rows and separate cleanup summaries on all 40
+India patches, and confirmed zero test access. See supplied_calibration_review.md.
+
+Remote preflight: RTX 4000 Ada, 20,475 MiB total and 1,166 MiB used, 14% GPU
+utilization; the only listed compute process was the desktop service (162 MiB).
+The project disk had 433 GB free. The dedicated environment imports the current
+project, PyTorch 2.15.0+cu132 reports CUDA available, and the supplied metadata
+chain verifies there with the exact 29/40/31 split. No new training has started.
