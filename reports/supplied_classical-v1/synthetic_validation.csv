@@ -1,0 +1,127 @@
+data_range,looks,method,mse,noise_seed,parameters,phantom_id,psnr_db,seconds,source,split,status
+1.0,1,raw,0.3767064923055974,42,{},phantom_06,4.239968949329181,0.00434583704918623,simulated_backscatter,validation,ok
+1.0,1,raw,0.36972536011852497,43,{},phantom_06,4.3212075937603975,0.0042101009748876095,simulated_backscatter,validation,ok
+1.0,1,raw,0.3646975135113615,44,{},phantom_06,4.380671976732663,0.004200523952022195,simulated_backscatter,validation,ok
+1.0,1,raw,0.39036531014698317,42,{},phantom_07,4.085287829139702,0.00420091999694705,simulated_backscatter,validation,ok
+1.0,1,raw,0.3850980409661575,43,{},phantom_07,4.144286906729108,0.004246260970830917,simulated_backscatter,validation,ok
+1.0,1,raw,0.3793812980545207,44,{},phantom_07,4.209240818604128,0.004188206046819687,simulated_backscatter,validation,ok
+1.0,1,raw,0.40484105236895446,42,{},phantom_08,3.927154548804074,0.004218156915158033,simulated_backscatter,validation,ok
+1.0,1,raw,0.39990928429968775,43,{},phantom_08,3.9803851316250864,0.004176091868430376,simulated_backscatter,validation,ok
+1.0,1,raw,0.3943964973641389,44,{},phantom_08,4.040669506836188,0.004186321049928665,simulated_backscatter,validation,ok
+1.0,1,median,0.06923636675092842,42,"{""window"": 3}",phantom_06,11.596657302452776,0.014659433159977198,simulated_backscatter,validation,ok
+1.0,1,median,0.0683077390693402,43,"{""window"": 3}",phantom_06,11.655300892217683,0.014577079098671675,simulated_backscatter,validation,ok
+1.0,1,median,0.06912279645121608,44,"{""window"": 3}",phantom_06,11.60378700234531,0.01456099096685648,simulated_backscatter,validation,ok
+1.0,1,median,0.07195883394986724,42,"{""window"": 3}",phantom_07,11.429158827534081,0.014558568131178617,simulated_backscatter,validation,ok
+1.0,1,median,0.07131534516792865,43,"{""window"": 3}",phantom_07,11.468170114565305,0.01462390087544918,simulated_backscatter,validation,ok
+1.0,1,median,0.0721082130095774,44,"{""window"": 3}",phantom_07,11.420152670198014,0.014656272018328309,simulated_backscatter,validation,ok
+1.0,1,median,0.07457852962131234,42,"{""window"": 3}",phantom_08,11.273861833727455,0.014613324077799916,simulated_backscatter,validation,ok
+1.0,1,median,0.07409348525034191,43,"{""window"": 3}",phantom_08,11.302199761530517,0.014623876893892884,simulated_backscatter,validation,ok
+1.0,1,median,0.07480766722752777,44,"{""window"": 3}",phantom_08,11.260538879114828,0.014671741984784603,simulated_backscatter,validation,ok
+1.0,1,median,0.04979583100347566,42,"{""window"": 5}",phantom_06,13.02807015633368,0.03595425793901086,simulated_backscatter,validation,ok
+1.0,1,median,0.04853427408993772,43,"{""window"": 5}",phantom_06,13.139514615810564,0.03614722890779376,simulated_backscatter,validation,ok
+1.0,1,median,0.049881013447316186,44,"{""window"": 5}",phantom_06,13.020647314143066,0.03586881002411246,simulated_backscatter,validation,ok
+1.0,1,median,0.05171830179638821,42,"{""window"": 5}",phantom_07,12.863557438953963,0.03581820288673043,simulated_backscatter,validation,ok
+1.0,1,median,0.0507944093135467,43,"{""window"": 5}",phantom_07,12.941840857060603,0.036086034029722214,simulated_backscatter,validation,ok
+1.0,1,median,0.05209316854692443,44,"{""window"": 5}",phantom_07,12.832192259692178,0.03606790094636381,simulated_backscatter,validation,ok
+1.0,1,median,0.05359950273782933,42,"{""window"": 5}",phantom_08,12.708392393971282,0.035784323932603,simulated_backscatter,validation,ok
+1.0,1,median,0.05295198154128167,43,"{""window"": 5}",phantom_08,12.761177833120742,0.036026027984917164,simulated_backscatter,validation,ok
+1.0,1,median,0.054085038335185825,44,"{""window"": 5}",phantom_08,12.669228581306232,0.036021312000229955,simulated_backscatter,validation,ok
+1.0,1,lee,0.020783359320297345,42,"{""window"": 5}",phantom_06,16.822842538744027,0.0063907860312610865,simulated_backscatter,validation,ok
+1.0,1,lee,0.020616447648615994,43,"{""window"": 5}",phantom_06,16.857861644409944,0.006181137869134545,simulated_backscatter,validation,ok
+1.0,1,lee,0.020533481617794933,44,"{""window"": 5}",phantom_06,16.875374062456157,0.0062012269627302885,simulated_backscatter,validation,ok
+1.0,1,lee,0.021200764493358396,42,"{""window"": 5}",phantom_07,16.736484782570624,0.0061235500033944845,simulated_backscatter,validation,ok
+1.0,1,lee,0.021230765143945247,43,"{""window"": 5}",phantom_07,16.73034353841288,0.00614277902059257,simulated_backscatter,validation,ok
+1.0,1,lee,0.020995982296384386,44,"{""window"": 5}",phantom_07,16.77863802096782,0.00610809400677681,simulated_backscatter,validation,ok
+1.0,1,lee,0.022141433041743742,42,"{""window"": 5}",phantom_08,16.54794274063398,0.006187374005094171,simulated_backscatter,validation,ok
+1.0,1,lee,0.022211143959017292,43,"{""window"": 5}",phantom_08,16.53429073045647,0.006138740107417107,simulated_backscatter,validation,ok
+1.0,1,lee,0.021827165131240455,44,"{""window"": 5}",phantom_08,16.610026659311057,0.00638430705294013,simulated_backscatter,validation,ok
+1.0,1,lee,0.013094724748510093,42,"{""window"": 7}",phantom_06,18.829036260252753,0.006127262953668833,simulated_backscatter,validation,ok
+1.0,1,lee,0.012755713245276417,43,"{""window"": 7}",phantom_06,18.94295252473443,0.006222673924639821,simulated_backscatter,validation,ok
+1.0,1,lee,0.012907701257058292,44,"{""window"": 7}",phantom_06,18.891510947023203,0.006160445045679808,simulated_backscatter,validation,ok
+1.0,1,lee,0.013325292295754826,42,"{""window"": 7}",phantom_07,18.75323255769223,0.006138985976576805,simulated_backscatter,validation,ok
+1.0,1,lee,0.01316947986176257,43,"{""window"": 7}",phantom_07,18.804313774776386,0.006167084909975529,simulated_backscatter,validation,ok
+1.0,1,lee,0.013142844788449666,44,"{""window"": 7}",phantom_07,18.8131062090973,0.006165229016914964,simulated_backscatter,validation,ok
+1.0,1,lee,0.013836893047126828,42,"{""window"": 7}",phantom_08,18.589614159462695,0.00612041587010026,simulated_backscatter,validation,ok
+1.0,1,lee,0.013682194408754386,43,"{""window"": 7}",phantom_08,18.638442430264064,0.006199297029525042,simulated_backscatter,validation,ok
+1.0,1,lee,0.013576679238081054,44,"{""window"": 7}",phantom_08,18.6720644249568,0.006191109074279666,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.2997567396269621,42,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,5.232310435922669,0.017252879915758967,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.2928636493010142,43,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,5.333345302907137,0.017498389119282365,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.2890528004344015,44,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,5.390228186870116,0.01742940302938223,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.31068371020366914,42,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,5.076815171155495,0.017525390023365617,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.3051522158715021,43,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,5.154834720541949,0.017451335908845067,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.30075850573104573,44,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,5.217820815614429,0.01755799097009003,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.32210792628414886,42,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,4.919985881293502,0.017336508026346564,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.3169385419706532,43,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,4.990249443143663,0.017461730865761638,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.31269323970571633,44,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,5.048815079167735,0.017353154020383954,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.16360673841266266,42,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,7.861988131636572,0.017174665117636323,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.16049383974402523,43,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,7.945416325209206,0.017636214150115848,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.15831158548877397,44,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,8.004873016270114,0.017412830842658877,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.16955552361585158,42,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,7.706880576298646,0.01750426203943789,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.16730909155428375,43,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,7.7648045889069985,0.017376394011080265,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.1646705492828418,44,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,7.833840658431731,0.017591402865946293,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.17607317923992166,42,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,7.543067939204012,0.01768468297086656,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.1740249632600597,43,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,7.593884492548914,0.017895044991746545,simulated_backscatter,validation,ok
+1.0,1,log_bilateral,0.17102320625348794,44,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,7.669449559000354,0.01853441819548607,simulated_backscatter,validation,ok
+1.0,4,raw,0.09415544727238578,42,{},phantom_06,10.261545492330411,0.004326669964939356,simulated_backscatter,validation,ok
+1.0,4,raw,0.09176006364837988,43,{},phantom_06,10.373462938629942,0.004230652004480362,simulated_backscatter,validation,ok
+1.0,4,raw,0.09440261392131749,44,{},phantom_06,10.250159803217649,0.004252368118613958,simulated_backscatter,validation,ok
+1.0,4,raw,0.09797129719621654,42,{},phantom_07,10.089011416047908,0.004210297018289566,simulated_backscatter,validation,ok
+1.0,4,raw,0.09562383842516092,43,{},phantom_07,10.194338273270255,0.0042046960443258286,simulated_backscatter,validation,ok
+1.0,4,raw,0.09811801540764667,44,{},phantom_07,10.08251244670956,0.004213131032884121,simulated_backscatter,validation,ok
+1.0,4,raw,0.10193336008928616,42,{},phantom_08,9.916836596476664,0.004218369023874402,simulated_backscatter,validation,ok
+1.0,4,raw,0.09927080293569535,43,{},phantom_08,10.031784653862086,0.004256231943145394,simulated_backscatter,validation,ok
+1.0,4,raw,0.10185048368416555,44,{},phantom_08,9.920369042105495,0.004214229993522167,simulated_backscatter,validation,ok
+1.0,4,median,0.01731824193938168,42,"{""window"": 3}",phantom_06,17.614961974675303,0.014797476818785071,simulated_backscatter,validation,ok
+1.0,4,median,0.01687791097866672,43,"{""window"": 3}",phantom_06,17.72681308100271,0.01468848087824881,simulated_backscatter,validation,ok
+1.0,4,median,0.016784837612254938,44,"{""window"": 3}",phantom_06,17.75082856050926,0.014508489985018969,simulated_backscatter,validation,ok
+1.0,4,median,0.018024245047002223,42,"{""window"": 3}",phantom_07,17.441429168325257,0.014676329912617803,simulated_backscatter,validation,ok
+1.0,4,median,0.017528373672986604,43,"{""window"": 3}",phantom_07,17.562583769816786,0.014705906854942441,simulated_backscatter,validation,ok
+1.0,4,median,0.017551004711245495,44,"{""window"": 3}",phantom_07,17.556980172004145,0.014488469110801816,simulated_backscatter,validation,ok
+1.0,4,median,0.01869424341745677,42,"{""window"": 3}",phantom_08,17.282921066676955,0.014533004024997354,simulated_backscatter,validation,ok
+1.0,4,median,0.018180048385687764,43,"{""window"": 3}",phantom_08,17.40404965249957,0.014550006948411465,simulated_backscatter,validation,ok
+1.0,4,median,0.018150943269011618,44,"{""window"": 3}",phantom_08,17.411008006068226,0.014605605974793434,simulated_backscatter,validation,ok
+1.0,4,median,0.010039473373061006,42,"{""window"": 5}",phantom_06,19.982890677858318,0.0363459421787411,simulated_backscatter,validation,ok
+1.0,4,median,0.010108766054257357,43,"{""window"": 5}",phantom_06,19.953018541551156,0.035905868047848344,simulated_backscatter,validation,ok
+1.0,4,median,0.009947842873087474,44,"{""window"": 5}",phantom_06,20.022710830613285,0.03592452988959849,simulated_backscatter,validation,ok
+1.0,4,median,0.009762937263809815,42,"{""window"": 5}",phantom_07,20.104195014365878,0.036146007012575865,simulated_backscatter,validation,ok
+1.0,4,median,0.009667407516463174,43,"{""window"": 5}",phantom_07,20.146899739258902,0.03588028694503009,simulated_backscatter,validation,ok
+1.0,4,median,0.009620432849505568,44,"{""window"": 5}",phantom_07,20.168053874296778,0.0359547829721123,simulated_backscatter,validation,ok
+1.0,4,median,0.010089644226181981,42,"{""window"": 5}",phantom_08,19.961241472744927,0.036170144099742174,simulated_backscatter,validation,ok
+1.0,4,median,0.010066610891624899,43,"{""window"": 5}",phantom_08,19.971167180068797,0.03587911790236831,simulated_backscatter,validation,ok
+1.0,4,median,0.010032512080680896,44,"{""window"": 5}",phantom_08,19.98590308636746,0.03618238307535648,simulated_backscatter,validation,ok
+1.0,4,lee,0.007035368672432516,42,"{""window"": 5}",phantom_06,21.527131394221513,0.00638959719799459,simulated_backscatter,validation,ok
+1.0,4,lee,0.006464905399654935,43,"{""window"": 5}",phantom_06,21.894378257268876,0.006291921017691493,simulated_backscatter,validation,ok
+1.0,4,lee,0.006836924898517239,44,"{""window"": 5}",phantom_06,21.651391906628817,0.006180565105751157,simulated_backscatter,validation,ok
+1.0,4,lee,0.007234726475616884,42,"{""window"": 5}",phantom_07,21.405778836708294,0.006187604041770101,simulated_backscatter,validation,ok
+1.0,4,lee,0.006639543229505669,43,"{""window"": 5}",phantom_07,21.77861797097134,0.006249538855627179,simulated_backscatter,validation,ok
+1.0,4,lee,0.0070511071880944975,44,"{""window"": 5}",phantom_07,21.51742683302799,0.006236569955945015,simulated_backscatter,validation,ok
+1.0,4,lee,0.0075112128349581996,42,"{""window"": 5}",phantom_08,21.242899318370846,0.006137114018201828,simulated_backscatter,validation,ok
+1.0,4,lee,0.0069059788501084325,43,"{""window"": 5}",phantom_08,21.607747560322153,0.0061762051191180944,simulated_backscatter,validation,ok
+1.0,4,lee,0.007304814923283023,44,"{""window"": 5}",phantom_08,21.363907829897993,0.006138279102742672,simulated_backscatter,validation,ok
+1.0,4,lee,0.004969584045301378,42,"{""window"": 7}",phantom_06,23.036799602385397,0.006134958937764168,simulated_backscatter,validation,ok
+1.0,4,lee,0.004579212637800848,43,"{""window"": 7}",phantom_06,23.39209189344235,0.006156145129352808,simulated_backscatter,validation,ok
+1.0,4,lee,0.004870935456124756,44,"{""window"": 7}",phantom_06,23.123876251468864,0.006271426100283861,simulated_backscatter,validation,ok
+1.0,4,lee,0.005111662513216626,42,"{""window"": 7}",phantom_07,22.914378272843337,0.006247629877179861,simulated_backscatter,validation,ok
+1.0,4,lee,0.004662913301872877,43,"{""window"": 7}",phantom_07,23.313426593617717,0.006424273131415248,simulated_backscatter,validation,ok
+1.0,4,lee,0.00500446448791842,44,"{""window"": 7}",phantom_07,23.006423881916295,0.006153718801215291,simulated_backscatter,validation,ok
+1.0,4,lee,0.005286270781061062,42,"{""window"": 7}",phantom_08,22.768505945700547,0.006162849022075534,simulated_backscatter,validation,ok
+1.0,4,lee,0.004854980232208138,43,"{""window"": 7}",phantom_08,23.138125340485413,0.0061730078887194395,simulated_backscatter,validation,ok
+1.0,4,lee,0.005171707159638526,44,"{""window"": 7}",phantom_08,22.86366074385932,0.006194778019562364,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.0514898560099963,42,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,12.882783226639576,0.017128709005191922,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.050081877174217415,43,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,13.00319401220841,0.01748801488429308,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.05133449149618769,44,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,12.895907356092485,0.01768238702788949,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.05357252679725615,42,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,12.710578692473478,0.01755475508980453,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.05217142832069782,43,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,12.82567273239172,0.01739329402334988,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.05337542400314846,44,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,12.726586620091439,0.017469289945438504,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.055713770011707776,42,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,12.540374529229965,0.01731957891024649,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.05416069420379075,43,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,12.663157777249898,0.01746794185601175,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.05538428260518838,44,"{""color_sigma_db"": 1.5, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,12.56613465349373,0.017346008913591504,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.02049296970082122,42,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,16.88395102056296,0.017008258029818535,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.019956310663223814,43,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,16.999197439454402,0.017475116066634655,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.02029500928581746,44,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_06,16.926107456387204,0.01730558997951448,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.02132090464390899,42,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,16.711943721819253,0.017459437949582934,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.020776690916383216,43,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,16.824236209363463,0.017417204100638628,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.021128550439884597,44,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_07,16.751302974367547,0.017514792969450355,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.022132750505453776,42,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,16.549646115985436,0.017299994127824903,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.02155527811244317,43,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,16.664463693807157,0.01751727913506329,simulated_backscatter,validation,ok
+1.0,4,log_bilateral,0.021922626713380508,44,"{""color_sigma_db"": 3.0, ""spatial_sigma"": 2.0, ""window"": 5}",phantom_08,16.59107411009655,0.01748718600720167,simulated_backscatter,validation,ok

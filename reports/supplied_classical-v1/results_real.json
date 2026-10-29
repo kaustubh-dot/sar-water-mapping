@@ -1,0 +1,6572 @@
+{
+  "primary": [
+    {
+      "method": "raw",
+      "parameters": {},
+      "cleanup": false,
+      "channel": "VH",
+      "rule": "fixed",
+      "threshold": -20,
+      "seconds": 0.6601350193377584,
+      "timing_scope": "filter_segmentation_and_scoring_only",
+      "diagnostics_seconds": 0.13652866543270648,
+      "figure_seconds": 10.970436337869614,
+      "summary": {
+        "counts": {
+          "tp": 98560,
+          "fp": 210666,
+          "fn": 46331,
+          "tn": 4584750
+        },
+        "pooled": {
+          "iou": 0.27719887387957487,
+          "f1": 0.4340731573581258,
+          "precision": 0.31873128391532407,
+          "recall": 0.6802354873663651
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.20956186277211353,
+            "f1": 0.34650871397653493,
+            "precision": 0.21063564603240548,
+            "recall": 0.9762516046213093
+          },
+          "Ghana_1089161": {
+            "iou": 0.24814609850581074,
+            "f1": 0.3976234814223641,
+            "precision": 0.26786140979689366,
+            "recall": 0.7712418300653595
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.01652892561983471,
+            "f1": 0.032520325203252036,
+            "precision": 0.024691358024691357,
+            "recall": 0.047619047619047616
+          },
+          "Ghana_141910": {
+            "iou": 0.3646829005422519,
+            "f1": 0.5344580787190144,
+            "precision": 0.410318013702783,
+            "recall": 0.7662986553432414
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.06029342801634622,
+            "f1": 0.1137297024072787,
+            "precision": 0.07318858258111735,
+            "recall": 0.254957507082153
+          },
+          "Ghana_154838": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5333932211588295,
+            "f1": 0.6957031161983732,
+            "precision": 0.8706784727313744,
+            "recall": 0.5792870544090056
+          },
+          "Ghana_24858": {
+            "iou": 0.07024793388429752,
+            "f1": 0.13127413127413126,
+            "precision": 1.0,
+            "recall": 0.07024793388429752
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.4264396529056008,
+            "f1": 0.5979077376837643,
+            "precision": 0.5182551729647679,
+            "recall": 0.7064909605750381
+          },
+          "Ghana_45911": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.28067039106145253,
+            "f1": 0.43831792008375503,
+            "precision": 0.3275667217247675,
+            "recall": 0.6622144112478031
+          },
+          "Ghana_61925": {
+            "iou": 0.15171650055370986,
+            "f1": 0.26346153846153847,
+            "precision": 0.15616984895981761,
+            "recall": 0.8417818740399385
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.001388888888888889,
+            "f1": 0.0027739251040221915,
+            "precision": 0.0013895321908290875,
+            "recall": 0.75
+          },
+          "Ghana_83200": {
+            "iou": 0.060795596697523144,
+            "f1": 0.11462264150943396,
+            "precision": 0.06555165902346911,
+            "recall": 0.45590994371482174
+          },
+          "Ghana_887131": {
+            "iou": 0.3177076455829922,
+            "f1": 0.4822126465577713,
+            "precision": 0.48689669128807045,
+            "recall": 0.47761786600496275
+          },
+          "Ghana_953791": {
+            "iou": 0.06457554865533394,
+            "f1": 0.12131698635554676,
+            "precision": 0.0702910174152154,
+            "recall": 0.44264069264069267
+          },
+          "Ghana_97516": {
+            "iou": 0.03705077917947631,
+            "f1": 0.07145412726808076,
+            "precision": 0.037192721081196124,
+            "recall": 0.9066147859922179
+          }
+        },
+        "macro": {
+          "iou": 0.18954662493496413,
+          "f1": 0.2895923381483241,
+          "precision": 0.30137912316782656,
+          "recall": 0.5806116111493259
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 1,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 39098,
+          "false_positive_rate": 0.018916388671841925,
+          "fraction_with_false_positives": 1.0
+        }
+      }
+    },
+    {
+      "method": "median",
+      "parameters": {
+        "window": 5
+      },
+      "cleanup": false,
+      "channel": "VH",
+      "rule": "fixed",
+      "threshold": -20,
+      "seconds": 4.159085736377165,
+      "timing_scope": "filter_segmentation_and_scoring_only",
+      "diagnostics_seconds": 0.13689253572374582,
+      "figure_seconds": 11.841020041611046,
+      "summary": {
+        "counts": {
+          "tp": 98436,
+          "fp": 93164,
+          "fn": 46455,
+          "tn": 4702252
+        },
+        "pooled": {
+          "iou": 0.4135010816828044,
+          "f1": 0.5850735978079652,
+          "precision": 0.5137578288100209,
+          "recall": 0.6793796716152142
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.45611940298507464,
+            "f1": 0.6264862648626486,
+            "precision": 0.4602409638554217,
+            "recall": 0.9807445442875481
+          },
+          "Ghana_1089161": {
+            "iou": 0.6889922480620155,
+            "f1": 0.8158619423535891,
+            "precision": 0.8748031496062992,
+            "recall": 0.7643618851049192
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_141910": {
+            "iou": 0.3880529112929353,
+            "f1": 0.5591327364192105,
+            "precision": 0.43066424926751273,
+            "recall": 0.796829440905874
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.07918316315899146,
+            "f1": 0.14674647615369762,
+            "precision": 0.23044269254093389,
+            "recall": 0.10764872521246459
+          },
+          "Ghana_154838": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5286490275100754,
+            "f1": 0.6916552040348464,
+            "precision": 0.8889216263995285,
+            "recall": 0.5660412757973734
+          },
+          "Ghana_24858": {
+            "iou": 0.028925619834710745,
+            "f1": 0.05622489959839357,
+            "precision": 1.0,
+            "recall": 0.028925619834710745
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.6324565186143453,
+            "f1": 0.774852513868099,
+            "precision": 0.8403896351944993,
+            "recall": 0.7187976475713352
+          },
+          "Ghana_45911": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.5698332809059453,
+            "f1": 0.7259793607854924,
+            "precision": 0.8443253320904218,
+            "recall": 0.6367311072056239
+          },
+          "Ghana_61925": {
+            "iou": 0.825563909774436,
+            "f1": 0.9044481054365733,
+            "precision": 0.9751332149200711,
+            "recall": 0.8433179723502304
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_83200": {
+            "iou": 0.2105820105820106,
+            "f1": 0.3479020979020979,
+            "precision": 0.32569558101472995,
+            "recall": 0.37335834896810505
+          },
+          "Ghana_887131": {
+            "iou": 0.33864960366727154,
+            "f1": 0.5059570521509595,
+            "precision": 0.8995433789954338,
+            "recall": 0.35196029776674936
+          },
+          "Ghana_953791": {
+            "iou": 0.1981322102179088,
+            "f1": 0.3307351367874064,
+            "precision": 0.2869265446831079,
+            "recall": 0.3903318903318903
+          },
+          "Ghana_97516": {
+            "iou": 0.12258953168044077,
+            "f1": 0.2184049079754601,
+            "precision": 0.12384762567403027,
+            "recall": 0.9234760051880675
+          }
+        },
+        "macro": {
+          "iou": 0.3378486292190775,
+          "f1": 0.4469591132218983,
+          "precision": 0.5453955996161326,
+          "recall": 0.49883498403499277
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 5,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 1727,
+          "false_positive_rate": 0.0008355568887480436,
+          "fraction_with_false_positives": 0.7333333333333333
+        }
+      }
+    },
+    {
+      "method": "lee",
+      "parameters": {
+        "window": 5
+      },
+      "cleanup": false,
+      "channel": "VH",
+      "rule": "fixed",
+      "threshold": -20,
+      "seconds": 0.973759425804019,
+      "timing_scope": "filter_segmentation_and_scoring_only",
+      "diagnostics_seconds": 0.13501978130079806,
+      "figure_seconds": 11.667508408194408,
+      "summary": {
+        "counts": {
+          "tp": 91209,
+          "fp": 80270,
+          "fn": 53682,
+          "tn": 4715146
+        },
+        "pooled": {
+          "iou": 0.40508347360333274,
+          "f1": 0.5765970224736858,
+          "precision": 0.5318960339166895,
+          "recall": 0.6295007971509617
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.48743556701030927,
+            "f1": 0.6554039419536496,
+            "precision": 0.4946060804184374,
+            "recall": 0.9711168164313222
+          },
+          "Ghana_1089161": {
+            "iou": 0.6939696871976782,
+            "f1": 0.8193413287645155,
+            "precision": 0.9173060528559249,
+            "recall": 0.7402820777433781
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_141910": {
+            "iou": 0.3852316316432013,
+            "f1": 0.5561981445460187,
+            "precision": 0.44033061126753587,
+            "recall": 0.7548195329087048
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.05477827839696467,
+            "f1": 0.10386690647482015,
+            "precision": 0.25163398692810457,
+            "recall": 0.06543909348441926
+          },
+          "Ghana_154838": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.488659793814433,
+            "f1": 0.6565096952908587,
+            "precision": 0.9027978457900959,
+            "recall": 0.515797373358349
+          },
+          "Ghana_24858": {
+            "iou": 0.022727272727272728,
+            "f1": 0.044444444444444446,
+            "precision": 1.0,
+            "recall": 0.022727272727272728
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.6081456493699772,
+            "f1": 0.7563315544313169,
+            "precision": 0.8723404255319149,
+            "recall": 0.6675560879982575
+          },
+          "Ghana_45911": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.49571805006587616,
+            "f1": 0.6628495926007487,
+            "precision": 0.8873820754716981,
+            "recall": 0.5289982425307557
+          },
+          "Ghana_61925": {
+            "iou": 0.7884322678843226,
+            "f1": 0.8817021276595745,
+            "precision": 0.9885496183206107,
+            "recall": 0.7956989247311828
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_83200": {
+            "iou": 0.22376738305941846,
+            "f1": 0.365702479338843,
+            "precision": 0.4068965517241379,
+            "recall": 0.3320825515947467
+          },
+          "Ghana_887131": {
+            "iou": 0.25944042261788297,
+            "f1": 0.41199316451763246,
+            "precision": 0.947481243301179,
+            "recall": 0.2632258064516129
+          },
+          "Ghana_953791": {
+            "iou": 0.21556473829201103,
+            "f1": 0.3546742209631728,
+            "precision": 0.37217598097502974,
+            "recall": 0.33874458874458874
+          },
+          "Ghana_97516": {
+            "iou": 0.16495098039215686,
+            "f1": 0.2831895644855881,
+            "precision": 0.16901054746358612,
+            "recall": 0.8728923476005188
+          }
+        },
+        "macro": {
+          "iou": 0.3259214481647669,
+          "f1": 0.43681381103141226,
+          "precision": 0.5767007346698836,
+          "recall": 0.4579587144203406
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 6,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 1094,
+          "false_positive_rate": 0.0005292989208398145,
+          "fraction_with_false_positives": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "method": "log_bilateral",
+      "parameters": {
+        "window": 5,
+        "spatial_sigma": 2.0,
+        "color_sigma_db": 3.0
+      },
+      "cleanup": false,
+      "channel": "VH",
+      "rule": "fixed",
+      "threshold": -20,
+      "seconds": 2.5770873934961855,
+      "timing_scope": "filter_segmentation_and_scoring_only",
+      "diagnostics_seconds": 0.13592847250401974,
+      "figure_seconds": 11.735634526936337,
+      "summary": {
+        "counts": {
+          "tp": 98170,
+          "fp": 111737,
+          "fn": 46721,
+          "tn": 4683679
+        },
+        "pooled": {
+          "iou": 0.3825381486042053,
+          "f1": 0.5533853065688081,
+          "precision": 0.46768330736945407,
+          "recall": 0.6775438087941971
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.3956329607486353,
+            "f1": 0.56695846526355,
+            "precision": 0.3993702440304382,
+            "recall": 0.9768934531450578
+          },
+          "Ghana_1089161": {
+            "iou": 0.5326452232357177,
+            "f1": 0.6950665622552858,
+            "precision": 0.6380103507763082,
+            "recall": 0.7633298933608531
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_141910": {
+            "iou": 0.37763621446841367,
+            "f1": 0.5482379317592657,
+            "precision": 0.4240470070913201,
+            "recall": 0.7753007784854918
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.0964474678760393,
+            "f1": 0.1759272025368813,
+            "precision": 0.17136717700778942,
+            "recall": 0.18073654390934843
+          },
+          "Ghana_154838": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5304031609496835,
+            "f1": 0.6931548163041491,
+            "precision": 0.8861432410328309,
+            "recall": 0.5691932457786116
+          },
+          "Ghana_24858": {
+            "iou": 0.04132231404958678,
+            "f1": 0.07936507936507936,
+            "precision": 1.0,
+            "recall": 0.04132231404958678
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.575100718164302,
+            "f1": 0.7302399288276016,
+            "precision": 0.7459812553251917,
+            "recall": 0.7151492049662382
+          },
+          "Ghana_45911": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.49445705890209696,
+            "f1": 0.661721333452498,
+            "precision": 0.6732133115111838,
+            "recall": 0.6506151142355009
+          },
+          "Ghana_61925": {
+            "iou": 0.6211111111111111,
+            "f1": 0.7662782727895819,
+            "precision": 0.6918316831683168,
+            "recall": 0.858678955453149
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.01910828025477707,
+            "f1": 0.0375,
+            "precision": 0.019230769230769232,
+            "recall": 0.75
+          },
+          "Ghana_83200": {
+            "iou": 0.17184115523465704,
+            "f1": 0.2932840418977203,
+            "precision": 0.21834862385321102,
+            "recall": 0.44652908067542213
+          },
+          "Ghana_887131": {
+            "iou": 0.389202762084118,
+            "f1": 0.5603253502033438,
+            "precision": 0.8013293943870015,
+            "recall": 0.4307692307692308
+          },
+          "Ghana_953791": {
+            "iou": 0.1400948558920102,
+            "f1": 0.24576,
+            "precision": 0.1744661517492049,
+            "recall": 0.4155844155844156
+          },
+          "Ghana_97516": {
+            "iou": 0.07930214115781126,
+            "f1": 0.14695077149155034,
+            "precision": 0.07994518044769301,
+            "recall": 0.9079118028534371
+          }
+        },
+        "macro": {
+          "iou": 0.2976203616085973,
+          "f1": 0.4133846504097672,
+          "precision": 0.46155229264075054,
+          "recall": 0.5654676022177563
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 1,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 6580,
+          "false_positive_rate": 0.003183534642711133,
+          "fraction_with_false_positives": 1.0
+        }
+      }
+    }
+  ],
+  "cleanup_ablation": [
+    {
+      "method": "raw",
+      "cleanup": false,
+      "seconds": null,
+      "timing_scope": "see_primary",
+      "summary": {
+        "counts": {
+          "tp": 98560,
+          "fp": 210666,
+          "fn": 46331,
+          "tn": 4584750
+        },
+        "pooled": {
+          "iou": 0.27719887387957487,
+          "f1": 0.4340731573581258,
+          "precision": 0.31873128391532407,
+          "recall": 0.6802354873663651
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.20956186277211353,
+            "f1": 0.34650871397653493,
+            "precision": 0.21063564603240548,
+            "recall": 0.9762516046213093
+          },
+          "Ghana_1089161": {
+            "iou": 0.24814609850581074,
+            "f1": 0.3976234814223641,
+            "precision": 0.26786140979689366,
+            "recall": 0.7712418300653595
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.01652892561983471,
+            "f1": 0.032520325203252036,
+            "precision": 0.024691358024691357,
+            "recall": 0.047619047619047616
+          },
+          "Ghana_141910": {
+            "iou": 0.3646829005422519,
+            "f1": 0.5344580787190144,
+            "precision": 0.410318013702783,
+            "recall": 0.7662986553432414
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.06029342801634622,
+            "f1": 0.1137297024072787,
+            "precision": 0.07318858258111735,
+            "recall": 0.254957507082153
+          },
+          "Ghana_154838": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5333932211588295,
+            "f1": 0.6957031161983732,
+            "precision": 0.8706784727313744,
+            "recall": 0.5792870544090056
+          },
+          "Ghana_24858": {
+            "iou": 0.07024793388429752,
+            "f1": 0.13127413127413126,
+            "precision": 1.0,
+            "recall": 0.07024793388429752
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.4264396529056008,
+            "f1": 0.5979077376837643,
+            "precision": 0.5182551729647679,
+            "recall": 0.7064909605750381
+          },
+          "Ghana_45911": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.28067039106145253,
+            "f1": 0.43831792008375503,
+            "precision": 0.3275667217247675,
+            "recall": 0.6622144112478031
+          },
+          "Ghana_61925": {
+            "iou": 0.15171650055370986,
+            "f1": 0.26346153846153847,
+            "precision": 0.15616984895981761,
+            "recall": 0.8417818740399385
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.001388888888888889,
+            "f1": 0.0027739251040221915,
+            "precision": 0.0013895321908290875,
+            "recall": 0.75
+          },
+          "Ghana_83200": {
+            "iou": 0.060795596697523144,
+            "f1": 0.11462264150943396,
+            "precision": 0.06555165902346911,
+            "recall": 0.45590994371482174
+          },
+          "Ghana_887131": {
+            "iou": 0.3177076455829922,
+            "f1": 0.4822126465577713,
+            "precision": 0.48689669128807045,
+            "recall": 0.47761786600496275
+          },
+          "Ghana_953791": {
+            "iou": 0.06457554865533394,
+            "f1": 0.12131698635554676,
+            "precision": 0.0702910174152154,
+            "recall": 0.44264069264069267
+          },
+          "Ghana_97516": {
+            "iou": 0.03705077917947631,
+            "f1": 0.07145412726808076,
+            "precision": 0.037192721081196124,
+            "recall": 0.9066147859922179
+          }
+        },
+        "macro": {
+          "iou": 0.18954662493496413,
+          "f1": 0.2895923381483241,
+          "precision": 0.30137912316782656,
+          "recall": 0.5806116111493259
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 1,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 39098,
+          "false_positive_rate": 0.018916388671841925,
+          "fraction_with_false_positives": 1.0
+        }
+      }
+    },
+    {
+      "method": "raw",
+      "cleanup": true,
+      "seconds": 0.15082098031416535,
+      "timing_scope": "segmentation_and_cleanup_only_cached_filter",
+      "summary": {
+        "counts": {
+          "tp": 96653,
+          "fp": 102738,
+          "fn": 48238,
+          "tn": 4692678
+        },
+        "pooled": {
+          "iou": 0.39031373546717063,
+          "f1": 0.5614757669584817,
+          "precision": 0.4847410364560085,
+          "recall": 0.6670738693224562
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.427247191011236,
+            "f1": 0.5987010431017517,
+            "precision": 0.4317343173431734,
+            "recall": 0.9762516046213093
+          },
+          "Ghana_1089161": {
+            "iou": 0.6279594137542277,
+            "f1": 0.7714681440443213,
+            "precision": 0.7765772046009063,
+            "recall": 0.7664258685930513
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_141910": {
+            "iou": 0.37275826703994236,
+            "f1": 0.5430792529025744,
+            "precision": 0.42206355433503334,
+            "recall": 0.7613871196036801
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.11596180081855388,
+            "f1": 0.2078239608801956,
+            "precision": 0.22561380225613803,
+            "recall": 0.19263456090651557
+          },
+          "Ghana_154838": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5240508984129204,
+            "f1": 0.6877078698075556,
+            "precision": 0.8845813418304125,
+            "recall": 0.5625140712945591
+          },
+          "Ghana_24858": {
+            "iou": 0.045454545454545456,
+            "f1": 0.08695652173913043,
+            "precision": 1.0,
+            "recall": 0.045454545454545456
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.5682502584385815,
+            "f1": 0.7246933394474379,
+            "precision": 0.7649443368828654,
+            "recall": 0.6884665650185144
+          },
+          "Ghana_45911": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.5571343104995513,
+            "f1": 0.7155892805686294,
+            "precision": 0.7890277483583986,
+            "recall": 0.6546572934973638
+          },
+          "Ghana_61925": {
+            "iou": 0.8082595870206489,
+            "f1": 0.8939641109298532,
+            "precision": 0.9530434782608695,
+            "recall": 0.8417818740399385
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.06818181818181818,
+            "f1": 0.1276595744680851,
+            "precision": 0.06976744186046512,
+            "recall": 0.75
+          },
+          "Ghana_83200": {
+            "iou": 0.17903225806451614,
+            "f1": 0.3036935704514364,
+            "precision": 0.23896663078579117,
+            "recall": 0.4165103189493433
+          },
+          "Ghana_887131": {
+            "iou": 0.4064107274063189,
+            "f1": 0.5779403121530725,
+            "precision": 0.8447880870561283,
+            "recall": 0.4392059553349876
+          },
+          "Ghana_953791": {
+            "iou": 0.15198208876596866,
+            "f1": 0.263861895507031,
+            "precision": 0.19313807531380753,
+            "recall": 0.4163059163059163
+          },
+          "Ghana_97516": {
+            "iou": 0.08392364029295234,
+            "f1": 0.15485157288435977,
+            "precision": 0.08465544386581082,
+            "recall": 0.9066147859922179
+          }
+        },
+        "macro": {
+          "iou": 0.32910712034411876,
+          "f1": 0.44386602992569557,
+          "precision": 0.51192676418332,
+          "recall": 0.5612140319741294
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 7,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 3266,
+          "false_positive_rate": 0.0015801556448471975,
+          "fraction_with_false_positives": 0.6
+        }
+      }
+    },
+    {
+      "method": "median",
+      "cleanup": false,
+      "seconds": null,
+      "timing_scope": "see_primary",
+      "summary": {
+        "counts": {
+          "tp": 98436,
+          "fp": 93164,
+          "fn": 46455,
+          "tn": 4702252
+        },
+        "pooled": {
+          "iou": 0.4135010816828044,
+          "f1": 0.5850735978079652,
+          "precision": 0.5137578288100209,
+          "recall": 0.6793796716152142
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.45611940298507464,
+            "f1": 0.6264862648626486,
+            "precision": 0.4602409638554217,
+            "recall": 0.9807445442875481
+          },
+          "Ghana_1089161": {
+            "iou": 0.6889922480620155,
+            "f1": 0.8158619423535891,
+            "precision": 0.8748031496062992,
+            "recall": 0.7643618851049192
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_141910": {
+            "iou": 0.3880529112929353,
+            "f1": 0.5591327364192105,
+            "precision": 0.43066424926751273,
+            "recall": 0.796829440905874
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.07918316315899146,
+            "f1": 0.14674647615369762,
+            "precision": 0.23044269254093389,
+            "recall": 0.10764872521246459
+          },
+          "Ghana_154838": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5286490275100754,
+            "f1": 0.6916552040348464,
+            "precision": 0.8889216263995285,
+            "recall": 0.5660412757973734
+          },
+          "Ghana_24858": {
+            "iou": 0.028925619834710745,
+            "f1": 0.05622489959839357,
+            "precision": 1.0,
+            "recall": 0.028925619834710745
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.6324565186143453,
+            "f1": 0.774852513868099,
+            "precision": 0.8403896351944993,
+            "recall": 0.7187976475713352
+          },
+          "Ghana_45911": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.5698332809059453,
+            "f1": 0.7259793607854924,
+            "precision": 0.8443253320904218,
+            "recall": 0.6367311072056239
+          },
+          "Ghana_61925": {
+            "iou": 0.825563909774436,
+            "f1": 0.9044481054365733,
+            "precision": 0.9751332149200711,
+            "recall": 0.8433179723502304
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_83200": {
+            "iou": 0.2105820105820106,
+            "f1": 0.3479020979020979,
+            "precision": 0.32569558101472995,
+            "recall": 0.37335834896810505
+          },
+          "Ghana_887131": {
+            "iou": 0.33864960366727154,
+            "f1": 0.5059570521509595,
+            "precision": 0.8995433789954338,
+            "recall": 0.35196029776674936
+          },
+          "Ghana_953791": {
+            "iou": 0.1981322102179088,
+            "f1": 0.3307351367874064,
+            "precision": 0.2869265446831079,
+            "recall": 0.3903318903318903
+          },
+          "Ghana_97516": {
+            "iou": 0.12258953168044077,
+            "f1": 0.2184049079754601,
+            "precision": 0.12384762567403027,
+            "recall": 0.9234760051880675
+          }
+        },
+        "macro": {
+          "iou": 0.3378486292190775,
+          "f1": 0.4469591132218983,
+          "precision": 0.5453955996161326,
+          "recall": 0.49883498403499277
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 5,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 1727,
+          "false_positive_rate": 0.0008355568887480436,
+          "fraction_with_false_positives": 0.7333333333333333
+        }
+      }
+    },
+    {
+      "method": "median",
+      "cleanup": true,
+      "seconds": 0.1465414697304368,
+      "timing_scope": "segmentation_and_cleanup_only_cached_filter",
+      "summary": {
+        "counts": {
+          "tp": 97811,
+          "fp": 89367,
+          "fn": 47080,
+          "tn": 4706049
+        },
+        "pooled": {
+          "iou": 0.417535366988534,
+          "f1": 0.5891004580373356,
+          "precision": 0.5225560696235668,
+          "recall": 0.6750660841598167
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.46472019464720193,
+            "f1": 0.6345514950166113,
+            "precision": 0.468999386126458,
+            "recall": 0.9807445442875481
+          },
+          "Ghana_1089161": {
+            "iou": 0.7087719298245614,
+            "f1": 0.8295687885010267,
+            "precision": 0.9069387755102041,
+            "recall": 0.7643618851049192
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0
+          },
+          "Ghana_141910": {
+            "iou": 0.38914381025545197,
+            "f1": 0.5602642539707846,
+            "precision": 0.4322959113065674,
+            "recall": 0.7958527954706298
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.07138077180459514,
+            "f1": 0.1332500520508016,
+            "precision": 0.2513747054202671,
+            "recall": 0.0906515580736544
+          },
+          "Ghana_154838": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5257988705321127,
+            "f1": 0.6892112462355456,
+            "precision": 0.8896670425544543,
+            "recall": 0.5624765478424015
+          },
+          "Ghana_24858": {
+            "iou": 0.008264462809917356,
+            "f1": 0.01639344262295082,
+            "precision": 1.0,
+            "recall": 0.008264462809917356
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.6371707317073171,
+            "f1": 0.7783803110660866,
+            "precision": 0.8594551914725622,
+            "recall": 0.7112829448921804
+          },
+          "Ghana_45911": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.5757867694283879,
+            "f1": 0.7307927450580803,
+            "precision": 0.8695441319107663,
+            "recall": 0.6302284710017575
+          },
+          "Ghana_61925": {
+            "iou": 0.8220211161387632,
+            "f1": 0.902317880794702,
+            "precision": 0.9784560143626571,
+            "recall": 0.837173579109063
+          },
+          "Ghana_7496": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": null,
+            "recall": 0.0
+          },
+          "Ghana_83200": {
+            "iou": 0.22576966932725198,
+            "f1": 0.3683720930232558,
+            "precision": 0.36531365313653136,
+            "recall": 0.3714821763602251
+          },
+          "Ghana_887131": {
+            "iou": 0.3258742613581323,
+            "f1": 0.49156133557390225,
+            "precision": 0.9313399778516057,
+            "recall": 0.3338957816377171
+          },
+          "Ghana_953791": {
+            "iou": 0.2166257166257166,
+            "f1": 0.35610905419050826,
+            "precision": 0.3337539432176656,
+            "recall": 0.38167388167388167
+          },
+          "Ghana_97516": {
+            "iou": 0.14300161812297735,
+            "f1": 0.25022119978764823,
+            "precision": 0.14487704918032787,
+            "recall": 0.9169909208819714
+          }
+        },
+        "macro": {
+          "iou": 0.3409553281721591,
+          "f1": 0.4493995931927936,
+          "precision": 0.6486165986192359,
+          "recall": 0.49233863660972443
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 2,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 8,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 1195,
+          "false_positive_rate": 0.0005781647261458669,
+          "fraction_with_false_positives": 0.5333333333333333
+        }
+      }
+    }
+  ],
+  "per_patch": [
+    {
+      "patch_id": "Ghana_103272",
+      "method": "raw",
+      "tp": 1521,
+      "fp": 5700,
+      "fn": 37,
+      "tn": 252011,
+      "iou": 0.20956186277211353,
+      "f1": 0.34650871397653493,
+      "precision": 0.21063564603240548,
+      "recall": 0.9762516046213093,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "raw",
+      "tp": 2242,
+      "fp": 6128,
+      "fn": 665,
+      "tn": 227129,
+      "iou": 0.24814609850581074,
+      "f1": 0.3976234814223641,
+      "precision": 0.26786140979689366,
+      "recall": 0.7712418300653595,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "raw",
+      "tp": 0,
+      "fp": 5083,
+      "fn": 0,
+      "tn": 257061,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "raw",
+      "tp": 0,
+      "fp": 2676,
+      "fn": 0,
+      "tn": 166172,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "raw",
+      "tp": 0,
+      "fp": 421,
+      "fn": 0,
+      "tn": 37242,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "raw",
+      "tp": 12,
+      "fp": 474,
+      "fn": 240,
+      "tn": 23898,
+      "iou": 0.01652892561983471,
+      "f1": 0.032520325203252036,
+      "precision": 0.024691358024691357,
+      "recall": 0.047619047619047616,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "raw",
+      "tp": 54139,
+      "fp": 77805,
+      "fn": 16511,
+      "tn": 113689,
+      "iou": 0.3646829005422519,
+      "f1": 0.5344580787190144,
+      "precision": 0.410318013702783,
+      "recall": 0.7662986553432414,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "raw",
+      "tp": 0,
+      "fp": 1642,
+      "fn": 0,
+      "tn": 21909,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "raw",
+      "tp": 0,
+      "fp": 1196,
+      "fn": 0,
+      "tn": 180460,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "raw",
+      "tp": 900,
+      "fp": 11397,
+      "fn": 2630,
+      "tn": 247217,
+      "iou": 0.06029342801634622,
+      "f1": 0.1137297024072787,
+      "precision": 0.07318858258111735,
+      "recall": 0.254957507082153,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "raw",
+      "tp": 0,
+      "fp": 1089,
+      "fn": 0,
+      "tn": 41018,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "raw",
+      "tp": 0,
+      "fp": 4347,
+      "fn": 0,
+      "tn": 257797,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "raw",
+      "tp": 0,
+      "fp": 366,
+      "fn": 0,
+      "tn": 1526,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "raw",
+      "tp": 0,
+      "fp": 163,
+      "fn": 0,
+      "tn": 41633,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "raw",
+      "tp": 0,
+      "fp": 5445,
+      "fn": 0,
+      "tn": 256699,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "raw",
+      "tp": 0,
+      "fp": 855,
+      "fn": 0,
+      "tn": 46553,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "raw",
+      "tp": 15438,
+      "fp": 2293,
+      "fn": 11212,
+      "tn": 11231,
+      "iou": 0.5333932211588295,
+      "f1": 0.6957031161983732,
+      "precision": 0.8706784727313744,
+      "recall": 0.5792870544090056,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "raw",
+      "tp": 34,
+      "fp": 0,
+      "fn": 450,
+      "tn": 0,
+      "iou": 0.07024793388429752,
+      "f1": 0.13127413127413126,
+      "precision": 1.0,
+      "recall": 0.07024793388429752,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "raw",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "raw",
+      "tp": 0,
+      "fp": 1926,
+      "fn": 0,
+      "tn": 180049,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "raw",
+      "tp": 12974,
+      "fp": 12060,
+      "fn": 5390,
+      "tn": 228983,
+      "iou": 0.4264396529056008,
+      "f1": 0.5979077376837643,
+      "precision": 0.5182551729647679,
+      "recall": 0.7064909605750381,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "raw",
+      "tp": 0,
+      "fp": 126,
+      "fn": 0,
+      "tn": 29143,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "raw",
+      "tp": 0,
+      "fp": 10674,
+      "fn": 0,
+      "tn": 251470,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "raw",
+      "tp": 3768,
+      "fp": 7735,
+      "fn": 1922,
+      "tn": 248719,
+      "iou": 0.28067039106145253,
+      "f1": 0.43831792008375503,
+      "precision": 0.3275667217247675,
+      "recall": 0.6622144112478031,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "raw",
+      "tp": 548,
+      "fp": 2961,
+      "fn": 103,
+      "tn": 258532,
+      "iou": 0.15171650055370986,
+      "f1": 0.26346153846153847,
+      "precision": 0.15616984895981761,
+      "recall": 0.8417818740399385,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "raw",
+      "tp": 0,
+      "fp": 3089,
+      "fn": 0,
+      "tn": 259055,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "raw",
+      "tp": 3,
+      "fp": 2156,
+      "fn": 1,
+      "tn": 192506,
+      "iou": 0.001388888888888889,
+      "f1": 0.0027739251040221915,
+      "precision": 0.0013895321908290875,
+      "recall": 0.75,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "raw",
+      "tp": 243,
+      "fp": 3464,
+      "fn": 290,
+      "tn": 94218,
+      "iou": 0.060795596697523144,
+      "f1": 0.11462264150943396,
+      "precision": 0.06555165902346911,
+      "recall": 0.45590994371482174,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "raw",
+      "tp": 4812,
+      "fp": 5071,
+      "fn": 5263,
+      "tn": 246998,
+      "iou": 0.3177076455829922,
+      "f1": 0.4822126465577713,
+      "precision": 0.48689669128807045,
+      "recall": 0.47761786600496275,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "raw",
+      "tp": 1227,
+      "fp": 16229,
+      "fn": 1545,
+      "tn": 243143,
+      "iou": 0.06457554865533394,
+      "f1": 0.12131698635554676,
+      "precision": 0.0702910174152154,
+      "recall": 0.44264069264069267,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "raw",
+      "tp": 699,
+      "fp": 18095,
+      "fn": 72,
+      "tn": 168689,
+      "iou": 0.03705077917947631,
+      "f1": 0.07145412726808076,
+      "precision": 0.037192721081196124,
+      "recall": 0.9066147859922179,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "median",
+      "tp": 1528,
+      "fp": 1792,
+      "fn": 30,
+      "tn": 255919,
+      "iou": 0.45611940298507464,
+      "f1": 0.6264862648626486,
+      "precision": 0.4602409638554217,
+      "recall": 0.9807445442875481,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "median",
+      "tp": 2222,
+      "fp": 318,
+      "fn": 685,
+      "tn": 232939,
+      "iou": 0.6889922480620155,
+      "f1": 0.8158619423535891,
+      "precision": 0.8748031496062992,
+      "recall": 0.7643618851049192,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "median",
+      "tp": 0,
+      "fp": 101,
+      "fn": 0,
+      "tn": 262043,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "median",
+      "tp": 0,
+      "fp": 731,
+      "fn": 0,
+      "tn": 168117,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "median",
+      "tp": 0,
+      "fp": 2,
+      "fn": 0,
+      "tn": 37661,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "median",
+      "tp": 0,
+      "fp": 15,
+      "fn": 252,
+      "tn": 24357,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "median",
+      "tp": 56296,
+      "fp": 74423,
+      "fn": 14354,
+      "tn": 117071,
+      "iou": 0.3880529112929353,
+      "f1": 0.5591327364192105,
+      "precision": 0.43066424926751273,
+      "recall": 0.796829440905874,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "median",
+      "tp": 0,
+      "fp": 93,
+      "fn": 0,
+      "tn": 23458,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "median",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 181656,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "median",
+      "tp": 380,
+      "fp": 1269,
+      "fn": 3150,
+      "tn": 257345,
+      "iou": 0.07918316315899146,
+      "f1": 0.14674647615369762,
+      "precision": 0.23044269254093389,
+      "recall": 0.10764872521246459,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "median",
+      "tp": 0,
+      "fp": 3,
+      "fn": 0,
+      "tn": 42104,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "median",
+      "tp": 0,
+      "fp": 80,
+      "fn": 0,
+      "tn": 262064,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "median",
+      "tp": 0,
+      "fp": 132,
+      "fn": 0,
+      "tn": 1760,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "median",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 41796,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "median",
+      "tp": 0,
+      "fp": 226,
+      "fn": 0,
+      "tn": 261918,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "median",
+      "tp": 0,
+      "fp": 105,
+      "fn": 0,
+      "tn": 47303,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "median",
+      "tp": 15085,
+      "fp": 1885,
+      "fn": 11565,
+      "tn": 11639,
+      "iou": 0.5286490275100754,
+      "f1": 0.6916552040348464,
+      "precision": 0.8889216263995285,
+      "recall": 0.5660412757973734,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "median",
+      "tp": 14,
+      "fp": 0,
+      "fn": 470,
+      "tn": 0,
+      "iou": 0.028925619834710745,
+      "f1": 0.05622489959839357,
+      "precision": 1.0,
+      "recall": 0.028925619834710745,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "median",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "median",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 181975,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "median",
+      "tp": 13200,
+      "fp": 2507,
+      "fn": 5164,
+      "tn": 238536,
+      "iou": 0.6324565186143453,
+      "f1": 0.774852513868099,
+      "precision": 0.8403896351944993,
+      "recall": 0.7187976475713352,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "median",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 29269,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "median",
+      "tp": 0,
+      "fp": 242,
+      "fn": 0,
+      "tn": 261902,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "median",
+      "tp": 3623,
+      "fp": 668,
+      "fn": 2067,
+      "tn": 255786,
+      "iou": 0.5698332809059453,
+      "f1": 0.7259793607854924,
+      "precision": 0.8443253320904218,
+      "recall": 0.6367311072056239,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "median",
+      "tp": 549,
+      "fp": 14,
+      "fn": 102,
+      "tn": 261479,
+      "iou": 0.825563909774436,
+      "f1": 0.9044481054365733,
+      "precision": 0.9751332149200711,
+      "recall": 0.8433179723502304,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "median",
+      "tp": 0,
+      "fp": 12,
+      "fn": 0,
+      "tn": 262132,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "median",
+      "tp": 0,
+      "fp": 12,
+      "fn": 4,
+      "tn": 194650,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "median",
+      "tp": 199,
+      "fp": 412,
+      "fn": 334,
+      "tn": 97270,
+      "iou": 0.2105820105820106,
+      "f1": 0.3479020979020979,
+      "precision": 0.32569558101472995,
+      "recall": 0.37335834896810505,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "median",
+      "tp": 3546,
+      "fp": 396,
+      "fn": 6529,
+      "tn": 251673,
+      "iou": 0.33864960366727154,
+      "f1": 0.5059570521509595,
+      "precision": 0.8995433789954338,
+      "recall": 0.35196029776674936,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "median",
+      "tp": 1082,
+      "fp": 2689,
+      "fn": 1690,
+      "tn": 256683,
+      "iou": 0.1981322102179088,
+      "f1": 0.3307351367874064,
+      "precision": 0.2869265446831079,
+      "recall": 0.3903318903318903,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "median",
+      "tp": 712,
+      "fp": 5037,
+      "fn": 59,
+      "tn": 181747,
+      "iou": 0.12258953168044077,
+      "f1": 0.2184049079754601,
+      "precision": 0.12384762567403027,
+      "recall": 0.9234760051880675,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "lee",
+      "tp": 1513,
+      "fp": 1546,
+      "fn": 45,
+      "tn": 256165,
+      "iou": 0.48743556701030927,
+      "f1": 0.6554039419536496,
+      "precision": 0.4946060804184374,
+      "recall": 0.9711168164313222,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "lee",
+      "tp": 2152,
+      "fp": 194,
+      "fn": 755,
+      "tn": 233063,
+      "iou": 0.6939696871976782,
+      "f1": 0.8193413287645155,
+      "precision": 0.9173060528559249,
+      "recall": 0.7402820777433781,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "lee",
+      "tp": 0,
+      "fp": 21,
+      "fn": 0,
+      "tn": 262123,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "lee",
+      "tp": 0,
+      "fp": 624,
+      "fn": 0,
+      "tn": 168224,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "lee",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 37663,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "lee",
+      "tp": 0,
+      "fp": 3,
+      "fn": 252,
+      "tn": 24369,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "lee",
+      "tp": 53328,
+      "fp": 67781,
+      "fn": 17322,
+      "tn": 123713,
+      "iou": 0.3852316316432013,
+      "f1": 0.5561981445460187,
+      "precision": 0.44033061126753587,
+      "recall": 0.7548195329087048,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "lee",
+      "tp": 0,
+      "fp": 29,
+      "fn": 0,
+      "tn": 23522,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "lee",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 181656,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "lee",
+      "tp": 231,
+      "fp": 687,
+      "fn": 3299,
+      "tn": 257927,
+      "iou": 0.05477827839696467,
+      "f1": 0.10386690647482015,
+      "precision": 0.25163398692810457,
+      "recall": 0.06543909348441926,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "lee",
+      "tp": 0,
+      "fp": 6,
+      "fn": 0,
+      "tn": 42101,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "lee",
+      "tp": 0,
+      "fp": 26,
+      "fn": 0,
+      "tn": 262118,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "lee",
+      "tp": 0,
+      "fp": 113,
+      "fn": 0,
+      "tn": 1779,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "lee",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 41796,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "lee",
+      "tp": 0,
+      "fp": 128,
+      "fn": 0,
+      "tn": 262016,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "lee",
+      "tp": 0,
+      "fp": 86,
+      "fn": 0,
+      "tn": 47322,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "lee",
+      "tp": 13746,
+      "fp": 1480,
+      "fn": 12904,
+      "tn": 12044,
+      "iou": 0.488659793814433,
+      "f1": 0.6565096952908587,
+      "precision": 0.9027978457900959,
+      "recall": 0.515797373358349,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "lee",
+      "tp": 11,
+      "fp": 0,
+      "fn": 473,
+      "tn": 0,
+      "iou": 0.022727272727272728,
+      "f1": 0.044444444444444446,
+      "precision": 1.0,
+      "recall": 0.022727272727272728,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "lee",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "lee",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 181975,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "lee",
+      "tp": 12259,
+      "fp": 1794,
+      "fn": 6105,
+      "tn": 239249,
+      "iou": 0.6081456493699772,
+      "f1": 0.7563315544313169,
+      "precision": 0.8723404255319149,
+      "recall": 0.6675560879982575,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "lee",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 29269,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "lee",
+      "tp": 0,
+      "fp": 54,
+      "fn": 0,
+      "tn": 262090,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "lee",
+      "tp": 3010,
+      "fp": 382,
+      "fn": 2680,
+      "tn": 256072,
+      "iou": 0.49571805006587616,
+      "f1": 0.6628495926007487,
+      "precision": 0.8873820754716981,
+      "recall": 0.5289982425307557,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "lee",
+      "tp": 518,
+      "fp": 6,
+      "fn": 133,
+      "tn": 261487,
+      "iou": 0.7884322678843226,
+      "f1": 0.8817021276595745,
+      "precision": 0.9885496183206107,
+      "recall": 0.7956989247311828,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "lee",
+      "tp": 0,
+      "fp": 7,
+      "fn": 0,
+      "tn": 262137,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "lee",
+      "tp": 0,
+      "fp": 5,
+      "fn": 4,
+      "tn": 194657,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "lee",
+      "tp": 177,
+      "fp": 258,
+      "fn": 356,
+      "tn": 97424,
+      "iou": 0.22376738305941846,
+      "f1": 0.365702479338843,
+      "precision": 0.4068965517241379,
+      "recall": 0.3320825515947467,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "lee",
+      "tp": 2652,
+      "fp": 147,
+      "fn": 7423,
+      "tn": 251922,
+      "iou": 0.25944042261788297,
+      "f1": 0.41199316451763246,
+      "precision": 0.947481243301179,
+      "recall": 0.2632258064516129,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "lee",
+      "tp": 939,
+      "fp": 1584,
+      "fn": 1833,
+      "tn": 257788,
+      "iou": 0.21556473829201103,
+      "f1": 0.3546742209631728,
+      "precision": 0.37217598097502974,
+      "recall": 0.33874458874458874,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "lee",
+      "tp": 673,
+      "fp": 3309,
+      "fn": 98,
+      "tn": 183475,
+      "iou": 0.16495098039215686,
+      "f1": 0.2831895644855881,
+      "precision": 0.16901054746358612,
+      "recall": 0.8728923476005188,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "log_bilateral",
+      "tp": 1522,
+      "fp": 2289,
+      "fn": 36,
+      "tn": 255422,
+      "iou": 0.3956329607486353,
+      "f1": 0.56695846526355,
+      "precision": 0.3993702440304382,
+      "recall": 0.9768934531450578,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "log_bilateral",
+      "tp": 2219,
+      "fp": 1259,
+      "fn": 688,
+      "tn": 231998,
+      "iou": 0.5326452232357177,
+      "f1": 0.6950665622552858,
+      "precision": 0.6380103507763082,
+      "recall": 0.7633298933608531,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 728,
+      "fn": 0,
+      "tn": 261416,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 912,
+      "fn": 0,
+      "tn": 167936,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 75,
+      "fn": 0,
+      "tn": 37588,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 72,
+      "fn": 252,
+      "tn": 24300,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "log_bilateral",
+      "tp": 54775,
+      "fp": 74397,
+      "fn": 15875,
+      "tn": 117097,
+      "iou": 0.37763621446841367,
+      "f1": 0.5482379317592657,
+      "precision": 0.4240470070913201,
+      "recall": 0.7753007784854918,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 411,
+      "fn": 0,
+      "tn": 23140,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 48,
+      "fn": 0,
+      "tn": 181608,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "log_bilateral",
+      "tp": 638,
+      "fp": 3085,
+      "fn": 2892,
+      "tn": 255529,
+      "iou": 0.0964474678760393,
+      "f1": 0.1759272025368813,
+      "precision": 0.17136717700778942,
+      "recall": 0.18073654390934843,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 167,
+      "fn": 0,
+      "tn": 41940,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 564,
+      "fn": 0,
+      "tn": 261580,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 225,
+      "fn": 0,
+      "tn": 1667,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 13,
+      "fn": 0,
+      "tn": 41783,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 934,
+      "fn": 0,
+      "tn": 261210,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 238,
+      "fn": 0,
+      "tn": 47170,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "log_bilateral",
+      "tp": 15169,
+      "fp": 1949,
+      "fn": 11481,
+      "tn": 11575,
+      "iou": 0.5304031609496835,
+      "f1": 0.6931548163041491,
+      "precision": 0.8861432410328309,
+      "recall": 0.5691932457786116,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "log_bilateral",
+      "tp": 20,
+      "fp": 0,
+      "fn": 464,
+      "tn": 0,
+      "iou": 0.04132231404958678,
+      "f1": 0.07936507936507936,
+      "precision": 1.0,
+      "recall": 0.04132231404958678,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "iou": null,
+      "f1": null,
+      "precision": null,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 134,
+      "fn": 0,
+      "tn": 181841,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "log_bilateral",
+      "tp": 13133,
+      "fp": 4472,
+      "fn": 5231,
+      "tn": 236571,
+      "iou": 0.575100718164302,
+      "f1": 0.7302399288276016,
+      "precision": 0.7459812553251917,
+      "recall": 0.7151492049662382,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 11,
+      "fn": 0,
+      "tn": 29258,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 1872,
+      "fn": 0,
+      "tn": 260272,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "log_bilateral",
+      "tp": 3702,
+      "fp": 1797,
+      "fn": 1988,
+      "tn": 254657,
+      "iou": 0.49445705890209696,
+      "f1": 0.661721333452498,
+      "precision": 0.6732133115111838,
+      "recall": 0.6506151142355009,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "log_bilateral",
+      "tp": 559,
+      "fp": 249,
+      "fn": 92,
+      "tn": 261244,
+      "iou": 0.6211111111111111,
+      "f1": 0.7662782727895819,
+      "precision": 0.6918316831683168,
+      "recall": 0.858678955453149,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "log_bilateral",
+      "tp": 0,
+      "fp": 248,
+      "fn": 0,
+      "tn": 261896,
+      "iou": 0.0,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": null,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "log_bilateral",
+      "tp": 3,
+      "fp": 153,
+      "fn": 1,
+      "tn": 194509,
+      "iou": 0.01910828025477707,
+      "f1": 0.0375,
+      "precision": 0.019230769230769232,
+      "recall": 0.75,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "log_bilateral",
+      "tp": 238,
+      "fp": 852,
+      "fn": 295,
+      "tn": 96830,
+      "iou": 0.17184115523465704,
+      "f1": 0.2932840418977203,
+      "precision": 0.21834862385321102,
+      "recall": 0.44652908067542213,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "log_bilateral",
+      "tp": 4340,
+      "fp": 1076,
+      "fn": 5735,
+      "tn": 250993,
+      "iou": 0.389202762084118,
+      "f1": 0.5603253502033438,
+      "precision": 0.8013293943870015,
+      "recall": 0.4307692307692308,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "log_bilateral",
+      "tp": 1152,
+      "fp": 5451,
+      "fn": 1620,
+      "tn": 253921,
+      "iou": 0.1400948558920102,
+      "f1": 0.24576,
+      "precision": 0.1744661517492049,
+      "recall": 0.4155844155844156,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "log_bilateral",
+      "tp": 700,
+      "fp": 8056,
+      "fn": 71,
+      "tn": 178728,
+      "iou": 0.07930214115781126,
+      "f1": 0.14695077149155034,
+      "precision": 0.07994518044769301,
+      "recall": 0.9079118028534371,
+      "threshold_db": -20.0,
+      "status": "fixed",
+      "cleanup": false
+    }
+  ],
+  "enl_rois": [
+    {
+      "patch_id": "Ghana_103272",
+      "method": "raw",
+      "roi_id": "supplied_enl_01",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 150,
+      "y1": 182,
+      "x0": 200,
+      "x1": 232,
+      "value": 5.1702391926075535,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "raw",
+      "roi_id": "supplied_enl_01",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 150,
+      "y1": 182,
+      "x0": 200,
+      "x1": 232,
+      "value": 6.031507438795458,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "raw",
+      "roi_id": "supplied_enl_02",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 300,
+      "y1": 332,
+      "x0": 100,
+      "x1": 132,
+      "value": 5.101636847331131,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "raw",
+      "roi_id": "supplied_enl_02",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 300,
+      "y1": 332,
+      "x0": 100,
+      "x1": 132,
+      "value": 5.016818155928313,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "raw",
+      "roi_id": "supplied_enl_05",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 192,
+      "y1": 224,
+      "x0": 256,
+      "x1": 288,
+      "value": 6.087525749852314,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "raw",
+      "roi_id": "supplied_enl_05",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 192,
+      "y1": 224,
+      "x0": 256,
+      "x1": 288,
+      "value": 6.374154743537808,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "raw",
+      "roi_id": "supplied_enl_03",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 256,
+      "y1": 288,
+      "x0": 256,
+      "x1": 288,
+      "value": 4.387141529789365,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "raw",
+      "roi_id": "supplied_enl_03",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 256,
+      "y1": 288,
+      "x0": 256,
+      "x1": 288,
+      "value": 5.667089730221524,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "raw",
+      "roi_id": "supplied_enl_04",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 384,
+      "y1": 416,
+      "x0": 64,
+      "x1": 96,
+      "value": 6.173114023828651,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "raw",
+      "roi_id": "supplied_enl_04",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 384,
+      "y1": 416,
+      "x0": 64,
+      "x1": 96,
+      "value": 4.886236373352904,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "median",
+      "roi_id": "supplied_enl_01",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 150,
+      "y1": 182,
+      "x0": 200,
+      "x1": 232,
+      "value": 19.006995291091854,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "median",
+      "roi_id": "supplied_enl_01",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 150,
+      "y1": 182,
+      "x0": 200,
+      "x1": 232,
+      "value": 19.77944128356027,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "median",
+      "roi_id": "supplied_enl_02",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 300,
+      "y1": 332,
+      "x0": 100,
+      "x1": 132,
+      "value": 15.427390723232053,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "median",
+      "roi_id": "supplied_enl_02",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 300,
+      "y1": 332,
+      "x0": 100,
+      "x1": 132,
+      "value": 18.138156806226785,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "median",
+      "roi_id": "supplied_enl_05",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 192,
+      "y1": 224,
+      "x0": 256,
+      "x1": 288,
+      "value": 22.066590223073582,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "median",
+      "roi_id": "supplied_enl_05",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 192,
+      "y1": 224,
+      "x0": 256,
+      "x1": 288,
+      "value": 21.018492735653464,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "median",
+      "roi_id": "supplied_enl_03",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 256,
+      "y1": 288,
+      "x0": 256,
+      "x1": 288,
+      "value": 17.488100207605726,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "median",
+      "roi_id": "supplied_enl_03",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 256,
+      "y1": 288,
+      "x0": 256,
+      "x1": 288,
+      "value": 20.154061985182917,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "median",
+      "roi_id": "supplied_enl_04",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 384,
+      "y1": 416,
+      "x0": 64,
+      "x1": 96,
+      "value": 24.723402327571264,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "median",
+      "roi_id": "supplied_enl_04",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 384,
+      "y1": 416,
+      "x0": 64,
+      "x1": 96,
+      "value": 19.832976164964943,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "lee",
+      "roi_id": "supplied_enl_01",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 150,
+      "y1": 182,
+      "x0": 200,
+      "x1": 232,
+      "value": 21.002248719396054,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "lee",
+      "roi_id": "supplied_enl_01",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 150,
+      "y1": 182,
+      "x0": 200,
+      "x1": 232,
+      "value": 25.30963096867983,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "lee",
+      "roi_id": "supplied_enl_02",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 300,
+      "y1": 332,
+      "x0": 100,
+      "x1": 132,
+      "value": 17.86024309134644,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "lee",
+      "roi_id": "supplied_enl_02",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 300,
+      "y1": 332,
+      "x0": 100,
+      "x1": 132,
+      "value": 22.787474536195468,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "lee",
+      "roi_id": "supplied_enl_05",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 192,
+      "y1": 224,
+      "x0": 256,
+      "x1": 288,
+      "value": 23.864193264854094,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "lee",
+      "roi_id": "supplied_enl_05",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 192,
+      "y1": 224,
+      "x0": 256,
+      "x1": 288,
+      "value": 27.251547836300002,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "lee",
+      "roi_id": "supplied_enl_03",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 256,
+      "y1": 288,
+      "x0": 256,
+      "x1": 288,
+      "value": 15.499174004943056,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "lee",
+      "roi_id": "supplied_enl_03",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 256,
+      "y1": 288,
+      "x0": 256,
+      "x1": 288,
+      "value": 20.955541104225897,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "lee",
+      "roi_id": "supplied_enl_04",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 384,
+      "y1": 416,
+      "x0": 64,
+      "x1": 96,
+      "value": 28.5878710411527,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "lee",
+      "roi_id": "supplied_enl_04",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 384,
+      "y1": 416,
+      "x0": 64,
+      "x1": 96,
+      "value": 22.320052708825152,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_01",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 150,
+      "y1": 182,
+      "x0": 200,
+      "x1": 232,
+      "value": 12.751606621307502,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_01",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 150,
+      "y1": 182,
+      "x0": 200,
+      "x1": 232,
+      "value": 15.571611258641868,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_02",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 300,
+      "y1": 332,
+      "x0": 100,
+      "x1": 132,
+      "value": 11.653080858450789,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_02",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 300,
+      "y1": 332,
+      "x0": 100,
+      "x1": 132,
+      "value": 12.973303899494923,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_05",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 192,
+      "y1": 224,
+      "x0": 256,
+      "x1": 288,
+      "value": 14.96528891195609,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_05",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 192,
+      "y1": 224,
+      "x0": 256,
+      "x1": 288,
+      "value": 16.03855032206271,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_03",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 256,
+      "y1": 288,
+      "x0": 256,
+      "x1": 288,
+      "value": 10.430828464500234,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_03",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 256,
+      "y1": 288,
+      "x0": 256,
+      "x1": 288,
+      "value": 13.468121886239627,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_04",
+      "band": "VV",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 384,
+      "y1": 416,
+      "x0": 64,
+      "x1": 96,
+      "value": 16.774990721000744,
+      "status": "ok",
+      "n": 1024
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "log_bilateral",
+      "roi_id": "supplied_enl_04",
+      "band": "VH",
+      "roi_class": "land",
+      "suitability": "visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth",
+      "y0": 384,
+      "y1": 416,
+      "x0": 64,
+      "x1": 96,
+      "value": 12.942771797150794,
+      "status": "ok",
+      "n": 1024
+    }
+  ],
+  "enl_summary": [
+    {
+      "method": "raw",
+      "band": "VV",
+      "roi_class": "land",
+      "roi_count": 5,
+      "finite_count": 5,
+      "undefined_count": 0,
+      "median": 5.1702391926075535,
+      "q25": 5.101636847331131,
+      "q75": 6.087525749852314,
+      "status": "ok"
+    },
+    {
+      "method": "raw",
+      "band": "VH",
+      "roi_class": "land",
+      "roi_count": 5,
+      "finite_count": 5,
+      "undefined_count": 0,
+      "median": 5.667089730221524,
+      "q25": 5.016818155928313,
+      "q75": 6.031507438795458,
+      "status": "ok"
+    },
+    {
+      "method": "median",
+      "band": "VV",
+      "roi_class": "land",
+      "roi_count": 5,
+      "finite_count": 5,
+      "undefined_count": 0,
+      "median": 19.006995291091854,
+      "q25": 17.488100207605726,
+      "q75": 22.066590223073582,
+      "status": "ok"
+    },
+    {
+      "method": "median",
+      "band": "VH",
+      "roi_class": "land",
+      "roi_count": 5,
+      "finite_count": 5,
+      "undefined_count": 0,
+      "median": 19.832976164964943,
+      "q25": 19.77944128356027,
+      "q75": 20.154061985182917,
+      "status": "ok"
+    },
+    {
+      "method": "lee",
+      "band": "VV",
+      "roi_class": "land",
+      "roi_count": 5,
+      "finite_count": 5,
+      "undefined_count": 0,
+      "median": 21.002248719396054,
+      "q25": 17.86024309134644,
+      "q75": 23.864193264854094,
+      "status": "ok"
+    },
+    {
+      "method": "lee",
+      "band": "VH",
+      "roi_class": "land",
+      "roi_count": 5,
+      "finite_count": 5,
+      "undefined_count": 0,
+      "median": 22.787474536195468,
+      "q25": 22.320052708825152,
+      "q75": 25.30963096867983,
+      "status": "ok"
+    },
+    {
+      "method": "log_bilateral",
+      "band": "VV",
+      "roi_class": "land",
+      "roi_count": 5,
+      "finite_count": 5,
+      "undefined_count": 0,
+      "median": 12.751606621307502,
+      "q25": 11.653080858450789,
+      "q75": 14.96528891195609,
+      "status": "ok"
+    },
+    {
+      "method": "log_bilateral",
+      "band": "VH",
+      "roi_class": "land",
+      "roi_count": 5,
+      "finite_count": 5,
+      "undefined_count": 0,
+      "median": 13.468121886239627,
+      "q25": 12.973303899494923,
+      "q75": 15.571611258641868,
+      "status": "ok"
+    }
+  ],
+  "radiometry": [
+    {
+      "patch_id": "Ghana_103272",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.13564443345975627,
+      "filtered_mean_power": 0.13564443345975627,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.034366669956350945,
+      "filtered_mean_power": 0.034366669956350945,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.12345263532215456,
+      "filtered_mean_power": 0.12345263532215456,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.032300803702377576,
+      "filtered_mean_power": 0.032300803702377576,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.13327747518609634,
+      "filtered_mean_power": 0.13327747518609634,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03217218119982612,
+      "filtered_mean_power": 0.03217218119982612,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1552608933754981,
+      "filtered_mean_power": 0.1552608933754981,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03688304329133278,
+      "filtered_mean_power": 0.03688304329133278,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.15284661395762655,
+      "filtered_mean_power": 0.15284661395762655,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03905628274023013,
+      "filtered_mean_power": 0.03905628274023013,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.15012702070547407,
+      "filtered_mean_power": 0.15012702070547407,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.032833415900075845,
+      "filtered_mean_power": 0.032833415900075845,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.08470874338951791,
+      "filtered_mean_power": 0.08470874338951791,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.014286525646373045,
+      "filtered_mean_power": 0.014286525646373045,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.10479059587027528,
+      "filtered_mean_power": 0.10479059587027528,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.02442683295328285,
+      "filtered_mean_power": 0.02442683295328285,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.14722667864396044,
+      "filtered_mean_power": 0.14722667864396044,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03681108075135597,
+      "filtered_mean_power": 0.03681108075135597,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.13501079865155408,
+      "filtered_mean_power": 0.13501079865155408,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.027948913403480685,
+      "filtered_mean_power": 0.027948913403480685,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.13094265660772741,
+      "filtered_mean_power": 0.13094265660772741,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03396925768351733,
+      "filtered_mean_power": 0.03396925768351733,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1331876914859258,
+      "filtered_mean_power": 0.1331876914859258,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03355085770611854,
+      "filtered_mean_power": 0.03355085770611854,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1100012819089117,
+      "filtered_mean_power": 0.1100012819089117,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.02604855497602557,
+      "filtered_mean_power": 0.02604855497602557,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.17156870197240792,
+      "filtered_mean_power": 0.17156870197240792,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.042808752587256915,
+      "filtered_mean_power": 0.042808752587256915,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.13448685085249146,
+      "filtered_mean_power": 0.13448685085249146,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03266639239322089,
+      "filtered_mean_power": 0.03266639239322089,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.14239948167077943,
+      "filtered_mean_power": 0.14239948167077943,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.036011162265926544,
+      "filtered_mean_power": 0.036011162265926544,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1303418023267541,
+      "filtered_mean_power": 0.1303418023267541,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.034129243036280905,
+      "filtered_mean_power": 0.034129243036280905,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.13475564740830848,
+      "filtered_mean_power": 0.13475564740830848,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03336939409965378,
+      "filtered_mean_power": 0.03336939409965378,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.14634635142085628,
+      "filtered_mean_power": 0.14634635142085628,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.0367881066578124,
+      "filtered_mean_power": 0.0367881066578124,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1412524997487843,
+      "filtered_mean_power": 0.1412524997487843,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03522519116430578,
+      "filtered_mean_power": 0.03522519116430578,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.11944014418033827,
+      "filtered_mean_power": 0.11944014418033827,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.026290418414020317,
+      "filtered_mean_power": 0.026290418414020317,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.165647756234776,
+      "filtered_mean_power": 0.165647756234776,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.044212914972980855,
+      "filtered_mean_power": 0.044212914972980855,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.11973922968245532,
+      "filtered_mean_power": 0.11973922968245532,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.027123030899901757,
+      "filtered_mean_power": 0.027123030899901757,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.13381669487495707,
+      "filtered_mean_power": 0.13381669487495707,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.030494393641256973,
+      "filtered_mean_power": 0.030494393641256973,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.140841684863664,
+      "filtered_mean_power": 0.140841684863664,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.03729223457342099,
+      "filtered_mean_power": 0.03729223457342099,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1384528142966559,
+      "filtered_mean_power": 0.1384528142966559,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.035457338928481796,
+      "filtered_mean_power": 0.035457338928481796,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1344888235744861,
+      "filtered_mean_power": 0.1344888235744861,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.034691983892654044,
+      "filtered_mean_power": 0.034691983892654044,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1493750795388813,
+      "filtered_mean_power": 0.1493750795388813,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.0302341407234456,
+      "filtered_mean_power": 0.0302341407234456,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.1308246852949031,
+      "filtered_mean_power": 0.1308246852949031,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.032225285334773174,
+      "filtered_mean_power": 0.032225285334773174,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.11023993509464614,
+      "filtered_mean_power": 0.11023993509464614,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.025223794176310405,
+      "filtered_mean_power": 0.025223794176310405,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "raw",
+      "band": "VV",
+      "raw_mean_power": 0.09486191332974814,
+      "filtered_mean_power": 0.09486191332974814,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "raw",
+      "band": "VH",
+      "raw_mean_power": 0.02223404855674864,
+      "filtered_mean_power": 0.02223404855674864,
+      "mean_change_percent": 0.0
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.13564443345975627,
+      "filtered_mean_power": 0.12796775778697356,
+      "mean_change_percent": -5.659410767534567
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.034366669956350945,
+      "filtered_mean_power": 0.03260814443064086,
+      "mean_change_percent": -5.116950603429382
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.12345263532215456,
+      "filtered_mean_power": 0.11455626237018413,
+      "mean_change_percent": -7.2063046112826985
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.032300803702377576,
+      "filtered_mean_power": 0.030444701724069156,
+      "mean_change_percent": -5.7463027713202
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.13327747518609634,
+      "filtered_mean_power": 0.12691570350864367,
+      "mean_change_percent": -4.773328477726391
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03217218119982612,
+      "filtered_mean_power": 0.030580879082195978,
+      "mean_change_percent": -4.94620525648023
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1552608933754981,
+      "filtered_mean_power": 0.14796478426999532,
+      "mean_change_percent": -4.699257454262584
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03688304329133278,
+      "filtered_mean_power": 0.03514113578578257,
+      "mean_change_percent": -4.722786815044488
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.15284661395762655,
+      "filtered_mean_power": 0.1461813632953043,
+      "mean_change_percent": -4.360744729464572
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03905628274023013,
+      "filtered_mean_power": 0.03725486629613689,
+      "mean_change_percent": -4.61236020866288
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.15012702070547407,
+      "filtered_mean_power": 0.14304194804762088,
+      "mean_change_percent": -4.719385374171248
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.032833415900075845,
+      "filtered_mean_power": 0.03135033778868503,
+      "mean_change_percent": -4.516977812800116
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.08470874338951791,
+      "filtered_mean_power": 0.07843000674427092,
+      "mean_change_percent": -7.412147074801179
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.014286525646373045,
+      "filtered_mean_power": 0.01304868204996474,
+      "mean_change_percent": -8.66441307738498
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.10479059587027528,
+      "filtered_mean_power": 0.09921502552101913,
+      "mean_change_percent": -5.320678161004433
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.02442683295328285,
+      "filtered_mean_power": 0.023152825788272935,
+      "mean_change_percent": -5.215605180771887
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.14722667864396044,
+      "filtered_mean_power": 0.14023838616732576,
+      "mean_change_percent": -4.746621020728536
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03681108075135597,
+      "filtered_mean_power": 0.03510309251094412,
+      "mean_change_percent": -4.6398752917596315
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.13501079865155408,
+      "filtered_mean_power": 0.12783720327033876,
+      "mean_change_percent": -5.313349341580786
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.027948913403480685,
+      "filtered_mean_power": 0.026520880170490813,
+      "mean_change_percent": -5.109440973157941
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.13094265660772741,
+      "filtered_mean_power": 0.124227733332674,
+      "mean_change_percent": -5.128140400549297
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03396925768351733,
+      "filtered_mean_power": 0.03226986363486617,
+      "mean_change_percent": -5.00274119759686
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1331876914859258,
+      "filtered_mean_power": 0.12682116963198098,
+      "mean_change_percent": -4.780112773872636
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03355085770611854,
+      "filtered_mean_power": 0.031917007554955745,
+      "mean_change_percent": -4.869771632886866
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1100012819089117,
+      "filtered_mean_power": 0.10444707262662764,
+      "mean_change_percent": -5.049222323502844
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.02604855497602557,
+      "filtered_mean_power": 0.024724714012368854,
+      "mean_change_percent": -5.082205000911366
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.17156870197240792,
+      "filtered_mean_power": 0.16370410213374953,
+      "mean_change_percent": -4.583936200626615
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.042808752587256915,
+      "filtered_mean_power": 0.04078735672014844,
+      "mean_change_percent": -4.721921908348703
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.13448685085249146,
+      "filtered_mean_power": 0.1279302204427779,
+      "mean_change_percent": -4.875294772799032
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03266639239322089,
+      "filtered_mean_power": 0.031027153811848507,
+      "mean_change_percent": -5.018119422677869
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.14239948167077943,
+      "filtered_mean_power": 0.13576752657779778,
+      "mean_change_percent": -4.6572887872684765
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.036011162265926544,
+      "filtered_mean_power": 0.03429899666045255,
+      "mean_change_percent": -4.75454136367609
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1303418023267541,
+      "filtered_mean_power": 0.12299661295762045,
+      "mean_change_percent": -5.635328987334387
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.034129243036280905,
+      "filtered_mean_power": 0.03227465638265991,
+      "mean_change_percent": -5.434010510134923
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.13475564740830848,
+      "filtered_mean_power": 0.12866422072816164,
+      "mean_change_percent": -4.520349831194725
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03336939409965378,
+      "filtered_mean_power": 0.03183896383085916,
+      "mean_change_percent": -4.586329210006557
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.14634635142085628,
+      "filtered_mean_power": 0.1396248675273668,
+      "mean_change_percent": -4.592860586021807
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.0367881066578124,
+      "filtered_mean_power": 0.03504306620533004,
+      "mean_change_percent": -4.7434907936795945
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1412524997487843,
+      "filtered_mean_power": 0.1346590002795267,
+      "mean_change_percent": -4.667881616951231
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03522519116430578,
+      "filtered_mean_power": 0.03359580705199505,
+      "mean_change_percent": -4.625621773663524
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.11944014418033827,
+      "filtered_mean_power": 0.1132163970213158,
+      "mean_change_percent": -5.210766615975826
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.026290418414020317,
+      "filtered_mean_power": 0.02495103262684506,
+      "mean_change_percent": -5.09457767496383
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.165647756234776,
+      "filtered_mean_power": 0.15816411171626044,
+      "mean_change_percent": -4.517806150002324
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.044212914972980855,
+      "filtered_mean_power": 0.042133094564807294,
+      "mean_change_percent": -4.7041015265439245
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.11973922968245532,
+      "filtered_mean_power": 0.11402252957602599,
+      "mean_change_percent": -4.774291701717004
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.027123030899901757,
+      "filtered_mean_power": 0.025784584028007984,
+      "mean_change_percent": -4.934724577180716
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.13381669487495707,
+      "filtered_mean_power": 0.12678954764292527,
+      "mean_change_percent": -5.251323266202479
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.030494393641256973,
+      "filtered_mean_power": 0.028858763407815236,
+      "mean_change_percent": -5.363708007064072
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.140841684863664,
+      "filtered_mean_power": 0.13401579997327318,
+      "mean_change_percent": -4.846494769640353
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.03729223457342099,
+      "filtered_mean_power": 0.035465795801636,
+      "mean_change_percent": -4.897638322501418
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1384528142966559,
+      "filtered_mean_power": 0.13208197795188426,
+      "mean_change_percent": -4.601449509810019
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.035457338928481796,
+      "filtered_mean_power": 0.03380450682903913,
+      "mean_change_percent": -4.6614668483059845
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1344888235744861,
+      "filtered_mean_power": 0.12826981445137164,
+      "mean_change_percent": -4.624182856109293
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.034691983892654044,
+      "filtered_mean_power": 0.03311821483796251,
+      "mean_change_percent": -4.5364054692322515
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1493750795388813,
+      "filtered_mean_power": 0.14217967833988965,
+      "mean_change_percent": -4.817002421825478
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.0302341407234456,
+      "filtered_mean_power": 0.028776809090971245,
+      "mean_change_percent": -4.8201523099488774
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.1308246852949031,
+      "filtered_mean_power": 0.12406981720489618,
+      "mean_change_percent": -5.163297794128219
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.032225285334773174,
+      "filtered_mean_power": 0.030549986148487918,
+      "mean_change_percent": -5.198710170853005
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.11023993509464614,
+      "filtered_mean_power": 0.10442386676138149,
+      "mean_change_percent": -5.275827066000427
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.025223794176310405,
+      "filtered_mean_power": 0.023944872546143525,
+      "mean_change_percent": -5.070298390588723
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "median",
+      "band": "VV",
+      "raw_mean_power": 0.09486191332974814,
+      "filtered_mean_power": 0.08959603027215657,
+      "mean_change_percent": -5.551103570183013
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "median",
+      "band": "VH",
+      "raw_mean_power": 0.02223404855674864,
+      "filtered_mean_power": 0.02098480938106584,
+      "mean_change_percent": -5.618586162993799
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.13564443345975627,
+      "filtered_mean_power": 0.13524879110146415,
+      "mean_change_percent": -0.29167607413060903
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.034366669956350945,
+      "filtered_mean_power": 0.03434424088092458,
+      "mean_change_percent": -0.06526403476057041
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.12345263532215456,
+      "filtered_mean_power": 0.1229086392967833,
+      "mean_change_percent": -0.4406516101917779
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.032300803702377576,
+      "filtered_mean_power": 0.03226629830860417,
+      "mean_change_percent": -0.10682518642985972
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.13327747518609634,
+      "filtered_mean_power": 0.13298154290782804,
+      "mean_change_percent": -0.2220422302081304
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03217218119982612,
+      "filtered_mean_power": 0.03215972472251849,
+      "mean_change_percent": -0.03871816222301705
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1552608933754981,
+      "filtered_mean_power": 0.15489760686681692,
+      "mean_change_percent": -0.23398455385836847
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03688304329133278,
+      "filtered_mean_power": 0.03687306603208997,
+      "mean_change_percent": -0.02705107375223781
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.15284661395762655,
+      "filtered_mean_power": 0.15251185752260918,
+      "mean_change_percent": -0.21901462279706463
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03905628274023013,
+      "filtered_mean_power": 0.03903829046870681,
+      "mean_change_percent": -0.04606754729575835
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.15012702070547407,
+      "filtered_mean_power": 0.1498815314167998,
+      "mean_change_percent": -0.1635210553840749
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.032833415900075845,
+      "filtered_mean_power": 0.03282469546575086,
+      "mean_change_percent": -0.026559631661604577
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.08470874338951791,
+      "filtered_mean_power": 0.08367860455094878,
+      "mean_change_percent": -1.216095053886257
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.014286525646373045,
+      "filtered_mean_power": 0.014129414645637925,
+      "mean_change_percent": -1.0997145465875158
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.10479059587027528,
+      "filtered_mean_power": 0.10445158100929319,
+      "mean_change_percent": -0.3235164932183121
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.02442683295328285,
+      "filtered_mean_power": 0.02441310071892211,
+      "mean_change_percent": -0.05621782564692035
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.14722667864396044,
+      "filtered_mean_power": 0.14694074694658354,
+      "mean_change_percent": -0.19421187790860106
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03681108075135597,
+      "filtered_mean_power": 0.036804265154792404,
+      "mean_change_percent": -0.018515067812341357
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.13501079865155408,
+      "filtered_mean_power": 0.13450689878189692,
+      "mean_change_percent": -0.3732293080923488
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.027948913403480685,
+      "filtered_mean_power": 0.027928423947326753,
+      "mean_change_percent": -0.07331038548131774
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.13094265660772741,
+      "filtered_mean_power": 0.1305554161277982,
+      "mean_change_percent": -0.2957328726644781
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03396925768351733,
+      "filtered_mean_power": 0.03395582743074854,
+      "mean_change_percent": -0.03953649177121932
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1331876914859258,
+      "filtered_mean_power": 0.13289022335310108,
+      "mean_change_percent": -0.2233450625249045
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03355085770611854,
+      "filtered_mean_power": 0.03354128207161011,
+      "mean_change_percent": -0.028540654883713046
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1100012819089117,
+      "filtered_mean_power": 0.1096125073217627,
+      "mean_change_percent": -0.353427324120581
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.02604855497602557,
+      "filtered_mean_power": 0.02602051978979874,
+      "mean_change_percent": -0.10762664667055555
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.17156870197240792,
+      "filtered_mean_power": 0.17124845278158318,
+      "mean_change_percent": -0.1866594472902383
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.042808752587256915,
+      "filtered_mean_power": 0.04279945850680633,
+      "mean_change_percent": -0.0217107014077067
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.13448685085249146,
+      "filtered_mean_power": 0.13415868864858282,
+      "mean_change_percent": -0.2440106239594897
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03266639239322089,
+      "filtered_mean_power": 0.032654290866197755,
+      "mean_change_percent": -0.03704580192835927
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.14239948167077943,
+      "filtered_mean_power": 0.1420904218415373,
+      "mean_change_percent": -0.21703718694472407
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.036011162265926544,
+      "filtered_mean_power": 0.03599988068398208,
+      "mean_change_percent": -0.03132801396732443
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1303418023267541,
+      "filtered_mean_power": 0.1297497384691036,
+      "mean_change_percent": -0.4542394282428752
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.034129243036280905,
+      "filtered_mean_power": 0.034067375916946384,
+      "mean_change_percent": -0.18127304865436233
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.13475564740830848,
+      "filtered_mean_power": 0.13449891660228985,
+      "mean_change_percent": -0.19051580468515406
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03336939409965378,
+      "filtered_mean_power": 0.03336223423402451,
+      "mean_change_percent": -0.021456384877371892
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.14634635142085628,
+      "filtered_mean_power": 0.14606401686238257,
+      "mean_change_percent": -0.19292217109108112
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.0367881066578124,
+      "filtered_mean_power": 0.036779867078313266,
+      "mean_change_percent": -0.022397400267915035
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1412524997487843,
+      "filtered_mean_power": 0.14094582321264681,
+      "mean_change_percent": -0.2171122894694899
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03522519116430578,
+      "filtered_mean_power": 0.03521815122710237,
+      "mean_change_percent": -0.019985518802656532
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.11944014418033827,
+      "filtered_mean_power": 0.11899465103792917,
+      "mean_change_percent": -0.37298443121139835
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.026290418414020317,
+      "filtered_mean_power": 0.026264195804191703,
+      "mean_change_percent": -0.09974207871347174
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.165647756234776,
+      "filtered_mean_power": 0.1653074568156967,
+      "mean_change_percent": -0.20543557414505198
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.044212914972980855,
+      "filtered_mean_power": 0.044203881331952743,
+      "mean_change_percent": -0.020432131728098657
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.11973922968245532,
+      "filtered_mean_power": 0.11944229848708687,
+      "mean_change_percent": -0.24798154803225003
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.027123030899901757,
+      "filtered_mean_power": 0.027113808917734517,
+      "mean_change_percent": -0.03400055916049638
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.13381669487495707,
+      "filtered_mean_power": 0.133320994410564,
+      "mean_change_percent": -0.3704324522857627
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.030494393641256973,
+      "filtered_mean_power": 0.030444331478572728,
+      "mean_change_percent": -0.16416841493287482
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.140841684863664,
+      "filtered_mean_power": 0.14045508927650285,
+      "mean_change_percent": -0.2744894649161389
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.03729223457342099,
+      "filtered_mean_power": 0.03727944537333272,
+      "mean_change_percent": -0.034294539425072657
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1384528142966559,
+      "filtered_mean_power": 0.1381357141770394,
+      "mean_change_percent": -0.22903118382054943
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.035457338928481796,
+      "filtered_mean_power": 0.0354480611635033,
+      "mean_change_percent": -0.026165993441340518
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1344888235744861,
+      "filtered_mean_power": 0.1342179644443462,
+      "mean_change_percent": -0.20139898836269987
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.034691983892654044,
+      "filtered_mean_power": 0.03468612151148065,
+      "mean_change_percent": -0.016898373963081248
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1493750795388813,
+      "filtered_mean_power": 0.14898503713863676,
+      "mean_change_percent": -0.261116112171178
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.0302341407234456,
+      "filtered_mean_power": 0.030225266021719044,
+      "mean_change_percent": -0.02935324607944434
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.1308246852949031,
+      "filtered_mean_power": 0.13035713369258595,
+      "mean_change_percent": -0.3573879052437223
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.032225285334773174,
+      "filtered_mean_power": 0.03218506719222347,
+      "mean_change_percent": -0.124803061111467
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.11023993509464614,
+      "filtered_mean_power": 0.10987466087662057,
+      "mean_change_percent": -0.3313447324800767
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.025223794176310405,
+      "filtered_mean_power": 0.02521065771119968,
+      "mean_change_percent": -0.052079655498704636
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "lee",
+      "band": "VV",
+      "raw_mean_power": 0.09486191332974814,
+      "filtered_mean_power": 0.09452195688918419,
+      "mean_change_percent": -0.35836979102691346
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "lee",
+      "band": "VH",
+      "raw_mean_power": 0.02223404855674864,
+      "filtered_mean_power": 0.022216620933514952,
+      "mean_change_percent": -0.07838259050845231
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.13564443345975627,
+      "filtered_mean_power": 0.1288693150281478,
+      "mean_change_percent": -4.99476333735328
+    },
+    {
+      "patch_id": "Ghana_103272",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.034366669956350945,
+      "filtered_mean_power": 0.032630336367992265,
+      "mean_change_percent": -5.05237659209925
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.12345263532215456,
+      "filtered_mean_power": 0.11661264155427672,
+      "mean_change_percent": -5.540581414101531
+    },
+    {
+      "patch_id": "Ghana_1089161",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.032300803702377576,
+      "filtered_mean_power": 0.03055681712845145,
+      "mean_change_percent": -5.399204892842202
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.13327747518609634,
+      "filtered_mean_power": 0.1269585470915615,
+      "mean_change_percent": -4.741182323353332
+    },
+    {
+      "patch_id": "Ghana_11745",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03217218119982612,
+      "filtered_mean_power": 0.03057251059599997,
+      "mean_change_percent": -4.972216816417774
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1552608933754981,
+      "filtered_mean_power": 0.14801773478415464,
+      "mean_change_percent": -4.665153235867248
+    },
+    {
+      "patch_id": "Ghana_128663",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03688304329133278,
+      "filtered_mean_power": 0.035100478553306995,
+      "mean_change_percent": -4.83301967233456
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.15284661395762655,
+      "filtered_mean_power": 0.14583804306748965,
+      "mean_change_percent": -4.585362219460009
+    },
+    {
+      "patch_id": "Ghana_134751",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03905628274023013,
+      "filtered_mean_power": 0.03711511817758367,
+      "mean_change_percent": -4.970172342200274
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.15012702070547407,
+      "filtered_mean_power": 0.143271970596979,
+      "mean_change_percent": -4.566166754180534
+    },
+    {
+      "patch_id": "Ghana_135389",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.032833415900075845,
+      "filtered_mean_power": 0.03126065834880896,
+      "mean_change_percent": -4.790112475818442
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.08470874338951791,
+      "filtered_mean_power": 0.07980227085126276,
+      "mean_change_percent": -5.792167776227785
+    },
+    {
+      "patch_id": "Ghana_141910",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.014286525646373045,
+      "filtered_mean_power": 0.013371213198393832,
+      "mean_change_percent": -6.406823258750705
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.10479059587027528,
+      "filtered_mean_power": 0.09953913819353488,
+      "mean_change_percent": -5.011382589370328
+    },
+    {
+      "patch_id": "Ghana_144050",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.02442683295328285,
+      "filtered_mean_power": 0.023148432388402806,
+      "mean_change_percent": -5.233591138585291
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.14722667864396044,
+      "filtered_mean_power": 0.14029671129270582,
+      "mean_change_percent": -4.707005153606314
+    },
+    {
+      "patch_id": "Ghana_146222",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03681108075135597,
+      "filtered_mean_power": 0.03506147769155277,
+      "mean_change_percent": -4.752925000004948
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.13501079865155408,
+      "filtered_mean_power": 0.12826994484433385,
+      "mean_change_percent": -4.9928256662028385
+    },
+    {
+      "patch_id": "Ghana_147015",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.027948913403480685,
+      "filtered_mean_power": 0.026519249563768416,
+      "mean_change_percent": -5.115275213290483
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.13094265660772741,
+      "filtered_mean_power": 0.12449111107982347,
+      "mean_change_percent": -4.92700063908984
+    },
+    {
+      "patch_id": "Ghana_154838",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03396925768351733,
+      "filtered_mean_power": 0.03223540368966482,
+      "mean_change_percent": -5.104185702279307
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1331876914859258,
+      "filtered_mean_power": 0.1268791906934581,
+      "mean_change_percent": -4.736549392880141
+    },
+    {
+      "patch_id": "Ghana_156478",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03355085770611854,
+      "filtered_mean_power": 0.03190534283875479,
+      "mean_change_percent": -4.904538899652822
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1100012819089117,
+      "filtered_mean_power": 0.10456919330205075,
+      "mean_change_percent": -4.938204821430247
+    },
+    {
+      "patch_id": "Ghana_161233",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.02604855497602557,
+      "filtered_mean_power": 0.024662912180830516,
+      "mean_change_percent": -5.3194612771048755
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.17156870197240792,
+      "filtered_mean_power": 0.16357626265676117,
+      "mean_change_percent": -4.658448320563801
+    },
+    {
+      "patch_id": "Ghana_168875",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.042808752587256915,
+      "filtered_mean_power": 0.04069646171144825,
+      "mean_change_percent": -4.934250002971218
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.13448685085249146,
+      "filtered_mean_power": 0.12803662314463793,
+      "mean_change_percent": -4.796177222506537
+    },
+    {
+      "patch_id": "Ghana_187318",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03266639239322089,
+      "filtered_mean_power": 0.03102628127292384,
+      "mean_change_percent": -5.020790482628912
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.14239948167077943,
+      "filtered_mean_power": 0.135728052743737,
+      "mean_change_percent": -4.685009277257368
+    },
+    {
+      "patch_id": "Ghana_194723",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.036011162265926544,
+      "filtered_mean_power": 0.03423396133227358,
+      "mean_change_percent": -4.935139056410131
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1303418023267541,
+      "filtered_mean_power": 0.123776070250393,
+      "mean_change_percent": -5.037318771994159
+    },
+    {
+      "patch_id": "Ghana_247288",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.034129243036280905,
+      "filtered_mean_power": 0.03238078761835568,
+      "mean_change_percent": -5.12304189127939
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.13475564740830848,
+      "filtered_mean_power": 0.12856084285074942,
+      "mean_change_percent": -4.5970648924188335
+    },
+    {
+      "patch_id": "Ghana_24858",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03336939409965378,
+      "filtered_mean_power": 0.03179914663168759,
+      "mean_change_percent": -4.705651721684934
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.14634635142085628,
+      "filtered_mean_power": 0.13960852407453928,
+      "mean_change_percent": -4.60402823910564
+    },
+    {
+      "patch_id": "Ghana_26376",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.0367881066578124,
+      "filtered_mean_power": 0.03503960143729534,
+      "mean_change_percent": -4.752908968055691
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1412524997487843,
+      "filtered_mean_power": 0.13462178918715395,
+      "mean_change_percent": -4.694225286931541
+    },
+    {
+      "patch_id": "Ghana_264787",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03522519116430578,
+      "filtered_mean_power": 0.03353334379047812,
+      "mean_change_percent": -4.802947316697703
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.11944014418033827,
+      "filtered_mean_power": 0.11353291218964812,
+      "mean_change_percent": -4.9457676321715045
+    },
+    {
+      "patch_id": "Ghana_362274",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.026290418414020317,
+      "filtered_mean_power": 0.024950770861336243,
+      "mean_change_percent": -5.095573343821947
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.165647756234776,
+      "filtered_mean_power": 0.15803911993990027,
+      "mean_change_percent": -4.593262515486085
+    },
+    {
+      "patch_id": "Ghana_45911",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.044212914972980855,
+      "filtered_mean_power": 0.04207859004605119,
+      "mean_change_percent": -4.827378896492085
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.11973922968245532,
+      "filtered_mean_power": 0.11402055609957529,
+      "mean_change_percent": -4.775939846987298
+    },
+    {
+      "patch_id": "Ghana_49890",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.027123030899901757,
+      "filtered_mean_power": 0.025765112057351658,
+      "mean_change_percent": -5.0065158557004
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.13381669487495707,
+      "filtered_mean_power": 0.12725221311712565,
+      "mean_change_percent": -4.905577561877084
+    },
+    {
+      "patch_id": "Ghana_597288",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.030494393641256973,
+      "filtered_mean_power": 0.028928704624311026,
+      "mean_change_percent": -5.134350383762576
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.140841684863664,
+      "filtered_mean_power": 0.13408928412895027,
+      "mean_change_percent": -4.794319764954613
+    },
+    {
+      "patch_id": "Ghana_61925",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.03729223457342099,
+      "filtered_mean_power": 0.03544374871106172,
+      "mean_change_percent": -4.956758111987014
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1384528142966559,
+      "filtered_mean_power": 0.13199179605243216,
+      "mean_change_percent": -4.666584985683309
+    },
+    {
+      "patch_id": "Ghana_7496",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.035457338928481796,
+      "filtered_mean_power": 0.033738094732498336,
+      "mean_change_percent": -4.848768260503733
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1344888235744861,
+      "filtered_mean_power": 0.12825089056430983,
+      "mean_change_percent": -4.6382538298592735
+    },
+    {
+      "patch_id": "Ghana_8090",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.034691983892654044,
+      "filtered_mean_power": 0.03305461434385926,
+      "mean_change_percent": -4.719734546923671
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1493750795388813,
+      "filtered_mean_power": 0.14229722294111902,
+      "mean_change_percent": -4.738311517296944
+    },
+    {
+      "patch_id": "Ghana_83200",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.0302341407234456,
+      "filtered_mean_power": 0.028776399765810173,
+      "mean_change_percent": -4.821506160765454
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.1308246852949031,
+      "filtered_mean_power": 0.1243806498673683,
+      "mean_change_percent": -4.925702984118596
+    },
+    {
+      "patch_id": "Ghana_887131",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.032225285334773174,
+      "filtered_mean_power": 0.030580747818844775,
+      "mean_change_percent": -5.1032519924775865
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.11023993509464614,
+      "filtered_mean_power": 0.10480517440635762,
+      "mean_change_percent": -4.929938214878781
+    },
+    {
+      "patch_id": "Ghana_953791",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.025223794176310405,
+      "filtered_mean_power": 0.02395374134883259,
+      "mean_change_percent": -5.035137928102107
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "log_bilateral",
+      "band": "VV",
+      "raw_mean_power": 0.09486191332974814,
+      "filtered_mean_power": 0.08999031780501876,
+      "mean_change_percent": -5.135459905594875
+    },
+    {
+      "patch_id": "Ghana_97516",
+      "method": "log_bilateral",
+      "band": "VH",
+      "raw_mean_power": 0.02223404855674864,
+      "filtered_mean_power": 0.02104573918457492,
+      "mean_change_percent": -5.344547886277939
+    }
+  ],
+  "enl_status": "recorded_rois",
+  "macro_patch_ids": [
+    "Ghana_103272",
+    "Ghana_1089161",
+    "Ghana_135389",
+    "Ghana_141910",
+    "Ghana_147015",
+    "Ghana_247288",
+    "Ghana_24858",
+    "Ghana_362274",
+    "Ghana_597288",
+    "Ghana_61925",
+    "Ghana_8090",
+    "Ghana_83200",
+    "Ghana_887131",
+    "Ghana_953791",
+    "Ghana_97516"
+  ]
+}

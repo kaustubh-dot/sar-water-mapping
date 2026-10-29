@@ -1,0 +1,16 @@
+{
+  "cleanup_ablation.csv": "8124868c0e1ba4bc0e348d8f743ba9fea893fa81b07687a5b10a45f35e1bc6e9",
+  "config.json": "49cb0ff9bf2c77c3f85169bbdb0149e3fc51fabdb494122f2c215d83ec42bf62",
+  "enl_rois.csv": "eaa622e4922147a78b88965969781c92c8319357c8915dbac966e42018aa498c",
+  "enl_summary.csv": "78c61034aa7515a875ed1fb2e4aa982461ab510e2f8b6d2ece99c332d0c22db6",
+  "environment.txt": "bd5c7958218233edb51d9f5c2ddca2d84e46207435dc614e80b02499f4af6f95",
+  "per_patch_real.csv": "3e26075ba7f0f9e36e99c0474f5fc2cc07a34e731c6d67b6b38223c305336e13",
+  "radiometry.csv": "1a8990201818e78c03c46b70431f69fca189dd7a0200d241eead56efe538c1e1",
+  "results_real.csv": "2da0cfa3e3dbb26be7c340572d7e73a3f9fe7b91413b145a6af95a1c81ed00cf",
+  "results_real.json": "dcc8d27fe15126dbe2b959d5169a88be3b897903d89dded03d6413883150faea",
+  "results_synthetic.csv": "1402065b617483332c322d4b68180992792587151df0aa9d054eeab9617c092e",
+  "runtime.json": "b251d9ecdc77d53d9be68b4c67b14fa237042ca2cf1fc723663b69e4ac8dd732",
+  "synthetic_selection.csv": "118a57450867069c7c2d2a0529e140f99b628a50890af4aa91345e61071e3798",
+  "synthetic_test.csv": "6d57357d6b52f9f67f5ad995ad21c68e4715e52c0756d11a58f1b1fa919098ff",
+  "synthetic_validation.csv": "f5b6b3b37f462edd10d4e734434c4786b5a36b2666d3dc1408b63ed7910ac056"
+}

@@ -1,0 +1,1189 @@
+{
+  "runtime": {
+    "profile": "checkpoint-evaluation",
+    "runtime_type": "neural_cuda",
+    "training_included": false,
+    "fresh_colab_verified": false,
+    "seed": 42,
+    "training_runtime_type": "remote",
+    "external_training_seconds": 76.76752543798648,
+    "training_config": {
+      "seed": 42,
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "crop_size": 256,
+      "max_seconds": 3588.8989961289335,
+      "profile": "remote"
+    },
+    "training_commit_sha": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+    "training_working_tree_dirty": false,
+    "evaluation_source_commit_sha": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+    "evaluation_working_tree_dirty": false,
+    "evaluation_source_git_status": "available",
+    "evaluation_source_sha256": {
+      "scripts/evaluate_neural.py": "67aa6b72b3f7d9f4d510555bd3baa8a339511009bcf88956287257bdc5646ba3",
+      "src/sar_water/model.py": "c943cf84f2237131df46277cedc31c9b3c72966922d3bdb333e85ccf794740cc",
+      "src/sar_water/train.py": "3b7d6fb308919b1e92e2348f61f34d264ed018833a978ae4633208d6adddad67",
+      "src/sar_water/data.py": "e0ef47f8f1834a6420e1b366c46b4a61bb2c9266c84fc4e0ebeb1f33f8709532",
+      "src/sar_water/filters.py": "6afb5df3b78787e4e4de7dff4c6dec77429c12a5d228088a4c834f7704de24c5",
+      "src/sar_water/metrics.py": "8aef3af47e0ad895c874bee7ab9c70c38562189dc6c19efe59be097aa7d883ed",
+      "src/sar_water/evaluate.py": "bbd607eded10e8906a78d323e67fb7846814eadeb71873f7b6e3cd6ed86091e8"
+    },
+    "training_report_sha256": "2bf40f37c37b46a08566dac1607f2949322168a60a6033eb78cb0d0b846e259b",
+    "training_checkpoint_sha256": {
+      "raw": "ca627a944b74ceaa01c4fb24a0de4a181a8e74751b0c5349165418c45b13c799",
+      "filtered": "325a085a55fef3df79c653a8c63128dc2d4f71e3f5e9757ca7b0560ff61e4180"
+    },
+    "config_sha256": "a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b",
+    "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+    "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+    "normalization": {
+      "mean": [
+        -11.439083026806747,
+        -18.45606842526354
+      ],
+      "std": [
+        5.334126788219284,
+        6.788454969182341
+      ],
+      "pixel_count": 7601417,
+      "train_ids": [
+        "Mekong_1111068",
+        "Mekong_1191208",
+        "Mekong_119477",
+        "Mekong_1248200",
+        "Mekong_1282475",
+        "Mekong_1395593",
+        "Mekong_1396181",
+        "Mekong_1439641",
+        "Mekong_16233",
+        "Mekong_213094",
+        "Mekong_221789",
+        "Mekong_269835",
+        "Mekong_342411",
+        "Mekong_52610",
+        "Mekong_596495",
+        "Mekong_774566",
+        "Mekong_846007",
+        "Mekong_922373",
+        "Nigeria_143329",
+        "Nigeria_35845",
+        "Nigeria_439488",
+        "Nigeria_529525",
+        "Nigeria_598959",
+        "Nigeria_600295",
+        "Nigeria_707067",
+        "Nigeria_78061",
+        "Nigeria_81933",
+        "Nigeria_952958",
+        "Pakistan_909806"
+      ]
+    },
+    "filtered_identity": {
+      "method": "median",
+      "parameters": {
+        "window": 5
+      },
+      "looks": [
+        4.6020301257391925,
+        2.582041888130562
+      ],
+      "config_file_sha256": "a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b",
+      "manifest_file_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+      "splits_file_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+      "training_roi_sha256": "06250010ee4dcc6cd43a9ff97c5ff4644c55f85b990664ea76e0fb7459abfad0",
+      "looks_artifact_sha256": "97179626997d624aa1026320d950098af91f74a8e24abbfcd85e86b29ef1dac2"
+    },
+    "best_epochs": {
+      "raw": 5,
+      "filtered": 4
+    },
+    "actual_training_updates": {
+      "raw": 150,
+      "filtered": 135
+    },
+    "heldout_patch_count": 31,
+    "heldout_shapes": {
+      "Ghana_103272": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_1089161": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_11745": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_128663": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_134751": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_135389": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_141910": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_144050": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_146222": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_147015": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_154838": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_156478": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_161233": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_168875": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_187318": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_194723": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_247288": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_24858": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_26376": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_264787": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_362274": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_45911": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_49890": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_597288": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_61925": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_7496": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_8090": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_83200": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_887131": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_953791": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_97516": [
+        2,
+        512,
+        512
+      ]
+    },
+    "fixed_macro_patch_ids": [
+      "Ghana_103272",
+      "Ghana_1089161",
+      "Ghana_135389",
+      "Ghana_141910",
+      "Ghana_147015",
+      "Ghana_247288",
+      "Ghana_24858",
+      "Ghana_362274",
+      "Ghana_597288",
+      "Ghana_61925",
+      "Ghana_8090",
+      "Ghana_83200",
+      "Ghana_887131",
+      "Ghana_953791",
+      "Ghana_97516"
+    ],
+    "native_prediction_artifact_count": 62,
+    "native_export_seconds": 0.16738487384282053,
+    "prediction_encoding": {
+      "dtype": "int8",
+      "land": 0,
+      "water": 1,
+      "invalid": -1,
+      "validity": "original SAR mask; label validity stored separately"
+    },
+    "label_claim": "independent manual labels",
+    "python": "3.12.3",
+    "torch": "2.15.0+cu132",
+    "numpy": "2.5.4",
+    "device": "cuda",
+    "device_name": "NVIDIA RTX 4000 Ada Generation",
+    "checkpoint_verification_seconds": 0.41581879695877433,
+    "heldout_loading_seconds": 0.7705877891276032,
+    "limitations": "A checkpoint evaluation does not reproduce training or establish a fresh Colab runtime. These masks identify observed water; new flooding versus permanent water is not established.",
+    "evaluation_seconds": 9.061678797006607,
+    "evaluation_timing_scope": "preflight_loading_compute_tables_native_masks_checksums_and_optional_figures; excludes_final_json_and_config_serialization"
+  },
+  "conditions": [
+    {
+      "condition": "raw",
+      "model_role": "segmentation",
+      "input_filter": "raw",
+      "water_probability_threshold": 0.5,
+      "threshold_comparison": "strict_greater",
+      "cleanup": false,
+      "enl": "not_applicable",
+      "psnr": "not_applicable",
+      "seconds": 0.9336543390527368,
+      "timing_scope": "input_filtering_native_inference_and_scoring_only",
+      "native_export_seconds": 0.08327905600890517,
+      "native_export_timing_scope": "native_prediction_npz_write_and_checksum",
+      "per_patch_counts": {
+        "Ghana_103272": {
+          "tp": 1550,
+          "fp": 2479,
+          "fn": 8,
+          "tn": 255232
+        },
+        "Ghana_1089161": {
+          "tp": 2373,
+          "fp": 689,
+          "fn": 534,
+          "tn": 232568
+        },
+        "Ghana_11745": {
+          "tp": 0,
+          "fp": 74,
+          "fn": 0,
+          "tn": 262070
+        },
+        "Ghana_128663": {
+          "tp": 0,
+          "fp": 1054,
+          "fn": 0,
+          "tn": 167794
+        },
+        "Ghana_134751": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 37663
+        },
+        "Ghana_135389": {
+          "tp": 0,
+          "fp": 15,
+          "fn": 252,
+          "tn": 24357
+        },
+        "Ghana_141910": {
+          "tp": 62726,
+          "fp": 86318,
+          "fn": 7924,
+          "tn": 105176
+        },
+        "Ghana_144050": {
+          "tp": 0,
+          "fp": 206,
+          "fn": 0,
+          "tn": 23345
+        },
+        "Ghana_146222": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 181656
+        },
+        "Ghana_147015": {
+          "tp": 632,
+          "fp": 1931,
+          "fn": 2898,
+          "tn": 256683
+        },
+        "Ghana_154838": {
+          "tp": 0,
+          "fp": 40,
+          "fn": 0,
+          "tn": 42067
+        },
+        "Ghana_156478": {
+          "tp": 0,
+          "fp": 95,
+          "fn": 0,
+          "tn": 262049
+        },
+        "Ghana_161233": {
+          "tp": 0,
+          "fp": 1443,
+          "fn": 0,
+          "tn": 449
+        },
+        "Ghana_168875": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 41796
+        },
+        "Ghana_187318": {
+          "tp": 0,
+          "fp": 410,
+          "fn": 0,
+          "tn": 261734
+        },
+        "Ghana_194723": {
+          "tp": 0,
+          "fp": 245,
+          "fn": 0,
+          "tn": 47163
+        },
+        "Ghana_247288": {
+          "tp": 16188,
+          "fp": 2209,
+          "fn": 10462,
+          "tn": 11315
+        },
+        "Ghana_24858": {
+          "tp": 24,
+          "fp": 0,
+          "fn": 460,
+          "tn": 0
+        },
+        "Ghana_26376": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "Ghana_264787": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 181975
+        },
+        "Ghana_362274": {
+          "tp": 13995,
+          "fp": 1608,
+          "fn": 4369,
+          "tn": 239435
+        },
+        "Ghana_45911": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 29269
+        },
+        "Ghana_49890": {
+          "tp": 0,
+          "fp": 291,
+          "fn": 0,
+          "tn": 261853
+        },
+        "Ghana_597288": {
+          "tp": 4807,
+          "fp": 2133,
+          "fn": 883,
+          "tn": 254321
+        },
+        "Ghana_61925": {
+          "tp": 627,
+          "fp": 219,
+          "fn": 24,
+          "tn": 261274
+        },
+        "Ghana_7496": {
+          "tp": 0,
+          "fp": 19,
+          "fn": 0,
+          "tn": 262125
+        },
+        "Ghana_8090": {
+          "tp": 1,
+          "fp": 23,
+          "fn": 3,
+          "tn": 194639
+        },
+        "Ghana_83200": {
+          "tp": 264,
+          "fp": 546,
+          "fn": 269,
+          "tn": 97136
+        },
+        "Ghana_887131": {
+          "tp": 5125,
+          "fp": 1080,
+          "fn": 4950,
+          "tn": 250989
+        },
+        "Ghana_953791": {
+          "tp": 1243,
+          "fp": 4421,
+          "fn": 1529,
+          "tn": 254951
+        },
+        "Ghana_97516": {
+          "tp": 765,
+          "fp": 9734,
+          "fn": 6,
+          "tn": 177050
+        }
+      },
+      "summary": {
+        "counts": {
+          "tp": 110320,
+          "fp": 117282,
+          "fn": 34571,
+          "tn": 4678134
+        },
+        "pooled": {
+          "iou": 0.42079085184210424,
+          "f1": 0.5923332787461778,
+          "precision": 0.4847057582973788,
+          "recall": 0.7613999489271245
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.38394847659152836,
+            "f1": 0.5548594952568463,
+            "precision": 0.384710846363862,
+            "recall": 0.9948652118100129
+          },
+          "Ghana_1089161": {
+            "iou": 0.6598998887652948,
+            "f1": 0.795108058301223,
+            "precision": 0.7749836708033965,
+            "recall": 0.8163054695562435
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_141910": {
+            "iou": 0.3996101116151063,
+            "f1": 0.5710306153103862,
+            "precision": 0.4208555862698264,
+            "recall": 0.8878414720452937
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.11572971983153268,
+            "f1": 0.20745117347776137,
+            "precision": 0.2465860319937573,
+            "recall": 0.17903682719546743
+          },
+          "Ghana_154838": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5609341973041339,
+            "f1": 0.7187160077252647,
+            "precision": 0.8799260749035169,
+            "recall": 0.6074296435272045
+          },
+          "Ghana_24858": {
+            "iou": 0.049586776859504134,
+            "f1": 0.09448818897637795,
+            "precision": 1.0,
+            "recall": 0.049586776859504134
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.7007310234328059,
+            "f1": 0.82403509288427,
+            "precision": 0.8969428955970006,
+            "recall": 0.7620888695273361
+          },
+          "Ghana_45911": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.6144701521155567,
+            "f1": 0.7612034837688044,
+            "precision": 0.6926512968299712,
+            "recall": 0.8448154657293497
+          },
+          "Ghana_61925": {
+            "iou": 0.7206896551724138,
+            "f1": 0.8376753507014028,
+            "precision": 0.7411347517730497,
+            "recall": 0.9631336405529954
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.037037037037037035,
+            "f1": 0.07142857142857142,
+            "precision": 0.041666666666666664,
+            "recall": 0.25
+          },
+          "Ghana_83200": {
+            "iou": 0.24467099165894346,
+            "f1": 0.39314966492926284,
+            "precision": 0.32592592592592595,
+            "recall": 0.49530956848030017
+          },
+          "Ghana_887131": {
+            "iou": 0.45943523083818916,
+            "f1": 0.6296068796068796,
+            "precision": 0.8259468170829976,
+            "recall": 0.5086848635235732
+          },
+          "Ghana_953791": {
+            "iou": 0.17280689559293758,
+            "f1": 0.29468942626837363,
+            "precision": 0.21945621468926554,
+            "recall": 0.44841269841269843
+          },
+          "Ghana_97516": {
+            "iou": 0.07282246549262256,
+            "f1": 0.13575865128660158,
+            "precision": 0.07286408229355176,
+            "recall": 0.9922178988326849
+          }
+        },
+        "macro": {
+          "iou": 0.34615817482050715,
+          "f1": 0.45928004399480177,
+          "precision": 0.5015767240795193,
+          "recall": 0.586648560403511
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 6,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 3877,
+          "false_positive_rate": 0.0018757695759560886,
+          "fraction_with_false_positives": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "condition": "filtered",
+      "model_role": "segmentation",
+      "input_filter": "median",
+      "water_probability_threshold": 0.5,
+      "threshold_comparison": "strict_greater",
+      "cleanup": false,
+      "enl": "not_applicable",
+      "psnr": "not_applicable",
+      "seconds": 4.777398181147873,
+      "timing_scope": "input_filtering_native_inference_and_scoring_only",
+      "native_export_seconds": 0.08410581783391535,
+      "native_export_timing_scope": "native_prediction_npz_write_and_checksum",
+      "per_patch_counts": {
+        "Ghana_103272": {
+          "tp": 1540,
+          "fp": 2165,
+          "fn": 18,
+          "tn": 255546
+        },
+        "Ghana_1089161": {
+          "tp": 2270,
+          "fp": 380,
+          "fn": 637,
+          "tn": 232877
+        },
+        "Ghana_11745": {
+          "tp": 0,
+          "fp": 1532,
+          "fn": 0,
+          "tn": 260612
+        },
+        "Ghana_128663": {
+          "tp": 0,
+          "fp": 1133,
+          "fn": 0,
+          "tn": 167715
+        },
+        "Ghana_134751": {
+          "tp": 0,
+          "fp": 33,
+          "fn": 0,
+          "tn": 37630
+        },
+        "Ghana_135389": {
+          "tp": 0,
+          "fp": 139,
+          "fn": 252,
+          "tn": 24233
+        },
+        "Ghana_141910": {
+          "tp": 62256,
+          "fp": 84420,
+          "fn": 8394,
+          "tn": 107074
+        },
+        "Ghana_144050": {
+          "tp": 0,
+          "fp": 338,
+          "fn": 0,
+          "tn": 23213
+        },
+        "Ghana_146222": {
+          "tp": 0,
+          "fp": 242,
+          "fn": 0,
+          "tn": 181414
+        },
+        "Ghana_147015": {
+          "tp": 577,
+          "fp": 3572,
+          "fn": 2953,
+          "tn": 255042
+        },
+        "Ghana_154838": {
+          "tp": 0,
+          "fp": 483,
+          "fn": 0,
+          "tn": 41624
+        },
+        "Ghana_156478": {
+          "tp": 0,
+          "fp": 1266,
+          "fn": 0,
+          "tn": 260878
+        },
+        "Ghana_161233": {
+          "tp": 0,
+          "fp": 533,
+          "fn": 0,
+          "tn": 1359
+        },
+        "Ghana_168875": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 41796
+        },
+        "Ghana_187318": {
+          "tp": 0,
+          "fp": 2322,
+          "fn": 0,
+          "tn": 259822
+        },
+        "Ghana_194723": {
+          "tp": 0,
+          "fp": 371,
+          "fn": 0,
+          "tn": 47037
+        },
+        "Ghana_247288": {
+          "tp": 16049,
+          "fp": 2107,
+          "fn": 10601,
+          "tn": 11417
+        },
+        "Ghana_24858": {
+          "tp": 28,
+          "fp": 0,
+          "fn": 456,
+          "tn": 0
+        },
+        "Ghana_26376": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "Ghana_264787": {
+          "tp": 0,
+          "fp": 478,
+          "fn": 0,
+          "tn": 181497
+        },
+        "Ghana_362274": {
+          "tp": 12917,
+          "fp": 1178,
+          "fn": 5447,
+          "tn": 239865
+        },
+        "Ghana_45911": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 29269
+        },
+        "Ghana_49890": {
+          "tp": 0,
+          "fp": 2009,
+          "fn": 0,
+          "tn": 260135
+        },
+        "Ghana_597288": {
+          "tp": 4377,
+          "fp": 1024,
+          "fn": 1313,
+          "tn": 255430
+        },
+        "Ghana_61925": {
+          "tp": 628,
+          "fp": 141,
+          "fn": 23,
+          "tn": 261352
+        },
+        "Ghana_7496": {
+          "tp": 0,
+          "fp": 747,
+          "fn": 0,
+          "tn": 261397
+        },
+        "Ghana_8090": {
+          "tp": 3,
+          "fp": 644,
+          "fn": 1,
+          "tn": 194018
+        },
+        "Ghana_83200": {
+          "tp": 275,
+          "fp": 735,
+          "fn": 258,
+          "tn": 96947
+        },
+        "Ghana_887131": {
+          "tp": 4646,
+          "fp": 761,
+          "fn": 5429,
+          "tn": 251308
+        },
+        "Ghana_953791": {
+          "tp": 1068,
+          "fp": 4224,
+          "fn": 1704,
+          "tn": 255148
+        },
+        "Ghana_97516": {
+          "tp": 747,
+          "fp": 7761,
+          "fn": 24,
+          "tn": 179023
+        }
+      },
+      "summary": {
+        "counts": {
+          "tp": 107381,
+          "fp": 120738,
+          "fn": 37510,
+          "tn": 4674678
+        },
+        "pooled": {
+          "iou": 0.40425179479650186,
+          "f1": 0.5757540012332109,
+          "precision": 0.47072361355257564,
+          "recall": 0.7411157352768633
+        },
+        "per_patch": {
+          "Ghana_103272": {
+            "iou": 0.41364491001880205,
+            "f1": 0.5852175565266958,
+            "precision": 0.4156545209176788,
+            "recall": 0.9884467265725289
+          },
+          "Ghana_1089161": {
+            "iou": 0.6905993306966839,
+            "f1": 0.8169875832283606,
+            "precision": 0.8566037735849057,
+            "recall": 0.780873753009976
+          },
+          "Ghana_11745": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_128663": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_134751": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_135389": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Ghana_141910": {
+            "iou": 0.40147030373379766,
+            "f1": 0.5729273073631319,
+            "precision": 0.4244457170907306,
+            "recall": 0.8811889596602972
+          },
+          "Ghana_144050": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_146222": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_147015": {
+            "iou": 0.08124471979724021,
+            "f1": 0.15027998437296522,
+            "precision": 0.13906965533863583,
+            "recall": 0.16345609065155808
+          },
+          "Ghana_154838": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_156478": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_161233": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_168875": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_187318": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_194723": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_247288": {
+            "iou": 0.5580902041242133,
+            "f1": 0.7163772709012186,
+            "precision": 0.883950209297202,
+            "recall": 0.6022138836772983
+          },
+          "Ghana_24858": {
+            "iou": 0.05785123966942149,
+            "f1": 0.109375,
+            "precision": 1.0,
+            "recall": 0.05785123966942149
+          },
+          "Ghana_26376": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_264787": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_362274": {
+            "iou": 0.6609865929792242,
+            "f1": 0.7958963615638189,
+            "precision": 0.9164242639233771,
+            "recall": 0.7033870616423438
+          },
+          "Ghana_45911": {
+            "iou": null,
+            "f1": null,
+            "precision": null,
+            "recall": null
+          },
+          "Ghana_49890": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_597288": {
+            "iou": 0.6519213583556747,
+            "f1": 0.7892886123884231,
+            "precision": 0.8104054804665802,
+            "recall": 0.769244288224956
+          },
+          "Ghana_61925": {
+            "iou": 0.7929292929292929,
+            "f1": 0.8845070422535212,
+            "precision": 0.8166449934980494,
+            "recall": 0.9646697388632872
+          },
+          "Ghana_7496": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "Ghana_8090": {
+            "iou": 0.004629629629629629,
+            "f1": 0.009216589861751152,
+            "precision": 0.00463678516228748,
+            "recall": 0.75
+          },
+          "Ghana_83200": {
+            "iou": 0.21687697160883282,
+            "f1": 0.356448476992871,
+            "precision": 0.2722772277227723,
+            "recall": 0.5159474671669794
+          },
+          "Ghana_887131": {
+            "iou": 0.4287559985234404,
+            "f1": 0.6001808551866684,
+            "precision": 0.8592565193267986,
+            "recall": 0.46114143920595535
+          },
+          "Ghana_953791": {
+            "iou": 0.15265866209262435,
+            "f1": 0.2648809523809524,
+            "precision": 0.2018140589569161,
+            "recall": 0.3852813852813853
+          },
+          "Ghana_97516": {
+            "iou": 0.08755274261603375,
+            "f1": 0.16100872938894278,
+            "precision": 0.0877997179125529,
+            "recall": 0.9688715953307393
+          }
+        },
+        "macro": {
+          "iou": 0.3466141304516608,
+          "f1": 0.45417282149395466,
+          "precision": 0.5125988615465659,
+          "recall": 0.5995049085971151
+        },
+        "macro_patch_ids": [
+          "Ghana_103272",
+          "Ghana_1089161",
+          "Ghana_135389",
+          "Ghana_141910",
+          "Ghana_147015",
+          "Ghana_247288",
+          "Ghana_24858",
+          "Ghana_362274",
+          "Ghana_597288",
+          "Ghana_61925",
+          "Ghana_8090",
+          "Ghana_83200",
+          "Ghana_887131",
+          "Ghana_953791",
+          "Ghana_97516"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 3,
+        "no_valid_patch_count": 1,
+        "dry": {
+          "patch_count": 15,
+          "valid_pixels": 2066885,
+          "false_positive_pixels": 11487,
+          "false_positive_rate": 0.005557638668818052,
+          "fraction_with_false_positives": 0.8666666666666667
+        }
+      }
+    }
+  ]
+}

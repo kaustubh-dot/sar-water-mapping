@@ -32,7 +32,7 @@ is disclosed; this is not a claim of pristine blind evaluation.
   validation choices under unchanged method grids; independent review.
 - [x] Remote GPU resource preflight, dedicated environment, seed42 paired
   scratch training under one-hour cap; completed-pair independent review.
-- [ ] Frozen classical/synthetic and neural held-out evaluation, separate
+- [x] Frozen classical/synthetic and neural held-out evaluation, separate
   outputs, figures/counts/hash evidence; independent result review.
 - [ ] Notebook supplied-profile execution smoke, report/reproduction/roadmap
   update, final integration review and branch publication.
@@ -88,3 +88,19 @@ See supplied_training_review.md. The redacted 3,666,469-byte checkpoint bundle
 has SHA-256 `9605d1906802434d73d5ef73239e127395779a03df11596004c94e4acb5aa6d6`;
 it remains outside Git. Frozen held-out classical/synthetic and neural scoring
 has now started in separate output directories at the same clean source.
+
+Frozen evaluation accepted by independent Sol xhigh review in
+supplied_results_review.md. All six summaries and 186 primary per-patch rows
+agree; all 62 saved neural masks and their independent validity masks recount
+exactly. Every method scores 4,940,307 pixels, with the same 15 water-positive
+macro patches, 15 dry patches and one no-score patch. ENL has 40 finite records
+from five fixed land rectangles, including one SAR-valid/label-invalid region
+whose land class is visual interpretation only. The 72 synthetic PSNR records
+and eight means are separate from real SAR. No test-driven changes were made.
+Classical evaluation took 59.376433 seconds including 124 diagnostic figures;
+neural checkpoint evaluation took 9.061679 seconds, separately from training.
+
+The supplied notebook smoke is now running in a separate Linux kernel, clean
+checkout pinned to `9aef5d3b499ca49bcba5fc3c732238c2fa3ba55f`, with 200 cached
+TIFFs. Clone/cache preparation and the existing execution environment are
+outside its notebook clock. This can verify integration, not fresh Colab.

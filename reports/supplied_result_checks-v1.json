@@ -1,0 +1,766 @@
+{
+  "status": "verified",
+  "evaluation_commit": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+  "config_sha256": "a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b",
+  "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+  "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+  "test_patch_count": 31,
+  "independent_test_files_opened": 62,
+  "total_scored_pixels": 4940307,
+  "total_water_pixels": 144891,
+  "fixed_macro_patch_ids": [
+    "Ghana_103272",
+    "Ghana_1089161",
+    "Ghana_135389",
+    "Ghana_141910",
+    "Ghana_147015",
+    "Ghana_247288",
+    "Ghana_24858",
+    "Ghana_362274",
+    "Ghana_597288",
+    "Ghana_61925",
+    "Ghana_8090",
+    "Ghana_83200",
+    "Ghana_887131",
+    "Ghana_953791",
+    "Ghana_97516"
+  ],
+  "dry_patch_ids": [
+    "Ghana_11745",
+    "Ghana_128663",
+    "Ghana_134751",
+    "Ghana_144050",
+    "Ghana_146222",
+    "Ghana_154838",
+    "Ghana_156478",
+    "Ghana_161233",
+    "Ghana_168875",
+    "Ghana_187318",
+    "Ghana_194723",
+    "Ghana_264787",
+    "Ghana_45911",
+    "Ghana_49890",
+    "Ghana_7496"
+  ],
+  "no_score_patch_ids": [
+    "Ghana_26376"
+  ],
+  "Ghana_24858_scored_pixels": 484,
+  "six_primary_rows": [
+    {
+      "kind": "real",
+      "name": "raw",
+      "counts": {
+        "tp": 98560,
+        "fp": 210666,
+        "fn": 46331,
+        "tn": 4584750
+      },
+      "iou": 0.27719887387957487,
+      "f1": 0.4340731573581258,
+      "precision": 0.31873128391532407,
+      "recall": 0.6802354873663651,
+      "macro_iou": 0.18954662493496413,
+      "macro_f1": 0.2895923381483241,
+      "dry": {
+        "patch_count": 15,
+        "valid_pixels": 2066885,
+        "false_positive_pixels": 39098,
+        "false_positive_rate": 0.018916388671841925,
+        "fraction_with_false_positives": 1.0
+      }
+    },
+    {
+      "kind": "real",
+      "name": "median",
+      "counts": {
+        "tp": 98436,
+        "fp": 93164,
+        "fn": 46455,
+        "tn": 4702252
+      },
+      "iou": 0.4135010816828044,
+      "f1": 0.5850735978079652,
+      "precision": 0.5137578288100209,
+      "recall": 0.6793796716152142,
+      "macro_iou": 0.3378486292190775,
+      "macro_f1": 0.4469591132218983,
+      "dry": {
+        "patch_count": 15,
+        "valid_pixels": 2066885,
+        "false_positive_pixels": 1727,
+        "false_positive_rate": 0.0008355568887480436,
+        "fraction_with_false_positives": 0.7333333333333333
+      }
+    },
+    {
+      "kind": "real",
+      "name": "lee",
+      "counts": {
+        "tp": 91209,
+        "fp": 80270,
+        "fn": 53682,
+        "tn": 4715146
+      },
+      "iou": 0.40508347360333274,
+      "f1": 0.5765970224736858,
+      "precision": 0.5318960339166895,
+      "recall": 0.6295007971509617,
+      "macro_iou": 0.3259214481647669,
+      "macro_f1": 0.43681381103141226,
+      "dry": {
+        "patch_count": 15,
+        "valid_pixels": 2066885,
+        "false_positive_pixels": 1094,
+        "false_positive_rate": 0.0005292989208398145,
+        "fraction_with_false_positives": 0.6666666666666666
+      }
+    },
+    {
+      "kind": "real",
+      "name": "log_bilateral",
+      "counts": {
+        "tp": 98170,
+        "fp": 111737,
+        "fn": 46721,
+        "tn": 4683679
+      },
+      "iou": 0.3825381486042053,
+      "f1": 0.5533853065688081,
+      "precision": 0.46768330736945407,
+      "recall": 0.6775438087941971,
+      "macro_iou": 0.2976203616085973,
+      "macro_f1": 0.4133846504097672,
+      "dry": {
+        "patch_count": 15,
+        "valid_pixels": 2066885,
+        "false_positive_pixels": 6580,
+        "false_positive_rate": 0.003183534642711133,
+        "fraction_with_false_positives": 1.0
+      }
+    },
+    {
+      "kind": "neural",
+      "name": "raw",
+      "counts": {
+        "tp": 110320,
+        "fp": 117282,
+        "fn": 34571,
+        "tn": 4678134
+      },
+      "iou": 0.42079085184210424,
+      "f1": 0.5923332787461778,
+      "precision": 0.4847057582973788,
+      "recall": 0.7613999489271245,
+      "macro_iou": 0.34615817482050715,
+      "macro_f1": 0.45928004399480177,
+      "dry": {
+        "patch_count": 15,
+        "valid_pixels": 2066885,
+        "false_positive_pixels": 3877,
+        "false_positive_rate": 0.0018757695759560886,
+        "fraction_with_false_positives": 0.6666666666666666
+      }
+    },
+    {
+      "kind": "neural",
+      "name": "filtered",
+      "counts": {
+        "tp": 107381,
+        "fp": 120738,
+        "fn": 37510,
+        "tn": 4674678
+      },
+      "iou": 0.40425179479650186,
+      "f1": 0.5757540012332109,
+      "precision": 0.47072361355257564,
+      "recall": 0.7411157352768633,
+      "macro_iou": 0.3466141304516608,
+      "macro_f1": 0.45417282149395466,
+      "dry": {
+        "patch_count": 15,
+        "valid_pixels": 2066885,
+        "false_positive_pixels": 11487,
+        "false_positive_rate": 0.005557638668818052,
+        "fraction_with_false_positives": 0.8666666666666667
+      }
+    }
+  ],
+  "native_predictions_recounted": 62,
+  "cleanup_ablation_rows": 4,
+  "enl_records": 40,
+  "enl_aggregates": 8,
+  "enl_roi_class": "land",
+  "enl_fixed_roi_parents": 3,
+  "enl_maximum_relative_replay_difference": 5.294316999954663e-09,
+  "enl_label_diagnostics": [
+    {
+      "roi_id": "supplied_enl_01",
+      "sar_valid_pixels": 1024,
+      "label_valid_pixels": 1024,
+      "land_label_pixels": 1024,
+      "water_label_pixels": 0,
+      "invalid_label_pixels": 0
+    },
+    {
+      "roi_id": "supplied_enl_02",
+      "sar_valid_pixels": 1024,
+      "label_valid_pixels": 1024,
+      "land_label_pixels": 1024,
+      "water_label_pixels": 0,
+      "invalid_label_pixels": 0
+    },
+    {
+      "roi_id": "supplied_enl_03",
+      "sar_valid_pixels": 1024,
+      "label_valid_pixels": 1024,
+      "land_label_pixels": 1024,
+      "water_label_pixels": 0,
+      "invalid_label_pixels": 0
+    },
+    {
+      "roi_id": "supplied_enl_04",
+      "sar_valid_pixels": 1024,
+      "label_valid_pixels": 1024,
+      "land_label_pixels": 1024,
+      "water_label_pixels": 0,
+      "invalid_label_pixels": 0
+    },
+    {
+      "roi_id": "supplied_enl_05",
+      "sar_valid_pixels": 1024,
+      "label_valid_pixels": 0,
+      "land_label_pixels": 0,
+      "water_label_pixels": 0,
+      "invalid_label_pixels": 1024
+    }
+  ],
+  "synthetic_test_records": 72,
+  "synthetic_means": 8,
+  "classical_figures_verified": 124,
+  "identical_public_metadata_copies": [
+    "reports\\supplied_classical-v1\\cleanup_ablation.csv",
+    "reports\\supplied_classical-v1\\config.json",
+    "reports\\supplied_classical-v1\\enl_rois.csv",
+    "reports\\supplied_classical-v1\\enl_summary.csv",
+    "reports\\supplied_classical-v1\\environment.txt",
+    "reports\\supplied_classical-v1\\per_patch_real.csv",
+    "reports\\supplied_classical-v1\\radiometry.csv",
+    "reports\\supplied_classical-v1\\results_real.csv",
+    "reports\\supplied_classical-v1\\results_real.json",
+    "reports\\supplied_classical-v1\\results_synthetic.csv",
+    "reports\\supplied_classical-v1\\runtime.json",
+    "reports\\supplied_classical-v1\\synthetic_selection.csv",
+    "reports\\supplied_classical-v1\\synthetic_test.csv",
+    "reports\\supplied_classical-v1\\synthetic_validation.csv",
+    "reports\\supplied_neural-v1\\config.json",
+    "reports\\supplied_neural-v1\\learning_curves.png",
+    "reports\\supplied_neural-v1\\native_predictions.csv",
+    "reports\\supplied_neural-v1\\per_patch_neural.csv",
+    "reports\\supplied_neural-v1\\results_neural.csv",
+    "reports\\supplied_neural-v1\\results_neural.json",
+    "reports\\supplied_neural-v1\\runtime_neural.json"
+  ],
+  "neural_checkpoint_sha256": {
+    "raw": "ca627a944b74ceaa01c4fb24a0de4a181a8e74751b0c5349165418c45b13c799",
+    "filtered": "325a085a55fef3df79c653a8c63128dc2d4f71e3f5e9757ca7b0560ff61e4180"
+  },
+  "classical_runtime": {
+    "profile": "full",
+    "runtime_type": "remote_linux_cpu_not_colab",
+    "seed": 42,
+    "training_included": false,
+    "neural_status": "not_run_by_classical_runner",
+    "remote_training_seconds": null,
+    "fresh_colab_verified": false,
+    "python": "3.12.3",
+    "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "accelerator": "not_used_by_classical_runner",
+    "dependencies": {
+      "numpy": "2.5.4",
+      "scipy": "1.17.1",
+      "rasterio": "1.5.2",
+      "matplotlib": "3.10.9",
+      "torch": "2.15.0"
+    },
+    "commit_sha": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+    "working_tree_dirty": false,
+    "config_sha256": "a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b",
+    "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+    "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+    "enl_rois_sha256": "ce9feec5fae46109f805c0650f27c9cc9e5193cd96d95f0c268115626a78556e",
+    "manifest_patch_count": 100,
+    "heldout_patch_count": 31,
+    "heldout_shapes": {
+      "Ghana_103272": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_1089161": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_11745": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_128663": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_134751": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_135389": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_141910": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_144050": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_146222": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_147015": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_154838": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_156478": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_161233": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_168875": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_187318": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_194723": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_247288": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_24858": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_26376": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_264787": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_362274": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_45911": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_49890": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_597288": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_61925": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_7496": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_8090": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_83200": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_887131": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_953791": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_97516": [
+        2,
+        512,
+        512
+      ]
+    },
+    "label_claim": "independent manual labels",
+    "external_setup_seconds": 0.0,
+    "load_and_verify_seconds": 0.757624794030562,
+    "real_evaluation_seconds": 55.42944911192171,
+    "synthetic_seconds": 3.1764017431996763,
+    "enl_status": "recorded_rois",
+    "synthetic_status": "scored_separate_known_reference",
+    "runner_seconds": 59.37643294990994,
+    "limitations": "No fresh Colab Run All was verified by this function. External setup includes only supplied timing. Surface water mapping does not establish new flooding versus permanent water.",
+    "total_wall_seconds_including_supplied_setup": 59.37643294990994
+  },
+  "neural_runtime": {
+    "profile": "checkpoint-evaluation",
+    "runtime_type": "neural_cuda",
+    "training_included": false,
+    "fresh_colab_verified": false,
+    "seed": 42,
+    "training_runtime_type": "remote",
+    "external_training_seconds": 76.76752543798648,
+    "training_config": {
+      "seed": 42,
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "crop_size": 256,
+      "max_seconds": 3588.8989961289335,
+      "profile": "remote"
+    },
+    "training_commit_sha": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+    "training_working_tree_dirty": false,
+    "evaluation_source_commit_sha": "0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50",
+    "evaluation_working_tree_dirty": false,
+    "evaluation_source_git_status": "available",
+    "evaluation_source_sha256": {
+      "scripts/evaluate_neural.py": "67aa6b72b3f7d9f4d510555bd3baa8a339511009bcf88956287257bdc5646ba3",
+      "src/sar_water/model.py": "c943cf84f2237131df46277cedc31c9b3c72966922d3bdb333e85ccf794740cc",
+      "src/sar_water/train.py": "3b7d6fb308919b1e92e2348f61f34d264ed018833a978ae4633208d6adddad67",
+      "src/sar_water/data.py": "e0ef47f8f1834a6420e1b366c46b4a61bb2c9266c84fc4e0ebeb1f33f8709532",
+      "src/sar_water/filters.py": "6afb5df3b78787e4e4de7dff4c6dec77429c12a5d228088a4c834f7704de24c5",
+      "src/sar_water/metrics.py": "8aef3af47e0ad895c874bee7ab9c70c38562189dc6c19efe59be097aa7d883ed",
+      "src/sar_water/evaluate.py": "bbd607eded10e8906a78d323e67fb7846814eadeb71873f7b6e3cd6ed86091e8"
+    },
+    "training_report_sha256": "2bf40f37c37b46a08566dac1607f2949322168a60a6033eb78cb0d0b846e259b",
+    "training_checkpoint_sha256": {
+      "raw": "ca627a944b74ceaa01c4fb24a0de4a181a8e74751b0c5349165418c45b13c799",
+      "filtered": "325a085a55fef3df79c653a8c63128dc2d4f71e3f5e9757ca7b0560ff61e4180"
+    },
+    "config_sha256": "a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b",
+    "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+    "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+    "normalization": {
+      "mean": [
+        -11.439083026806747,
+        -18.45606842526354
+      ],
+      "std": [
+        5.334126788219284,
+        6.788454969182341
+      ],
+      "pixel_count": 7601417,
+      "train_ids": [
+        "Mekong_1111068",
+        "Mekong_1191208",
+        "Mekong_119477",
+        "Mekong_1248200",
+        "Mekong_1282475",
+        "Mekong_1395593",
+        "Mekong_1396181",
+        "Mekong_1439641",
+        "Mekong_16233",
+        "Mekong_213094",
+        "Mekong_221789",
+        "Mekong_269835",
+        "Mekong_342411",
+        "Mekong_52610",
+        "Mekong_596495",
+        "Mekong_774566",
+        "Mekong_846007",
+        "Mekong_922373",
+        "Nigeria_143329",
+        "Nigeria_35845",
+        "Nigeria_439488",
+        "Nigeria_529525",
+        "Nigeria_598959",
+        "Nigeria_600295",
+        "Nigeria_707067",
+        "Nigeria_78061",
+        "Nigeria_81933",
+        "Nigeria_952958",
+        "Pakistan_909806"
+      ]
+    },
+    "filtered_identity": {
+      "method": "median",
+      "parameters": {
+        "window": 5
+      },
+      "looks": [
+        4.6020301257391925,
+        2.582041888130562
+      ],
+      "config_file_sha256": "a04fc6e52b01dff1ddb2684d9b2a198963acd7a0d658404e11264779dea6843b",
+      "manifest_file_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+      "splits_file_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+      "training_roi_sha256": "06250010ee4dcc6cd43a9ff97c5ff4644c55f85b990664ea76e0fb7459abfad0",
+      "looks_artifact_sha256": "97179626997d624aa1026320d950098af91f74a8e24abbfcd85e86b29ef1dac2"
+    },
+    "best_epochs": {
+      "raw": 5,
+      "filtered": 4
+    },
+    "actual_training_updates": {
+      "raw": 150,
+      "filtered": 135
+    },
+    "heldout_patch_count": 31,
+    "heldout_shapes": {
+      "Ghana_103272": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_1089161": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_11745": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_128663": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_134751": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_135389": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_141910": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_144050": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_146222": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_147015": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_154838": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_156478": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_161233": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_168875": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_187318": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_194723": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_247288": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_24858": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_26376": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_264787": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_362274": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_45911": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_49890": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_597288": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_61925": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_7496": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_8090": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_83200": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_887131": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_953791": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_97516": [
+        2,
+        512,
+        512
+      ]
+    },
+    "fixed_macro_patch_ids": [
+      "Ghana_103272",
+      "Ghana_1089161",
+      "Ghana_135389",
+      "Ghana_141910",
+      "Ghana_147015",
+      "Ghana_247288",
+      "Ghana_24858",
+      "Ghana_362274",
+      "Ghana_597288",
+      "Ghana_61925",
+      "Ghana_8090",
+      "Ghana_83200",
+      "Ghana_887131",
+      "Ghana_953791",
+      "Ghana_97516"
+    ],
+    "native_prediction_artifact_count": 62,
+    "native_export_seconds": 0.16738487384282053,
+    "prediction_encoding": {
+      "dtype": "int8",
+      "land": 0,
+      "water": 1,
+      "invalid": -1,
+      "validity": "original SAR mask; label validity stored separately"
+    },
+    "label_claim": "independent manual labels",
+    "python": "3.12.3",
+    "torch": "2.15.0+cu132",
+    "numpy": "2.5.4",
+    "device": "cuda",
+    "device_name": "NVIDIA RTX 4000 Ada Generation",
+    "checkpoint_verification_seconds": 0.41581879695877433,
+    "heldout_loading_seconds": 0.7705877891276032,
+    "limitations": "A checkpoint evaluation does not reproduce training or establish a fresh Colab runtime. These masks identify observed water; new flooding versus permanent water is not established.",
+    "evaluation_seconds": 9.061678797006607,
+    "evaluation_timing_scope": "preflight_loading_compute_tables_native_masks_checksums_and_optional_figures; excludes_final_json_and_config_serialization"
+  },
+  "review_seconds": 16.51466879999498,
+  "scope": "Saved results/native-mask arithmetic audit and fixed-ROI classical replay only; no tuning, training or neural inference."
+}
