@@ -12,6 +12,10 @@ reports/neural_results-v*/** -text
 reports/notebook_smoke_summary.json -text
 reports/supplied_subset_selection.csv -text
 reports/supplied_subset_recipe.json -text
+reports/supplied_*.csv -text
+reports/supplied_*.json -text
+reports/supplied_*-v*/** -text
+configs/supplied-*.json -text
 reports/results_real.csv -text
 reports/results_neural.csv -text
 reports/results_synthetic.csv -text

@@ -1,0 +1,6 @@
+roi_id,patch_id,y0,y1,x0,x1,roi_class,suitability
+supplied_enl_01,Ghana_103272,150,182,200,232,land,visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth
+supplied_enl_02,Ghana_103272,300,332,100,132,land,visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth
+supplied_enl_03,Ghana_187318,256,288,256,288,land,visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth
+supplied_enl_04,Ghana_187318,384,416,64,96,land,visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth
+supplied_enl_05,Ghana_168875,192,224,256,288,land,visually homogeneous raw land; selected from SAR only before new filtered outputs; class interpretation not independent truth

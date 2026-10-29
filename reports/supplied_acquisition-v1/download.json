@@ -1,0 +1,1834 @@
+{
+  "status": "download_verified_not_raster_audited",
+  "pairs": 100,
+  "files": 200,
+  "bytes": 169393092,
+  "objects": [
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_103272_S1Hand.tif",
+      "path": "Ghana_103272_S1Hand.tif",
+      "sha256": "1c46a973029c6d05ea931f7c82b1bce9f20282229cc44eb712b0fb84773fcab5",
+      "bytes": 1787221,
+      "generation": "1601572698721398",
+      "md5Hash": "2m5py0bUw9245Sax+UMvJw==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_103272_LabelHand.tif",
+      "path": "Ghana_103272_LabelHand.tif",
+      "sha256": "0b295adc1c5831a534b9d285a1e079cb48715220a4c47e11c7fd59550830bb59",
+      "bytes": 1413,
+      "generation": "1601572621252638",
+      "md5Hash": "hRoCLByG4HYpVk5Ix3VO5w==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_24858_S1Hand.tif",
+      "path": "Ghana_24858_S1Hand.tif",
+      "sha256": "9516e857143c4b2f47ce684dcdcae2471d1b5a2db149658deddce4b6544622e6",
+      "bytes": 1781630,
+      "generation": "1601572691594539",
+      "md5Hash": "royu8uNrba2s/znN/uRX3Q==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_24858_LabelHand.tif",
+      "path": "Ghana_24858_LabelHand.tif",
+      "sha256": "711e33ff541ccbc9e6fdb8bb7990ccca205bc25d06074b02d391a3fc7bbf47c5",
+      "bytes": 1368,
+      "generation": "1601572621393712",
+      "md5Hash": "2yemuMae8fBNLuK/zOcw3Q==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_147015_S1Hand.tif",
+      "path": "Ghana_147015_S1Hand.tif",
+      "sha256": "0c0b1786cf1a9253a0410be894b7fe7682e51c2ba80d7bb0445e3ffdbd3b96a6",
+      "bytes": 1779360,
+      "generation": "1601572676161242",
+      "md5Hash": "UmD18GUc+/xH5S8Lkt0uqg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_147015_LabelHand.tif",
+      "path": "Ghana_147015_LabelHand.tif",
+      "sha256": "5927fb8fc09632d0eca51ddf3c71a55533a3120930919302fc15b7c4afaebc25",
+      "bytes": 2126,
+      "generation": "1601572621364861",
+      "md5Hash": "T89hrpbFur5mIZoiGug/fA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_953791_S1Hand.tif",
+      "path": "Ghana_953791_S1Hand.tif",
+      "sha256": "a89f3f732632efb34b1b5745bc6a6a182cd32bf83310da99f1f08070a860a521",
+      "bytes": 1772556,
+      "generation": "1601572751725286",
+      "md5Hash": "ZQr6rqRqlhN50SL76C68vQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_953791_LabelHand.tif",
+      "path": "Ghana_953791_LabelHand.tif",
+      "sha256": "ea1e7301480615e47c2716d1e8cc9630ecd971275fbe0d58d9716657acfcaa58",
+      "bytes": 1780,
+      "generation": "1601572621564974",
+      "md5Hash": "6xZvH3BdOKNgREshY1t/vQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_154838_S1Hand.tif",
+      "path": "Ghana_154838_S1Hand.tif",
+      "sha256": "268a439ca5601acbb48029f41bc3eb382724a95d76b02b6b33c67c7393028847",
+      "bytes": 1787044,
+      "generation": "1601572677787850",
+      "md5Hash": "ZVJSYIfBJRSYHmMDOZmFhQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_154838_LabelHand.tif",
+      "path": "Ghana_154838_LabelHand.tif",
+      "sha256": "168c862179560c67f9da3dcac6f85d6bd5669a32ac7d4ce41bf40f2c71414901",
+      "bytes": 3053,
+      "generation": "1601572621348892",
+      "md5Hash": "XOIBiXulNB61J4Kr7/453g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_134751_S1Hand.tif",
+      "path": "Ghana_134751_S1Hand.tif",
+      "sha256": "10ab55d06acb9cd737cdb67cbee5bd6179c8baae7f2f4827436df0998b5b496b",
+      "bytes": 266450,
+      "generation": "1601572632506249",
+      "md5Hash": "San2mXN73Sc8Wh9YpTj0Wg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_134751_LabelHand.tif",
+      "path": "Ghana_134751_LabelHand.tif",
+      "sha256": "55573317fa6059f51812a3a8a2ff0b826c1e7f6902af7b047c24789785e7ce40",
+      "bytes": 3746,
+      "generation": "1601572621314672",
+      "md5Hash": "Afl8VojUNHIeccPKH+qNQg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_61925_S1Hand.tif",
+      "path": "Ghana_61925_S1Hand.tif",
+      "sha256": "8af21d3cc5c09af542430022dee40e30dfb77bfd104d73280c89f51d03b0e0df",
+      "bytes": 1783007,
+      "generation": "1601572710532683",
+      "md5Hash": "cLByKAdlpXYeCFWXkre6Bg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_61925_LabelHand.tif",
+      "path": "Ghana_61925_LabelHand.tif",
+      "sha256": "9fab07a0039122963bdf9c658819d817a697501a4432b9add2e1aef8bd568586",
+      "bytes": 1129,
+      "generation": "1601572621473701",
+      "md5Hash": "rL5j9MRIE6/LgludTcFF3A==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_156478_S1Hand.tif",
+      "path": "Ghana_156478_S1Hand.tif",
+      "sha256": "6faf9402fd5f94b32d9191bc9cb32ffe79277c815253ad290547c2c8165f5d49",
+      "bytes": 1782993,
+      "generation": "1601572677270061",
+      "md5Hash": "Rn4SMv+rTwc8qZY2WXokAg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_156478_LabelHand.tif",
+      "path": "Ghana_156478_LabelHand.tif",
+      "sha256": "d910c6645e73d88dbf5d99078b147139b583f74b3196551b811ae1a9ab85f653",
+      "bytes": 1015,
+      "generation": "1601572621365130",
+      "md5Hash": "YVdPDA/UnzKnqz/uhp9pNw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_144050_S1Hand.tif",
+      "path": "Ghana_144050_S1Hand.tif",
+      "sha256": "0dfbfce059a8daf5e77eabd8820912bb145e8748147bfc215421a5b32a2be138",
+      "bytes": 1769352,
+      "generation": "1601572666424661",
+      "md5Hash": "lK38OZ699D2Gzp9kH9CnOg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_144050_LabelHand.tif",
+      "path": "Ghana_144050_LabelHand.tif",
+      "sha256": "4f1afc7c4e1d8e02419835b7df5e8db4005ba24db684b75bf1508daf9d8044d6",
+      "bytes": 2285,
+      "generation": "1601572621345607",
+      "md5Hash": "zmsapnk0P9pSI5Vn3W7/6Q==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_49890_S1Hand.tif",
+      "path": "Ghana_49890_S1Hand.tif",
+      "sha256": "f1c4a106e6c52be3b8c894ff03e0deda171944564c857bd25e074b63dc850902",
+      "bytes": 1775719,
+      "generation": "1601572735142461",
+      "md5Hash": "Ht8rTqEjUNT7lGzXSSS+zg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_49890_LabelHand.tif",
+      "path": "Ghana_49890_LabelHand.tif",
+      "sha256": "d4babfe58fdd51a923f175fd3bfd76ad60994ba4629a41af7a083a2a1ffcba8e",
+      "bytes": 1015,
+      "generation": "1601572621512547",
+      "md5Hash": "YrAaiUnVs24otpP4s3ZEpg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_97516_S1Hand.tif",
+      "path": "Ghana_97516_S1Hand.tif",
+      "sha256": "eb4cde7af17c3a524b590cc173b8acb3fd0cf14136f747a3bc2dd7bf326767fd",
+      "bytes": 1764609,
+      "generation": "1601572736589485",
+      "md5Hash": "9hTOvUWcuEtG31NRdJADZA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_97516_LabelHand.tif",
+      "path": "Ghana_97516_LabelHand.tif",
+      "sha256": "a6a16b0c24ce167c026e132178d3e89d7ec5862ffb471a3502a1fac56531fcf6",
+      "bytes": 3546,
+      "generation": "1601572621597054",
+      "md5Hash": "YeVLd+VmCy2yDtwiUAAAqA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_168875_S1Hand.tif",
+      "path": "Ghana_168875_S1Hand.tif",
+      "sha256": "13aa61ee7a49a556fc53b514c909b49514a5ced3309ce14e5ad09707c51622d8",
+      "bytes": 1791206,
+      "generation": "1601572689962629",
+      "md5Hash": "BSZd9PDPt3FBJWUNmtstLw==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_168875_LabelHand.tif",
+      "path": "Ghana_168875_LabelHand.tif",
+      "sha256": "d2a87b6253fe66402894c36d4cf148eedff7db853233d10c79074fbee38b563e",
+      "bytes": 2764,
+      "generation": "1601572621360682",
+      "md5Hash": "o+v8CX5uk0XktRjJtcHrVA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_141910_S1Hand.tif",
+      "path": "Ghana_141910_S1Hand.tif",
+      "sha256": "cc7251fdfa6910f76e11bb295c0a81c4865372f72e30bd73ea05dd6bddcd80b0",
+      "bytes": 1796026,
+      "generation": "1601572689755010",
+      "md5Hash": "tJ7vXW2AZgrJDm7yEuA6uw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_141910_LabelHand.tif",
+      "path": "Ghana_141910_LabelHand.tif",
+      "sha256": "e6dd6c0eb8f2bc5e5e64b12e99f7398d27a0e56a4670f8be5382055504c4602b",
+      "bytes": 3562,
+      "generation": "1601572621357855",
+      "md5Hash": "4hNJYBvOuB8YaBHzhCW2/A==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_146222_S1Hand.tif",
+      "path": "Ghana_146222_S1Hand.tif",
+      "sha256": "cd7be3babff5eb3ddf22e5666eb53cad42441583a9a3a658391df6bd04395367",
+      "bytes": 1789318,
+      "generation": "1601572680731780",
+      "md5Hash": "bXnXLKwGAiFgrDnpgahOZQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_146222_LabelHand.tif",
+      "path": "Ghana_146222_LabelHand.tif",
+      "sha256": "ad53caccc98c0c9aa26a013096a1d111cc5a47bbe8c7bc092cc7d608c63de80a",
+      "bytes": 7595,
+      "generation": "1601572621347882",
+      "md5Hash": "qIL1dKVKOuRvzzDMxYBURg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_11745_S1Hand.tif",
+      "path": "Ghana_11745_S1Hand.tif",
+      "sha256": "44e9e683f90b7b31eebf179ad431f0728285fe8e4ab6d03964422549f8364d01",
+      "bytes": 1781920,
+      "generation": "1601572676724948",
+      "md5Hash": "O6DTz1ZLCQkmbZ3gulWAVw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_11745_LabelHand.tif",
+      "path": "Ghana_11745_LabelHand.tif",
+      "sha256": "070f09094d54abd3c52ffe2fd9d2ac0351f8d8199aa7c98f4d7ce44f3059a564",
+      "bytes": 1015,
+      "generation": "1601572621277054",
+      "md5Hash": "sUrINWgMWxqPDIbP/FXE2w==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_161233_S1Hand.tif",
+      "path": "Ghana_161233_S1Hand.tif",
+      "sha256": "aed12f222c03a7a0c4c2195a0c64142d6aa708b1ef5d711cce0bfa405a6d4e35",
+      "bytes": 1110286,
+      "generation": "1601572657466529",
+      "md5Hash": "YCCCvhp+S37DAptYqKxzGg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_161233_LabelHand.tif",
+      "path": "Ghana_161233_LabelHand.tif",
+      "sha256": "2764ab0c8e75df989a3ae3476ec76fe0dd6c12ab616aebf5dbd632fc8903b61d",
+      "bytes": 1180,
+      "generation": "1601572621426694",
+      "md5Hash": "fx0pDkB6j+djd9lItaffdA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_7496_S1Hand.tif",
+      "path": "Ghana_7496_S1Hand.tif",
+      "sha256": "adbb184c54bc96f6eae27f080257aec94cafc1c10881b2b2100c1d709586ac30",
+      "bytes": 1784639,
+      "generation": "1601572737291414",
+      "md5Hash": "/lRPTlXQv0Uv8iE/0y9uoQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_7496_LabelHand.tif",
+      "path": "Ghana_7496_LabelHand.tif",
+      "sha256": "0d847bd675a62a90e82072638a0403d6891a6a599e35e8594cf04431f0971bac",
+      "bytes": 1015,
+      "generation": "1601572621510096",
+      "md5Hash": "RT+hEGq7V46C/5kGKjwRag==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_128663_S1Hand.tif",
+      "path": "Ghana_128663_S1Hand.tif",
+      "sha256": "ac8eed522f95c06403cd82699fd5de3792b827191b321fb4cecd56eac599dd27",
+      "bytes": 1783654,
+      "generation": "1601572690447994",
+      "md5Hash": "QqeznkjnywV/yaFh+oXeMA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_128663_LabelHand.tif",
+      "path": "Ghana_128663_LabelHand.tif",
+      "sha256": "4620ba9c43318f88d7b6e1be6ae5fc3ccdcd4b7f443c9e409788c2f4f0a45aa4",
+      "bytes": 3394,
+      "generation": "1601572621294629",
+      "md5Hash": "/S1RnO7DvwbRNHy5HEkTgw==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_264787_S1Hand.tif",
+      "path": "Ghana_264787_S1Hand.tif",
+      "sha256": "738540adc77ac9b61fd922acf0bfedcc6dce049e3e03a15927a49f1851385a5c",
+      "bytes": 1788706,
+      "generation": "1601572711673065",
+      "md5Hash": "QsrwPqQMyD+8TvDhNIz1hA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_264787_LabelHand.tif",
+      "path": "Ghana_264787_LabelHand.tif",
+      "sha256": "9290b4f720b727030e8641c83572ead6d051da49393bab2e54ab335a245a8184",
+      "bytes": 8603,
+      "generation": "1601572621429830",
+      "md5Hash": "Nt9n5zBu5HBE/n60xICfhA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_597288_S1Hand.tif",
+      "path": "Ghana_597288_S1Hand.tif",
+      "sha256": "f9e4a0a2abb0e0b99a33996e1ab96eab98b97a86f68d97353dcef958fedb5c0d",
+      "bytes": 1781814,
+      "generation": "1601572726429950",
+      "md5Hash": "TyOAj2ALjifi7x4eHEOLsw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_597288_LabelHand.tif",
+      "path": "Ghana_597288_LabelHand.tif",
+      "sha256": "0cd3eeb4368f4440ecf00fa12b66e45d961cf9b48ba5d1af6db8cba8469448d7",
+      "bytes": 2575,
+      "generation": "1601572621486538",
+      "md5Hash": "hLbhoTD2aqIoIZ/Tox8NFw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_8090_S1Hand.tif",
+      "path": "Ghana_8090_S1Hand.tif",
+      "sha256": "3c787dbaf4191295d135ed16472c7a26c9fc3dd74a22a68343e2221218b5ded7",
+      "bytes": 1788077,
+      "generation": "1601572722999629",
+      "md5Hash": "VjQzJ/y9rwvt2b8ros8Sjw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_8090_LabelHand.tif",
+      "path": "Ghana_8090_LabelHand.tif",
+      "sha256": "e32fb194aace31fad58bf88cf2438c467b7aeef2fc7deb1682ea4a5b0d4d1837",
+      "bytes": 9218,
+      "generation": "1601572621543109",
+      "md5Hash": "41+jEHJAuaGjw0OnLhgRgQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_187318_S1Hand.tif",
+      "path": "Ghana_187318_S1Hand.tif",
+      "sha256": "6de6e08127d187deeff5ed092ddb3cecb3f3b3bb28e09ed81390612b6f1808ec",
+      "bytes": 1781895,
+      "generation": "1601572699027054",
+      "md5Hash": "rrwEB6E1hgEw8+t0wwon9Q==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_187318_LabelHand.tif",
+      "path": "Ghana_187318_LabelHand.tif",
+      "sha256": "0097bc8b715f103c3f3d142028bc5d90e0b3a4b31dc4ece4493a706b836620ce",
+      "bytes": 1015,
+      "generation": "1601572621346433",
+      "md5Hash": "PVL6kyEgoNkimxPE1xccJg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_362274_S1Hand.tif",
+      "path": "Ghana_362274_S1Hand.tif",
+      "sha256": "7466a38a0157eeadbdf7ad61c2133e8bc68eaf0d8d72c8170536362b82db4427",
+      "bytes": 1780956,
+      "generation": "1601572732286596",
+      "md5Hash": "f0kYhsBkAVpB93VdFWA2FA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_362274_LabelHand.tif",
+      "path": "Ghana_362274_LabelHand.tif",
+      "sha256": "2030e61f58a19ed8a58359281959172a044ee4f45e589ff13555a55d9cb90ff9",
+      "bytes": 4129,
+      "generation": "1601572621481540",
+      "md5Hash": "L7loctKrUHg4IwfgHxOmjA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_1089161_S1Hand.tif",
+      "path": "Ghana_1089161_S1Hand.tif",
+      "sha256": "900e9292d7066069349970b46d07cc6e63ebc1c708db33ee3431abe44e56bffb",
+      "bytes": 1777953,
+      "generation": "1601572677482143",
+      "md5Hash": "2hrcMf9ogo71I2SwW/lWAw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_1089161_LabelHand.tif",
+      "path": "Ghana_1089161_LabelHand.tif",
+      "sha256": "45a19ca98d84d24670be6121df1c2645ec88f2159fd30d5947f98569776fef8c",
+      "bytes": 2646,
+      "generation": "1601572621314849",
+      "md5Hash": "2hEXFbdqclwzBaXI0/6kbQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_887131_S1Hand.tif",
+      "path": "Ghana_887131_S1Hand.tif",
+      "sha256": "3bc0409e1f5af5ea08202c1ce77dd12d89fc9150045d6244cfb8de8ef5af9170",
+      "bytes": 1782786,
+      "generation": "1601572745622908",
+      "md5Hash": "E7pRdQlujtXW3XBtnYkCTw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_887131_LabelHand.tif",
+      "path": "Ghana_887131_LabelHand.tif",
+      "sha256": "f445c0716feb0ca1790b0c9ec3f20b067d36c99324d4632b4332ec2372797138",
+      "bytes": 5064,
+      "generation": "1601572621617911",
+      "md5Hash": "HurUOH+L6JDmA00zPgA/OQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_247288_S1Hand.tif",
+      "path": "Ghana_247288_S1Hand.tif",
+      "sha256": "d0c721df86f008c152b10ac1726142d36ce55789eb9c54236a65c8f17bb26ca3",
+      "bytes": 1791611,
+      "generation": "1601572685229505",
+      "md5Hash": "B07fAKu3lrrj/IcMCjG6xA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_247288_LabelHand.tif",
+      "path": "Ghana_247288_LabelHand.tif",
+      "sha256": "825c7fb89ab4e2df4bb4e49cb7918ba372185be9c9c2c57d02873dd0b97f260a",
+      "bytes": 5479,
+      "generation": "1601572621406532",
+      "md5Hash": "YUcHSZXwKPZNnMYQOCmVrQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_194723_S1Hand.tif",
+      "path": "Ghana_194723_S1Hand.tif",
+      "sha256": "d8f119dc80e4655d5f35dfbacdc56fc2a0f52eae6b5ef5cfe8f718edf61d4164",
+      "bytes": 1788001,
+      "generation": "1601572690139698",
+      "md5Hash": "Tu4TxmDaGrcv9pK/0czp1w==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_194723_LabelHand.tif",
+      "path": "Ghana_194723_LabelHand.tif",
+      "sha256": "136cbf94be9488d0571c75edab451587eabe78475d734cdf86ecc005533752c3",
+      "bytes": 2279,
+      "generation": "1601572621388711",
+      "md5Hash": "6SZ6MLnw6AitqPj/TgnSyA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_26376_S1Hand.tif",
+      "path": "Ghana_26376_S1Hand.tif",
+      "sha256": "bf41fee1cd0f50d634c8cd797adade28e2e755e3b1ec6b990bcc601503e7c1d7",
+      "bytes": 1789725,
+      "generation": "1601572700134025",
+      "md5Hash": "/yGA99hjrFyYHpJHF7Hztg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_26376_LabelHand.tif",
+      "path": "Ghana_26376_LabelHand.tif",
+      "sha256": "77bedab00e27761210ec03f9fbb24e475004e5a6915237bf0ab1fba6a30f6775",
+      "bytes": 1015,
+      "generation": "1601572621402557",
+      "md5Hash": "stjsw/VvZHpLcEh7H+EYRg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_45911_S1Hand.tif",
+      "path": "Ghana_45911_S1Hand.tif",
+      "sha256": "f8ffa315ac8a9cfef0a32ee1d4c4a601d5b4f1033b88329fbefd68c6b48a6364",
+      "bytes": 1789542,
+      "generation": "1601572722182934",
+      "md5Hash": "Qavp98ACQh1PIQJWMEc0iQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_45911_LabelHand.tif",
+      "path": "Ghana_45911_LabelHand.tif",
+      "sha256": "440cbb856f0c045a2ee5f46fdf8db73c76638dee3158ebae1f3ca67384e88152",
+      "bytes": 2830,
+      "generation": "1601572621514689",
+      "md5Hash": "2ZWMkeqW/uCqlcp6e5muqw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_83200_S1Hand.tif",
+      "path": "Ghana_83200_S1Hand.tif",
+      "sha256": "d0e2d33df5338bffd7031723ee37ec51dff23433154b5fa1fd6fab1d445a707b",
+      "bytes": 1786885,
+      "generation": "1601572727900626",
+      "md5Hash": "JnNckWjViX/eYz6mrWzIwA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_83200_LabelHand.tif",
+      "path": "Ghana_83200_LabelHand.tif",
+      "sha256": "b4b73b8e2c1729a1bd37bdaeb640d421ddb15814e4d41d6ac818e88d57d89781",
+      "bytes": 4141,
+      "generation": "1601572621553160",
+      "md5Hash": "E9DgCU4A3pM9OLClNvCFVg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Ghana_135389_S1Hand.tif",
+      "path": "Ghana_135389_S1Hand.tif",
+      "sha256": "e662ed6c06adf8abc6598a12e4a74fec7765f6f22e6b619fba2c8288895c04f9",
+      "bytes": 177205,
+      "generation": "1601572626575183",
+      "md5Hash": "O1c9HdTwMQRi++FAh3Z/2g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Ghana_135389_LabelHand.tif",
+      "path": "Ghana_135389_LabelHand.tif",
+      "sha256": "aa0966ce96243b433feae59d8cb3fa82f1a7e4465c298f71ff7718eda68ab314",
+      "bytes": 2210,
+      "generation": "1601572621332355",
+      "md5Hash": "3949ZRZSA0BGIGJP+jXEDw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_285297_S1Hand.tif",
+      "path": "India_285297_S1Hand.tif",
+      "sha256": "d720e440668b59affe70047b8e3694d04917abe10309c0a342ecdb000f14319f",
+      "bytes": 1669481,
+      "generation": "1601572752767088",
+      "md5Hash": "5PzRLlV28bGniAdJM/hdHQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_285297_LabelHand.tif",
+      "path": "India_285297_LabelHand.tif",
+      "sha256": "ebe00d64a4615a44b55a14f6e2714a35258378d1b424cb3ba5f08a35132013f2",
+      "bytes": 15127,
+      "generation": "1601572621807948",
+      "md5Hash": "ijxcoJDpfkGmc0+4up4QDg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_1072277_S1Hand.tif",
+      "path": "India_1072277_S1Hand.tif",
+      "sha256": "a77bd81e7735a427634f2a745937943d2bc6c9d3be272a14ce7e7dd5cc97dd23",
+      "bytes": 1668141,
+      "generation": "1601572749196191",
+      "md5Hash": "dD0Re+7CMOwH2DSp+ZuwIg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_1072277_LabelHand.tif",
+      "path": "India_1072277_LabelHand.tif",
+      "sha256": "3c666009079d0fc3d5a4db049358b36516a069b425528d8288a85b07a8b0a206",
+      "bytes": 10719,
+      "generation": "1601572621642423",
+      "md5Hash": "k7wmmS2cnL/Y1RVBBiIc0g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_324254_S1Hand.tif",
+      "path": "India_324254_S1Hand.tif",
+      "sha256": "2f8789d42a2cafa15ee49252004a9a2defec98ba895ad1949ef78028324efd1e",
+      "bytes": 1677446,
+      "generation": "1601572776337835",
+      "md5Hash": "nF5Zc5c0WRJe/Gkvn3mUMg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_324254_LabelHand.tif",
+      "path": "India_324254_LabelHand.tif",
+      "sha256": "d01d6cef2fd22a66a7abf358a800367ed372a901043f3190d20ceb9419ee7a78",
+      "bytes": 3284,
+      "generation": "1601572621738445",
+      "md5Hash": "TRudwx05/xdMBPj4LforMA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_177319_S1Hand.tif",
+      "path": "India_177319_S1Hand.tif",
+      "sha256": "5afa85ff59ab4bd5db9e3eb96f6473724eae5883de2f7ff7dfb777a21a3fdb4b",
+      "bytes": 1666294,
+      "generation": "1601572749863134",
+      "md5Hash": "6HUwWrtgkbbwEkZNut/FiA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_177319_LabelHand.tif",
+      "path": "India_177319_LabelHand.tif",
+      "sha256": "8693a4b3ce9b6e06ac1d281de4fd184ddea8241f30078092db7b311c5fa79113",
+      "bytes": 3031,
+      "generation": "1601572621688333",
+      "md5Hash": "RW5SO67n2Xpq7Qx2aJHQDg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_391908_S1Hand.tif",
+      "path": "India_391908_S1Hand.tif",
+      "sha256": "0eb7787d56e12aa2ff643a1e7304f2b18ae68cf883c58cd0951511f74293403f",
+      "bytes": 1666307,
+      "generation": "1601572769386509",
+      "md5Hash": "SVOxS31vZaViLheMmIA9Bg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_391908_LabelHand.tif",
+      "path": "India_391908_LabelHand.tif",
+      "sha256": "547d7e34df00f22ef62e27078633fecff658df04dbf6938b51792c907b8c1c86",
+      "bytes": 12930,
+      "generation": "1601572621843114",
+      "md5Hash": "Ejaz8T2JS2366Wdqlq8oxA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_166709_S1Hand.tif",
+      "path": "India_166709_S1Hand.tif",
+      "sha256": "33603416eb7ca6b601a7d88e952a3fe2d91419b862a241dc495e8cd4f9264654",
+      "bytes": 1657593,
+      "generation": "1601572751551660",
+      "md5Hash": "L6+s41GwrESbCFnpa8jjqA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_166709_LabelHand.tif",
+      "path": "India_166709_LabelHand.tif",
+      "sha256": "706f6b729d8ba713688daf93158d566c136b806a5669b90f91cc71e3c39af82e",
+      "bytes": 7452,
+      "generation": "1601572621689577",
+      "md5Hash": "BWacuL43pEdhUA1+RDiJXQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_534470_S1Hand.tif",
+      "path": "India_534470_S1Hand.tif",
+      "sha256": "c9f77bf8a8ee5d51bf2bafc6867180c193f0f2d6a2657fd6d8958b89a4d8f41f",
+      "bytes": 1667380,
+      "generation": "1601572786573858",
+      "md5Hash": "w5FS+k6VRS0sNPNYxZkMlA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_534470_LabelHand.tif",
+      "path": "India_534470_LabelHand.tif",
+      "sha256": "0d06f70c24f19b536ff1bff8c50308b4adc9bb8ebf10ebceff544134e1497689",
+      "bytes": 6723,
+      "generation": "1601572621847506",
+      "md5Hash": "FPuO1POQMiLE0R925PN7Lw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_773682_S1Hand.tif",
+      "path": "India_773682_S1Hand.tif",
+      "sha256": "53e1bfc6af232f5a1cdb3893b0b6b06c4e70ca9b6e141740e1d27a6dd5efded0",
+      "bytes": 1656875,
+      "generation": "1601572806338995",
+      "md5Hash": "MTW57j/L0AFSJF7IzMnA/g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_773682_LabelHand.tif",
+      "path": "India_773682_LabelHand.tif",
+      "sha256": "7bda6cb39559654842eb35a4c4a2642ffb5e74b8ca00d60c3b52ce254286ee57",
+      "bytes": 13794,
+      "generation": "1601572622049152",
+      "md5Hash": "uXgItgVbqDXc2dvRkfBaag==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_956930_S1Hand.tif",
+      "path": "India_956930_S1Hand.tif",
+      "sha256": "6d092ee7c30d0f7bc58396fba3b426303af495cf08a8269a1d53095843460359",
+      "bytes": 1667330,
+      "generation": "1601572824064294",
+      "md5Hash": "fkmwvRODV6wqOuR/GMjoww==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_956930_LabelHand.tif",
+      "path": "India_956930_LabelHand.tif",
+      "sha256": "f9f73271b9cddee3fefd5f642defbb4198e67f7837614eea7abb6540d59511f0",
+      "bytes": 14711,
+      "generation": "1601572622154000",
+      "md5Hash": "B5YfUdv3bWPkKd2CisBU7A==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_979278_S1Hand.tif",
+      "path": "India_979278_S1Hand.tif",
+      "sha256": "2a6457391987f87dbb39037f1d3270f20bca2e39453050bd4a5256fc203415f8",
+      "bytes": 798394,
+      "generation": "1601572798380526",
+      "md5Hash": "zzGlCYDfakvpMe6CIUBS3Q==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_979278_LabelHand.tif",
+      "path": "India_979278_LabelHand.tif",
+      "sha256": "aaf6ebc78c6cc70d6e7d7427a5c97fe7d046286b7c804fdb3e16e0d20aa658b5",
+      "bytes": 6986,
+      "generation": "1601572622115785",
+      "md5Hash": "SKbdbz4jxR9lCVm9c/fxbQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_664410_S1Hand.tif",
+      "path": "India_664410_S1Hand.tif",
+      "sha256": "e60bddb7ed7f9c38f681193a183e49261d9792e3cdf37cb76491e7be2243dda9",
+      "bytes": 1661461,
+      "generation": "1601572795331043",
+      "md5Hash": "AZ4knQj9BFPC0X10u/C6Dw==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_664410_LabelHand.tif",
+      "path": "India_664410_LabelHand.tif",
+      "sha256": "66e20dd4222c572024e8d0037750e8716c8ea1b132597f843a44345d6e075b29",
+      "bytes": 9300,
+      "generation": "1601572621912457",
+      "md5Hash": "AywKRnPtwDr2rgJyU7njEw==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_747970_S1Hand.tif",
+      "path": "India_747970_S1Hand.tif",
+      "sha256": "516465bdaa35ceea8d46abe65f4198c63b3aad8360e174d79b1d0024d3b98092",
+      "bytes": 1668019,
+      "generation": "1601572807977376",
+      "md5Hash": "zmHrsIPSYteDwqLnZxqsAQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_747970_LabelHand.tif",
+      "path": "India_747970_LabelHand.tif",
+      "sha256": "cb2c79907ff5b155b728dee3973bafc1fb87f58e67c3d2786931c1af3a7b4c0c",
+      "bytes": 5772,
+      "generation": "1601572621960565",
+      "md5Hash": "XPcPwJBe2nmOri+pQ+viGw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_207862_S1Hand.tif",
+      "path": "India_207862_S1Hand.tif",
+      "sha256": "22b353fe3c68edc2b4aafc8bb0a079de157377ac3d7867719427f6f2e77fdd44",
+      "bytes": 1671719,
+      "generation": "1601572769512350",
+      "md5Hash": "qn8EkOAO8vfhJs76obzbeA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_207862_LabelHand.tif",
+      "path": "India_207862_LabelHand.tif",
+      "sha256": "2dfeca2e22fe538b88f03b19b464ac0c0003e61b435f0357c2e851a24a1e12ac",
+      "bytes": 13957,
+      "generation": "1601572621753991",
+      "md5Hash": "IogzWQCl1XZ/UMzm2fy5EQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_500266_S1Hand.tif",
+      "path": "India_500266_S1Hand.tif",
+      "sha256": "a278f76fe2f3fab425705bb17ebdead4fd58473a0d8eff6c49ff7b8977089b40",
+      "bytes": 1667597,
+      "generation": "1601572775885837",
+      "md5Hash": "S2VWVQE6a0k0XjnqBeyR1w==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_500266_LabelHand.tif",
+      "path": "India_500266_LabelHand.tif",
+      "sha256": "f72ef9c427c93f6d05470f239930f2ecc0eb2a2d1441a303486240a1453e3441",
+      "bytes": 15971,
+      "generation": "1601572621877255",
+      "md5Hash": "EPVirYCUhnwYdGPsbFDfbQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_179238_S1Hand.tif",
+      "path": "India_179238_S1Hand.tif",
+      "sha256": "66f9fb02d4a6233269bd82ec9dbdcaa97c46e4f0a201f4030829a6bdd4a774c3",
+      "bytes": 1652218,
+      "generation": "1601572741991909",
+      "md5Hash": "Ex4XqyCNmJpHHVnvR2FlKA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_179238_LabelHand.tif",
+      "path": "India_179238_LabelHand.tif",
+      "sha256": "38107d87b1327813ec83b10d75e49c564cf1de649ac2488eced8d3c5bf693c3f",
+      "bytes": 11401,
+      "generation": "1601572621713302",
+      "md5Hash": "WUSe05T2FzSdiPULkCGVeg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_287642_S1Hand.tif",
+      "path": "India_287642_S1Hand.tif",
+      "sha256": "77e7343fbe818c3be93f3732d2f057ebdfc1aa202245a59ae30aaaf38594154a",
+      "bytes": 1666235,
+      "generation": "1601572775590370",
+      "md5Hash": "a+AJaVaibEWFcgWG7rA4DA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_287642_LabelHand.tif",
+      "path": "India_287642_LabelHand.tif",
+      "sha256": "6d474034646815470b0327d82be233ae8a359081d0cc53e48b2fc204c8588f25",
+      "bytes": 11560,
+      "generation": "1601572621760798",
+      "md5Hash": "9eHloWq8OF+D0ZEOY1WRCQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_774689_S1Hand.tif",
+      "path": "India_774689_S1Hand.tif",
+      "sha256": "f0d5171ed0eea8297595db3489015b562d1e120c70806cf226994d4395d585c2",
+      "bytes": 1658027,
+      "generation": "1601572808994773",
+      "md5Hash": "v8/62TP83+yYE6XmNiPFtQ==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_774689_LabelHand.tif",
+      "path": "India_774689_LabelHand.tif",
+      "sha256": "e49de9eb03f76dcf673e0facf890ded010376fe8b5165dc7379b3578feb0b2a3",
+      "bytes": 11494,
+      "generation": "1601572622011432",
+      "md5Hash": "tVnWifi7a1j66XG0kgYE7g==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_383430_S1Hand.tif",
+      "path": "India_383430_S1Hand.tif",
+      "sha256": "c90e092e5995577cff25789d6dd3e568bd7a52e8e1cf565c294d4872cc9f260d",
+      "bytes": 1664748,
+      "generation": "1601572760912404",
+      "md5Hash": "ZB1BtsiQvdVB6FG9E15SzA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_383430_LabelHand.tif",
+      "path": "India_383430_LabelHand.tif",
+      "sha256": "3740b8a2e81540781360aea205250a6a9476b927e32f3fd5b86bee932efb2b69",
+      "bytes": 12870,
+      "generation": "1601572621814990",
+      "md5Hash": "ebsIT+FPSHxZb3WVpnYehQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_373039_S1Hand.tif",
+      "path": "India_373039_S1Hand.tif",
+      "sha256": "10088c37b464d500149e803f3ad743155e73b4eaa51942ced05643d61ab71a12",
+      "bytes": 1689365,
+      "generation": "1601572772535199",
+      "md5Hash": "J5bKa0vvyh9dpJyor5lahA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_373039_LabelHand.tif",
+      "path": "India_373039_LabelHand.tif",
+      "sha256": "a19ee77a4f4023581ea565c98e7f1dff244825fd81aef5889b7dfff602fb24b0",
+      "bytes": 3440,
+      "generation": "1601572621742962",
+      "md5Hash": "hvJhTFy3SouUbTljLtW32Q==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_698338_S1Hand.tif",
+      "path": "India_698338_S1Hand.tif",
+      "sha256": "d6381f7c72e560e4f44de164f9689bd88457e0f39adb89c0c0e21606581575de",
+      "bytes": 1659927,
+      "generation": "1601572794547819",
+      "md5Hash": "TcFKHnwEFbG96bv+qhHIjA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_698338_LabelHand.tif",
+      "path": "India_698338_LabelHand.tif",
+      "sha256": "22b25cba554c4581bd46865cee6143150590d65b14681f8250387b55ffa73923",
+      "bytes": 7591,
+      "generation": "1601572621946260",
+      "md5Hash": "Ijei/gtwtlFuiY2a8ik3Ow==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_1017769_S1Hand.tif",
+      "path": "India_1017769_S1Hand.tif",
+      "sha256": "3db2f06ab052abea0dd47612a918c81e21bb2451a9573399abbc7fa4a3a320ec",
+      "bytes": 1654895,
+      "generation": "1601572726203028",
+      "md5Hash": "nW4Qwy/c5F7l8ux1a/19zQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_1017769_LabelHand.tif",
+      "path": "India_1017769_LabelHand.tif",
+      "sha256": "c5535788f6eaaeb5386c10102f9c4923ebc1eedf794dd8c408cf8a2780629796",
+      "bytes": 8399,
+      "generation": "1601572621644057",
+      "md5Hash": "lolFy0Mob2BItJTawMgb4g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_981708_S1Hand.tif",
+      "path": "India_981708_S1Hand.tif",
+      "sha256": "241cdcceeb5984a47018232a75e5286cb0b4c64e04506330aaa40bb2d94deeb4",
+      "bytes": 1422864,
+      "generation": "1601572825629847",
+      "md5Hash": "OKZacHuXM3sOJerZ0EqbLg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_981708_LabelHand.tif",
+      "path": "India_981708_LabelHand.tif",
+      "sha256": "81c76ccd3dc9fdb731ca1e0796215f486e0c70e78d73b663a65b4f66d3ba1e18",
+      "bytes": 9419,
+      "generation": "1601572622163830",
+      "md5Hash": "Dd9FcTFxWA4Cs6WEGiTHsQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_91379_S1Hand.tif",
+      "path": "India_91379_S1Hand.tif",
+      "sha256": "bee1213abf087c670e479e9c1c9c029efb3d0cf714943d0bff04a88185ddc149",
+      "bytes": 1666895,
+      "generation": "1601572825138395",
+      "md5Hash": "Z2YWTGTEprpMxrsECpCT9w==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_91379_LabelHand.tif",
+      "path": "India_91379_LabelHand.tif",
+      "sha256": "cac872eb9b59c21754d465033cb79cab91b66f833ca8a832d1150bb9acae088b",
+      "bytes": 12942,
+      "generation": "1601572622097957",
+      "md5Hash": "5bRTl/Y8lIsH9B8a3eUGYg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_59460_S1Hand.tif",
+      "path": "India_59460_S1Hand.tif",
+      "sha256": "83456b355e9ec267de8543a677deb8c2f2b1a7241a7b910d77c473324aa16f53",
+      "bytes": 1681041,
+      "generation": "1601572781181947",
+      "md5Hash": "t4QYgZUF2bqovZup9aDKwQ==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_59460_LabelHand.tif",
+      "path": "India_59460_LabelHand.tif",
+      "sha256": "e2e59c851ec18a8e73975f46779a0a4b186741830478b67474ad10fb5c2f9409",
+      "bytes": 3665,
+      "generation": "1601572621918053",
+      "md5Hash": "oKrGs0oJnnGSlmkxm9lqdA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_624341_S1Hand.tif",
+      "path": "India_624341_S1Hand.tif",
+      "sha256": "0bd99dd05d6832e520f7d267eeecdb13fd13e6443a6a50f1ff97ea9092b71bf6",
+      "bytes": 1689327,
+      "generation": "1601572788361240",
+      "md5Hash": "XbEria5vd986KfP6jf1QOw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_624341_LabelHand.tif",
+      "path": "India_624341_LabelHand.tif",
+      "sha256": "8cfedfab55b2eadc9a76642ad267af45446cb8dd1fcfdddec2886438f0c782cc",
+      "bytes": 2652,
+      "generation": "1601572621898868",
+      "md5Hash": "mgfAz+tVgGOu0cDbYPJQZg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_566697_S1Hand.tif",
+      "path": "India_566697_S1Hand.tif",
+      "sha256": "31d091773343b692cf7d72481c2bd7d27df520c42a26dd2c2c7fbd4ee35bbcbd",
+      "bytes": 1653872,
+      "generation": "1601572779913057",
+      "md5Hash": "Ue38sHTiEbsolX0ThI1olg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_566697_LabelHand.tif",
+      "path": "India_566697_LabelHand.tif",
+      "sha256": "8ecbf383afb32207845e6f0e1e896b0c404ce7f7fbaa5be599e8f10ab5989a4a",
+      "bytes": 11879,
+      "generation": "1601572621830166",
+      "md5Hash": "pR4Ryi/j3NlUmBhZNkZvEQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_804466_S1Hand.tif",
+      "path": "India_804466_S1Hand.tif",
+      "sha256": "6ab387987072e405fb5fb18884340e6d78e235a9b0b5439866a0d055190e8e2a",
+      "bytes": 1666432,
+      "generation": "1601572792344610",
+      "md5Hash": "jbfbPShZi/QEJgidjemYxg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_804466_LabelHand.tif",
+      "path": "India_804466_LabelHand.tif",
+      "sha256": "4c60ddbdfd3844fd4252c5c3ee02b65670cf6331d353fc4c48315bab323aeb57",
+      "bytes": 16046,
+      "generation": "1601572622044812",
+      "md5Hash": "QTv+P9gJZvuNRBd68k98uQ==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_103447_S1Hand.tif",
+      "path": "India_103447_S1Hand.tif",
+      "sha256": "5827b63630493152fe45660f33fe3d111bd5e8e9e9573cb18ac73704a4cc14a9",
+      "bytes": 1660418,
+      "generation": "1601572742115466",
+      "md5Hash": "ff5wkuKCpKVXAol6AXCaJg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_103447_LabelHand.tif",
+      "path": "India_103447_LabelHand.tif",
+      "sha256": "74b9f50208d5162af149a527579b303dd94eeb5c6ca58895419469954bca254b",
+      "bytes": 11945,
+      "generation": "1601572621613597",
+      "md5Hash": "ShH8lPGvso52l1lpih2hfw==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_136196_S1Hand.tif",
+      "path": "India_136196_S1Hand.tif",
+      "sha256": "1b78a066ef0786aa470bd798006c1a5ff8d1117239ceb04600c042322e5197be",
+      "bytes": 1672524,
+      "generation": "1601572755578509",
+      "md5Hash": "pVVC1fhbBFduOQ46mw3gwQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_136196_LabelHand.tif",
+      "path": "India_136196_LabelHand.tif",
+      "sha256": "e7c519b5873ad75214005e00dac6dcbd6342c8695fe3641076af8b719cd4daf4",
+      "bytes": 4193,
+      "generation": "1601572621666652",
+      "md5Hash": "0JmLk5aFd/YuJ3Nx9DiSQQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_842775_S1Hand.tif",
+      "path": "India_842775_S1Hand.tif",
+      "sha256": "faf120f0c8e4b3e4deac373c46c2e90d5402050d01ab513f75a765aed58ba6de",
+      "bytes": 1660494,
+      "generation": "1601572822821728",
+      "md5Hash": "TnLAyKg2Anx+T9othqEZ9g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_842775_LabelHand.tif",
+      "path": "India_842775_LabelHand.tif",
+      "sha256": "f38837ac5698865fee84ad06cd8217da858b162b008efceda39ec15a62c8444e",
+      "bytes": 6415,
+      "generation": "1601572622078810",
+      "md5Hash": "vJ3awnlXV3EbvI3BDJaKoQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_25540_S1Hand.tif",
+      "path": "India_25540_S1Hand.tif",
+      "sha256": "23c56172d1d9a32425e75f048397b4199f069d0fa720befc4b315535cecd9a37",
+      "bytes": 1684837,
+      "generation": "1601572769837049",
+      "md5Hash": "COgBdFHI5R3f1ve09L8czw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_25540_LabelHand.tif",
+      "path": "India_25540_LabelHand.tif",
+      "sha256": "6780a00a020b06a584590b4e04c6c8ccc00211a29aac1f2a8bd9f327d574dc9a",
+      "bytes": 10825,
+      "generation": "1601572621753306",
+      "md5Hash": "a4MZYuCAX8xC0L+LFYIB0A==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_56450_S1Hand.tif",
+      "path": "India_56450_S1Hand.tif",
+      "sha256": "22d6ebd641bf53dac257316be74c96afb548bbbe75adf764daf1827bdfed4832",
+      "bytes": 1687938,
+      "generation": "1601572782760784",
+      "md5Hash": "Ep4ZkD2eG6KVRrMdd6qsyw==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_56450_LabelHand.tif",
+      "path": "India_56450_LabelHand.tif",
+      "sha256": "e4b2731993bd93966c4f67f5b68652c22b96f357eaa6ab6cfc4fbda8e892bc60",
+      "bytes": 9042,
+      "generation": "1601572621817208",
+      "md5Hash": "y3ljw/RAzqYAiVZbPlQnjg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_135434_S1Hand.tif",
+      "path": "India_135434_S1Hand.tif",
+      "sha256": "6eddaf8da77935639fd066bc5c31a40201166434b60b29e6e9c8a9b2c8bb1cc5",
+      "bytes": 1639141,
+      "generation": "1601572748037076",
+      "md5Hash": "/7PEtN79P8ZFI270KPyFwA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_135434_LabelHand.tif",
+      "path": "India_135434_LabelHand.tif",
+      "sha256": "b47d474f91a2e495bc6f894e431abeba42b4b3e1d8e2d00c123da319dd808b46",
+      "bytes": 7294,
+      "generation": "1601572621694154",
+      "md5Hash": "OXelflCXO1kcwqC8WjKb4Q==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_652725_S1Hand.tif",
+      "path": "India_652725_S1Hand.tif",
+      "sha256": "4a6147de10d7454c959856bdc7deb2f203cc093030925b06b44a091e16c591be",
+      "bytes": 1668750,
+      "generation": "1601572797761895",
+      "md5Hash": "fiWljUYFvThV7Wjha5+yCw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_652725_LabelHand.tif",
+      "path": "India_652725_LabelHand.tif",
+      "sha256": "8b930415db4f8a83ae2219fb46074085385db39c306507de5f8f91907d9bcd9b",
+      "bytes": 11448,
+      "generation": "1601572621910286",
+      "md5Hash": "smmvhcl7FuWooJd6ksVsfQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_943439_S1Hand.tif",
+      "path": "India_943439_S1Hand.tif",
+      "sha256": "ab689f300cd381eb64372f41afc257d5b8bf718f91b80483c4f3cb074e1ac441",
+      "bytes": 1665040,
+      "generation": "1601572809217385",
+      "md5Hash": "rAOWoKHfoKj076QsidS4Hw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_943439_LabelHand.tif",
+      "path": "India_943439_LabelHand.tif",
+      "sha256": "444d84e29ad06cbba1dfdbba1d812ab1918e0ce2884cdfdff0ceb0cb54bc56dc",
+      "bytes": 12360,
+      "generation": "1601572622095911",
+      "md5Hash": "1CyA2gpFm43iwZM0bHWh4Q==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_73419_S1Hand.tif",
+      "path": "India_73419_S1Hand.tif",
+      "sha256": "927b00f697d4ce8edf4cf1bdd86e59e86d3269c34255b947df8ce1029059f684",
+      "bytes": 1661382,
+      "generation": "1601572788489616",
+      "md5Hash": "nONsf/Qh59bctUGcQEUVFw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_73419_LabelHand.tif",
+      "path": "India_73419_LabelHand.tif",
+      "sha256": "cf45ae87f726ce64f5d51d13be90e3c3a834d067d5b31816a016585263a36bf2",
+      "bytes": 10333,
+      "generation": "1601572621955876",
+      "md5Hash": "+fiEZmed2zyyEHHdrN+YCQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_591549_S1Hand.tif",
+      "path": "India_591549_S1Hand.tif",
+      "sha256": "3674bfdcadea7af73f81153a637aedc76d13e0ddcc5e8010d5d981a590629444",
+      "bytes": 1665354,
+      "generation": "1601572796707620",
+      "md5Hash": "FyLdcOqNjY65fkNA0ZJJpA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_591549_LabelHand.tif",
+      "path": "India_591549_LabelHand.tif",
+      "sha256": "ff69850ea4d2557bbbc6dd62bb7e8752725747f156055e431f2cea228209add2",
+      "bytes": 8973,
+      "generation": "1601572621857909",
+      "md5Hash": "F1lkRVXo3WzTf9MvbFD2Ug==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_273873_S1Hand.tif",
+      "path": "India_273873_S1Hand.tif",
+      "sha256": "77c63db8985f36f4f22db169d63ead884c72920f782e7eefac695863753d4367",
+      "bytes": 1700663,
+      "generation": "1601572760066808",
+      "md5Hash": "GZeT/6+7g0WDjR23m5XC4g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_273873_LabelHand.tif",
+      "path": "India_273873_LabelHand.tif",
+      "sha256": "f5e434ef3403dedf717c8345a8301a2687f2cd2a043825087f66f2a98ca2a642",
+      "bytes": 6441,
+      "generation": "1601572621772926",
+      "md5Hash": "fuo7dsmLSVjk0q/tgwnXyQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_707886_S1Hand.tif",
+      "path": "India_707886_S1Hand.tif",
+      "sha256": "034d001cf35b3284a5d2392d95af342d0d3029646fa829b6b2263ccf9f67a2e2",
+      "bytes": 1668844,
+      "generation": "1601572804027203",
+      "md5Hash": "Zxb7HA0fsSm+f5HEwlvNtw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_707886_LabelHand.tif",
+      "path": "India_707886_LabelHand.tif",
+      "sha256": "6e61d0b87928b319a56c271188b788f6d272c09c283b5131a3a1af0e8b039e83",
+      "bytes": 3447,
+      "generation": "1601572621919396",
+      "md5Hash": "3f6NOVzyzO+ClSoWemwpsA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/India_265762_S1Hand.tif",
+      "path": "India_265762_S1Hand.tif",
+      "sha256": "602309e9df326715a216e6115c3cb24010d6cf34d65fa974b6eaedf6ecb3c400",
+      "bytes": 1661747,
+      "generation": "1601572770085711",
+      "md5Hash": "iO4OCr7c+6mB7eWBHNNAog==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/India_265762_LabelHand.tif",
+      "path": "India_265762_LabelHand.tif",
+      "sha256": "8e23ff29cae336fafc90d8783b3e3119b2fc02178f0f3433cc3cabec97f46544",
+      "bytes": 10702,
+      "generation": "1601572621777294",
+      "md5Hash": "9ExP9Z6ylfcAwMqZUEtLOg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_221789_S1Hand.tif",
+      "path": "Mekong_221789_S1Hand.tif",
+      "sha256": "cd471fbd9b56deb10fed00f12f8fc70e86e405e98b2702adf684cc6288e7987b",
+      "bytes": 1773728,
+      "generation": "1601572841094400",
+      "md5Hash": "lYvfcujkPKwibTj7mRbZ7w==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_221789_LabelHand.tif",
+      "path": "Mekong_221789_LabelHand.tif",
+      "sha256": "8dc056d9f4da55b049e5c446f72cf19175d67a4350a816540e8778c399b566e1",
+      "bytes": 3189,
+      "generation": "1601572622183825",
+      "md5Hash": "ZANdRPK7YW42ZbIavQXAhA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_52610_S1Hand.tif",
+      "path": "Mekong_52610_S1Hand.tif",
+      "sha256": "d0eff70dd549f914a09f10c29f50184f8d5998ceef16a655bda5fa46d61dd91e",
+      "bytes": 1780950,
+      "generation": "1601572870471183",
+      "md5Hash": "9QydPCIgV90W07IUuYlFzw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_52610_LabelHand.tif",
+      "path": "Mekong_52610_LabelHand.tif",
+      "sha256": "8de5c120a4552916eee7a24e9d83fcc9aabc7299a8d7812b54677c198bcc899d",
+      "bytes": 12729,
+      "generation": "1601572622270770",
+      "md5Hash": "d6wBS0CUhnPDPYWEf65DtA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_596495_S1Hand.tif",
+      "path": "Mekong_596495_S1Hand.tif",
+      "sha256": "9a65b8f124989a3944b9c3b436e02e01c7c67268b4330144e7c4c74b05082fde",
+      "bytes": 1783331,
+      "generation": "1601572865737494",
+      "md5Hash": "N+ysYfcyWJZuOeXlQjLXwA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_596495_LabelHand.tif",
+      "path": "Mekong_596495_LabelHand.tif",
+      "sha256": "9fbec9b1bd06e96cc8eb0c66fa4934a48dd80cbd1b670494c2affd259ee7a32c",
+      "bytes": 11426,
+      "generation": "1601572622284973",
+      "md5Hash": "DXEF4RjOm55xT7CwopDxfA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1439641_S1Hand.tif",
+      "path": "Mekong_1439641_S1Hand.tif",
+      "sha256": "8bb3895655b0a4895b8e9f4ef65efb2f623136036dcfb670574f20642225722b",
+      "bytes": 1785601,
+      "generation": "1601572845941791",
+      "md5Hash": "hN73W19/SFIN0L0aB/KSnw==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1439641_LabelHand.tif",
+      "path": "Mekong_1439641_LabelHand.tif",
+      "sha256": "5e6a8e0a4a240ec67402dba79be7535f0a90df3f52be777b6d2133e55ee3c3f5",
+      "bytes": 9807,
+      "generation": "1601572622208952",
+      "md5Hash": "fOAaW7BPOTUvwAX2E8Otsg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1191208_S1Hand.tif",
+      "path": "Mekong_1191208_S1Hand.tif",
+      "sha256": "e73a8e62fa7fd0349fe881a36f6d5c944a57b6e6f9484ef6c7dc3c011c5dde04",
+      "bytes": 1774686,
+      "generation": "1601572844015597",
+      "md5Hash": "m7GC+5dmwi4W/CFSII5PyQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1191208_LabelHand.tif",
+      "path": "Mekong_1191208_LabelHand.tif",
+      "sha256": "15c5dafbd4086efea9a26d530eee8b8b0bb01c8963e1c885cee87155fe96fee4",
+      "bytes": 8686,
+      "generation": "1601572622171446",
+      "md5Hash": "4Pb319JT4ja+J1lF3pWetQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_774566_S1Hand.tif",
+      "path": "Mekong_774566_S1Hand.tif",
+      "sha256": "1f682a591666578a05eed752248e4d135638d8df3576701871ae07a93610faed",
+      "bytes": 1790820,
+      "generation": "1601572869740318",
+      "md5Hash": "NO2stLq1WOw1OXOKNopH8w==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_774566_LabelHand.tif",
+      "path": "Mekong_774566_LabelHand.tif",
+      "sha256": "78b08ce80d3d7d8d32f37913031ff6c01f8b5c481a38223d7191ede86a5f2f5c",
+      "bytes": 11592,
+      "generation": "1601572622369524",
+      "md5Hash": "p08fFrmSSKkVXfs+pRqH6A==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_213094_S1Hand.tif",
+      "path": "Mekong_213094_S1Hand.tif",
+      "sha256": "b808fbb37b5e054017fa399cb6508bcd8b1523f6ea46fda3260a69d9ad9d8d37",
+      "bytes": 1767733,
+      "generation": "1601572855337331",
+      "md5Hash": "cW5cRZQuc1hBDBgUwiM6rA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_213094_LabelHand.tif",
+      "path": "Mekong_213094_LabelHand.tif",
+      "sha256": "3f20f7ef7f8ee222dd1b8f27458d2e72264c6723ff6d1303f67fc9d9a7dbc33c",
+      "bytes": 5695,
+      "generation": "1601572622218691",
+      "md5Hash": "+yYX3SNa6ZQc9WMkeu9/6g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_119477_S1Hand.tif",
+      "path": "Mekong_119477_S1Hand.tif",
+      "sha256": "ecd01674f580dc4b5c5ad5ab05aed2b45606982f5ea5bd67f6043d7ac5625f3d",
+      "bytes": 1777031,
+      "generation": "1601572845690542",
+      "md5Hash": "KEWEeIIIikWh5w6bjV4OuQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_119477_LabelHand.tif",
+      "path": "Mekong_119477_LabelHand.tif",
+      "sha256": "79f8ee17455cb29225e1d21b5ff03861f55371ef0f9a84cc3452aa00550bbeff",
+      "bytes": 3430,
+      "generation": "1601572622215717",
+      "md5Hash": "A7nBeAGocDMqtsw8leAjUg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_269835_S1Hand.tif",
+      "path": "Mekong_269835_S1Hand.tif",
+      "sha256": "6eed0d7ff2be9059b741b7d4321bd5f5c1603b297e31b101bac612bb97682e69",
+      "bytes": 1771972,
+      "generation": "1601572837110859",
+      "md5Hash": "eUAVHM6jawzZO/JT/JyQ5w==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_269835_LabelHand.tif",
+      "path": "Mekong_269835_LabelHand.tif",
+      "sha256": "3dcdd3b67ac03028570a1d19112b9bd91ff911cf13188f2906260a0517ad62a1",
+      "bytes": 4883,
+      "generation": "1601572622281346",
+      "md5Hash": "g9VTUD50iLiONpvDIW55Iw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_846007_S1Hand.tif",
+      "path": "Mekong_846007_S1Hand.tif",
+      "sha256": "e6d06e2491d78800eb0993f8cc29e86705ced25eb03c4a97b8ef325e852128ab",
+      "bytes": 1783991,
+      "generation": "1601572849836023",
+      "md5Hash": "VXMBwUc+jE/de/3CU45hBA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_846007_LabelHand.tif",
+      "path": "Mekong_846007_LabelHand.tif",
+      "sha256": "3c16622ee9f0be87e7bdc73d07a48505a93af36459a816a889d85652fc6f094e",
+      "bytes": 8401,
+      "generation": "1601572622351938",
+      "md5Hash": "frmj2YfMXXGFat4bKxahmw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1111068_S1Hand.tif",
+      "path": "Mekong_1111068_S1Hand.tif",
+      "sha256": "941757942b80aa513548ebbaf1ea5ba2ade11faafdedb9eecb8ea9ac3a9bd50c",
+      "bytes": 1782427,
+      "generation": "1601572841898387",
+      "md5Hash": "s76o8ZkJA/QxWGakSMuh8g==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1111068_LabelHand.tif",
+      "path": "Mekong_1111068_LabelHand.tif",
+      "sha256": "f5a3832d5dd82a8cda98748bad2fbcd1a2d213e31b126cd12f9921cb61ce98cc",
+      "bytes": 7162,
+      "generation": "1601572622157866",
+      "md5Hash": "vV/3i+EpTVZrYfusEEfoDA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1282475_S1Hand.tif",
+      "path": "Mekong_1282475_S1Hand.tif",
+      "sha256": "a5b42c28353891e88796545aee2392e506a9b5a59c11756c22c009f03f97164c",
+      "bytes": 1781456,
+      "generation": "1601572832715437",
+      "md5Hash": "BITjpn8ZpVENcK91z10mGQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1282475_LabelHand.tif",
+      "path": "Mekong_1282475_LabelHand.tif",
+      "sha256": "7c988815de0a983fc782a9e9172532a1b9738372152d29361018845704aed06e",
+      "bytes": 4909,
+      "generation": "1601572622204734",
+      "md5Hash": "TA10r8dvFjIp3MsJ4Cd9ZA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_16233_S1Hand.tif",
+      "path": "Mekong_16233_S1Hand.tif",
+      "sha256": "f57b1198ece71528f677764275eecbc9e2bc1267b64905e08a326c0b600457c7",
+      "bytes": 1788304,
+      "generation": "1601572855074561",
+      "md5Hash": "UtV9YsC3TyM/xl/kMqTAzg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_16233_LabelHand.tif",
+      "path": "Mekong_16233_LabelHand.tif",
+      "sha256": "fee52121a2abbd1e1f57f67927122530bf18b7eb336da7ecb2c137f5875f7102",
+      "bytes": 4983,
+      "generation": "1601572622246223",
+      "md5Hash": "6e5Dal3RVreGT6azd4x5Yg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_342411_S1Hand.tif",
+      "path": "Mekong_342411_S1Hand.tif",
+      "sha256": "12957d32721a92c7b570a669de9193e4083ecdb93430bdb573830ebdd9ab86f6",
+      "bytes": 1781536,
+      "generation": "1601572841291098",
+      "md5Hash": "K73vBjbGyAnmbUheLR8cig==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_342411_LabelHand.tif",
+      "path": "Mekong_342411_LabelHand.tif",
+      "sha256": "3e199b61a624ec117c3c176d7a2dd2b7681c017949c839566b261507112db3db",
+      "bytes": 6510,
+      "generation": "1601572623260138",
+      "md5Hash": "nhoII6fYnQvfWEweiYpVjA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1395593_S1Hand.tif",
+      "path": "Mekong_1395593_S1Hand.tif",
+      "sha256": "7e1799fed340db5d533f9d4e383bc57f71f181bcea7e85e8c9b5d5081e3cef16",
+      "bytes": 1779633,
+      "generation": "1601572833646449",
+      "md5Hash": "gMspRKzO5G5XU1Y1o3uHVg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1395593_LabelHand.tif",
+      "path": "Mekong_1395593_LabelHand.tif",
+      "sha256": "1af6cfa337b64420d70631b16570efca84ab95c42414b5f140beb97ba1c2ef45",
+      "bytes": 4832,
+      "generation": "1601572622213697",
+      "md5Hash": "cPPUuBzS95e+tV3rAvHvqw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_922373_S1Hand.tif",
+      "path": "Mekong_922373_S1Hand.tif",
+      "sha256": "5f1d95207eded9ad5f860ec8bce509fda825a56cc941cd371640525bddf2f4ed",
+      "bytes": 1790619,
+      "generation": "1601572864745861",
+      "md5Hash": "nKn35GlgcwBL1FhBeAOByw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_922373_LabelHand.tif",
+      "path": "Mekong_922373_LabelHand.tif",
+      "sha256": "d008695c4d5a31bd8a11820139223be5b41298a1548a41f5b0faadc51be09f01",
+      "bytes": 15756,
+      "generation": "1601572622346668",
+      "md5Hash": "xRiiYxV/55gqIk3xk0yhuw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1396181_S1Hand.tif",
+      "path": "Mekong_1396181_S1Hand.tif",
+      "sha256": "c773065e29000e3d76d1f1c3909480e73d1aa23d856c3541b593f7ddca759538",
+      "bytes": 1788319,
+      "generation": "1601572858297195",
+      "md5Hash": "MfiqAuWm5C6ultMYenF3kw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1396181_LabelHand.tif",
+      "path": "Mekong_1396181_LabelHand.tif",
+      "sha256": "3cba6ca75f2c277d5e681437ebd8da0e45707e37b82c026b3bc799791ca16438",
+      "bytes": 16633,
+      "generation": "1601572622232578",
+      "md5Hash": "mqQlbbMeVYhIRUTK3+ezJg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Mekong_1248200_S1Hand.tif",
+      "path": "Mekong_1248200_S1Hand.tif",
+      "sha256": "3ec218c9cdfda7e8e6b6b5deff651f4c248105e131779886a559de58c07de785",
+      "bytes": 1784865,
+      "generation": "1601572827881287",
+      "md5Hash": "bkuLVsRsZXiborcRfSURow==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Mekong_1248200_LabelHand.tif",
+      "path": "Mekong_1248200_LabelHand.tif",
+      "sha256": "df8a678b6e2bb86caf5297520870206c3efc5f38f27346a2797fed047e1b5980",
+      "bytes": 14434,
+      "generation": "1601572622230223",
+      "md5Hash": "e9EClxYaCRW8xCi4kLK4Kw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_529525_S1Hand.tif",
+      "path": "Nigeria_529525_S1Hand.tif",
+      "sha256": "22e11a7b67eccc9660c42c80cfa894183bea6117ab87b69e0bc93af95a462f8a",
+      "bytes": 1794341,
+      "generation": "1601572892483510",
+      "md5Hash": "yMj3WX8CVVt7hV2ol1sBuQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_529525_LabelHand.tif",
+      "path": "Nigeria_529525_LabelHand.tif",
+      "sha256": "8a64830e6d1558ec6af8b52b6f4b1fe0ef8920d7f317cfdd8b37bac40f9e8fc9",
+      "bytes": 11861,
+      "generation": "1601572622436919",
+      "md5Hash": "R2tUf/JsG20Xjd64WKG7HQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_143329_S1Hand.tif",
+      "path": "Nigeria_143329_S1Hand.tif",
+      "sha256": "5c5c2401e6c0cb4aa964c77863533c3348204a0c050b48ca544c5326c06a0221",
+      "bytes": 1778640,
+      "generation": "1601572881002520",
+      "md5Hash": "H5znWlreYa/x7QQVX+qXyA==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_143329_LabelHand.tif",
+      "path": "Nigeria_143329_LabelHand.tif",
+      "sha256": "c6732c47603d03521fe9223b690a3a4cc6c3f719621486de078c495fb05ac4fa",
+      "bytes": 3480,
+      "generation": "1601572622302530",
+      "md5Hash": "R88RB+0+1vLAiAtFwR1WMg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_439488_S1Hand.tif",
+      "path": "Nigeria_439488_S1Hand.tif",
+      "sha256": "29a76cfbc4cb6e21e80c652d579aa5ce67612653f6485de1256657c2ea184f90",
+      "bytes": 1780253,
+      "generation": "1601572877304508",
+      "md5Hash": "mii8Hd81dwT7h7bZJJo8dg==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_439488_LabelHand.tif",
+      "path": "Nigeria_439488_LabelHand.tif",
+      "sha256": "7c53908b2fdb14bf24bdadceaf1f7b4ccea127f74cb0c4517400114c0d6bf462",
+      "bytes": 6447,
+      "generation": "1601572622425865",
+      "md5Hash": "wKFqUQShXJgsAYEzZix9FQ==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_707067_S1Hand.tif",
+      "path": "Nigeria_707067_S1Hand.tif",
+      "sha256": "4c6cbdebd9dbb47dbd38eba116c11d16ebc0f77c6aca8175acf91f62c1cbdeee",
+      "bytes": 1781252,
+      "generation": "1601572881432050",
+      "md5Hash": "Zvm35LP08aszMll9rOZnxQ==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_707067_LabelHand.tif",
+      "path": "Nigeria_707067_LabelHand.tif",
+      "sha256": "89a36972a4efa30b0a8488af035e07e350ef4a1453402ed603717d66884c482f",
+      "bytes": 3718,
+      "generation": "1601572622430271",
+      "md5Hash": "r2T7ooOOoTcoFNOgSJsrbQ==",
+      "origin": "cache"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_81933_S1Hand.tif",
+      "path": "Nigeria_81933_S1Hand.tif",
+      "sha256": "7684c67d11d84c768ecbc104a85f99f949a6dfdf3ec3658352fa4715ef335ecb",
+      "bytes": 1801830,
+      "generation": "1601572897358839",
+      "md5Hash": "3rdE2Jt59W7qzMWa4Y7hvw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_81933_LabelHand.tif",
+      "path": "Nigeria_81933_LabelHand.tif",
+      "sha256": "8fe9baed81ffb296a200641df99a59cb9f52443333810887aa9b4a6dc944dff8",
+      "bytes": 19728,
+      "generation": "1601572622525939",
+      "md5Hash": "pX377KU+TmZcVjIz0zkuEw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_35845_S1Hand.tif",
+      "path": "Nigeria_35845_S1Hand.tif",
+      "sha256": "e6393a8c3a32e0fa0dc66c89be3fce3fd054b4af905ee8574a30225a805dc9fb",
+      "bytes": 1794759,
+      "generation": "1601572885159304",
+      "md5Hash": "rFCAIL/sBDVoMzFJD7OQUQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_35845_LabelHand.tif",
+      "path": "Nigeria_35845_LabelHand.tif",
+      "sha256": "c61c8bafed9eaa97c515d991c4e402e2dfc9b3cb3823e3d404ceb674db609f7b",
+      "bytes": 5963,
+      "generation": "1601572622386648",
+      "md5Hash": "j3QfapU2NRBJPcfQ8PuBSQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_598959_S1Hand.tif",
+      "path": "Nigeria_598959_S1Hand.tif",
+      "sha256": "39a419e2dd295104346f44220c6d0f70adf32b9501af9a781364cdebb89ee8ff",
+      "bytes": 1783923,
+      "generation": "1601572873434053",
+      "md5Hash": "0fVt2xrvnLhKnvvRX8yOPA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_598959_LabelHand.tif",
+      "path": "Nigeria_598959_LabelHand.tif",
+      "sha256": "286acf57009d5ffc94e535306f0f7ffd01ee65a3060f9a702fdd21db16dd58a9",
+      "bytes": 14088,
+      "generation": "1601572622437493",
+      "md5Hash": "Pv56kUzxkwpRQqyBdnJd6A==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_952958_S1Hand.tif",
+      "path": "Nigeria_952958_S1Hand.tif",
+      "sha256": "9a59b1dfed76cb9931af3d9e8aa1361299fd54b58f52c6c3f06055e7c1f660e7",
+      "bytes": 1790881,
+      "generation": "1601572881195166",
+      "md5Hash": "dX3pMfidMZCHoXzUQuYnIg==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_952958_LabelHand.tif",
+      "path": "Nigeria_952958_LabelHand.tif",
+      "sha256": "f1c8dc26d87e40a4be800f52e5eed855a815f2d1ffeaab476daa7dc729123af9",
+      "bytes": 6941,
+      "generation": "1601572622455797",
+      "md5Hash": "R6uAItx6bNjFcARanLEO7Q==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_78061_S1Hand.tif",
+      "path": "Nigeria_78061_S1Hand.tif",
+      "sha256": "f1fdde9f45625c8eacfbae4d75ed0413223b89ea548fe77b7bb0b1eca014dc0c",
+      "bytes": 1790660,
+      "generation": "1601572897836591",
+      "md5Hash": "eG0BeC0cZYWeTV16Z4vt1A==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_78061_LabelHand.tif",
+      "path": "Nigeria_78061_LabelHand.tif",
+      "sha256": "7ee3d569c47828220be55b4a5f759c3c6813923d02f376ac13d1351a7e9c7681",
+      "bytes": 4901,
+      "generation": "1601572622450107",
+      "md5Hash": "bIi5u+Qc7BvBuuTWhXezsQ==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Nigeria_600295_S1Hand.tif",
+      "path": "Nigeria_600295_S1Hand.tif",
+      "sha256": "e75d4ab8ef74c5724d1df0c15084e27343dc128b2e0577f197c81f7921ecbdc7",
+      "bytes": 1801844,
+      "generation": "1601572884405884",
+      "md5Hash": "pBBRSiFdEWeEkMndT27qrw==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Nigeria_600295_LabelHand.tif",
+      "path": "Nigeria_600295_LabelHand.tif",
+      "sha256": "7bce532830162964a4d0283046affb74c09f2a1ce3ec5a3c32aa4a6fe2fc629f",
+      "bytes": 12927,
+      "generation": "1601572622420041",
+      "md5Hash": "p+2zn0agqlQHrl7wF5zh0Q==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/S1Hand/Pakistan_909806_S1Hand.tif",
+      "path": "Pakistan_909806_S1Hand.tif",
+      "sha256": "073778a5bc568a5bc7a1ce4e2cee8003bf53eae3082d9d1368a348c6d23b187a",
+      "bytes": 1627873,
+      "generation": "1601572929000055",
+      "md5Hash": "BwiPeELHE1Z2yNIfXVDBeA==",
+      "origin": "download"
+    },
+    {
+      "name": "v1.1/data/flood_events/HandLabeled/LabelHand/Pakistan_909806_LabelHand.tif",
+      "path": "Pakistan_909806_LabelHand.tif",
+      "sha256": "19419eb504498a304914c8030d8c8dd61ad0e0cd1444574ba80fd63c84810c67",
+      "bytes": 4824,
+      "generation": "1601572622594163",
+      "md5Hash": "qnL8zVefxMDNafhTE8MCZw==",
+      "origin": "download"
+    }
+  ],
+  "origin_counts": {
+    "cache": 44,
+    "download": 156
+  },
+  "source_csv_sha256": "57be4dc440bf8a526effa77e06d4b8cb7a8484589c0bffa201d8e0f49e994beb",
+  "selection_sha256": "8cade23f9cbce0bb116ef3827d8cdffc35ab8ddc536f638ffb9372c85b2b07f0",
+  "supplied_selection_sha256": "9c4204b432254130a7dc7cc8e08705962b3a6eeab03824ea8fe76f9f8070b7b2",
+  "split_freeze_sha256": "07a49d6a76beb50e1725bf1ce18a975d3196a70bba7bcfeef9dda823c5ef9d11",
+  "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+  "inventory_sha256": "88e985560716774bc6a27e7daf82c0f11a030a2dd71de136d438111dcbd18cbb",
+  "split_counts": {
+    "test": 31,
+    "train": 29,
+    "validation": 40
+  },
+  "previous_training_exposure_by_split": {
+    "test": 8,
+    "train": 5,
+    "validation": 9
+  },
+  "acquisition_elapsed_seconds": 148.65619729997707,
+  "downloaded_utc": "2026-10-29T04:36:58.754342+00:00",
+  "raster_audit_complete": false,
+  "calibration_complete": false,
+  "training_complete": false,
+  "fresh_colab_verified": false
+}

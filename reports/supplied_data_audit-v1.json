@@ -1,0 +1,36 @@
+{
+  "patch_count": 100,
+  "split_counts": {
+    "test": 31,
+    "validation": 40,
+    "train": 29
+  },
+  "shapes": {
+    "512x512": 100
+  },
+  "label_sources": {
+    "manual": 100
+  },
+  "score_valid_pixels_by_split": {
+    "train": 6769828,
+    "validation": 8788754,
+    "test": 4940307
+  },
+  "zero_scored_patches": [
+    {
+      "patch_id": "Ghana_26376",
+      "split": "test"
+    }
+  ],
+  "low_scored_patches": [
+    {
+      "patch_id": "Ghana_24858",
+      "split": "test",
+      "pixels": 484
+    }
+  ],
+  "max_alignment_error_pixels": 5.1779135800964635e-11,
+  "manifest_sha256": "4c196542778daefb2f03b53634f8f0ef579f91851677c606d5ae77750ab93ea3",
+  "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+  "membership_matches_prefrozen": true
+}

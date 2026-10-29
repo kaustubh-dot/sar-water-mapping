@@ -1,0 +1,16 @@
+{
+  "patch_ids": [
+    "Mekong_1111068",
+    "Nigeria_143329",
+    "Pakistan_909806",
+    "Mekong_1191208",
+    "Mekong_119477"
+  ],
+  "selection": "first lexicographic ID per train event, then first two other train IDs; before method selection",
+  "input_units": "db",
+  "band_order": "VV,VH",
+  "label_source": "manual",
+  "image_path": "outputs/supplied-roi-inspection/training_contact.png",
+  "status": "raw_contact_sheet_visually_inspected",
+  "finding": "VV/VH arrangement and manual masks visually consistent; independent invalid pixels masked. Includes all three training events before calibration."
+}

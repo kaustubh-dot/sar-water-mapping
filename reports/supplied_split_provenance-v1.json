@@ -1,0 +1,27 @@
+{
+  "status": "internal_event_membership_frozen_before_new_source_access",
+  "frozen_utc": "2026-10-29T04:29:56.560532+00:00",
+  "seed": 42,
+  "policy": "event_id",
+  "source_selection_sha256": "9c4204b432254130a7dc7cc8e08705962b3a6eeab03824ea8fe76f9f8070b7b2",
+  "splits_sha256": "940f34a9a15c05af7ae61c623307577eb38ab9a4d46f638cc6f72d897a853532",
+  "split_counts": {
+    "test": 31,
+    "validation": 40,
+    "train": 29
+  },
+  "event_membership": {
+    "Ghana": "test",
+    "India": "validation",
+    "Mekong": "train",
+    "Nigeria": "train",
+    "Pakistan": "train"
+  },
+  "prior_development_training_exposure_by_new_split": {
+    "test": 8,
+    "validation": 9,
+    "train": 5
+  },
+  "proportion_limitation": "Existing event-group rule yields29/40/31; group isolation takes precedence over exact patch proportions. No split search.",
+  "prior_exposure_limitation": "8new-test IDs previously trained in development; newrun uses scratchmodels, report project exposure and do not claim pristine blind test."
+}
