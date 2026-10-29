@@ -30,7 +30,7 @@ is disclosed; this is not a claim of pristine blind evaluation.
   preserve development profile and exactly one notebook; independent review.
 - [x] Inspect raw training and test-only ENL regions, freeze training looks and
   validation choices under unchanged method grids; independent review.
-- [ ] Remote GPU resource preflight, dedicated environment, seed42 paired
+- [x] Remote GPU resource preflight, dedicated environment, seed42 paired
   scratch training under one-hour cap; completed-pair independent review.
 - [ ] Frozen classical/synthetic and neural held-out evaluation, separate
   outputs, figures/counts/hash evidence; independent result review.
@@ -75,4 +75,16 @@ Remote preflight: RTX 4000 Ada, 20,475 MiB total and 1,166 MiB used, 14% GPU
 utilization; the only listed compute process was the desktop service (162 MiB).
 The project disk had 433 GB free. The dedicated environment imports the current
 project, PyTorch 2.15.0+cu132 reports CUDA available, and the supplied metadata
-chain verifies there with the exact 29/40/31 split. No new training has started.
+chain verifies there with the exact 29/40/31 split.
+
+Training accepted at clean source `0cdb7874e3699cd1e6c0f68a98b5eea6c6e9ff50`.
+The pair completed in 76.767525 seconds including 11.101004 seconds of input
+preparation. Raw stopped at epoch 10 / 150 updates, best epoch 5; Median-5
+stopped at epoch 9 / 135 updates, best epoch 4. Both have the same scratch
+initialization, independently replayed in the original environment. The Sol
+xhigh reviewer reproduced normalization, all ten crop plans and all 80 native
+validation confusion matrices exactly, with zero test reads or attempts.
+See supplied_training_review.md. The redacted 3,666,469-byte checkpoint bundle
+has SHA-256 `9605d1906802434d73d5ef73239e127395779a03df11596004c94e4acb5aa6d6`;
+it remains outside Git. Frozen held-out classical/synthetic and neural scoring
+has now started in separate output directories at the same clean source.
