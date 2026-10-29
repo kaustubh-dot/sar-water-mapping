@@ -119,15 +119,53 @@ limited ROIs and hardware-dependent timing constrain conclusions.
 The reviewed 487,857-parameter VV/VH U-Net uses shared raw-training dB
 normalization, matched initialization/crops, masked equal BCE/Dice loss, Adam
 0.001, batch 8, seed 42 and fixed probability threshold above 0.5. The remote
-pair is capped at 20 epochs per condition, patience five and one shared hour.
-At this report checkpoint training has not completed; no neural accuracy is
-claimed. Mask outputs receive neither ENL nor denoising PSNR.
+pair completed in **122.06 seconds**, including 12.86 seconds of input
+preparation, on an RTX 4000 Ada. It remained within the shared hour cap.
 
-Remaining gates are the completed/reviewed GPU pair and checkpoint evaluation,
-the organizer subset, and a measured fresh Colab run below 30 minutes. Remote
-training and checkpoint-only inference must remain separate timings. The full
-classical notebook is the bounded fallback. No final submission tag is issued
-until its acceptance evidence exists.
+| Training input | Executed epochs / updates | Best validation epoch | Test water IoU | Test water F1 |
+| --- | --- | ---: | ---: | ---: |
+| Raw VV/VH | 11 / 327 | 6 | 0.5855 | 0.7385 |
+| Median-5 VV/VH | 13 / 387 | 8 | 0.5346 | 0.6968 |
+
+Both conditions stopped after five stale validation epochs. Their actual
+updates differ; initialization and each shared epoch's crop plan match.
+Independent review verified all 13 crop plans, raw-training normalization,
+checkpoint hashes and all 40 native validation confusion matrices. Only seed
+42 was run. Peak PyTorch CUDA allocation was 964,296,704 bytes; CPU peak RSS was
+not measured. Original environment versions are preserved.
+
+The frozen native-resolution checkpoint evaluation took a recorded 6.85-second
+subtotal on the GPU, including native-mask exports and figures but preceding
+final metadata writes. This excludes training. The raw U-Net underperforms the
+classical Median baseline on pooled IoU, and Median preprocessing reduces the
+U-Net's IoU further. The negative learned result is retained; no architecture,
+threshold or test-based rescue search follows. Mask outputs receive neither
+ENL nor denoising PSNR. Small data and one seed do not establish a universal
+ranking of learned and classical approaches.
+
+Independent result review recomputed all 40 exported native-mask confusion
+matrices against the original held-out labels and validity masks, along with
+pooled scores, the fixed 19-patch water macro set and one dry patch. The
+evaluation process did not record deterministic/TF32 backend flags; these are
+measured-run results without a claim of bitwise inference replay across setups.
+
+The approved [development checkpoint release](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1)
+provides the small weights/metadata bundle outside Git. Its SHA-256 is
+`b70dc5117a21ecac5b3b0e2ad9fc06f960a727370c81892089ac27b894100238`.
+The [reproduction instructions](../docs/REPRODUCING.md) distinguish frozen
+checkpoint evaluation from new training and fresh classical calibration.
+
+The full classical notebook also completed all ten code cells in a separate
+Linux kernel: **91.78 seconds** through archive creation and checksum, using
+cached TIFFs, an existing clean clone and a preinstalled notebook kernel.
+It reproduced all four held-out classical confusion counts exactly. This
+smoke run does not measure fresh installation, uncached access or Colab
+hardware. See the [execution evidence](notebook_smoke_summary.json).
+
+Remaining acceptance gates are the organizer subset and a measured fresh
+Colab run below 30 minutes. Remote training and checkpoint-only inference
+remain separate timings. The full classical notebook is the bounded fallback.
+No final submission tag is issued until its acceptance evidence exists.
 
 Dataset attribution: Bonafilia et al. (2020),
 [Sen1Floods11](https://github.com/cloudtostreet/Sen1Floods11).

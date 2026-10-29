@@ -1,0 +1,281 @@
+{
+  "profile": "checkpoint-evaluation",
+  "runtime_type": "neural_cuda",
+  "training_included": false,
+  "fresh_colab_verified": false,
+  "seed": 42,
+  "training_runtime_type": "remote",
+  "external_training_seconds": 122.06388808786869,
+  "training_config": {
+    "seed": 42,
+    "max_epochs": 20,
+    "patience": 5,
+    "batch_size": 8,
+    "learning_rate": 0.001,
+    "crop_size": 256,
+    "max_seconds": 3587.135936937062,
+    "profile": "remote"
+  },
+  "training_commit_sha": "61b09f9bfa61114d83bd7be19eba3de67d5621db",
+  "training_working_tree_dirty": false,
+  "evaluation_source_commit_sha": "61b09f9bfa61114d83bd7be19eba3de67d5621db",
+  "evaluation_working_tree_dirty": false,
+  "evaluation_source_git_status": "available",
+  "evaluation_source_sha256": {
+    "scripts/evaluate_neural.py": "67aa6b72b3f7d9f4d510555bd3baa8a339511009bcf88956287257bdc5646ba3",
+    "src/sar_water/model.py": "c943cf84f2237131df46277cedc31c9b3c72966922d3bdb333e85ccf794740cc",
+    "src/sar_water/train.py": "3b7d6fb308919b1e92e2348f61f34d264ed018833a978ae4633208d6adddad67",
+    "src/sar_water/data.py": "e0ef47f8f1834a6420e1b366c46b4a61bb2c9266c84fc4e0ebeb1f33f8709532",
+    "src/sar_water/filters.py": "6afb5df3b78787e4e4de7dff4c6dec77429c12a5d228088a4c834f7704de24c5",
+    "src/sar_water/metrics.py": "8aef3af47e0ad895c874bee7ab9c70c38562189dc6c19efe59be097aa7d883ed",
+    "src/sar_water/evaluate.py": "bbd607eded10e8906a78d323e67fb7846814eadeb71873f7b6e3cd6ed86091e8"
+  },
+  "training_report_sha256": "b2fc6c5efdca617a2009ce74ccd42d7f5e977027ce870128e1347d9906c91140",
+  "training_checkpoint_sha256": {
+    "raw": "2b6545a63c91bfa3f226ba47c92ccf4ff07fd2ca71553b318750df22c64868af",
+    "filtered": "4916665108b1e83258467f82511e80fb3d373dabdd11bf2e337db54a6e56e63f"
+  },
+  "config_sha256": "3b54e43f217ad80e2c029554289acd483538ecbd09837bcfb9c9b689a653f4af",
+  "manifest_sha256": "d840b655f00df68220d5b2ccbaf9eb9c5aa4e785dd0184e05f8dec7646c46786",
+  "splits_sha256": "24963a9951f318aab0cc3d687023ce849fc5c9435ed9fc8cbadced4dc6c2d1b7",
+  "normalization": {
+    "mean": [
+      -10.498828326151829,
+      -17.220758706521245
+    ],
+    "std": [
+      3.970486845419953,
+      4.72255479237435
+    ],
+    "pixel_count": 15417377,
+    "train_ids": [
+      "Ghana_103272",
+      "Ghana_128663",
+      "Ghana_168875",
+      "Ghana_187318",
+      "Ghana_24858",
+      "Ghana_26376",
+      "Ghana_264787",
+      "Ghana_97516",
+      "India_103447",
+      "India_179238",
+      "India_265762",
+      "India_56450",
+      "India_59460",
+      "India_664410",
+      "India_698338",
+      "India_774689",
+      "India_804466",
+      "Mekong_1439641",
+      "Mekong_596495",
+      "Nigeria_143329",
+      "Nigeria_439488",
+      "Nigeria_707067",
+      "Pakistan_1036366",
+      "Pakistan_548910",
+      "Pakistan_712873",
+      "Paraguay_1076204",
+      "Paraguay_198534",
+      "Paraguay_212687",
+      "Paraguay_225187",
+      "Paraguay_247656",
+      "Paraguay_48673",
+      "Paraguay_605682",
+      "Paraguay_721886",
+      "Paraguay_792268",
+      "Somalia_32375",
+      "Somalia_371421",
+      "Somalia_626316",
+      "Somalia_886726",
+      "Spain_1167260",
+      "Spain_7856615",
+      "Spain_8104659",
+      "Spain_8199661",
+      "Sri-Lanka_1038087",
+      "Sri-Lanka_120804",
+      "Sri-Lanka_135713",
+      "Sri-Lanka_14484",
+      "Sri-Lanka_152185",
+      "Sri-Lanka_178753",
+      "Sri-Lanka_956740",
+      "USA_198411",
+      "USA_217598",
+      "USA_231124",
+      "USA_232060",
+      "USA_348639",
+      "USA_58086",
+      "USA_638521",
+      "USA_693819",
+      "USA_788696",
+      "USA_831672",
+      "USA_84195"
+    ]
+  },
+  "filtered_identity": {
+    "method": "median",
+    "parameters": {
+      "window": 5
+    },
+    "looks": [
+      4.859278122453718,
+      4.020813607183419
+    ],
+    "config_file_sha256": "3b54e43f217ad80e2c029554289acd483538ecbd09837bcfb9c9b689a653f4af",
+    "manifest_file_sha256": "d840b655f00df68220d5b2ccbaf9eb9c5aa4e785dd0184e05f8dec7646c46786",
+    "splits_file_sha256": "24963a9951f318aab0cc3d687023ce849fc5c9435ed9fc8cbadced4dc6c2d1b7",
+    "training_roi_sha256": "c5a5c818c2c984d6d561b86fc51872167ea5f3aa005f600bbb0224c28139b533",
+    "looks_artifact_sha256": "e913ffc80d7edf57f38167bb34448bb39f93447483e02b09df102902002e6233"
+  },
+  "best_epochs": {
+    "raw": 6,
+    "filtered": 8
+  },
+  "actual_training_updates": {
+    "raw": 327,
+    "filtered": 387
+  },
+  "heldout_patch_count": 20,
+  "heldout_shapes": {
+    "Ghana_313799": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_406026": [
+      2,
+      512,
+      512
+    ],
+    "Ghana_97059": [
+      2,
+      512,
+      512
+    ],
+    "India_1018327": [
+      2,
+      512,
+      512
+    ],
+    "India_591317": [
+      2,
+      512,
+      512
+    ],
+    "India_592446": [
+      2,
+      512,
+      512
+    ],
+    "Mekong_1443339": [
+      2,
+      512,
+      512
+    ],
+    "Mekong_254910": [
+      2,
+      512,
+      512
+    ],
+    "Mekong_382276": [
+      2,
+      512,
+      512
+    ],
+    "Nigeria_417184": [
+      2,
+      512,
+      512
+    ],
+    "Nigeria_812045": [
+      2,
+      512,
+      512
+    ],
+    "Pakistan_694942": [
+      2,
+      512,
+      512
+    ],
+    "Paraguay_913449": [
+      2,
+      512,
+      512
+    ],
+    "Somalia_322855": [
+      2,
+      512,
+      512
+    ],
+    "Somalia_699062": [
+      2,
+      512,
+      512
+    ],
+    "Spain_6095801": [
+      2,
+      512,
+      512
+    ],
+    "Spain_6860600": [
+      2,
+      512,
+      512
+    ],
+    "Sri-Lanka_713926": [
+      2,
+      512,
+      512
+    ],
+    "USA_527077": [
+      2,
+      512,
+      512
+    ],
+    "USA_67102": [
+      2,
+      512,
+      512
+    ]
+  },
+  "fixed_macro_patch_ids": [
+    "Ghana_313799",
+    "Ghana_406026",
+    "India_1018327",
+    "India_591317",
+    "India_592446",
+    "Mekong_1443339",
+    "Mekong_254910",
+    "Mekong_382276",
+    "Nigeria_417184",
+    "Nigeria_812045",
+    "Pakistan_694942",
+    "Paraguay_913449",
+    "Somalia_322855",
+    "Somalia_699062",
+    "Spain_6095801",
+    "Spain_6860600",
+    "Sri-Lanka_713926",
+    "USA_527077",
+    "USA_67102"
+  ],
+  "native_prediction_artifact_count": 40,
+  "native_export_seconds": 0.11728262971155345,
+  "prediction_encoding": {
+    "dtype": "int8",
+    "land": 0,
+    "water": 1,
+    "invalid": -1,
+    "validity": "original SAR mask; label validity stored separately"
+  },
+  "label_claim": "independent manual labels",
+  "python": "3.12.3",
+  "torch": "2.15.0+cu132",
+  "numpy": "2.5.4",
+  "device": "cuda",
+  "device_name": "NVIDIA RTX 4000 Ada Generation",
+  "checkpoint_verification_seconds": 0.35756538808345795,
+  "heldout_loading_seconds": 0.49743021302856505,
+  "limitations": "A checkpoint evaluation does not reproduce training or establish a fresh Colab runtime. These masks identify observed water; new flooding versus permanent water is not established.",
+  "evaluation_seconds": 6.853085705079138,
+  "evaluation_timing_scope": "preflight_loading_compute_tables_native_masks_checksums_and_optional_figures; excludes_final_json_and_config_serialization"
+}

@@ -27,7 +27,10 @@ we retain the negative result rather than selecting against test outcomes.
 **2:20–3:00 — Reproduction and limitations.** Open the single notebook and
 explain its classical full profile, saved checksums, fixed decisions and result
 bundle. Distinguish remote U-Net training from checkpoint inference and fresh
-Colab timing. At this checkpoint the notebook has implementation review but
-no verified fresh Colab Run All. The organizer archive remains unavailable.
+Colab timing. The raw/Median U-Net pair completed in 122.06 seconds; test IoU
+was 0.5855/0.5346, below the classical Median row. The classical notebook
+completed in 91.78 seconds on Linux using cached data, an existing clone and
+a preinstalled kernel; fresh Colab Run All remains unverified. The organizer
+archive remains unavailable.
 Close with the practical finding: a small classical pipeline yields a measured
 water-IoU gain here, while smoothing alone cannot guarantee better mapping.

@@ -4,13 +4,28 @@
 
 Reproducible speckle denoising and surface-water segmentation on a 100-patch Sentinel-1 VV/VH subset of Sen1Floods11. The target is an end-to-end Google Colab run in **under 30 minutes**.
 
-**Status (29 October 2026):** the reviewed pipeline now has an audited upstream development subset of 100 hand-labeled pairs (60 train, 20 validation, 20 test). Classical calibration has run on train/validation only; its version 2 artifacts passed independent Sol xhigh review before GPU training. The organizers' subset and fresh Colab runtime remain open gates. See the [development audit](reports/development_data_audit.md), [execution ledger](reports/execution_ledger.md), and [roadmap](ROADMAP.md). The official subset contains touching cross-partition chips; results describe correlated development data, not unseen-geography generalization.
+**Status (29 October 2026):** the upstream development experiment is implemented and measured: audited 100 manual-label pairs, frozen calibration, four classical pipelines, paired GPU U-Net training, held-out evaluation and a complete cached Linux notebook run. Phase reviews use GPT-6.1 Sol at xhigh. The organizers’ subset and a **fresh Colab Run All below 30 minutes remain unverified**. Official partitions contain touching chips and shared events, so these are correlated development results, not unseen-geography evidence.
+
+| Held-out method | Water IoU | Water F1 |
+| --- | ---: | ---: |
+| Raw + shared threshold | 0.6084 | 0.7565 |
+| Median 5 + shared threshold | 0.6304 | 0.7733 |
+| Lee 5 + shared threshold | 0.6070 | 0.7554 |
+| Log-bilateral + shared threshold | 0.6304 | 0.7733 |
+| Compact U-Net, raw VV/VH | 0.5855 | 0.7385 |
+| Compact U-Net, Median-5 VV/VH | 0.5346 | 0.6968 |
+
+All classical rows use validation-selected VV below -18 dB, with cleanup disabled. Neural rows use fixed probability above 0.5. Median preprocessing did not improve this single-seed U-Net; the negative result is retained. ENL and synthetic PSNR are reported separately in the [report](reports/final_report.md), with [classical outputs](reports/classical_results-v1/results_real.csv) and [neural outputs](reports/neural_results-v1/results_neural.csv).
+
+The GPU training pair took **122.06 seconds**, including preparation. The complete classical notebook took **91.78 seconds on Linux with cached TIFFs, an existing clone and preinstalled kernel**; this is not a fresh Colab measurement. See [notebook evidence](reports/notebook_smoke_summary.json), [current roadmap](ROADMAP.md) and [execution ledger](reports/execution_ledger.md).
+
+[Download the reviewed development checkpoints](https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1). Weights are release assets outside Git; no raw dataset is included. The [reproduction guide](docs/REPRODUCING.md) explains the exact source commit, input restoration, environments and commands. [Open the classical notebook in Colab](https://colab.research.google.com/github/kaustubh-dot/sar-water-mapping/blob/implementation/remaining-phases/notebooks/01_sar_water_mapping.ipynb); this access link does not certify its fresh-runtime timing.
 
 ## Local development
 
-Use Python 3.11 or newer in a project environment, then install `pip install -e ".[geo,audit,test]"`. Run `python -m pytest -q --basetemp=outputs/pytest`. The [data instructions](data/README.md) describe the explicit inventory and `sar-water-audit` command. Fixtures exercise loader and split behavior; they do not replace the organizer-data audit or establish geographic generalization.
+Use Python 3.12 or later for the pinned notebook profile (`pip install -r requirements-colab.txt`, then `pip install -e . --no-deps`). The core package also supports Python 3.11 with compatible dependencies. Run `python -m pytest -q --basetemp=outputs/pytest`. The [data instructions](data/README.md) describe the explicit inventory and `sar-water-audit` command. Fixtures exercise loader and split behavior; they do not replace the organizer-data audit or establish geographic generalization.
 
-Reproduce the simulated raw/noisy baseline with `python -m sar_water.synthetic --output outputs/phase2_synthetic`. Run `python scripts/phase3_synthetic_check.py` for filter diagnostics on training/validation phantoms, and `python scripts/phase4_fixture.py` for the segmentation-selection fixture. These are local synthetic development runs, not the final held-out benchmark or a timed Colab run. Real-data choices in `configs/experiment.json` remain unset until validation on the audited subset.
+Reproduce the simulated raw/noisy baseline with `python -m sar_water.synthetic --output outputs/phase2_synthetic`. Run `python scripts/phase3_synthetic_check.py` for filter diagnostics on training/validation phantoms, and `python scripts/phase4_fixture.py` for the segmentation-selection fixture. These are local synthetic development runs, not the final held-out benchmark or a timed Colab run. The generic `configs/experiment.json` remains an unfitted template. Recorded calibration choices are in `configs/development-calibrated-v3.json`; v3 changes only portable identity bindings from accepted v2, with no retuning.
 
 ## Start here
 
@@ -48,7 +63,7 @@ The upstream documentation describes two-band, 512 x 512 Sentinel-1 images in dB
 
 ## Planned stack
 
-Python, NumPy, SciPy, scikit-image, rasterio, pandas, matplotlib, and pytest. PyTorch and the neural package are introduced only if the neural feasibility gate passes. Exact dependency versions will be pinned after a clean Colab compatibility check.
+Python, NumPy, SciPy, scikit-image, rasterio, pandas, matplotlib, and pytest. PyTorch and the neural package are introduced only if the neural feasibility gate passes. The classical pins are in `requirements-colab.txt`; actual training versions accompany the checkpoint bundle. Fresh Colab compatibility remains an execution gate.
 
 Remote training and Colab reproduction are separate measurements. A checkpoint-based Colab evaluation under 30 minutes does not prove training also fits that limit. If full training is required within the judging budget, time that profile explicitly or submit the classical pipeline as the compliant core.
 

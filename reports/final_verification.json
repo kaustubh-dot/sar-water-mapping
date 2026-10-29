@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-29",
+  "source_commit_for_measured_experiments": "61b09f9bfa61114d83bd7be19eba3de67d5621db",
+  "test_command": ".venv/Scripts/python.exe -m pytest -q --basetemp=outputs/pytest-final-delivery",
+  "test_exit_code": 0,
+  "tests_passed": 110,
+  "test_seconds": 83.58,
+  "environment": "local Windows dedicated project environment",
+  "sandbox_note": "Full suite ran with ordinary Windows helper access for the local Git checkout fixture.",
+  "core_document_local_links_verified": true,
+  "public_checkpoint_download_sha256_verified": true,
+  "public_checkpoint_preflight_conditions_accepted": 2,
+  "heldout_sources_read_by_public_bundle_preflight": 0,
+  "final_remote_project_checkout_clean": true,
+  "final_remote_project_jobs_running": 0,
+  "final_gpu_memory_free_mib": 18845,
+  "fresh_colab_verified": false,
+  "organizer_subset_verified": false,
+  "final_hackathon_tag_created": false
+}

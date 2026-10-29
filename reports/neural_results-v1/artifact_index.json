@@ -1,0 +1,9 @@
+{
+  "config.json": "eb4d2ddbf84d7dc21a2f28048ce1296a53486d144a565b479b1eb1311cc062a5",
+  "evaluation-environment.txt": "a38c9bf34568067981fbc86f33ea7b9c608cc49ccf2fde9b36b585c0e02cde73",
+  "native_predictions.csv": "ee563120327e234f7b7ab1ea6a2976d6b40e0ff99f29a08d8f4286fb1d09d1da",
+  "per_patch_neural.csv": "861f470a4465e235ad14d4a66b611f50638227993e8a457a66af131a5e86b839",
+  "results_neural.csv": "815602e524e6e2f2abc744b4e9d73a5a37490508fdc2d923d95629ba88bf29da",
+  "results_neural.json": "d4ac409314b4480bdc35048233ee47f0dc515570de9f727dc628336a14dd1857",
+  "runtime_neural.json": "124a0436961b53b9c73530e4f6f51dc3e5786cba2e92473a1bce8e681fa5be7b"
+}

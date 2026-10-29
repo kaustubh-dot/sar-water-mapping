@@ -1,0 +1,913 @@
+{
+  "runtime": {
+    "profile": "checkpoint-evaluation",
+    "runtime_type": "neural_cuda",
+    "training_included": false,
+    "fresh_colab_verified": false,
+    "seed": 42,
+    "training_runtime_type": "remote",
+    "external_training_seconds": 122.06388808786869,
+    "training_config": {
+      "seed": 42,
+      "max_epochs": 20,
+      "patience": 5,
+      "batch_size": 8,
+      "learning_rate": 0.001,
+      "crop_size": 256,
+      "max_seconds": 3587.135936937062,
+      "profile": "remote"
+    },
+    "training_commit_sha": "61b09f9bfa61114d83bd7be19eba3de67d5621db",
+    "training_working_tree_dirty": false,
+    "evaluation_source_commit_sha": "61b09f9bfa61114d83bd7be19eba3de67d5621db",
+    "evaluation_working_tree_dirty": false,
+    "evaluation_source_git_status": "available",
+    "evaluation_source_sha256": {
+      "scripts/evaluate_neural.py": "67aa6b72b3f7d9f4d510555bd3baa8a339511009bcf88956287257bdc5646ba3",
+      "src/sar_water/model.py": "c943cf84f2237131df46277cedc31c9b3c72966922d3bdb333e85ccf794740cc",
+      "src/sar_water/train.py": "3b7d6fb308919b1e92e2348f61f34d264ed018833a978ae4633208d6adddad67",
+      "src/sar_water/data.py": "e0ef47f8f1834a6420e1b366c46b4a61bb2c9266c84fc4e0ebeb1f33f8709532",
+      "src/sar_water/filters.py": "6afb5df3b78787e4e4de7dff4c6dec77429c12a5d228088a4c834f7704de24c5",
+      "src/sar_water/metrics.py": "8aef3af47e0ad895c874bee7ab9c70c38562189dc6c19efe59be097aa7d883ed",
+      "src/sar_water/evaluate.py": "bbd607eded10e8906a78d323e67fb7846814eadeb71873f7b6e3cd6ed86091e8"
+    },
+    "training_report_sha256": "b2fc6c5efdca617a2009ce74ccd42d7f5e977027ce870128e1347d9906c91140",
+    "training_checkpoint_sha256": {
+      "raw": "2b6545a63c91bfa3f226ba47c92ccf4ff07fd2ca71553b318750df22c64868af",
+      "filtered": "4916665108b1e83258467f82511e80fb3d373dabdd11bf2e337db54a6e56e63f"
+    },
+    "config_sha256": "3b54e43f217ad80e2c029554289acd483538ecbd09837bcfb9c9b689a653f4af",
+    "manifest_sha256": "d840b655f00df68220d5b2ccbaf9eb9c5aa4e785dd0184e05f8dec7646c46786",
+    "splits_sha256": "24963a9951f318aab0cc3d687023ce849fc5c9435ed9fc8cbadced4dc6c2d1b7",
+    "normalization": {
+      "mean": [
+        -10.498828326151829,
+        -17.220758706521245
+      ],
+      "std": [
+        3.970486845419953,
+        4.72255479237435
+      ],
+      "pixel_count": 15417377,
+      "train_ids": [
+        "Ghana_103272",
+        "Ghana_128663",
+        "Ghana_168875",
+        "Ghana_187318",
+        "Ghana_24858",
+        "Ghana_26376",
+        "Ghana_264787",
+        "Ghana_97516",
+        "India_103447",
+        "India_179238",
+        "India_265762",
+        "India_56450",
+        "India_59460",
+        "India_664410",
+        "India_698338",
+        "India_774689",
+        "India_804466",
+        "Mekong_1439641",
+        "Mekong_596495",
+        "Nigeria_143329",
+        "Nigeria_439488",
+        "Nigeria_707067",
+        "Pakistan_1036366",
+        "Pakistan_548910",
+        "Pakistan_712873",
+        "Paraguay_1076204",
+        "Paraguay_198534",
+        "Paraguay_212687",
+        "Paraguay_225187",
+        "Paraguay_247656",
+        "Paraguay_48673",
+        "Paraguay_605682",
+        "Paraguay_721886",
+        "Paraguay_792268",
+        "Somalia_32375",
+        "Somalia_371421",
+        "Somalia_626316",
+        "Somalia_886726",
+        "Spain_1167260",
+        "Spain_7856615",
+        "Spain_8104659",
+        "Spain_8199661",
+        "Sri-Lanka_1038087",
+        "Sri-Lanka_120804",
+        "Sri-Lanka_135713",
+        "Sri-Lanka_14484",
+        "Sri-Lanka_152185",
+        "Sri-Lanka_178753",
+        "Sri-Lanka_956740",
+        "USA_198411",
+        "USA_217598",
+        "USA_231124",
+        "USA_232060",
+        "USA_348639",
+        "USA_58086",
+        "USA_638521",
+        "USA_693819",
+        "USA_788696",
+        "USA_831672",
+        "USA_84195"
+      ]
+    },
+    "filtered_identity": {
+      "method": "median",
+      "parameters": {
+        "window": 5
+      },
+      "looks": [
+        4.859278122453718,
+        4.020813607183419
+      ],
+      "config_file_sha256": "3b54e43f217ad80e2c029554289acd483538ecbd09837bcfb9c9b689a653f4af",
+      "manifest_file_sha256": "d840b655f00df68220d5b2ccbaf9eb9c5aa4e785dd0184e05f8dec7646c46786",
+      "splits_file_sha256": "24963a9951f318aab0cc3d687023ce849fc5c9435ed9fc8cbadced4dc6c2d1b7",
+      "training_roi_sha256": "c5a5c818c2c984d6d561b86fc51872167ea5f3aa005f600bbb0224c28139b533",
+      "looks_artifact_sha256": "e913ffc80d7edf57f38167bb34448bb39f93447483e02b09df102902002e6233"
+    },
+    "best_epochs": {
+      "raw": 6,
+      "filtered": 8
+    },
+    "actual_training_updates": {
+      "raw": 327,
+      "filtered": 387
+    },
+    "heldout_patch_count": 20,
+    "heldout_shapes": {
+      "Ghana_313799": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_406026": [
+        2,
+        512,
+        512
+      ],
+      "Ghana_97059": [
+        2,
+        512,
+        512
+      ],
+      "India_1018327": [
+        2,
+        512,
+        512
+      ],
+      "India_591317": [
+        2,
+        512,
+        512
+      ],
+      "India_592446": [
+        2,
+        512,
+        512
+      ],
+      "Mekong_1443339": [
+        2,
+        512,
+        512
+      ],
+      "Mekong_254910": [
+        2,
+        512,
+        512
+      ],
+      "Mekong_382276": [
+        2,
+        512,
+        512
+      ],
+      "Nigeria_417184": [
+        2,
+        512,
+        512
+      ],
+      "Nigeria_812045": [
+        2,
+        512,
+        512
+      ],
+      "Pakistan_694942": [
+        2,
+        512,
+        512
+      ],
+      "Paraguay_913449": [
+        2,
+        512,
+        512
+      ],
+      "Somalia_322855": [
+        2,
+        512,
+        512
+      ],
+      "Somalia_699062": [
+        2,
+        512,
+        512
+      ],
+      "Spain_6095801": [
+        2,
+        512,
+        512
+      ],
+      "Spain_6860600": [
+        2,
+        512,
+        512
+      ],
+      "Sri-Lanka_713926": [
+        2,
+        512,
+        512
+      ],
+      "USA_527077": [
+        2,
+        512,
+        512
+      ],
+      "USA_67102": [
+        2,
+        512,
+        512
+      ]
+    },
+    "fixed_macro_patch_ids": [
+      "Ghana_313799",
+      "Ghana_406026",
+      "India_1018327",
+      "India_591317",
+      "India_592446",
+      "Mekong_1443339",
+      "Mekong_254910",
+      "Mekong_382276",
+      "Nigeria_417184",
+      "Nigeria_812045",
+      "Pakistan_694942",
+      "Paraguay_913449",
+      "Somalia_322855",
+      "Somalia_699062",
+      "Spain_6095801",
+      "Spain_6860600",
+      "Sri-Lanka_713926",
+      "USA_527077",
+      "USA_67102"
+    ],
+    "native_prediction_artifact_count": 40,
+    "native_export_seconds": 0.11728262971155345,
+    "prediction_encoding": {
+      "dtype": "int8",
+      "land": 0,
+      "water": 1,
+      "invalid": -1,
+      "validity": "original SAR mask; label validity stored separately"
+    },
+    "label_claim": "independent manual labels",
+    "python": "3.12.3",
+    "torch": "2.15.0+cu132",
+    "numpy": "2.5.4",
+    "device": "cuda",
+    "device_name": "NVIDIA RTX 4000 Ada Generation",
+    "checkpoint_verification_seconds": 0.35756538808345795,
+    "heldout_loading_seconds": 0.49743021302856505,
+    "limitations": "A checkpoint evaluation does not reproduce training or establish a fresh Colab runtime. These masks identify observed water; new flooding versus permanent water is not established.",
+    "evaluation_seconds": 6.853085705079138,
+    "evaluation_timing_scope": "preflight_loading_compute_tables_native_masks_checksums_and_optional_figures; excludes_final_json_and_config_serialization"
+  },
+  "conditions": [
+    {
+      "condition": "raw",
+      "model_role": "segmentation",
+      "input_filter": "raw",
+      "water_probability_threshold": 0.5,
+      "threshold_comparison": "strict_greater",
+      "cleanup": false,
+      "enl": "not_applicable",
+      "psnr": "not_applicable",
+      "seconds": 0.6675710259005427,
+      "timing_scope": "input_filtering_native_inference_and_scoring_only",
+      "native_export_seconds": 0.05728536006063223,
+      "native_export_timing_scope": "native_prediction_npz_write_and_checksum",
+      "per_patch_counts": {
+        "Ghana_313799": {
+          "tp": 327,
+          "fp": 0,
+          "fn": 14606,
+          "tn": 229531
+        },
+        "Ghana_406026": {
+          "tp": 4026,
+          "fp": 697,
+          "fn": 279,
+          "tn": 257142
+        },
+        "Ghana_97059": {
+          "tp": 0,
+          "fp": 355,
+          "fn": 0,
+          "tn": 27039
+        },
+        "India_1018327": {
+          "tp": 8378,
+          "fp": 26,
+          "fn": 28271,
+          "tn": 225467
+        },
+        "India_591317": {
+          "tp": 75440,
+          "fp": 604,
+          "fn": 38599,
+          "tn": 131406
+        },
+        "India_592446": {
+          "tp": 3672,
+          "fp": 614,
+          "fn": 5372,
+          "tn": 214697
+        },
+        "Mekong_1443339": {
+          "tp": 131717,
+          "fp": 84,
+          "fn": 61066,
+          "tn": 69268
+        },
+        "Mekong_254910": {
+          "tp": 0,
+          "fp": 4660,
+          "fn": 135,
+          "tn": 200700
+        },
+        "Mekong_382276": {
+          "tp": 8769,
+          "fp": 204,
+          "fn": 1039,
+          "tn": 252099
+        },
+        "Nigeria_417184": {
+          "tp": 851,
+          "fp": 1747,
+          "fn": 533,
+          "tn": 47004
+        },
+        "Nigeria_812045": {
+          "tp": 97864,
+          "fp": 2198,
+          "fn": 21719,
+          "tn": 114803
+        },
+        "Pakistan_694942": {
+          "tp": 17266,
+          "fp": 37203,
+          "fn": 1215,
+          "tn": 135760
+        },
+        "Paraguay_913449": {
+          "tp": 1972,
+          "fp": 887,
+          "fn": 3545,
+          "tn": 255740
+        },
+        "Somalia_322855": {
+          "tp": 10070,
+          "fp": 405,
+          "fn": 34667,
+          "tn": 209902
+        },
+        "Somalia_699062": {
+          "tp": 331,
+          "fp": 2153,
+          "fn": 2959,
+          "tn": 197766
+        },
+        "Spain_6095801": {
+          "tp": 5805,
+          "fp": 3771,
+          "fn": 16931,
+          "tn": 235555
+        },
+        "Spain_6860600": {
+          "tp": 50,
+          "fp": 980,
+          "fn": 196,
+          "tn": 260743
+        },
+        "Sri-Lanka_713926": {
+          "tp": 68988,
+          "fp": 537,
+          "fn": 11518,
+          "tn": 181061
+        },
+        "USA_527077": {
+          "tp": 863,
+          "fp": 11319,
+          "fn": 783,
+          "tn": 249162
+        },
+        "USA_67102": {
+          "tp": 8627,
+          "fp": 2356,
+          "fn": 864,
+          "tn": 250244
+        }
+      },
+      "summary": {
+        "counts": {
+          "tp": 445016,
+          "fp": 70800,
+          "fn": 244297,
+          "tn": 3745089
+        },
+        "pooled": {
+          "iou": 0.5854603197156212,
+          "f1": 0.7385367043694078,
+          "precision": 0.8627417528731175,
+          "recall": 0.645593511220592
+        },
+        "per_patch": {
+          "Ghana_313799": {
+            "iou": 0.021897810218978103,
+            "f1": 0.04285714285714286,
+            "precision": 1.0,
+            "recall": 0.021897810218978103
+          },
+          "Ghana_406026": {
+            "iou": 0.8048780487804879,
+            "f1": 0.8918918918918919,
+            "precision": 0.8524243065847978,
+            "recall": 0.935191637630662
+          },
+          "Ghana_97059": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "India_1018327": {
+            "iou": 0.22843899113837765,
+            "f1": 0.37191751936608,
+            "precision": 0.9969062351261304,
+            "recall": 0.22860105323474036
+          },
+          "India_591317": {
+            "iou": 0.6580427937161449,
+            "f1": 0.7937585160166875,
+            "precision": 0.9920572300247226,
+            "recall": 0.6615280737291628
+          },
+          "India_592446": {
+            "iou": 0.3802029405674053,
+            "f1": 0.5509377344336084,
+            "precision": 0.8567428838077461,
+            "recall": 0.40601503759398494
+          },
+          "Mekong_1443339": {
+            "iou": 0.6829421311058916,
+            "f1": 0.8116050082567224,
+            "precision": 0.9993626755487439,
+            "recall": 0.6832397047457504
+          },
+          "Mekong_254910": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "Mekong_382276": {
+            "iou": 0.875848981222533,
+            "f1": 0.933816090729993,
+            "precision": 0.9772651287194918,
+            "recall": 0.8940660685154975
+          },
+          "Nigeria_417184": {
+            "iou": 0.2717981475566911,
+            "f1": 0.4274234053239578,
+            "precision": 0.3275596612779061,
+            "recall": 0.6148843930635838
+          },
+          "Nigeria_812045": {
+            "iou": 0.8036064739162924,
+            "f1": 0.891110655831,
+            "precision": 0.9780336191561232,
+            "recall": 0.818377194082771
+          },
+          "Pakistan_694942": {
+            "iou": 0.31007111558077727,
+            "f1": 0.4733653187114462,
+            "precision": 0.31698764434816135,
+            "recall": 0.9342568042854824
+          },
+          "Paraguay_913449": {
+            "iou": 0.3079325421611493,
+            "f1": 0.4708691499522445,
+            "precision": 0.6897516614200769,
+            "recall": 0.3574406380279137
+          },
+          "Somalia_322855": {
+            "iou": 0.2230738558327057,
+            "f1": 0.364775773382598,
+            "precision": 0.9613365155131265,
+            "recall": 0.22509332320003578
+          },
+          "Somalia_699062": {
+            "iou": 0.060812052177108215,
+            "f1": 0.1146518877727745,
+            "precision": 0.13325281803542674,
+            "recall": 0.1006079027355623
+          },
+          "Spain_6095801": {
+            "iou": 0.21899875504583696,
+            "f1": 0.3593092349591483,
+            "precision": 0.606203007518797,
+            "recall": 0.2553219563687544
+          },
+          "Spain_6860600": {
+            "iou": 0.040783034257748776,
+            "f1": 0.07836990595611286,
+            "precision": 0.04854368932038835,
+            "recall": 0.2032520325203252
+          },
+          "Sri-Lanka_713926": {
+            "iou": 0.8512518045975593,
+            "f1": 0.9196499390126041,
+            "precision": 0.9922761596548004,
+            "recall": 0.8569299182669615
+          },
+          "USA_527077": {
+            "iou": 0.06656382568453528,
+            "f1": 0.12481920740526468,
+            "precision": 0.07084222623542932,
+            "recall": 0.5243013365735115
+          },
+          "USA_67102": {
+            "iou": 0.7282012323795054,
+            "f1": 0.8427273615316987,
+            "precision": 0.7854866612036784,
+            "recall": 0.9089663892108313
+          }
+        },
+        "macro": {
+          "iou": 0.3965970808389331,
+          "f1": 0.4980976707047882,
+          "precision": 0.6623701117629236,
+          "recall": 0.5068405933686585
+        },
+        "macro_patch_ids": [
+          "Ghana_313799",
+          "Ghana_406026",
+          "India_1018327",
+          "India_591317",
+          "India_592446",
+          "Mekong_1443339",
+          "Mekong_254910",
+          "Mekong_382276",
+          "Nigeria_417184",
+          "Nigeria_812045",
+          "Pakistan_694942",
+          "Paraguay_913449",
+          "Somalia_322855",
+          "Somalia_699062",
+          "Spain_6095801",
+          "Spain_6860600",
+          "Sri-Lanka_713926",
+          "USA_527077",
+          "USA_67102"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 0,
+        "no_valid_patch_count": 0,
+        "dry": {
+          "patch_count": 1,
+          "valid_pixels": 27394,
+          "false_positive_pixels": 355,
+          "false_positive_rate": 0.012959042126012996,
+          "fraction_with_false_positives": 1.0
+        }
+      }
+    },
+    {
+      "condition": "filtered",
+      "model_role": "segmentation",
+      "input_filter": "median",
+      "water_probability_threshold": 0.5,
+      "threshold_comparison": "strict_greater",
+      "cleanup": false,
+      "enl": "not_applicable",
+      "psnr": "not_applicable",
+      "seconds": 3.1647055163048208,
+      "timing_scope": "input_filtering_native_inference_and_scoring_only",
+      "native_export_seconds": 0.059997269650921226,
+      "native_export_timing_scope": "native_prediction_npz_write_and_checksum",
+      "per_patch_counts": {
+        "Ghana_313799": {
+          "tp": 767,
+          "fp": 21,
+          "fn": 14166,
+          "tn": 229510
+        },
+        "Ghana_406026": {
+          "tp": 3985,
+          "fp": 750,
+          "fn": 320,
+          "tn": 257089
+        },
+        "Ghana_97059": {
+          "tp": 0,
+          "fp": 343,
+          "fn": 0,
+          "tn": 27051
+        },
+        "India_1018327": {
+          "tp": 9766,
+          "fp": 102,
+          "fn": 26883,
+          "tn": 225391
+        },
+        "India_591317": {
+          "tp": 61260,
+          "fp": 161,
+          "fn": 52779,
+          "tn": 131849
+        },
+        "India_592446": {
+          "tp": 3607,
+          "fp": 580,
+          "fn": 5437,
+          "tn": 214731
+        },
+        "Mekong_1443339": {
+          "tp": 129473,
+          "fp": 84,
+          "fn": 63310,
+          "tn": 69268
+        },
+        "Mekong_254910": {
+          "tp": 3,
+          "fp": 5397,
+          "fn": 132,
+          "tn": 199963
+        },
+        "Mekong_382276": {
+          "tp": 8719,
+          "fp": 201,
+          "fn": 1089,
+          "tn": 252102
+        },
+        "Nigeria_417184": {
+          "tp": 1018,
+          "fp": 2251,
+          "fn": 366,
+          "tn": 46500
+        },
+        "Nigeria_812045": {
+          "tp": 82323,
+          "fp": 1541,
+          "fn": 37260,
+          "tn": 115460
+        },
+        "Pakistan_694942": {
+          "tp": 16929,
+          "fp": 23345,
+          "fn": 1552,
+          "tn": 149618
+        },
+        "Paraguay_913449": {
+          "tp": 1743,
+          "fp": 3024,
+          "fn": 3774,
+          "tn": 253603
+        },
+        "Somalia_322855": {
+          "tp": 14687,
+          "fp": 696,
+          "fn": 30050,
+          "tn": 209611
+        },
+        "Somalia_699062": {
+          "tp": 813,
+          "fp": 3759,
+          "fn": 2477,
+          "tn": 196160
+        },
+        "Spain_6095801": {
+          "tp": 9091,
+          "fp": 9120,
+          "fn": 13645,
+          "tn": 230206
+        },
+        "Spain_6860600": {
+          "tp": 109,
+          "fp": 7258,
+          "fn": 137,
+          "tn": 254465
+        },
+        "Sri-Lanka_713926": {
+          "tp": 55312,
+          "fp": 379,
+          "fn": 25194,
+          "tn": 181219
+        },
+        "USA_527077": {
+          "tp": 924,
+          "fp": 14166,
+          "fn": 722,
+          "tn": 246315
+        },
+        "USA_67102": {
+          "tp": 8467,
+          "fp": 2513,
+          "fn": 1024,
+          "tn": 250087
+        }
+      },
+      "summary": {
+        "counts": {
+          "tp": 408996,
+          "fp": 75691,
+          "fn": 280317,
+          "tn": 3740198
+        },
+        "pooled": {
+          "iou": 0.5346324986536019,
+          "f1": 0.6967563884156729,
+          "precision": 0.8438352998945712,
+          "recall": 0.5933385849389174
+        },
+        "per_patch": {
+          "Ghana_313799": {
+            "iou": 0.05129062458205162,
+            "f1": 0.09757649004516253,
+            "precision": 0.9733502538071066,
+            "recall": 0.05136275363289359
+          },
+          "Ghana_406026": {
+            "iou": 0.7883283877349159,
+            "f1": 0.8816371681415929,
+            "precision": 0.8416050686378036,
+            "recall": 0.9256678281068524
+          },
+          "Ghana_97059": {
+            "iou": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": null
+          },
+          "India_1018327": {
+            "iou": 0.26573426573426573,
+            "f1": 0.4198895027624309,
+            "precision": 0.9896635589785164,
+            "recall": 0.2664738464896723
+          },
+          "India_591317": {
+            "iou": 0.5364273204903678,
+            "f1": 0.6982788099851818,
+            "precision": 0.9973787466827306,
+            "recall": 0.537184647357483
+          },
+          "India_592446": {
+            "iou": 0.3747921862011638,
+            "f1": 0.5452346761393697,
+            "precision": 0.8614759971339861,
+            "recall": 0.39882795223352496
+          },
+          "Mekong_1443339": {
+            "iou": 0.6713071702261144,
+            "f1": 0.8033318855866476,
+            "precision": 0.9993516367313229,
+            "recall": 0.6715996742451357
+          },
+          "Mekong_254910": {
+            "iou": 0.0005422993492407809,
+            "f1": 0.001084010840108401,
+            "precision": 0.0005555555555555556,
+            "recall": 0.022222222222222223
+          },
+          "Mekong_382276": {
+            "iou": 0.8711159956039565,
+            "f1": 0.9311191798376762,
+            "precision": 0.9774663677130044,
+            "recall": 0.8889681892332789
+          },
+          "Nigeria_417184": {
+            "iou": 0.2800550206327373,
+            "f1": 0.4375671609714163,
+            "precision": 0.3114102171918018,
+            "recall": 0.7355491329479769
+          },
+          "Nigeria_812045": {
+            "iou": 0.6796588619926687,
+            "f1": 0.8092820243109999,
+            "precision": 0.9816250119240676,
+            "recall": 0.6884172499435538
+          },
+          "Pakistan_694942": {
+            "iou": 0.40474824271983934,
+            "f1": 0.576257339800868,
+            "precision": 0.42034563241793715,
+            "recall": 0.9160218602889454
+          },
+          "Paraguay_913449": {
+            "iou": 0.20407446434843696,
+            "f1": 0.33897316219369894,
+            "precision": 0.3656387665198238,
+            "recall": 0.31593257205002717
+          },
+          "Somalia_322855": {
+            "iou": 0.32326722866638785,
+            "f1": 0.4885894876912841,
+            "precision": 0.9547552493011766,
+            "recall": 0.3282964883653352
+          },
+          "Somalia_699062": {
+            "iou": 0.1153355085827777,
+            "f1": 0.20681760366319002,
+            "precision": 0.1778215223097113,
+            "recall": 0.24711246200607903
+          },
+          "Spain_6095801": {
+            "iou": 0.28537795077850325,
+            "f1": 0.44403741421837983,
+            "precision": 0.4992037779364121,
+            "recall": 0.39985045742434905
+          },
+          "Spain_6860600": {
+            "iou": 0.014525586353944563,
+            "f1": 0.02863522921318797,
+            "precision": 0.014795710601330257,
+            "recall": 0.44308943089430897
+          },
+          "Sri-Lanka_713926": {
+            "iou": 0.6838350744884713,
+            "f1": 0.8122352181031888,
+            "precision": 0.993194591585714,
+            "recall": 0.6870543810399224
+          },
+          "USA_527077": {
+            "iou": 0.058436630407285604,
+            "f1": 0.1104206500956023,
+            "precision": 0.06123260437375746,
+            "recall": 0.5613608748481167
+          },
+          "USA_67102": {
+            "iou": 0.705348217260913,
+            "f1": 0.8272189927214108,
+            "precision": 0.7711293260473588,
+            "recall": 0.892108313138763
+          }
+        },
+        "macro": {
+          "iou": 0.38495794927126536,
+          "f1": 0.49779926349059983,
+          "precision": 0.641684189234164,
+          "recall": 0.5251105440246547
+        },
+        "macro_patch_ids": [
+          "Ghana_313799",
+          "Ghana_406026",
+          "India_1018327",
+          "India_591317",
+          "India_592446",
+          "Mekong_1443339",
+          "Mekong_254910",
+          "Mekong_382276",
+          "Nigeria_417184",
+          "Nigeria_812045",
+          "Pakistan_694942",
+          "Paraguay_913449",
+          "Somalia_322855",
+          "Somalia_699062",
+          "Spain_6095801",
+          "Spain_6860600",
+          "Sri-Lanka_713926",
+          "USA_527077",
+          "USA_67102"
+        ],
+        "macro_undefined_counts": {
+          "iou": 0,
+          "f1": 0,
+          "precision": 0,
+          "recall": 0
+        },
+        "undefined_water_patch_count": 0,
+        "no_valid_patch_count": 0,
+        "dry": {
+          "patch_count": 1,
+          "valid_pixels": 27394,
+          "false_positive_pixels": 343,
+          "false_positive_rate": 0.012520989997809739,
+          "fraction_with_false_positives": 1.0
+        }
+      }
+    }
+  ]
+}

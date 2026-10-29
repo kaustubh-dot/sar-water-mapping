@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "tracked_and_proposed_file_count": 132,
+  "text_files_scanned": 128,
+  "forbidden_dataset_checkpoint_archive_files": [],
+  "files_over_5mb": [],
+  "credential_or_connection_pattern_files": [],
+  "note": "Pattern scan and manual artifact inspection, not a proof against every possible secret. Ignored local data/checkpoints remain outside Git."
+}

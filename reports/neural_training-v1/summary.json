@@ -1,0 +1,35 @@
+{
+  "status": "paired_training_completed_independently_accepted",
+  "source_commit": "61b09f9bfa61114d83bd7be19eba3de67d5621db",
+  "pair_complete": true,
+  "cap_exhausted": false,
+  "complete_pair_seconds": 122.06388808786869,
+  "input_preparation_seconds": 12.86406306293793,
+  "cuda_peak_allocated_bytes": 964296704,
+  "seed": 42,
+  "conditions": {
+    "raw": {
+      "status": "early_stopped",
+      "updates": 327,
+      "best_epoch": 6,
+      "best_iou": 0.6005466392695848,
+      "epochs_executed": 11
+    },
+    "filtered": {
+      "status": "early_stopped",
+      "updates": 387,
+      "best_epoch": 8,
+      "best_iou": 0.562146214221146,
+      "epochs_executed": 13
+    }
+  },
+  "original_training_report_sha256": "b2fc6c5efdca617a2009ce74ccd42d7f5e977027ce870128e1347d9906c91140",
+  "public_training_report_sha256": "22d35d8fa4053f642edab81f9277c88962d0b2cbc9808083506205bbbe37a314",
+  "checkpoint_bundle_sha256": "b70dc5117a21ecac5b3b0e2ad9fc06f960a727370c81892089ac27b894100238",
+  "training_environment": "remote dedicated RTX4000Ada; recorded original package versions",
+  "fresh_colab_verified": false,
+  "heldout_neural_scores": "reports/neural_results-v1/results_neural.csv",
+  "execution_review": "reports/phase5_execution_review.md",
+  "checkpoint_release_url": "https://github.com/kaustubh-dot/sar-water-mapping/releases/tag/development-seed42-v1",
+  "checkpoint_asset_url": "https://github.com/kaustubh-dot/sar-water-mapping/releases/download/development-seed42-v1/development-seed42-checkpoints.zip"
+}
